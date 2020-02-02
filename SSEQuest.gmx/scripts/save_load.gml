@@ -58,7 +58,43 @@
           var gameVal;
           gameVal               = file_text_read_real(dfile);
           global.game_completed = (dkey ^ gameVal);
-          file_text_readln(dfile);                   
+          file_text_readln(dfile);  
+       // Used Emeralds:
+       // First Emerald
+          var emer1Val;
+          emer1Val               = file_text_read_real(dfile);
+          global.used_emerald_1 = (dkey ^ emer1Val);
+          file_text_readln(dfile);
+       // Second Emerald
+          var emer2Val;
+          emer2Val               = file_text_read_real(dfile);
+          global.used_emerald_2 = (dkey ^ emer2Val);
+          file_text_readln(dfile);
+       // Third Emerald
+          var emer3Val;
+          emer3Val               = file_text_read_real(dfile);
+          global.used_emerald_3 = (dkey ^ emer3Val);
+          file_text_readln(dfile);
+       // Fourth Emerald
+          var emer4Val;
+          emer4Val               = file_text_read_real(dfile);
+          global.used_emerald_4 = (dkey ^ emer4Val);
+          file_text_readln(dfile);
+       // Fifth Emerald
+          var emer5Val;
+          emer5Val               = file_text_read_real(dfile);
+          global.used_emerald_5 = (dkey ^ emer5Val);
+          file_text_readln(dfile);
+       // Sixth Emerald
+          var emer6Val;
+          emer6Val               = file_text_read_real(dfile);
+          global.used_emerald_6 = (dkey ^ emer6Val);
+          file_text_readln(dfile);
+       // Seventh Emerald
+          var emer7Val;
+          emer7Val               = file_text_read_real(dfile);
+          global.used_emerald_7 = (dkey ^ emer7Val);
+          file_text_readln(dfile);
        // Close.                  
           file_text_close(dfile);
           

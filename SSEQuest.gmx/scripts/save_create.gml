@@ -39,7 +39,22 @@
           file_text_writeln(dfile);           
        // Game completed:
           file_text_write_string(dfile, string(global.game_completed^dkey));
-          file_text_writeln(dfile);                
+          file_text_writeln(dfile);    
+       // Used Emeralds:
+          file_text_write_string(dfile, string(global.used_emerald_1^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_2^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_3^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_4^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_5^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_6^dkey));
+          file_text_writeln(dfile);  
+          file_text_write_string(dfile, string(global.used_emerald_7^dkey));
+          file_text_writeln(dfile);  
        // Close.                  
           file_text_close(dfile);
     }

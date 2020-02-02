@@ -16,7 +16,7 @@
     global.zone_act         =  1;
     global.water_position   = -1;
     global.death_height     = room_height;
-    global.zone_id          =  1;
+    global.zone_id          =  0;
     global.data_select_icon =  1;   
     global.special          =  0;
     if(global.time_attack = false)
