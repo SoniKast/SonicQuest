@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="BGM">
@@ -84,6 +85,7 @@
         <sound>sound\jingle_drown</sound>
         <sound>sound\jingle_gameover</sound>
         <sound>sound\jingle_invincibility</sound>
+        <sound>sound\jingle_sneakers</sound>
         <sound>sound\jingle_scoring</sound>
         <sound>sound\jingle_super</sound>
         <sound>sound\jingle_title</sound>
@@ -370,7 +372,7 @@
         <sprites name="HUD">
           <sprite>sprites\spr_hud</sprite>
           <sprite>sprites\spr_time_seperator</sprite>
-          <sprite>sprites\spr_hud_rings</sprite>
+          <sprite>sprites\spr_hud_new</sprite>
           <sprite>sprites\spr_hud_lives</sprite>
           <sprite>sprites\spr_continues</sprite>
           <sprite>sprites\spr_game_over</sprite>
@@ -408,6 +410,7 @@
           <sprite>sprites\spr_platform_dir_down</sprite>
           <sprite>sprites\spr_platform_dir_left</sprite>
           <sprite>sprites\spr_platform_dir_right</sprite>
+          <sprite>sprites\spr_waterfall_platform_spawner</sprite>
         </sprites>
       </sprites>
       <sprites name="Effects">
@@ -655,9 +658,15 @@
             <sprite>sprites\spr_ssz_loop_right</sprite>
             <sprite>sprites\spr_ssz_loop_left</sprite>
           </sprites>
+          <sprites name="Flowers">
+            <sprite>sprites\spr_ssz_flower_yellow</sprite>
+            <sprite>sprites\spr_ssz_flower_red</sprite>
+            <sprite>sprites\spr_ssz_flower_violet</sprite>
+          </sprites>
           <sprite>sprites\spr_ssz_break_wall</sprite>
           <sprite>sprites\spr_ssz_platform</sprite>
           <sprite>sprites\spr_ssz_parts</sprite>
+          <sprite>sprites\spr_ssz_waterfall_platform</sprite>
           <sprite>sprites\spr_bridge_hold</sprite>
           <sprite>sprites\spr_bridge_hold_line</sprite>
           <sprite>sprites\spr_fall_bridge</sprite>
@@ -720,6 +729,14 @@
       </sprites>
     </sprites>
     <sprites name="Menus / Continue">
+      <sprites name="Startup">
+        <sprites name="STT">
+          <sprite>sprites\spr_sonic_ball</sprite>
+          <sprite>sprites\spr_tails_flight</sprite>
+          <sprite>sprites\spr_knuckles_gliding</sprite>
+          <sprite>sprites\spr_blow</sprite>
+        </sprites>
+      </sprites>
       <sprites name="Title Screen">
         <sprite>sprites\sprPresentationSonic</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
@@ -1084,6 +1101,15 @@
   <objects name="objects">
     <objects name="Init">
       <object>objects\obj_init</object>
+      <objects name="Startup">
+        <objects name="STT">
+          <object>objects\obj_sonic_run</object>
+          <object>objects\obj_tails_flight</object>
+          <object>objects\obj_knuckles_glide</object>
+          <object>objects\obj_blow</object>
+          <object>objects\obj_background_create</object>
+        </objects>
+      </objects>
       <objects name="Parents">
         <object>objects\par_obstacles</object>
         <object>objects\par_terrain</object>
@@ -1505,6 +1531,7 @@
       <objects name="Fades">
         <object>objects\obj_fade_in</object>
         <object>objects\obj_fade_next</object>
+        <object>objects\obj_fade_next_white</object>
         <object>objects\obj_fade_bonus</object>
         <object>objects\obj_fade_from_bonus</object>
         <object>objects\obj_fade_hpz</object>
@@ -1622,6 +1649,11 @@
         </objects>
         <objects name="Act 1">
           <objects name="Gimmicks">
+            <objects name="Waterfall Platform">
+              <object>objects\obj_waterfall_platform_spawner</object>
+              <object>objects\obj_waterfall_platform_despawn</object>
+              <object>objects\obj_ssz_waterfall_platform</object>
+            </objects>
             <object>objects\obj_ssz_platform</object>
             <object>objects\obj_ssz_break_wall</object>
             <object>objects\obj_ssz_break_wall_pieces</object>
@@ -1629,8 +1661,12 @@
             <object>objects\obj_ssz_loop_low</object>
             <object>objects\obj_ssz_loop_top</object>
             <object>objects\obj_water_rush</object>
+            <object>objects\obj_ssz_crumble</object>
           </objects>
           <objects name="Decorations">
+            <object>objects\obj_ssz_flower_yellow</object>
+            <object>objects\obj_ssz_flower_red</object>
+            <object>objects\obj_ssz_flower_violet</object>
             <object>objects\obj_waterfall_a</object>
             <object>objects\obj_waterfall_b</object>
           </objects>
@@ -1719,7 +1755,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_init</room>
+    <rooms name="Init">
+      <room>rooms\rm_init</room>
+      <room>rooms\rm_stt</room>
+    </rooms>
     <rooms name="Title &amp; Options">
       <room>rooms\rm_title</room>
       <room>rooms\rm_menu</room>

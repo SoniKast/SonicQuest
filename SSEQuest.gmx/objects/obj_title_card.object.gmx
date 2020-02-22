@@ -41,7 +41,7 @@
     zone_x        = -string_width(zone_text);
     zone_y        = 98;
     zone_add_text = "ZONE"
-    zone_add_x    = -string_width(zone_add_text)*2;
+    zone_add_x    = -string_width(zone_add_text)*3;
     zone_add_y    = 128; 
     zone_act_x    = -sprite_get_width(spr_title_card_act);
     zone_act_y    = 128;

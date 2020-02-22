@@ -40,7 +40,7 @@
     title_y           = 0;
     title_menu_option = 0;
     title_menu_active = 0;
-    title_menu_string = "PRESS START";
+    title_menu_string = "START";
     alarm[0]          = 15;
 
 </string>
@@ -185,13 +185,13 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
             <kind>1</kind>
             <string>/// Change menu option.
 
-/*
+
  // Change options.
     if(title_menu_active == 1)
     {
        if(keyboard_check_pressed(global.key_right))
        {
-          if(title_menu_option &lt; 2)
+          if(title_menu_option &lt; 3)
           {
              title_menu_option += 1;
           }
@@ -208,10 +208,10 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
           }
           else
           {
-             title_menu_option = 2;
+             title_menu_option = 3;
           }
        }       
-    }*/
+    }
     
  // String.
     if(title_menu_active == 1)
@@ -220,15 +220,20 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
        {
               case 0:
               {
-                   title_menu_string = "PRESS START";
+                   title_menu_string = "START";
                    break;
               }
               case 1:
               {
-                   title_menu_string = "EXTRA";
+                   title_menu_string = "TRIAL";
                    break;
               }
               case 2:
+              {
+                   title_menu_string = "OPTIONS";
+                   break;
+              }
+              case 3:
               {
                    title_menu_string = "EXIT";
                    break;
@@ -248,7 +253,7 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
                  {
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = rm_menu;
+                           value = rm_data_select;
                       }
                       break;
                  }
@@ -256,11 +261,19 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
                  {
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = rm_options;
+                           value = rm_time_attack;
                       }
                       break;
                  }
                  case 2:
+                 {
+                      with(instance_create(0, 0, obj_fade_to_value))
+                      {
+                           value = rm_options;
+                      }
+                      break;
+                 }
+                 case 3:
                  {
                       game_end();
                       break;

@@ -101,8 +101,8 @@
     
  // Rendering:
     global.screen_scale     = 1;   // The screen scale value.
-    global.screen_width     = 420; // The screen width.
-    global.screen_height    = 240; // The screen height.
+    global.screen_width     = 320; // The screen width.
+    global.screen_height    = 224; // The screen height.
     global.angle_mode       = 1;   // How to rotate the player. (0 for classic, 1 for smooth)
         
  // Sounds:
@@ -128,6 +128,13 @@
            global.save_slot_continues [i] = global.player_continues;               
            global.save_slot_emeralds  [i] = global.player_emeralds;
            global.save_slot_completed [i] = global.game_completed;
+           global.save_slot_used_emerald1 [i] = global.used_emerald_1;
+           global.save_slot_used_emerald2 [i] = global.used_emerald_2;
+           global.save_slot_used_emerald3 [i] = global.used_emerald_3;
+           global.save_slot_used_emerald4 [i] = global.used_emerald_4;
+           global.save_slot_used_emerald5 [i] = global.used_emerald_5;
+           global.save_slot_used_emerald6 [i] = global.used_emerald_6;
+           global.save_slot_used_emerald7 [i] = global.used_emerald_7;
         }        
         else
         {
@@ -138,6 +145,13 @@
            global.save_slot_continues [i] = 0;               
            global.save_slot_emeralds  [i] = 0;
            global.save_slot_completed [i] = 0;
+           global.save_slot_used_emerald1 [i] = 0;
+           global.save_slot_used_emerald2 [i] = 0;
+           global.save_slot_used_emerald3 [i] = 0;
+           global.save_slot_used_emerald4 [i] = 0;
+           global.save_slot_used_emerald5 [i] = 0;
+           global.save_slot_used_emerald6 [i] = 0;
+           global.save_slot_used_emerald7 [i] = 0;
         }        
     }
   

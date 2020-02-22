@@ -293,6 +293,12 @@
        x                = global.checkpoint_x;
        y                = global.checkpoint_y;
        global.game_time = global.checkpoint_t;
+    with (obj_camera){
+// Camera position.
+    cam_x       = obj_player.x;
+    cam_y       = obj_player.y;
+    cam_handle = obj_player;
+    }
     }
 </string>
           </argument>

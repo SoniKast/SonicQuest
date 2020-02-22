@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>419</bbox_right>
+  <bbox_right>319</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>215</bbox_bottom>
   <HTile>0</HTile>
@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>420</width>
-  <height>240</height>
+  <width>320</width>
+  <height>224</height>
   <frames>
     <frame index="0">images\spr_time_attack_0.png</frame>
     <frame index="1">images\spr_time_attack_1.png</frame>

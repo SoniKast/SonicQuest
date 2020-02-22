@@ -229,6 +229,11 @@
     {
        parent.speedshoe_timer = 900    
        parent.speedshoe       = 1;
+       if(global.bgm_volume &lt;= 0.0 &amp;&amp; audio_is_playing(player_life))
+       {
+          global.bgm_volume = 1;
+       }
+       aud_play_sound(jingle_sneakers, global.bgm_volume, 1, 1, 0);
     }   
   
  // Eggman:

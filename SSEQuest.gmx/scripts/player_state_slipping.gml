@@ -8,7 +8,4 @@ animation_direction = 1
 input_alarm = 0
 state = STATE_SLIPPING;
 }
-else{
-state = STATE_DEFAULT;
-}
 }

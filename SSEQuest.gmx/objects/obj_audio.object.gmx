@@ -132,7 +132,7 @@
     }
     
  // Set the volume of the currently playing zone music and invincibility jingle.
-    if(audio_is_playing(jingle_invincibility) == false)
+    if(audio_is_playing(jingle_invincibility) == false or audio_is_playing(jingle_sneakers) == false)
     {    
        if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
        {
@@ -152,12 +152,20 @@
        {
           audio_sound_gain(jingle_invincibility, global.bgm_volume, 0);
        }  
+       if(audio_is_playing(jingle_sneakers))
+       {
+          audio_sound_gain(jingle_sneakers, global.bgm_volume, 0);
+       }
     }
     else
     {
        if(audio_is_playing(jingle_invincibility))
        {    
           audio_sound_gain(jingle_invincibility, 0.00, 0);      
+       }
+       if(audio_is_playing(jingle_sneakers))
+       {
+          audio_sound_gain(jingle_sneakers, 0.00, 0);
        }         
     }
     
@@ -272,7 +280,7 @@
                 }
                 break;
            }    
-           case rm_sunshine_valley1:
+           case rm_radiant_valley1:
            {
                 zone_bgm = music_sunshine_valley1;
                 if(audio_is_playing(zone_bgm) == false)
