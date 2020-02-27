@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_waterfall_platform_spawner</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 20;
+            <string>alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_ssz_waterfall_platform);
+            <string>instance_create(x, y+10, obj_ssz_waterfall_platform);
 alarm[0] = 20;
 </string>
           </argument>

@@ -20,8 +20,8 @@
     {
        sprite                 = spr_sonic_idle_bored;
        animation_start        = 0;
-       animation_end          = 3;
-       animation_loop         = 2;
+       animation_end          = 6;
+       animation_loop         = 5;
        animation_speed        = 0.10;
        animation_repeat       = 1; 
        animation_repeat_times = 0;

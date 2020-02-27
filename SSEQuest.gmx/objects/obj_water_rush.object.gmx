@@ -50,7 +50,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(PalettePosition &gt; 5){
+            <string>if(PalettePosition &gt; 6){
           PalettePosition = 0;
        }
        PalettePosition += 0.15;

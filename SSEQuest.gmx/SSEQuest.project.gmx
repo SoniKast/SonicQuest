@@ -89,11 +89,20 @@
         <sound>sound\jingle_scoring</sound>
         <sound>sound\jingle_super</sound>
         <sound>sound\jingle_title</sound>
+        <sound>sound\jingle_sega</sound>
       </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Engine Boot">
+      <sprites name="STT">
+        <sprite>sprites\spr_sonic_ball</sprite>
+        <sprite>sprites\spr_tails_flight</sprite>
+        <sprite>sprites\spr_knuckles_gliding</sprite>
+        <sprite>sprites\spr_blow</sprite>
+      </sprites>
+      <sprite>sprites\spr_sega</sprite>
+      <sprite>sprites\spr_sega_text</sprite>
       <sprite>sprites\spr_engine_boot</sprite>
     </sprites>
     <sprites name="Gameplay">
@@ -583,6 +592,8 @@
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile22</sprite>
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile23</sprite>
           <sprite>sprites\spr_collision_tile_loop_low</sprite>
+          <sprite>sprites\sprite522</sprite>
+          <sprite>sprites\sprite523</sprite>
         </sprites>
         <sprites name="Terrain (Layer 1)">
           <sprite>sprites\spr_collision_mask_terrain_layer1_tile1</sprite>
@@ -609,6 +620,8 @@
           <sprite>sprites\spr_collision_mask_terrain_layer1_tile22</sprite>
           <sprite>sprites\spr_collision_mask_terrain_layer1_tile23</sprite>
           <sprite>sprites\spr_collision_tile_loop_high</sprite>
+          <sprite>sprites\sprite524</sprite>
+          <sprite>sprites\sprite525</sprite>
         </sprites>
         <sprites name="Terrain (Platforms)">
           <sprite>sprites\spr_collision_mask_terrain_platform_tile01</sprite>
@@ -638,6 +651,15 @@
         <sprite>sprites\spr_test_chain</sprite>
         <sprite>sprites\spr_test_chain_top</sprite>
       </sprites>
+      <sprites name="Cutscene">
+        <sprites name="SSZ">
+          <sprite>sprites\spr_metal_dash</sprite>
+          <sprite>sprites\spr_metal_slowdown</sprite>
+          <sprite>sprites\spr_metal_stand</sprite>
+          <sprite>sprites\spr_metal_win</sprite>
+          <sprite>sprites\spr_metal_dash_r</sprite>
+        </sprites>
+      </sprites>
       <sprites name="Tileset">
         <sprites name="SSZ">
           <sprites name="Water">
@@ -657,23 +679,31 @@
             <sprite>sprites\spr_ssz_loop_top</sprite>
             <sprite>sprites\spr_ssz_loop_right</sprite>
             <sprite>sprites\spr_ssz_loop_left</sprite>
+            <sprite>sprites\spr_ssz_loop_top_mask</sprite>
+            <sprite>sprites\spr_ssz_loop_right_mask</sprite>
+            <sprite>sprites\spr_ssz_loop_left_mask</sprite>
           </sprites>
           <sprites name="Flowers">
             <sprite>sprites\spr_ssz_flower_yellow</sprite>
             <sprite>sprites\spr_ssz_flower_red</sprite>
             <sprite>sprites\spr_ssz_flower_violet</sprite>
           </sprites>
-          <sprite>sprites\spr_ssz_break_wall</sprite>
+          <sprites name="Gimmicks">
+            <sprite>sprites\spr_ssz_break_wall</sprite>
+            <sprite>sprites\spr_ssz_parts</sprite>
+            <sprite>sprites\spr_bridge_hold</sprite>
+            <sprite>sprites\spr_ssz_waterfall_platform</sprite>
+            <sprite>sprites\spr_bridge_hold_line</sprite>
+            <sprite>sprites\spr_fall_bridge</sprite>
+            <sprite>sprites\sprite430</sprite>
+            <sprite>sprites\sprite431</sprite>
+            <sprite>sprites\sprite432</sprite>
+            <sprite>sprites\sprite433</sprite>
+            <sprite>sprites\spr_ssz_launch</sprite>
+            <sprite>sprites\spr_ssz_launch_mask</sprite>
+            <sprite>sprites\spr_fake_sign_post</sprite>
+          </sprites>
           <sprite>sprites\spr_ssz_platform</sprite>
-          <sprite>sprites\spr_ssz_parts</sprite>
-          <sprite>sprites\spr_ssz_waterfall_platform</sprite>
-          <sprite>sprites\spr_bridge_hold</sprite>
-          <sprite>sprites\spr_bridge_hold_line</sprite>
-          <sprite>sprites\spr_fall_bridge</sprite>
-          <sprite>sprites\sprite430</sprite>
-          <sprite>sprites\sprite431</sprite>
-          <sprite>sprites\sprite432</sprite>
-          <sprite>sprites\sprite433</sprite>
         </sprites>
         <sprites name="GGZ">
           <sprites name="Gimmicks">
@@ -729,14 +759,6 @@
       </sprites>
     </sprites>
     <sprites name="Menus / Continue">
-      <sprites name="Startup">
-        <sprites name="STT">
-          <sprite>sprites\spr_sonic_ball</sprite>
-          <sprite>sprites\spr_tails_flight</sprite>
-          <sprite>sprites\spr_knuckles_gliding</sprite>
-          <sprite>sprites\spr_blow</sprite>
-        </sprites>
-      </sprites>
       <sprites name="Title Screen">
         <sprite>sprites\sprPresentationSonic</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
@@ -775,6 +797,7 @@
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_empty</sprite>
+      <sprite>sprites\spr_rain</sprite>
       <sprite>sprites\spr_camera</sprite>
       <sprites name="Debug">
         <sprite>sprites\spr_playground</sprite>
@@ -1109,6 +1132,7 @@
           <object>objects\obj_blow</object>
           <object>objects\obj_background_create</object>
         </objects>
+        <object>objects\obj_sega_startup</object>
       </objects>
       <objects name="Parents">
         <object>objects\par_obstacles</object>
@@ -1483,6 +1507,8 @@
             <object>objects\obj_collision_terrain_layer_0_21</object>
             <object>objects\obj_collision_terrain_layer_0_22</object>
             <object>objects\obj_collision_terrain_layer_0_23</object>
+            <object>objects\object426</object>
+            <object>objects\object427</object>
           </objects>
           <objects name="Layer1">
             <object>objects\obj_collision_terrain_layer_1_01</object>
@@ -1509,6 +1535,8 @@
             <object>objects\obj_collision_terrain_layer_1_22</object>
             <object>objects\obj_collision_terrain_layer_1_23</object>
             <object>objects\obj_collision_tile_18_new</object>
+            <object>objects\object428</object>
+            <object>objects\object429</object>
           </objects>
         </objects>
         <objects name="Sensors">
@@ -1654,14 +1682,19 @@
               <object>objects\obj_waterfall_platform_despawn</object>
               <object>objects\obj_ssz_waterfall_platform</object>
             </objects>
+            <object>objects\obj_fake_sign_post</object>
+            <object>objects\obj_fake_results</object>
             <object>objects\obj_ssz_platform</object>
             <object>objects\obj_ssz_break_wall</object>
+            <object>objects\obj_ssz_break_wall_knuckles</object>
+            <object>objects\obj_ssz_break_wall_metal</object>
             <object>objects\obj_ssz_break_wall_pieces</object>
             <object>objects\obj_ssz_loop_high</object>
             <object>objects\obj_ssz_loop_low</object>
             <object>objects\obj_ssz_loop_top</object>
             <object>objects\obj_water_rush</object>
             <object>objects\obj_ssz_crumble</object>
+            <object>objects\obj_ssz_flip</object>
           </objects>
           <objects name="Decorations">
             <object>objects\obj_ssz_flower_yellow</object>
@@ -1672,6 +1705,7 @@
           </objects>
         </objects>
         <objects name="Act 2">
+          <object>objects\obj_rain</object>
           <object>objects\obj_bridge_fall</object>
           <object>objects\object473</object>
           <object>objects\object474</object>
@@ -1680,6 +1714,9 @@
           <object>objects\object477</object>
           <object>objects\object478</object>
           <object>objects\object481</object>
+        </objects>
+        <objects name="Cutscenes">
+          <object>objects\obj_metal_cutscene</object>
         </objects>
       </objects>
       <objects name="Great Garden Zone">
@@ -1757,6 +1794,7 @@
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
+      <room>rooms\rm_sega</room>
       <room>rooms\rm_stt</room>
     </rooms>
     <rooms name="Title &amp; Options">
@@ -1770,6 +1808,7 @@
     <rooms name="Stages">
       <rooms name="Sunshine Valley">
         <room>rooms\rm_radiant_valley1</room>
+        <room>rooms\rm_radiant_valley2</room>
         <room>rooms\rm_sunshine_valley1</room>
         <room>rooms\rm_sunshine_valley2</room>
       </rooms>
@@ -1800,7 +1839,7 @@
       <room>rooms\rm_hidden_palace</room>
     </rooms>
   </rooms>
-  <constants number="67">
+  <constants number="68">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -1852,6 +1891,7 @@
     <constant name="STATE_RESPAWN">23</constant>
     <constant name="STATE_TUBE">24</constant>
     <constant name="STATE_SLIPPING">25</constant>
+    <constant name="STATE_AIRCORKSCREW">26</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>

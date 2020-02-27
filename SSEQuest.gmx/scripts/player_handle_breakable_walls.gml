@@ -43,4 +43,4 @@
                 pieces_dir = 1;
                 instance_destroy();
            }
-        }        
+        }  

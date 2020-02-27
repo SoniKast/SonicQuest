@@ -3,7 +3,7 @@
   <spriteName>spr_spring_diagonal_up_left</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>par_spring_diagonal</parentName>
   <maskName>spr_spring_diagonal_up_left_mask</maskName>

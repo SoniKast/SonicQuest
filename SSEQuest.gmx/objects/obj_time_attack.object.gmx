@@ -76,7 +76,19 @@ draw_sprite(spr_time_attack, menu, x, y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_menu);
+            <string>if(!instance_exists(obj_fade_to_value))
+{
+    {
+        with(instance_create(x, y, obj_fade_to_value))
+        {
+        value = rm_title;
+        }
+    }
+    with(obj_title_screen_logo)
+    {
+    title_menu_option = 1;
+    }
+}
 </string>
           </argument>
         </arguments>

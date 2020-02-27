@@ -530,25 +530,25 @@
             <string>/// Draw Results.
 
  // "Character" Got:
-    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+94+result_gfx_position[0], view_yview+73);
+    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+57+result_gfx_position[0], view_yview+63);
 
  // Through:
-    draw_sprite(spr_results_through, 0, view_xview+151+result_gfx_position[1], view_yview+93);
+    draw_sprite(spr_results_through, 0, view_xview+114+result_gfx_position[1], view_yview+83);
     
  // Act Letter:
-    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+276+result_gfx_position[1], view_yview+76);
+    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+236+result_gfx_position[1], view_yview+66);
     
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 0, view_xview+114+result_gfx_position[2], view_yview+124);
+    draw_sprite(spr_results_bonuses, 0, view_xview+77+result_gfx_position[2], view_yview+110);
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(view_xview+299+result_gfx_position[2], view_yview+126,''+ string(bonus_time),  0);
-    draw_number_zero(view_xview+299+result_gfx_position[3], view_yview+142,''+ string(bonus_rings), 0);
-    draw_number_zero(view_xview+299+result_gfx_position[4], view_yview+170,    string(bonus_total), 0);
+    draw_number_zero(view_xview+261+result_gfx_position[2], view_yview+112,''+ string(bonus_time),  0);
+    draw_number_zero(view_xview+261+result_gfx_position[3], view_yview+128,''+ string(bonus_rings), 0);
+    draw_number_zero(view_xview+261+result_gfx_position[4], view_yview+156,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
 </string>

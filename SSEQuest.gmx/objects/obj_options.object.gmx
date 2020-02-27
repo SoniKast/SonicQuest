@@ -427,7 +427,11 @@
                    option_ended = 1;
                    with(instance_create(0, 0, obj_fade_to_value))
                    {
-                        value = rm_menu;
+                        value = rm_title;
+                   }
+                   with(obj_title_screen_logo)
+                   {
+                    title_menu_option = 2;
                    }
                    save_global_create();
                 }
