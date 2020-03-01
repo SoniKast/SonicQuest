@@ -57,6 +57,10 @@
             <kind>1</kind>
             <string>/// Go to the next room.
     global.previous_room = room;
+    global.checkpoint_x = global.temp_restart_x;
+    global.checkpoint_y = global.temp_restart_y;
+    global.temp_restart_x = -1;
+    global.temp_restart_y = -1;
     room_goto(rm_hidden_palace);
 </string>
           </argument>

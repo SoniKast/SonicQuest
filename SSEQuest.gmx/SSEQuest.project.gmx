@@ -658,6 +658,8 @@
           <sprite>sprites\spr_metal_stand</sprite>
           <sprite>sprites\spr_metal_win</sprite>
           <sprite>sprites\spr_metal_dash_r</sprite>
+          <sprite>sprites\spr_fake_sign_post</sprite>
+          <sprite>sprites\spr_metal_sign_post</sprite>
         </sprites>
       </sprites>
       <sprites name="Tileset">
@@ -701,7 +703,6 @@
             <sprite>sprites\sprite433</sprite>
             <sprite>sprites\spr_ssz_launch</sprite>
             <sprite>sprites\spr_ssz_launch_mask</sprite>
-            <sprite>sprites\spr_fake_sign_post</sprite>
           </sprites>
           <sprite>sprites\spr_ssz_platform</sprite>
         </sprites>
@@ -732,7 +733,8 @@
             <sprite>sprites\spr_dove_bomber</sprite>
             <sprite>sprites\spr_scatterroach</sprite>
             <sprite>sprites\spr_scatterroach_fly</sprite>
-            <sprite>sprites\spr_technomeow</sprite>
+            <sprite>sprites\spr_technomeow_h</sprite>
+            <sprite>sprites\spr_technomeow_h_drift</sprite>
           </sprites>
         </sprites>
         <sprites name="PPZ">
@@ -1682,8 +1684,6 @@
               <object>objects\obj_waterfall_platform_despawn</object>
               <object>objects\obj_ssz_waterfall_platform</object>
             </objects>
-            <object>objects\obj_fake_sign_post</object>
-            <object>objects\obj_fake_results</object>
             <object>objects\obj_ssz_platform</object>
             <object>objects\obj_ssz_break_wall</object>
             <object>objects\obj_ssz_break_wall_knuckles</object>
@@ -1717,6 +1717,9 @@
         </objects>
         <objects name="Cutscenes">
           <object>objects\obj_metal_cutscene</object>
+          <object>objects\obj_metal_sign_post</object>
+          <object>objects\obj_fake_sign_post</object>
+          <object>objects\obj_fake_results</object>
         </objects>
       </objects>
       <objects name="Great Garden Zone">
@@ -1745,6 +1748,8 @@
         </objects>
         <objects name="Badniks">
           <object>objects\obj_ggz_chowhound</object>
+          <object>objects\obj_technomeow_ground</object>
+          <object>objects\par_smoothmov_badnick</object>
         </objects>
         <objects name="Boss">
           <objects name="Wheel Mobile">

@@ -67,7 +67,7 @@
     }
     
  // Exit when the results are on screen.
-    if(instance_exists(obj_results) &amp;&amp; zone_results == false)
+    if(instance_exists(obj_results) or instance_exists(obj_fake_results) &amp;&amp; zone_results == false)
     {
        zone_results = true;    
        audio_stop_all();
@@ -289,7 +289,7 @@
                 }
                 break;
            }    
-           case rm_sunshine_valley2:
+           case rm_radiant_valley2:
            {
                 zone_bgm = music_sunshine_valley2;
                 if(audio_is_playing(zone_bgm) == false)

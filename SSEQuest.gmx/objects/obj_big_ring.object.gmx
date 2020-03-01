@@ -28,7 +28,10 @@
             <string>///Variables
     image_speed = 0.15;          // Image speed, for animation :)
     activated = 0;
-    scr_loadcollect();
+    if(global.save_selected != 0)
+    {           
+    load_collected(global.save_selected);
+    }
 </string>
           </argument>
         </arguments>
@@ -160,7 +163,10 @@ if(other.player_type == IS_PLAYER &amp;&amp; activated == 0){
             <kind>1</kind>
             <string>if sprite_index==spr_big_ring_disappear
 {
-scr_collected()
+    if(global.save_selected != 0)
+    {    
+    save_collected(global.save_selected);
+    }
 visible = false;
 }
 </string>
@@ -187,7 +193,7 @@ visible = false;
             <kind>1</kind>
             <string>///Draw Ring
 // Otherwise, draw normally
-//draw_sprite ( spr_big_ring, floor(image_index), x, y );
+//draw_sprite (spr_big_ring, floor(image_index), x, y );
 draw_sprite(sprite_index, floor(image_index), floor(x), floor(y));
 </string>
           </argument>

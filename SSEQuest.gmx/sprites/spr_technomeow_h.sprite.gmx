@@ -2,10 +2,10 @@
 <sprite>
   <type>0</type>
   <xorig>18</xorig>
-  <yorigin>10</yorigin>
-  <colkind>1</colkind>
+  <yorigin>20</yorigin>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>-1</sepmasks>
+  <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>35</bbox_right>
@@ -20,11 +20,8 @@
   <width>36</width>
   <height>20</height>
   <frames>
-    <frame index="0">images\spr_technomeow_0.png</frame>
-    <frame index="1">images\spr_technomeow_1.png</frame>
-    <frame index="2">images\spr_technomeow_2.png</frame>
-    <frame index="3">images\spr_technomeow_3.png</frame>
-    <frame index="4">images\spr_technomeow_4.png</frame>
-    <frame index="5">images\spr_technomeow_5.png</frame>
+    <frame index="0">images\spr_technomeow_h_0.png</frame>
+    <frame index="1">images\spr_technomeow_h_1.png</frame>
+    <frame index="2">images\spr_technomeow_h_2.png</frame>
   </frames>
 </sprite>

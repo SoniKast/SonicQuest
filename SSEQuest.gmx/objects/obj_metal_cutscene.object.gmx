@@ -98,7 +98,7 @@ global.cutscene = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0, 0, obj_fade_next);
+            <string>room_goto_next();
 </string>
           </argument>
         </arguments>
@@ -173,7 +173,7 @@ global.cutscene = true;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>100</string>
+            <string>30</string>
           </argument>
           <argument>
             <kind>4</kind>
