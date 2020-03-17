@@ -151,6 +151,11 @@
     
  // Animation / Sprite.
     animation_init();
+    /// Init.
+    event_inherited();
+    type = GRAB_TAILS;
+    bbox = 14;
+    distance = 0
     
  // Done initializing.
     initialized = true;
@@ -1130,7 +1135,9 @@
                 player_state_respawn(1);
                 death_timer = -5;    
              }         
-          }
+          }  
+
+         
     }
     
  // Input alarm.
@@ -2083,7 +2090,7 @@
  // Flying:
     if(player_index == CHAR_TAILS)
     {
-       player_state_fly();
+       player_state_fly_carry();
     }
     
  // Knuckles only (Glide, Climb and Slide)

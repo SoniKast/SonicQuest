@@ -64,7 +64,6 @@
     global.temp_restart_x = -1;
     global.temp_restart_y = -1;
     global.player_rings = global.BonusRings;
-    global.BonusRings = 0;
 </string>
           </argument>
         </arguments>

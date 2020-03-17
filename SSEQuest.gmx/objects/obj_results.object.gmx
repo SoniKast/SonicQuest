@@ -131,6 +131,8 @@
     }
     else
     {
+    if(global.time_attack = false)
+    {
        if(instance_exists(obj_fade_next) == false)
        {
           // Create fade.
@@ -142,7 +144,18 @@
                save_create(global.save_selected);
              }          
        }
-    
+    }
+    else if(global.time_attack = true)
+        {   
+            if(instance_exists(obj_fade_to_value) == false)
+            {
+            // Create fade.
+                with(instance_create(0, 0, obj_fade_to_value))
+                {
+                    value = rm_time_attack;
+                }
+            }
+        }
     }
 
 </string>

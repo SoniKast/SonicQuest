@@ -67,7 +67,7 @@ if (ActionTimer == 800)
 Active = true;
 }
 
-    if(Active == true)
+    /*if(Active == true)
     {
         if(obj_slotpanel01.Panel = 1 &amp;&amp; obj_slotpanel02.Panel = 1 &amp;&amp; obj_slotpanel03.Panel = 1)
         {

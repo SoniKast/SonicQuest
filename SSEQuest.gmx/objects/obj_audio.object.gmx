@@ -67,7 +67,7 @@
     }
     
  // Exit when the results are on screen.
-    if(instance_exists(obj_results) or instance_exists(obj_fake_results) &amp;&amp; zone_results == false)
+    if(instance_exists(obj_results) &amp;&amp; zone_results == false)
     {
        zone_results = true;    
        audio_stop_all();
@@ -80,6 +80,21 @@
     {
        exit;
     }
+    
+    if(instance_exists(obj_fake_results) &amp;&amp; zone_results == false)
+    {
+       zone_results = true;    
+       audio_stop_all();
+       global.bgm_volume = zone_my_bgm_volume;
+       global.sfx_volume = zone_my_sfx_volume;
+       aud_play_sound(jingle_scoring, global.bgm_volume, 1, 0, 0);       
+       exit;
+    }
+    if(zone_results == true)
+    {
+       exit;
+    }
+    
 
  // Lower the music volume if the life jingle is playing.
     if(instance_exists(obj_player))
@@ -253,7 +268,7 @@
                 aud_play_sound(jingle_continue, global.bgm_volume, 1, 0, 0);
                 break;
            }     
-           case rm_new_data_select:
+           case rm_data_select:
            {
                 zone_bgm = music_dataselect;
                 if(audio_is_playing(zone_bgm) == false)
@@ -262,7 +277,7 @@
                 }
                 break;
            }   
-           case rm_level_select:
+           case rm_time_attack:
            {
                 zone_bgm = music_levelselect;
                 if(audio_is_playing(zone_bgm) == false)

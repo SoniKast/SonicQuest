@@ -1932,7 +1932,7 @@
  // Sonic only - Dropdash:
     if(player_index == CHAR_SONIC &amp;&amp; allow_dropdash == true)
     {
-       player_state_dropdash();
+       player_state_insta_shield();
     }
     
  // Tails only - Flying:
@@ -2307,6 +2307,49 @@
             <kind>1</kind>
             <string>/// Air corkscrew
 if state==STATE_AIRCORKSCREW &amp;&amp; ground==true {state=STATE_DEFAULT}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Tails Help.
+if instance_exists(obj_ai){
+if state = STATE_GRAB &amp;&amp; (obj_ai.state == STATE_FLY || obj_ai.state == STATE_FLYDROP){
+if input_right{
+x += 1.5
+animation_direction = 1
+}
+if input_left{
+x -= 1.5
+animation_direction = -1
+}
+if input_left &amp;&amp; input_right{
+x += 0
+}
+ground = false
+obj_ai.x = x
+y  = obj_ai.y
+obj_ai.animation_direction = animation_direction
+}
+if state = STATE_GRAB &amp;&amp; ground{
+state = STATE_DEFAULT
+}
+}
 </string>
           </argument>
         </arguments>

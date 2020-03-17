@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>1</bbox_left>
-  <bbox_right>62</bbox_right>
-  <bbox_top>1</bbox_top>
-  <bbox_bottom>62</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>63</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>63</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -28,9 +28,5 @@
     <frame index="5">images\spr_big_ring_5.png</frame>
     <frame index="6">images\spr_big_ring_6.png</frame>
     <frame index="7">images\spr_big_ring_7.png</frame>
-    <frame index="8">images\spr_big_ring_8.png</frame>
-    <frame index="9">images\spr_big_ring_9.png</frame>
-    <frame index="10">images\spr_big_ring_10.png</frame>
-    <frame index="11">images\spr_big_ring_11.png</frame>
   </frames>
 </sprite>

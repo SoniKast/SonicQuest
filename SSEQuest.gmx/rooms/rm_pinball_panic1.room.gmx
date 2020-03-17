@@ -84,9 +84,6 @@
     <instance objName="obj_collision_tile_02" x="384" y="1184" name="inst_718D667F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="ts_pinball_panic" x="0" y="1152" w="128" h="128" xo="0" yo="256" id="10018796" name="inst_9FA31EC2" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="1152" w="128" h="128" xo="0" yo="256" id="10018798" name="inst_2DA375BF" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="1152" w="128" h="128" xo="0" yo="256" id="10018799" name="inst_9A96C66D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_pinball_panic" x="96" y="1120" w="32" h="32" xo="64" yo="160" id="10018813" name="inst_539967EC" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_pinball_panic" x="0" y="1088" w="32" h="32" xo="64" yo="160" id="10018814" name="inst_82724218" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_pinball_panic" x="32" y="1120" w="32" h="32" xo="64" yo="160" id="10018815" name="inst_821AC7DD" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

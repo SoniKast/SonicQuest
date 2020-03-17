@@ -122,29 +122,6 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Up and Down and all Around!        
-    ang_radius +=3
-    y = ystart+lengthdir_y(6,ang_radius)
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Thing
 // --------------------------------------------------------------
     switch(SonicState) {
@@ -153,7 +130,7 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
             else            SonicState = 1;
             break;
         case 1:
-            if (SonicYOffset &lt; 93) SonicYOffset+=3;
+            if (SonicYOffset &lt; 110) SonicYOffset+=3;
             else                   SonicState = 2;
             break;
         case 2:
@@ -285,6 +262,29 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Up and Down and all Around!        
+    ang_radius +=3
+    y = ystart+lengthdir_y(6,ang_radius)
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -304,21 +304,21 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
           <argument>
             <kind>1</kind>
             <string>    // --- Draw Title ----------------------------------------
-    draw_sprite(sprPresentationTitle, 0, global.screen_width/2, 100);
+    draw_sprite(sprPresentationTitle, 0, 160, 115);
     
     // --- Draw Sonic ----------------------------------------
     switch(SonicState) {
         case 1:
-            draw_sprite_part(sprPresentationSonic,  floor(SonicFrame), 0, 0, 85, SonicYOffset, global.screen_width/2, 112-SonicYOffset);
+            draw_sprite(sprPresentationSonic,  floor(SonicFrame), 77, 118-SonicYOffset);
             break;
         case 2:
-            draw_sprite(sprPresentationSonic, floor(SonicFrame), global.screen_width/2, 112-SonicYOffset);
+            draw_sprite(sprPresentationSonic, floor(SonicFrame), 77, 118-SonicYOffset);
             break;
     }
     
     // --- Draw Subtitle / Title band ------------------------
-    draw_sprite(sprPresentationTitleBand, 0, global.screen_width/2, 135);
-    draw_sprite(sprPresentationSubtitle, 0, global.screen_width/2, 180);
+    draw_sprite(sprPresentationTitleBand, 0, 160, 150);
+    draw_sprite(sprPresentationSubtitle, 0, 160, 185);
        
     // Draw menu.
     draw_set_color(c_yellow);

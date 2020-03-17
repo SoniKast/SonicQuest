@@ -218,6 +218,7 @@
         <sprites name="Palette">
           <sprite>sprites\pal_sonic</sprite>
         </sprites>
+        <sprite>sprites\spr_insta_shield</sprite>
       </sprites>
       <sprites name="NPCs">
         <sprites name="Collectible">
@@ -383,6 +384,7 @@
           <sprite>sprites\spr_time_seperator</sprite>
           <sprite>sprites\spr_hud_new</sprite>
           <sprite>sprites\spr_hud_lives</sprite>
+          <sprite>sprites\spr_specialstage_hud</sprite>
           <sprite>sprites\spr_continues</sprite>
           <sprite>sprites\spr_game_over</sprite>
           <sprite>sprites\spr_blue_ring</sprite>
@@ -399,6 +401,7 @@
           <sprite>sprites\font_hud_numbers</sprite>
           <sprite>sprites\font_main</sprite>
           <sprite>sprites\font_lives</sprite>
+          <sprite>sprites\spr_ss_text</sprite>
         </sprites>
       </sprites>
       <sprites name="Sensors">
@@ -487,6 +490,17 @@
       <sprites name="Special Stage">
         <sprite>sprites\spr_big_ring</sprite>
         <sprite>sprites\spr_big_ring_disappear</sprite>
+        <sprite>sprites\spr_bomb</sprite>
+        <sprite>sprites\spr_chaos_emerald1</sprite>
+        <sprite>sprites\spr_chaos_emerald2</sprite>
+        <sprite>sprites\spr_chaos_emerald3</sprite>
+        <sprite>sprites\spr_chaos_emerald4</sprite>
+        <sprite>sprites\spr_chaos_emerald5</sprite>
+        <sprite>sprites\spr_chaos_emerald6</sprite>
+        <sprite>sprites\spr_chaos_emerald7</sprite>
+        <sprite>sprites\spr_line</sprite>
+        <sprite>sprites\spr_sonic_specialstage</sprite>
+        <sprite>sprites\spr_nice</sprite>
       </sprites>
       <sprites name="Bonus Stage">
         <sprite>sprites\spr_slot_machine</sprite>
@@ -517,6 +531,7 @@
           <sprite>sprites\spr_collision_mask_tile_23</sprite>
           <sprite>sprites\spr_collision_mask_tile_20</sprite>
           <sprite>sprites\spr_collision_mask_tile_21</sprite>
+          <sprite>sprites\spr_dot</sprite>
         </sprites>
         <sprites name="Terrain">
           <sprite>sprites\spr_collision_tile_01</sprite>
@@ -742,6 +757,16 @@
             <sprite>sprites\spr_ppz_bumper</sprite>
             <sprite>sprites\spr_ppz_bumper_hit</sprite>
           </sprites>
+          <sprites name="Badniks">
+            <sprite>sprites\spr_crawl_ace</sprite>
+            <sprite>sprites\spr_crawl_ace_break</sprite>
+            <sprite>sprites\spr_duonaut</sprite>
+            <sprite>sprites\spr_jack_stomper</sprite>
+            <sprites name="Projectiles">
+              <sprite>sprites\spr_diamond_projectile</sprite>
+              <sprite>sprites\spr_ace_projectile</sprite>
+            </sprites>
+          </sprites>
         </sprites>
         <sprites name="HPZ">
           <sprites name="Decorations">
@@ -763,6 +788,7 @@
     <sprites name="Menus / Continue">
       <sprites name="Title Screen">
         <sprite>sprites\sprPresentationSonic</sprite>
+        <sprite>sprites\sprPresentationSonicOG</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
         <sprite>sprites\sprPresentationTitle</sprite>
         <sprite>sprites\sprPresentationSubtitle</sprite>
@@ -858,6 +884,7 @@
       </backgrounds>
       <backgrounds name="Menu">
         <background>background\bg_menu</background>
+        <background>background\bg_back</background>
         <background>background\bg_sonic_and_tails</background>
         <background>background\bg_header</background>
       </backgrounds>
@@ -887,8 +914,13 @@
         <backgrounds name="Pinball Panic">
           <background>background\ts_pinball_panic</background>
         </backgrounds>
-        <backgrounds name="Jungle Havoc">
+        <backgrounds name="Forest Frenzy">
+          <background>background\ts_forest_frenzy</background>
+          <background>background\ts_ffz_tree</background>
           <background>background\ts_jungle_havoc</background>
+          <background>background\ts_ffz_plants</background>
+          <background>background\ts_ffz_plants2</background>
+          <background>background\ts_ffz_plants3</background>
         </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\ts_hpz</background>
@@ -963,6 +995,16 @@
           <background>background\bg_bonus1_8</background>
         </backgrounds>
       </backgrounds>
+      <backgrounds name="Special Stage">
+        <backgrounds name="SS1">
+          <background>background\bg_ss1</background>
+          <background>background\bg_ss1_floor</background>
+        </backgrounds>
+        <backgrounds name="SS2">
+          <background>background\bg_ss2</background>
+          <background>background\bg_ss2_floor</background>
+        </backgrounds>
+      </backgrounds>
     </backgrounds>
   </backgrounds>
   <paths name="paths"/>
@@ -996,9 +1038,11 @@
         <script>scripts\player_state_tube.gml</script>
         <scripts name="Sonic only">
           <script>scripts\player_state_dropdash.gml</script>
+          <script>scripts\player_state_insta_shield.gml</script>
         </scripts>
         <scripts name="Tails only">
           <script>scripts\player_state_fly.gml</script>
+          <script>scripts\player_state_fly_carry.gml</script>
         </scripts>
         <scripts name="Knuckles only">
           <script>scripts\player_state_glide.gml</script>
@@ -1187,6 +1231,7 @@
           <object>objects\obj_player_fire_shield</object>
           <object>objects\obj_player_bubble_shield</object>
           <object>objects\obj_player_electricity_shield</object>
+          <object>objects\obj_insta_shield</object>
         </objects>
       </objects>
       <objects name="NPCs">
@@ -1578,6 +1623,7 @@
       </objects>
       <objects name="Menus / Continue">
         <objects name="Title Screen">
+          <object>objects\obj_title_screen_logo</object>
           <object>objects\obj_title_screen</object>
         </objects>
         <objects name="Options">
@@ -1615,9 +1661,39 @@
         </objects>
       </objects>
       <objects name="Special Stage">
+        <object>objects\obj_special_results</object>
+        <object>objects\obj_camera_new</object>
+        <object>objects\par_ss_player</object>
+        <object>objects\obj_ss_sonic</object>
+        <object>objects\obj_big_ring</object>
+        <object>objects\obj_ring_new</object>
         <object>objects\obj_empty</object>
-        <objects name="HPZ Rings">
-          <object>objects\obj_big_ring</object>
+        <object>objects\obj_bomb</object>
+        <object>objects\obj_hud</object>
+        <objects name="SS1">
+          <object>objects\obj_ce_1</object>
+          <object>objects\obj_challenge1</object>
+          <object>objects\obj_challenge2</object>
+          <object>objects\obj_challenge3</object>
+          <object>objects\obj_nice</object>
+        </objects>
+        <objects name="SS2">
+          <object>objects\obj_ce_2</object>
+        </objects>
+        <objects name="SS3">
+          <object>objects\obj_ce_3</object>
+        </objects>
+        <objects name="SS4">
+          <object>objects\obj_ce_4</object>
+        </objects>
+        <objects name="SS5">
+          <object>objects\obj_ce_5</object>
+        </objects>
+        <objects name="SS6">
+          <object>objects\obj_ce_6</object>
+        </objects>
+        <objects name="SS7">
+          <object>objects\obj_ce_7</object>
         </objects>
       </objects>
       <objects name="Bonus Stage">
@@ -1648,9 +1724,6 @@
           <object>objects\objBonusZoneParallax</object>
           <object>objects\obj_bonus3_bumper</object>
         </objects>
-      </objects>
-      <objects name="Title Screen">
-        <object>objects\obj_title_screen_logo</object>
       </objects>
       <object>objects\obj_screenshotter</object>
     </objects>
@@ -1759,9 +1832,18 @@
           </objects>
         </objects>
       </objects>
-      <objects name="Jungle Havoc Zone">
+      <objects name="Pinball Panic Zone">
+        <objects name="Badniks">
+          <object>objects\obj_duonaut</object>
+          <objects name="Projectiles">
+            <object>objects\obj_diamond_projectile</object>
+            <object>objects\obj_ace_projectile</object>
+          </objects>
+        </objects>
+      </objects>
+      <objects name="Forest Frenzy Zone">
         <objects name="Parallax">
-          <object>objects\obj_jhz_parallax</object>
+          <object>objects\obj_ffz_parallax</object>
         </objects>
       </objects>
       <objects name="Hidden Palace Zone">
@@ -1814,8 +1896,6 @@
       <rooms name="Sunshine Valley">
         <room>rooms\rm_radiant_valley1</room>
         <room>rooms\rm_radiant_valley2</room>
-        <room>rooms\rm_sunshine_valley1</room>
-        <room>rooms\rm_sunshine_valley2</room>
       </rooms>
       <rooms name="Great Garden">
         <room>rooms\rm_great_garden1</room>
@@ -1823,6 +1903,9 @@
       </rooms>
       <rooms name="Pinball Panic">
         <room>rooms\rm_pinball_panic1</room>
+      </rooms>
+      <rooms name="Forest Frenzy">
+        <room>rooms\rm_forest_frenzy1</room>
       </rooms>
     </rooms>
     <rooms name="Extra">
@@ -1835,16 +1918,21 @@
         <room>rooms\rm_template</room>
         <room>rooms\rm_level_select</room>
         <room>rooms\rm_new_data_select</room>
+        <room>rooms\rm_sunshine_valley1</room>
+        <room>rooms\rm_sunshine_valley2</room>
       </rooms>
       <rooms name="Bonus Stage">
         <room>rooms\rm_bonus1</room>
         <room>rooms\rm_bonus3</room>
       </rooms>
+      <rooms name="Special Stage">
+        <room>rooms\rm_special_stage1</room>
+      </rooms>
       <room>rooms\rm_options</room>
       <room>rooms\rm_hidden_palace</room>
     </rooms>
   </rooms>
-  <constants number="68">
+  <constants number="72">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -1902,6 +1990,7 @@
     <constant name="GRAB_STATIC">0</constant>
     <constant name="GRAB_POLE">1</constant>
     <constant name="GRAB_DISTANCE">2</constant>
+    <constant name="GRAB_TAILS">3</constant>
     <constant name="SHIELD_FIRE">1</constant>
     <constant name="SHIELD_BUBBLE">2</constant>
     <constant name="SHIELD_ELECTRICITY">3</constant>
@@ -1913,6 +2002,9 @@
     <constant name="IS_CPU">2</constant>
     <constant name="pal_cycle_default">1</constant>
     <constant name="pal_cycle_smooth">2</constant>
+    <constant name="s_left">1</constant>
+    <constant name="s_center">2</constant>
+    <constant name="s_right">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

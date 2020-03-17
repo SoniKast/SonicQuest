@@ -104,7 +104,7 @@
     {
        sprite                 = spr_tails_roll;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 3;
        animation_loop         = 0;
        animation_speed        = 0.2;
        animation_repeat       = 1; 
@@ -118,7 +118,7 @@
     {
        sprite                 = spr_tails_spindash;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 5;
        animation_loop         = 0;
        animation_speed        = 0.5;
        animation_repeat       = 1; 
@@ -272,7 +272,7 @@
     {
        sprite                 = spr_tails_swim;
        animation_start        = 0;
-       animation_end          = 3;
+       animation_end          = 4;
        animation_loop         = 0;
        animation_speed        = 0.25;
        animation_repeat       = 1; 

@@ -203,7 +203,7 @@ canmove = 1;
 if menu=4{
 with(instance_create(x, y, obj_fade_to_value))
 {
-    value = rm_jungle_havoc1
+    value = rm_forest_frenzy1
 }
 global.time_attack = true;
 canselect = 0;

@@ -54,8 +54,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0); 
+            <string>if(!audio_is_playing(general_ss_enter))
+{
+    aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0)
+}    
+if(!instance_exists(obj_fade_hpz))
+{
     instance_create(par_player.x, par_player.y, obj_fade_hpz);   
+}
 
 </string>
           </argument>

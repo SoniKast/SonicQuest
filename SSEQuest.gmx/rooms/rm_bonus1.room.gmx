@@ -60,9 +60,6 @@
   <instances>
     <instance objName="objBonusZoneParallax" x="48" y="16" name="inst_05E83E7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_casino_slot" x="448" y="304" name="inst_8243106F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slotpanel02" x="448" y="258" name="inst_A461BF57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slotpanel03" x="480" y="258" name="inst_E1ED6A84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slotpanel01" x="416" y="258" name="inst_F47046FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bonus_tri_bumper1R" x="768" y="368" name="inst_C2B5EA7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bonus_tri_bumper1L" x="96" y="368" name="inst_F089B06B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bonus_tri_bumper2L" x="286" y="753" name="inst_8F397717" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
