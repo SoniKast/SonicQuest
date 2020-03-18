@@ -756,6 +756,8 @@
           <sprites name="Gimmicks">
             <sprite>sprites\spr_ppz_bumper</sprite>
             <sprite>sprites\spr_ppz_bumper_hit</sprite>
+            <sprite>sprites\spr_ppz_flipping_card</sprite>
+            <sprite>sprites\spr_ppz_flipping_card_mask</sprite>
           </sprites>
           <sprites name="Badniks">
             <sprite>sprites\spr_crawl_ace</sprite>
@@ -997,12 +999,27 @@
       </backgrounds>
       <backgrounds name="Special Stage">
         <backgrounds name="SS1">
-          <background>background\bg_ss1</background>
           <background>background\bg_ss1_floor</background>
         </backgrounds>
         <backgrounds name="SS2">
           <background>background\bg_ss2</background>
           <background>background\bg_ss2_floor</background>
+        </backgrounds>
+        <backgrounds name="SS3">
+          <background>background\bg_ssz3_floor</background>
+        </backgrounds>
+        <backgrounds name="SS4">
+          <background>background\bg_ssz4_floor</background>
+        </backgrounds>
+        <backgrounds name="SS5">
+          <background>background\bg_ssz5_floor</background>
+        </backgrounds>
+        <backgrounds name="SS6">
+          <background>background\bg_ssz6_floor</background>
+        </backgrounds>
+        <backgrounds name="SS7">
+          <background>background\bg_ssz7_floor</background>
+          <background>background\bg_ss7</background>
         </backgrounds>
       </backgrounds>
     </backgrounds>
@@ -1818,6 +1835,7 @@
         <objects name="Decorations">
           <object>objects\obj_ggz_flower1</object>
           <object>objects\obj_ggz_flower2</object>
+          <object>objects\obj_ggz_fountain</object>
         </objects>
         <objects name="Badniks">
           <object>objects\obj_ggz_chowhound</object>
@@ -1833,6 +1851,9 @@
         </objects>
       </objects>
       <objects name="Pinball Panic Zone">
+        <objects name="Gimmicks">
+          <object>objects\obj_ppz_flipping_card</object>
+        </objects>
         <objects name="Badniks">
           <object>objects\obj_duonaut</object>
           <objects name="Projectiles">

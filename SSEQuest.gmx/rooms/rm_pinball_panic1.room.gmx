@@ -61,8 +61,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_ai" x="160" y="1264" name="inst_78B68C04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="144" y="1264" name="inst_EF3F3B4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ai" x="96" y="1264" name="inst_78B68C04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="80" y="1264" name="inst_EF3F3B4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_water" x="0" y="32" name="inst_4EF742E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_controller" x="16" y="0" name="inst_5FAD4A2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="0" y="1280" name="inst_C6D7104F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -73,84 +73,209 @@
     <instance objName="obj_collision_tile_02" x="320" y="1280" name="inst_B0973922" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="384" y="1280" name="inst_5725A7CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_parallax" x="48" y="16" name="inst_4BE15D09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="0" y="1120" name="inst_23CBE77A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="64" y="1120" name="inst_37A85A9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="128" y="1120" name="inst_E0D9EDFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="192" y="1120" name="inst_3E2C2E16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="256" y="1120" name="inst_13C490B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="320" y="1120" name="inst_24AA170C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="384" y="1120" name="inst_BF059DE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="384" y="1152" name="inst_F2C54828" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="384" y="1184" name="inst_718D667F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ppz_flipping_card" x="1216" y="2304" name="inst_C09E0D37" locked="0" code="" scaleX="1.14285719394684" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ppz_flipping_card" x="1280" y="2272" name="inst_ACBE74E5" locked="0" code="" scaleX="1.14285719394684" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bonus_flipper_r" x="480" y="1292" name="inst_05E29850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="0" y="2016" name="inst_9DB2BBFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="64" y="2016" name="inst_E30D205F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="128" y="2016" name="inst_0B20A4D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="192" y="2016" name="inst_D433B7ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="256" y="1888" name="inst_DDE70997" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="320" y="1824" name="inst_D5AE65D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="384" y="1760" name="inst_0D3FC336" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="0" y="2176" name="inst_2DCA0A66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="64" y="2176" name="inst_EC8057FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="128" y="2176" name="inst_D0AAC353" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="192" y="2176" name="inst_3A9D5CE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="256" y="2176" name="inst_F8397553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="320" y="2176" name="inst_89DA4893" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="384" y="2176" name="inst_E4F65B95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="576" y="2560" name="inst_7756D22C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="640" y="2560" name="inst_FE0071C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="704" y="2560" name="inst_46A81FF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="768" y="2560" name="inst_CEF70852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="448" y="2560" name="inst_9A48FE09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="512" y="2560" name="inst_4A6CAC9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="832" y="2560" name="inst_2202CBC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="896" y="2304" name="inst_6B11F794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="960" y="2304" name="inst_3DB81690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1024" y="2304" name="inst_44C91BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1088" y="2304" name="inst_9B4AB0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1152" y="2304" name="inst_2B91108B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1216" y="2624" name="inst_62CCC00A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1280" y="2624" name="inst_E9415B8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="896" y="2144" name="inst_8A7C9AC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="960" y="2144" name="inst_208ED276" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1024" y="2144" name="inst_3AB68608" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1088" y="2144" name="inst_EAC25D4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1152" y="2144" name="inst_2AAB5D86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="0" y="1120" name="inst_D686880C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="64" y="1120" name="inst_25C3AE04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="128" y="1120" name="inst_87A4D0CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="192" y="1120" name="inst_E3B9C1F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="256" y="1120" name="inst_0A92F69B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2208" name="inst_612E10EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2272" name="inst_62B17D28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2336" name="inst_A9430DCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2400" name="inst_764602E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2464" name="inst_AE57865E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="2528" name="inst_CCC0C0E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2336" name="inst_DF4271BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2400" name="inst_4A30379E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2464" name="inst_82569938" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2528" name="inst_5D0BC10B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2336" name="inst_FF4E9097" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2400" name="inst_662D81EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2464" name="inst_6E100B97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2528" name="inst_EAE9BF44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2592" name="inst_37176B7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_30" x="448" y="2432" name="inst_9C94E9A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_30" x="1216" y="2496" name="inst_5CDE91CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_31" x="768" y="2432" name="inst_59AD236B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="224" y="1952" name="inst_061BE264" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="224" y="1888" name="inst_CC265D4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="288" y="1824" name="inst_E7875462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="352" y="1760" name="inst_9EF29888" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1696" name="inst_B78B89C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1312" name="inst_6E564D21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1376" name="inst_1352D1D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1440" name="inst_0F1A1DB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1504" name="inst_8D00C923" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1568" name="inst_C1D99F17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="416" y="1632" name="inst_EEDF0E03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="1984" name="inst_C9CCF116" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2048" name="inst_6678AEB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="896" y="2112" name="inst_0902F526" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="1984" name="inst_CBE55698" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2048" name="inst_60936D66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1184" y="2112" name="inst_480D818A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="ts_pinball_panic" x="96" y="1120" w="32" h="32" xo="64" yo="160" id="10018813" name="inst_539967EC" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="1088" w="32" h="32" xo="64" yo="160" id="10018814" name="inst_82724218" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="32" y="1120" w="32" h="32" xo="64" yo="160" id="10018815" name="inst_821AC7DD" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="1088" w="32" h="32" xo="64" yo="160" id="10018816" name="inst_7AC6895E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="1088" w="32" h="32" xo="64" yo="160" id="10018817" name="inst_0289B966" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="160" y="1120" w="32" h="32" xo="64" yo="160" id="10018818" name="inst_525A42CB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="1088" w="32" h="32" xo="64" yo="160" id="10018819" name="inst_D9122F7B" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="224" y="1120" w="32" h="32" xo="64" yo="160" id="10018820" name="inst_9B905B28" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="1088" w="32" h="32" xo="64" yo="160" id="10018821" name="inst_376BEFB9" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="288" y="1120" w="32" h="32" xo="64" yo="160" id="10018822" name="inst_4E2B9986" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="1088" w="32" h="32" xo="64" yo="160" id="10018823" name="inst_2CB5284B" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="352" y="1120" w="32" h="32" xo="64" yo="160" id="10018824" name="inst_955AFB70" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1088" w="32" h="32" xo="64" yo="160" id="10018825" name="inst_983DEAF8" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="416" y="1120" w="32" h="32" xo="64" yo="160" id="10018826" name="inst_9BEC658E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1152" w="32" h="32" xo="64" yo="160" id="10018827" name="inst_6994A9DF" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="416" y="1184" w="32" h="32" xo="64" yo="160" id="10018828" name="inst_FDB94354" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="32" y="1088" w="32" h="32" xo="64" yo="384" id="10018829" name="inst_AD4614D3" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="1120" w="32" h="32" xo="64" yo="384" id="10018830" name="inst_1D466ACD" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="1120" w="32" h="32" xo="64" yo="384" id="10018831" name="inst_B966EA8D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="96" y="1088" w="32" h="32" xo="64" yo="384" id="10018832" name="inst_6665221F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="1120" w="32" h="32" xo="64" yo="384" id="10018833" name="inst_6C545A03" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="160" y="1088" w="32" h="32" xo="64" yo="384" id="10018834" name="inst_70639DC5" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="1120" w="32" h="32" xo="64" yo="384" id="10018835" name="inst_760C8DFB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="224" y="1088" w="32" h="32" xo="64" yo="384" id="10018836" name="inst_66171B56" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="1120" w="32" h="32" xo="64" yo="384" id="10018837" name="inst_6BA8DEFB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="288" y="1088" w="32" h="32" xo="64" yo="384" id="10018838" name="inst_447796B7" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="1120" w="32" h="32" xo="64" yo="384" id="10018839" name="inst_F7AF437A" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="352" y="1088" w="32" h="32" xo="64" yo="384" id="10018840" name="inst_337D962D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="416" y="1088" w="32" h="32" xo="64" yo="384" id="10018841" name="inst_F8EB787B" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1120" w="32" h="32" xo="64" yo="384" id="10018842" name="inst_BBF30BEB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="416" y="1152" w="32" h="32" xo="64" yo="384" id="10018843" name="inst_FCEA98E9" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1184" w="32" h="32" xo="64" yo="384" id="10018844" name="inst_B8EB2387" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="1024" w="64" h="64" xo="64" yo="96" id="10018845" name="inst_998EBD39" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="1024" w="64" h="64" xo="64" yo="96" id="10018846" name="inst_FC9DC156" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="1024" w="64" h="64" xo="64" yo="96" id="10018847" name="inst_EA3D5464" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="1024" w="64" h="64" xo="64" yo="96" id="10018848" name="inst_CF39D511" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="1024" w="64" h="64" xo="64" yo="96" id="10018849" name="inst_F8A5AA20" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="1024" w="64" h="64" xo="64" yo="96" id="10018850" name="inst_F7927EFF" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1024" w="64" h="64" xo="64" yo="96" id="10018851" name="inst_48BFF3E8" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="960" w="64" h="64" xo="64" yo="96" id="10018853" name="inst_46D70500" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="960" w="64" h="64" xo="64" yo="96" id="10018854" name="inst_AA7E2F72" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="960" w="64" h="64" xo="64" yo="96" id="10018855" name="inst_7CF05F51" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="960" w="64" h="64" xo="64" yo="96" id="10018856" name="inst_E4EC6A6D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="960" w="64" h="64" xo="64" yo="96" id="10018857" name="inst_FAD1A38A" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="960" w="64" h="64" xo="64" yo="96" id="10018858" name="inst_1FE7B997" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="960" w="64" h="64" xo="64" yo="96" id="10018859" name="inst_C83BFEB6" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="768" w="64" h="192" xo="64" yo="32" id="10018861" name="inst_FAC98D14" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="768" w="64" h="192" xo="64" yo="32" id="10018862" name="inst_CEE754D2" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="768" w="64" h="192" xo="64" yo="32" id="10018863" name="inst_3788FCEC" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="768" w="64" h="192" xo="64" yo="32" id="10018864" name="inst_C4769E22" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="768" w="64" h="192" xo="64" yo="32" id="10018865" name="inst_3E7AA22E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="768" w="64" h="192" xo="64" yo="32" id="10018866" name="inst_B0D6FBF5" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="768" w="64" h="192" xo="64" yo="32" id="10018867" name="inst_D3CC3C3E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="576" w="64" h="192" xo="64" yo="32" id="10018868" name="inst_94BD88E8" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="576" w="64" h="192" xo="64" yo="32" id="10018869" name="inst_212A8E7F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="576" w="64" h="192" xo="64" yo="32" id="10018870" name="inst_F38A41E5" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="576" w="64" h="192" xo="64" yo="32" id="10018871" name="inst_8FB7EF42" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="576" w="64" h="192" xo="64" yo="32" id="10018872" name="inst_B1BDA8CB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="576" w="64" h="192" xo="64" yo="32" id="10018873" name="inst_9F2E7D46" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="576" w="64" h="192" xo="64" yo="32" id="10018874" name="inst_87406D90" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="0" y="1280" w="64" h="96" xo="64" yo="0" id="10018788" name="inst_3B06A8F0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="64" y="1280" w="64" h="96" xo="64" yo="0" id="10018789" name="inst_CDF0CC1A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="128" y="1280" w="64" h="96" xo="64" yo="0" id="10018790" name="inst_33924DC8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="192" y="1280" w="64" h="96" xo="64" yo="0" id="10018791" name="inst_ADF2E189" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="256" y="1280" w="64" h="96" xo="64" yo="0" id="10018792" name="inst_F260F6FF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="320" y="1280" w="64" h="96" xo="64" yo="0" id="10018793" name="inst_C411B0E7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_pinball_panic" x="384" y="1280" w="64" h="96" xo="64" yo="0" id="10018795" name="inst_5DAA1E45" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1152" w="128" h="128" xo="0" yo="256" id="10027274" name="inst_DE5D03B0" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1152" w="128" h="128" xo="0" yo="256" id="10027275" name="inst_60D919CA" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1280" w="64" h="64" xo="64" yo="0" id="10027267" name="inst_743162FC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1280" w="64" h="64" xo="64" yo="0" id="10027268" name="inst_2070F08E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1280" w="64" h="64" xo="64" yo="0" id="10027269" name="inst_42613B01" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1280" w="64" h="64" xo="64" yo="0" id="10027270" name="inst_4A122C77" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1280" w="64" h="64" xo="64" yo="0" id="10027271" name="inst_C7B71A73" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1280" w="64" h="64" xo="64" yo="0" id="10027272" name="inst_38D82419" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1344" w="64" h="64" xo="64" yo="64" id="10027280" name="inst_D5B05C18" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1344" w="64" h="64" xo="64" yo="64" id="10027282" name="inst_6C876158" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1408" w="64" h="64" xo="64" yo="64" id="10027286" name="inst_E0EB630A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1408" w="64" h="64" xo="64" yo="64" id="10027288" name="inst_C17F88BE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1408" w="64" h="64" xo="64" yo="64" id="10027290" name="inst_A4D81DA4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1088" w="64" h="64" xo="64" yo="192" id="10027291" name="inst_482BBFA0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1088" w="64" h="64" xo="64" yo="192" id="10027292" name="inst_126392F3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1088" w="64" h="64" xo="64" yo="192" id="10027293" name="inst_1BCF64B6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1088" w="64" h="64" xo="64" yo="192" id="10027294" name="inst_1215E40F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1088" w="64" h="64" xo="128" yo="192" id="10027295" name="inst_B5757F8F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1024" w="128" h="64" xo="64" yo="128" id="10027296" name="inst_3E275650" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="960" w="64" h="64" xo="64" yo="128" id="10027297" name="inst_B78EFDBE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1024" w="64" h="64" xo="64" yo="128" id="10027298" name="inst_43A9937C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1024" w="64" h="64" xo="64" yo="128" id="10027299" name="inst_31A352CF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="960" w="64" h="64" xo="64" yo="128" id="10027300" name="inst_2C9F41ED" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="960" w="64" h="64" xo="64" yo="128" id="10027301" name="inst_F8B9984D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1024" w="64" h="64" xo="64" yo="128" id="10027302" name="inst_CB681FFF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="960" w="64" h="64" xo="64" yo="128" id="10027303" name="inst_D33C97FA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="896" w="64" h="64" xo="64" yo="128" id="10027304" name="inst_5AC14598" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="832" w="64" h="64" xo="64" yo="128" id="10027305" name="inst_9144C49F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="832" w="64" h="64" xo="64" yo="128" id="10027306" name="inst_B68D3FA8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="832" w="64" h="64" xo="64" yo="128" id="10027307" name="inst_89F05856" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="832" w="64" h="64" xo="64" yo="128" id="10027308" name="inst_AF73492A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="896" w="64" h="64" xo="64" yo="128" id="10027309" name="inst_131FD0C4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="896" w="64" h="64" xo="64" yo="128" id="10027310" name="inst_5AB6C28A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="896" w="64" h="64" xo="64" yo="128" id="10027311" name="inst_85966A6D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="704" w="64" h="64" xo="64" yo="128" id="10027312" name="inst_BD335914" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="768" w="64" h="64" xo="64" yo="128" id="10027313" name="inst_D0420A22" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="768" w="64" h="64" xo="64" yo="128" id="10027314" name="inst_DC2A5554" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="704" w="64" h="64" xo="64" yo="128" id="10027317" name="inst_2C65CC15" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="704" w="64" h="64" xo="64" yo="128" id="10027319" name="inst_940F89B9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="704" w="64" h="64" xo="64" yo="128" id="10027320" name="inst_6F3B0CC2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="768" w="64" h="64" xo="64" yo="128" id="10027321" name="inst_E31CB558" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="768" w="64" h="64" xo="64" yo="128" id="10027322" name="inst_1C5534ED" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="704" w="64" h="128" xo="128" yo="64" id="10027323" name="inst_53CD9239" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="832" w="64" h="128" xo="128" yo="64" id="10027324" name="inst_5DBBFBFB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="960" w="64" h="64" xo="128" yo="128" id="10027325" name="inst_DC6292BC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="384" y="1280" w="64" h="192" xo="128" yo="0" id="10027327" name="inst_E4C1A91D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1472" w="128" h="128" xo="64" yo="64" id="10027328" name="inst_FC8373B0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1600" w="128" h="128" xo="64" yo="64" id="10027329" name="inst_57C813C8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="384" y="1728" w="64" h="64" xo="128" yo="192" id="10027332" name="inst_54FB8A92" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1792" w="64" h="64" xo="128" yo="192" id="10027333" name="inst_3769B8DA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1856" w="64" h="64" xo="128" yo="192" id="10027334" name="inst_3DC44EA3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1984" w="64" h="64" xo="128" yo="192" id="10027335" name="inst_D76B14C5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1920" w="64" h="128" xo="64" yo="128" id="10027336" name="inst_2E48E69B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1920" w="64" h="128" xo="64" yo="128" id="10027337" name="inst_E15D883E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1920" w="64" h="128" xo="64" yo="128" id="10027338" name="inst_96528901" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1856" w="64" h="128" xo="64" yo="64" id="10027339" name="inst_A3983EA2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1728" w="64" h="128" xo="64" yo="64" id="10027340" name="inst_7F02BE28" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1728" w="64" h="64" xo="64" yo="64" id="10027341" name="inst_9246CAC8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1472" w="64" h="128" xo="64" yo="64" id="10027342" name="inst_5F6D8213" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1472" w="64" h="128" xo="64" yo="64" id="10027343" name="inst_2C4E31CA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1472" w="64" h="128" xo="64" yo="64" id="10027344" name="inst_FEA0F19B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1472" w="64" h="128" xo="64" yo="64" id="10027345" name="inst_DBF8578C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1472" w="64" h="128" xo="64" yo="64" id="10027346" name="inst_0B7E1F2D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1600" w="64" h="128" xo="64" yo="64" id="10027347" name="inst_E3394DD3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1600" w="64" h="128" xo="64" yo="64" id="10027348" name="inst_326E0F89" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1600" w="64" h="128" xo="64" yo="64" id="10027349" name="inst_5D415620" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1600" w="64" h="128" xo="64" yo="64" id="10027350" name="inst_E7C64CFA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1600" w="64" h="128" xo="64" yo="64" id="10027351" name="inst_1A761C19" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1728" w="64" h="128" xo="64" yo="64" id="10027352" name="inst_99EF2803" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1728" w="64" h="128" xo="64" yo="64" id="10027353" name="inst_89A5BAD7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1728" w="64" h="128" xo="64" yo="64" id="10027354" name="inst_0E4CE845" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1728" w="64" h="128" xo="64" yo="64" id="10027355" name="inst_D1EA69BC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1856" w="64" h="64" xo="64" yo="64" id="10027356" name="inst_574DACA6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1856" w="64" h="64" xo="64" yo="64" id="10027357" name="inst_DECF5380" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1856" w="64" h="64" xo="64" yo="64" id="10027358" name="inst_AE071B7D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="1344" w="64" h="64" xo="0" yo="384" id="10027361" name="inst_B4279F88" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1344" w="64" h="64" xo="64" yo="64" id="10027362" name="inst_665035F0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="1408" w="64" h="64" xo="0" yo="384" id="10027363" name="inst_6AA9C317" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="1344" w="64" h="64" xo="0" yo="384" id="10027364" name="inst_28D80C17" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="1408" w="64" h="64" xo="0" yo="384" id="10027365" name="inst_A7A27951" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="1344" w="64" h="64" xo="0" yo="384" id="10027366" name="inst_33E2546C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="1408" w="64" h="64" xo="0" yo="384" id="10027367" name="inst_47628C90" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="2176" w="64" h="128" xo="64" yo="0" id="10027368" name="inst_8CF1EF54" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="2176" w="64" h="128" xo="64" yo="0" id="10027369" name="inst_22DB4156" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="2176" w="64" h="128" xo="64" yo="0" id="10027370" name="inst_DCA11FE0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="2176" w="64" h="128" xo="64" yo="0" id="10027371" name="inst_674B93EB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="2176" w="64" h="128" xo="64" yo="0" id="10027372" name="inst_6DD41C63" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="2176" w="64" h="128" xo="64" yo="0" id="10027373" name="inst_7753EF81" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="384" y="2176" w="64" h="128" xo="128" yo="0" id="10027374" name="inst_EF4645F5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="2304" w="64" h="128" xo="64" yo="64" id="10027375" name="inst_72A3A780" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="2304" w="64" h="128" xo="64" yo="64" id="10027376" name="inst_E22B235E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="2304" w="64" h="128" xo="64" yo="64" id="10027377" name="inst_D46FD256" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="2304" w="64" h="128" xo="64" yo="64" id="10027378" name="inst_E2AD424E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="2304" w="64" h="128" xo="64" yo="64" id="10027379" name="inst_038A87EE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="2304" w="64" h="128" xo="64" yo="64" id="10027380" name="inst_DD378915" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="0" y="2432" w="64" h="128" xo="64" yo="64" id="10027381" name="inst_12935FC6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="64" y="2432" w="64" h="128" xo="64" yo="64" id="10027382" name="inst_5BBD5C98" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="128" y="2432" w="64" h="128" xo="64" yo="64" id="10027383" name="inst_DFC316B8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="192" y="2432" w="64" h="128" xo="64" yo="64" id="10027384" name="inst_5F2ACF7E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="256" y="2432" w="64" h="128" xo="64" yo="64" id="10027385" name="inst_9AFAE358" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="320" y="2432" w="64" h="128" xo="64" yo="64" id="10027386" name="inst_7E00AC7B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="384" y="2304" w="64" h="128" xo="128" yo="64" id="10027387" name="inst_5C51DCC3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="384" y="2432" w="64" h="128" xo="128" yo="64" id="10027388" name="inst_46D8BDE9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="448" y="2432" w="128" h="192" xo="192" yo="256" id="10027390" name="inst_0C0B62C8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="576" y="2560" w="64" h="128" xo="64" yo="0" id="10027391" name="inst_416C5FE7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="640" y="2560" w="64" h="128" xo="64" yo="0" id="10027392" name="inst_BE0B5524" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="704" y="2560" w="64" h="128" xo="64" yo="0" id="10027393" name="inst_B9F3753C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="768" y="2432" w="128" h="192" xo="320" yo="256" id="10027395" name="inst_EF65D989" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="896" y="2304" w="128" h="64" xo="0" yo="0" id="10027397" name="inst_2E1446AE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="896" y="2368" w="64" h="64" xo="0" yo="64" id="10027398" name="inst_4E350F2E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1024" y="2304" w="64" h="64" xo="64" yo="0" id="10027399" name="inst_D5F48299" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1088" y="2304" w="128" h="64" xo="64" yo="0" id="10027402" name="inst_9342D9E4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1152" y="2368" w="64" h="128" xo="128" yo="64" id="10027403" name="inst_7BBCC73F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1152" y="2496" w="64" h="128" xo="128" yo="64" id="10027404" name="inst_7AACA369" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1216" y="2496" w="128" h="192" xo="192" yo="256" id="10027405" name="inst_8FC35236" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="896" y="2112" w="128" h="64" xo="0" yo="192" id="10027406" name="inst_FC6A34B3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1024" y="2112" w="64" h="64" xo="64" yo="192" id="10027407" name="inst_82BE9369" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1088" y="2112" w="128" h="64" xo="64" yo="192" id="10027408" name="inst_04200F98" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="896" y="2048" w="128" h="64" xo="0" yo="128" id="10027409" name="inst_B1E6EE72" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1024" y="2048" w="64" h="64" xo="64" yo="128" id="10027411" name="inst_C375FC73" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1088" y="2048" w="128" h="64" xo="64" yo="128" id="10027412" name="inst_27436C04" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1088" y="1984" w="128" h="64" xo="64" yo="128" id="10027413" name="inst_40D23F92" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="896" y="1984" w="128" h="64" xo="0" yo="128" id="10027414" name="inst_B46F3524" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1024" y="1984" w="64" h="64" xo="64" yo="128" id="10027415" name="inst_38EF6DC9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1664" y="2688" w="64" h="64" xo="64" yo="128" id="10027416" name="inst_904EC52D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
