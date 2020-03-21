@@ -34,6 +34,7 @@
     player_index    = global.player_id; // Who do we play as?
     player_type     = IS_PLAYER;        // Is a Player or AI?
     ring            = RING_NORMAL;      // Blue Rings or not?
+    CharacterState  = CharacterNormal;    // State of our Character, either Normal (Default), Super or Hyper.
   
  // Horizontal movement:
     x_speed         = 0;        // The current horizontal speed.
@@ -147,7 +148,12 @@
     tube_mov_y        = 0;         // The y movement for the player in a tube.
     
     death_timer       = -5;       // See death script in the step event.
- 
+
+   // Transforming
+    AllowTransformation = 1;    // Checks if we can transform.
+    TransformEnded      = 0;    // Checks if a transformation has ended. 
+    TransformTimer      = 15;   // How long it takes to return to a normal stage.
+     
  // Animation / Sprite.
     animation_init();
     
@@ -311,6 +317,30 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Decrease Rings.
+    global.player_rings--
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
@@ -465,9 +495,9 @@
               { 
                  animation = "spring";
               }
-              if(state == STATE_SPRING &amp;&amp; y_speed &gt; 0 &amp;&amp; animation != "walk")
+              if(state == STATE_SPRING &amp;&amp; y_speed &gt; 0 &amp;&amp; animation != "falling")
               { 
-                 animation = "walk";
+                 animation = "falling";
               }              
               if(state != STATE_SPRING &amp;&amp; y_speed &gt; 0 &amp;&amp; animation == "spring")
               {
@@ -538,6 +568,12 @@
               if(state == STATE_SLIDE &amp;&amp; animation != "slide")
               {
                  animation = "slide";
+              }                                                                                                                               
+              
+           // Transform:
+              if(state == STATE_TRANSFORM &amp;&amp; animation != "transform")
+              {
+                 animation = "transform";
               }                                                                                                                               
     }
               
@@ -1928,6 +1964,9 @@
     
  // Shield abilities:
     player_state_shield();    
+ 
+ // Transform:
+    player_state_transform();
     
  // Sonic only - Dropdash:
     if(player_index == CHAR_SONIC &amp;&amp; allow_dropdash == true)
@@ -2416,7 +2455,16 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
     if not(initialized) exit;
 
     if not(debug_mode)
-    {        
+    {    
+         if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterSuper){
+            pal_swap_set(spr_sonic_super_palette, PalettePosition, false);
+         }
+         if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterHyper){
+            pal_swap_set(spr_sonic_hyper_palette, PalettePosition, false);
+         }    
+         if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+            pal_swap_set(spr_sonic_to_normal_palette, PalettePosition, false);
+         }      
         // Draw Player:
            if(invincibility == 1 &amp;&amp; invincibility_timer &gt; 0)
            {
@@ -2437,6 +2485,11 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
               }
               draw_sprite_ext(sprite, floor(animation_frame), floor(x), floor(y), animation_direction, 1, animation_angle, animation_color, animation_alpha);    
            }
+           
+        // When we modified the palette, make sure to reset it:
+             if(CharacterState != CharacterNormal){
+                pal_swap_reset()
+             }
                          
         // Draw Spindash dust:
          if(state == STATE_SPINDASH)

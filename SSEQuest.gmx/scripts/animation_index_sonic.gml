@@ -239,6 +239,20 @@
        animation_linked_frame = 0;      
     }
     
+ // Falling.
+    if(animation = "falling")
+    {
+       sprite                 = spr_sonic_falling;
+       animation_start        = 0;
+       animation_end          = 3;
+       animation_loop         = 0;
+       animation_speed        = 0;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;      
+    }
+    
  // Balance.
     if(animation = "balance")
     {
@@ -322,3 +336,17 @@
        animation_linked_to    = "";
        animation_linked_frame = 0;      
     }                            
+    
+ // Transform.
+    if(animation = "transform")
+    {
+       sprite                 = spr_sonic_transform;
+       animation_start        = 0;
+       animation_end          = 4;
+       animation_loop         = 3;
+       animation_speed        = 0.18;
+       animation_repeat       = 1; 
+       animation_repeat_times = -1;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;      
+    }                                   

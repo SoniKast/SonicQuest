@@ -186,7 +186,7 @@ Active = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(other.ai_flag == false){
+            <string>if(other.player_type == IS_PLAYER){
     if (Active == true){
     
     ActionTimer -= 4;

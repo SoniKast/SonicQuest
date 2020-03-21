@@ -83,11 +83,11 @@
             <string>/// Get into special stage.
 if(instance_exists(obj_fade_bonus) == false &amp;&amp; accframe = 10){
    /// Get into special stage.
-    global.temp_restart_x = global.checkpoint_x;
-    global.temp_restart_y = global.checkpoint_y;
-    global.checkpoint_x = -1;
-    global.checkpoint_y = -1;
-    instance_create(par_player.x, par_player.y, obj_fade_bonus);
+   global.temp_restart_x = global.checkpoint_x;
+   global.temp_restart_y = global.checkpoint_y;
+   global.checkpoint_x = -1;
+   global.checkpoint_y = -1;
+   instance_create(par_player.x, par_player.y, obj_fade_bonus);
    with(obj_player){
         if(physic_mode == 1){
            drown_timer = 1800;

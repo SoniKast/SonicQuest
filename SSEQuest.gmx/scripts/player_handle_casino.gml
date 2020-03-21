@@ -17,8 +17,8 @@ if( bumper_handle != noone )
 else if( hex_bumper_handle != noone )
 { 
   angle_to_bumper = degtorad(round(wrap_angle(point_direction(x, y, hex_bumper_handle.x, hex_bumper_handle.y)-90)/22.5)*24);
-  speed_x = sin(wrap_angle(angle_to_bumper))*8;
-  speed_y = cos(wrap_angle(angle_to_bumper))*8;     
+  x_speed = sin(wrap_angle(angle_to_bumper))*8;
+  y_speed = cos(wrap_angle(angle_to_bumper))*8;     
   hex_bumper_handle.bumper_state = 1;
   ground = false; 
 };
@@ -76,8 +76,8 @@ if( flipper_handle_left != noone )
     aud_play_sound(general_flipper, global.sfx_volume, 1, 0, 0);
     
     //Set Player Speed:
-    speed_x    = ( (x) - (flipper_handle_left.x) )*0.125;
-    speed_y    = -10;
+    x_speed    = ( (x) - (flipper_handle_left.x) )*0.125;
+    y_speed    = -10;
     ground     = false; 
    };  
 };

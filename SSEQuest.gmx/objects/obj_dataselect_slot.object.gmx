@@ -35,6 +35,13 @@
     dataslot_continues  = 0;
     dataslot_emeralds   = 0; 
     dataslot_completed  = 0;
+    dataslot_used_emerald_1 = 0;
+    dataslot_used_emerald_2 = 0;
+    dataslot_used_emerald_3 = 0;
+    dataslot_used_emerald_4 = 0;
+    dataslot_used_emerald_5 = 0;
+    dataslot_used_emerald_6 = 0;
+    dataslot_used_emerald_7 = 0;
     
  // Refresh data. Needs to be done after initializing the variables.
     alarm[1]            = 1; 
@@ -77,6 +84,13 @@
     dataslot_continues  = global.save_slot_continues[dataslot_index];
     dataslot_emeralds   = global.save_slot_emeralds[dataslot_index]; 
     dataslot_completed  = global.save_slot_completed[dataslot_index];
+    dataslot_used_emerald_1 = global.save_slot_used_emerald1[dataslot_index];
+    dataslot_used_emerald_2 = global.save_slot_used_emerald2[dataslot_index];
+    dataslot_used_emerald_3 = global.save_slot_used_emerald3[dataslot_index];
+    dataslot_used_emerald_4 = global.save_slot_used_emerald4[dataslot_index];
+    dataslot_used_emerald_5 = global.save_slot_used_emerald5[dataslot_index];
+    dataslot_used_emerald_6 = global.save_slot_used_emerald6[dataslot_index];
+    dataslot_used_emerald_7 = global.save_slot_used_emerald7[dataslot_index];
 
  // Set zone id to -1 aka level select if the game is completed.
     if(dataslot_completed == 1)
@@ -116,14 +130,21 @@
     dataslot_continues  = 0;
     dataslot_emeralds   = 0; 
     dataslot_completed  = 0;
+    dataslot_used_emerald_1 = 0;
+    dataslot_used_emerald_2 = 0;
+    dataslot_used_emerald_3 = 0;
+    dataslot_used_emerald_4 = 0;
+    dataslot_used_emerald_5 = 0;
+    dataslot_used_emerald_6 = 0;
+    dataslot_used_emerald_7 = 0;
     
  // Player select.
     dataslot_combo = 0;
         
  // Save empty slot.
     save_delete(dataslot_index);
-    
-    
+    file_delete(working_directory+"\data\save\QuestData"+string(dataslot_index)+".ini")
+
 </string>
           </argument>
         </arguments>
@@ -255,6 +276,13 @@
                                global.player_continues = 0;
                                global.player_emeralds  = 0;
                                global.game_completed   = 0;
+                               global.used_emerald_1   = 0;
+                               global.used_emerald_2   = 0;
+                               global.used_emerald_3   = 0;
+                               global.used_emerald_4   = 0;
+                               global.used_emerald_5   = 0;
+                               global.used_emerald_6   = 0;
+                               global.used_emerald_7   = 0;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_newgame);
@@ -275,6 +303,13 @@
                                global.player_continues = dataslot_continues;
                                global.player_emeralds  = dataslot_emeralds;
                                global.game_completed   = 0;
+                               global.used_emerald_1   = dataslot_used_emerald_1;
+                               global.used_emerald_2   = dataslot_used_emerald_2;
+                               global.used_emerald_3   = dataslot_used_emerald_3;
+                               global.used_emerald_4   = dataslot_used_emerald_4;
+                               global.used_emerald_5   = dataslot_used_emerald_5;
+                               global.used_emerald_6   = dataslot_used_emerald_6;
+                               global.used_emerald_7   = dataslot_used_emerald_7;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_loadgame);
@@ -295,6 +330,13 @@
                                global.player_continues = dataslot_continues;
                                global.player_emeralds  = dataslot_emeralds;
                                global.game_completed   = 1;
+                               global.used_emerald_1   = dataslot_used_emerald_1;
+                               global.used_emerald_2   = dataslot_used_emerald_2;
+                               global.used_emerald_3   = dataslot_used_emerald_3;
+                               global.used_emerald_4   = dataslot_used_emerald_4;
+                               global.used_emerald_5   = dataslot_used_emerald_5;
+                               global.used_emerald_6   = dataslot_used_emerald_6;
+                               global.used_emerald_7   = dataslot_used_emerald_7;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_levelselect);

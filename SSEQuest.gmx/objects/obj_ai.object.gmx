@@ -36,6 +36,7 @@
  // Character flag.
     player_index    = global.cpu; // Who do we play as?
     player_type     = IS_CPU;     // Is a Player or AI?
+    CharacterState  = CharacterNormal;    // State of our Character, either Normal (Default), Super or Hyper.
          
  // Horizontal movement:
     x_speed         = 0;        // The current horizontal speed.
@@ -148,9 +149,15 @@
  // AI Only.
     ai_state_delay    = 16;        // Delays state change.
     ai_ring           = 0;         // Checks if the ai has some rings.
+
+   // Transforming
+    AllowTransformation = 1;    // Checks if we can transform.
+    TransformEnded      = 0;    // Checks if a transformation has ended. 
+    TransformTimer      = 15;   // How long it takes to return to a normal stage.
     
  // Animation / Sprite.
     animation_init();
+    
     /// Init.
     event_inherited();
     type = GRAB_TAILS;

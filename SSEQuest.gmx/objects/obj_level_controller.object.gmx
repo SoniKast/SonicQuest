@@ -166,13 +166,10 @@
     ring_visibility = 1;
 
  // Save progress. 
-    if(global.time_attack = false)
-    {
         if(global.save_selected != 0)
         {
            save_create(global.save_selected);
         }
-    }
 </string>
           </argument>
         </arguments>

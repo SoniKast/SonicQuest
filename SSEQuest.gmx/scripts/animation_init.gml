@@ -1,7 +1,11 @@
 /// Animation_Init()
  // Initialize animation system.sprite_add_from_surface
    
-        if(player_index == CHAR_SONIC)
+        if(player_index == CHAR_SONIC && CharacterState == CharacterNormal)
+        {
+           sprite = spr_sonic_idle;
+        }
+        if(player_index == CHAR_SONIC && CharacterState == CharacterSuper or CharacterState == CharacterHyper)
         {
            sprite = spr_sonic_idle;
         }

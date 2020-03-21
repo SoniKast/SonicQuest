@@ -33,6 +33,13 @@
     dataslot_cpu         = 2;
     dataslot_combo       = 0;
     dataslot_arrow_frame = 0;
+    dataslot_used_emerald_1 = 0;
+    dataslot_used_emerald_2 = 0;
+    dataslot_used_emerald_3 = 0;
+    dataslot_used_emerald_4 = 0;
+    dataslot_used_emerald_5 = 0;
+    dataslot_used_emerald_6 = 0;
+    dataslot_used_emerald_7 = 0;
 </string>
           </argument>
         </arguments>
@@ -162,6 +169,13 @@
                                global.player_continues = 0;
                                global.player_emeralds  = 0;
                                global.game_completed   = 0;
+                               global.used_emerald_1   = 0;
+                               global.used_emerald_2   = 0;
+                               global.used_emerald_3   = 0;
+                               global.used_emerald_4   = 0;
+                               global.used_emerald_5   = 0;
+                               global.used_emerald_6   = 0;
+                               global.used_emerald_7   = 0;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_newgame);

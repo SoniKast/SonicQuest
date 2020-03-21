@@ -144,6 +144,7 @@
   
  // Set global save.
     global.save_selected = datacursor_slot_index;
+    global.save_file = datacursor_slot_index;
 
 
 </string>

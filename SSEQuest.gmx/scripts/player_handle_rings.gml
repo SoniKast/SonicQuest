@@ -57,15 +57,30 @@
                dummy_effect_create(spr_ring_sparkle, 0.4, x, y, -10, 0);          
                instance_destroy();
           }
-          if(player_type == IS_PLAYER)
+          if(global.BonusStage = false)
           {
-             global.player_rings += 1;    
+              if(player_type == IS_PLAYER)
+              {
+                 global.player_rings += 1;    
+              }
+              else
+              {
+                 ai_ring = 1;
+                 global.player_rings += 1;
+              }
           }
-          else
+          if(global.BonusStage = true)
           {
-             ai_ring = 1;
-             global.player_rings += 1;                 
-          }  
+              if(player_type == IS_PLAYER)
+              {
+                 global.BonusRings += 1;    
+              }
+              else
+              {
+                 ai_ring = 1;
+                 global.BonusRings += 1;
+              }
+          }
           
        // Play ring sound:
           global.ring_sound *= -1;

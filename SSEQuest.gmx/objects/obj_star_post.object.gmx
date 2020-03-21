@@ -139,7 +139,7 @@
           
           // Bonus Stage:
              if(global.player_rings &gt;= 25){
-                instance_create(x, y-75, obj_bonus_spark)
+                instance_create(x, y-75, obj_bonus_spark_generator)
              }         
        }
        else

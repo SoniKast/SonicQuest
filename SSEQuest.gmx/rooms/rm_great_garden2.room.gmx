@@ -3,8 +3,8 @@
   <caption></caption>
   <width>16000</width>
   <height>3000</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>64</vsnap>
+  <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -210,6 +210,38 @@
     <tile bgName="ts_great_garden" x="2176" y="1408" w="128" h="64" xo="256" yo="320" id="10027249" name="inst_D1505D57" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="2176" y="1568" w="128" h="256" xo="0" yo="64" id="10027251" name="inst_C194643D" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="2176" y="1824" w="128" h="64" xo="0" yo="320" id="10027252" name="inst_A6A2E6DA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1952" w="32" h="32" xo="1" yo="34" id="10027880" name="inst_8A895F12" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1984" w="32" h="32" xo="1" yo="34" id="10027881" name="inst_B097542F" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2016" w="32" h="32" xo="1" yo="34" id="10027882" name="inst_BA8EEE1A" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2048" w="32" h="32" xo="1" yo="34" id="10027883" name="inst_3A8DE303" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2080" w="32" h="32" xo="1" yo="34" id="10027884" name="inst_2E2B314F" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2112" w="32" h="32" xo="1" yo="34" id="10027885" name="inst_35450B5E" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2144" w="32" h="32" xo="1" yo="34" id="10027886" name="inst_03B27268" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2176" w="32" h="32" xo="1" yo="34" id="10027887" name="inst_BA8972CE" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2208" w="32" h="32" xo="1" yo="34" id="10027888" name="inst_28F9739B" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2240" w="32" h="32" xo="1" yo="34" id="10027889" name="inst_61B6DA79" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2272" w="32" h="32" xo="1" yo="34" id="10027890" name="inst_04F135BC" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2304" w="32" h="32" xo="1" yo="34" id="10027891" name="inst_9B1FB77B" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2336" w="32" h="32" xo="1" yo="34" id="10027892" name="inst_EBECF304" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="2368" w="32" h="32" xo="133" yo="67" id="10027893" name="inst_99919B53" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1504" y="2368" w="32" h="32" xo="166" yo="1" id="10027894" name="inst_6C2702E3" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1472" y="2368" w="32" h="32" xo="166" yo="1" id="10027895" name="inst_9E96D877" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1440" y="2368" w="32" h="32" xo="166" yo="1" id="10027896" name="inst_DF9591A6" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1408" y="2368" w="32" h="32" xo="166" yo="1" id="10027897" name="inst_D2342F7C" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1344" y="2368" w="32" h="32" xo="166" yo="1" id="10027898" name="inst_E47FBBF5" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1312" y="2368" w="32" h="32" xo="166" yo="1" id="10027899" name="inst_B871B8F9" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1280" y="2368" w="32" h="32" xo="166" yo="1" id="10027900" name="inst_8F7420B6" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1248" y="2368" w="32" h="32" xo="166" yo="1" id="10027901" name="inst_4CE212CF" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1216" y="2368" w="32" h="32" xo="166" yo="1" id="10027902" name="inst_8AC7E85A" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1152" y="2368" w="32" h="32" xo="166" yo="1" id="10027904" name="inst_62BAC8F8" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1184" y="2368" w="32" h="32" xo="166" yo="1" id="10027905" name="inst_577A414A" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1376" y="2368" w="32" h="32" xo="166" yo="1" id="10027906" name="inst_4D7F1BC0" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1920" w="32" h="32" xo="1" yo="34" id="10027907" name="inst_DED5E477" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1888" w="32" h="32" xo="1" yo="34" id="10027913" name="inst_547E69C3" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1856" w="32" h="32" xo="1" yo="34" id="10027914" name="inst_CAB6C44A" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1824" w="32" h="32" xo="1" yo="34" id="10027915" name="inst_C3E96C85" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1792" w="32" h="32" xo="1" yo="34" id="10027916" name="inst_C3A29FF8" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pipes" x="1536" y="1760" w="32" h="32" xo="1" yo="34" id="10027917" name="inst_70D6C83B" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

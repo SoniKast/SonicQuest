@@ -67,6 +67,7 @@
         <sound>sound\player_slide</sound>
         <sound>sound\player_spindash_charge</sound>
         <sound>sound\player_spindash_release</sound>
+        <sound>sound\player_transform</sound>
       </sounds>
       <sounds name="Shield">
         <sound>sound\shield_extra_bubble</sound>
@@ -115,6 +116,7 @@
           <sprite>sprites\spr_sonic_walk</sprite>
           <sprite>sprites\spr_sonic_run</sprite>
           <sprite>sprites\spr_sonic_spring</sprite>
+          <sprite>sprites\spr_sonic_falling</sprite>
           <sprite>sprites\spr_sonic_skid</sprite>
           <sprite>sprites\spr_sonic_skid_turn</sprite>
           <sprite>sprites\spr_sonic_push</sprite>
@@ -129,8 +131,25 @@
           <sprite>sprites\spr_sonic_balance</sprite>
           <sprite>sprites\spr_sonic_balance_alt</sprite>
           <sprite>sprites\spr_sonic_hurt</sprite>
+          <sprite>sprites\spr_sonic_transform</sprite>
           <sprite>sprites\spr_sonic_die</sprite>
           <sprite>sprites\spr_sonic_drown</sprite>
+          <sprites name="Super">
+            <sprite>sprites\spr_ssonic_idle</sprite>
+            <sprite>sprites\spr_ssonic_lookup</sprite>
+            <sprite>sprites\spr_ssonic_crouch</sprite>
+            <sprite>sprites\spr_ssonic_walk</sprite>
+            <sprite>sprites\spr_ssonic_run</sprite>
+            <sprite>sprites\spr_ssonic_push</sprite>
+            <sprite>sprites\spr_ssonic_skid</sprite>
+            <sprite>sprites\spr_ssonic_spindash</sprite>
+            <sprite>sprites\spr_ssonic_roll</sprite>
+            <sprite>sprites\spr_ssonic_spring</sprite>
+            <sprite>sprites\spr_ssonic_falling</sprite>
+            <sprite>sprites\spr_ssonic_edge_balance</sprite>
+            <sprite>sprites\spr_ssonic_breath</sprite>
+            <sprite>sprites\spr_ssonic_dropdash</sprite>
+          </sprites>
         </sprites>
         <sprites name="Tails">
           <sprite>sprites\spr_tails_idle</sprite>
@@ -217,6 +236,9 @@
         </sprites>
         <sprites name="Palette">
           <sprite>sprites\pal_sonic</sprite>
+          <sprite>sprites\spr_sonic_super_palette</sprite>
+          <sprite>sprites\spr_sonic_hyper_palette</sprite>
+          <sprite>sprites\spr_sonic_to_normal_palette</sprite>
         </sprites>
         <sprite>sprites\spr_insta_shield</sprite>
       </sprites>
@@ -769,6 +791,11 @@
               <sprite>sprites\spr_ace_projectile</sprite>
             </sprites>
           </sprites>
+          <sprites name="Palettes">
+            <sprite>sprites\spr_ppz_pal1</sprite>
+            <sprite>sprites\spr_ppz_pal2</sprite>
+            <sprite>sprites\spr_ppz_pal3</sprite>
+          </sprites>
         </sprites>
         <sprites name="HPZ">
           <sprites name="Decorations">
@@ -915,6 +942,8 @@
         </backgrounds>
         <backgrounds name="Pinball Panic">
           <background>background\ts_pinball_panic</background>
+          <background>background\ts_ppz_slot</background>
+          <background>background\ts_ppz_slot2</background>
         </backgrounds>
         <backgrounds name="Forest Frenzy">
           <background>background\ts_forest_frenzy</background>
@@ -963,6 +992,9 @@
           <background>background\bg_ggz_building2</background>
           <background>background\bg_ggz_building</background>
           <background>background\bg_ggz_grass</background>
+        </backgrounds>
+        <backgrounds name="Pinball Panic Zone">
+          <background>background\bg_ppz</background>
         </backgrounds>
         <backgrounds name="Jungle Havoc Zone">
           <background>background\bg_jhz_front</background>
@@ -1053,6 +1085,7 @@
         <script>scripts\player_state_edgewobble.gml</script>
         <script>scripts\player_state_respawn.gml</script>
         <script>scripts\player_state_tube.gml</script>
+        <script>scripts\player_state_transform.gml</script>
         <scripts name="Sonic only">
           <script>scripts\player_state_dropdash.gml</script>
           <script>scripts\player_state_insta_shield.gml</script>
@@ -1101,6 +1134,7 @@
       <script>scripts\animation_tail_apply.gml</script>
       <scripts name="Index">
         <script>scripts\animation_index_sonic.gml</script>
+        <script>scripts\animation_index_supersonic.gml</script>
         <script>scripts\animation_index_tails.gml</script>
         <script>scripts\animation_index_knuckles.gml</script>
       </scripts>
@@ -1155,6 +1189,7 @@
         <script>scripts\pal_swap_set_tiles.gml</script>
       </scripts>
       <script>scripts\inview.gml</script>
+      <script>scripts\script130.gml</script>
       <script>scripts\string_place_number.gml</script>
       <script>scripts\dummy_effect_create.gml</script>
       <script>scripts\wrap_angle.gml</script>
@@ -1405,6 +1440,7 @@
           <object>objects\obj_water_alarm</object>
         </objects>
         <objects name="Effects">
+          <object>objects\obj_bonus_spark_generator</object>
           <object>objects\obj_bonus_spark</object>
           <object>objects\obj_dummy_effect</object>
           <objects name="Player">
@@ -1861,6 +1897,9 @@
             <object>objects\obj_ace_projectile</object>
           </objects>
         </objects>
+        <objects name="Parallax">
+          <object>objects\obj_ppz_parallax</object>
+        </objects>
       </objects>
       <objects name="Forest Frenzy Zone">
         <objects name="Parallax">
@@ -1899,6 +1938,7 @@
       </objects>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
@@ -1948,12 +1988,18 @@
       </rooms>
       <rooms name="Special Stage">
         <room>rooms\rm_special_stage1</room>
+        <room>rooms\rm_special_stage2</room>
+        <room>rooms\rm_special_stage3</room>
+        <room>rooms\rm_special_stage4</room>
+        <room>rooms\rm_special_stage5</room>
+        <room>rooms\rm_special_stage6</room>
+        <room>rooms\rm_special_stage7</room>
       </rooms>
       <room>rooms\rm_options</room>
       <room>rooms\rm_hidden_palace</room>
     </rooms>
   </rooms>
-  <constants number="72">
+  <constants number="76">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2006,6 +2052,7 @@
     <constant name="STATE_TUBE">24</constant>
     <constant name="STATE_SLIPPING">25</constant>
     <constant name="STATE_AIRCORKSCREW">26</constant>
+    <constant name="STATE_TRANSFORM">27</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>
@@ -2026,6 +2073,9 @@
     <constant name="s_left">1</constant>
     <constant name="s_center">2</constant>
     <constant name="s_right">3</constant>
+    <constant name="CharacterNormal">1</constant>
+    <constant name="CharacterSuper">2</constant>
+    <constant name="CharacterHyper">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

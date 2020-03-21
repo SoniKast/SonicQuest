@@ -28,7 +28,7 @@
             <string>///Variables
     image_speed = 0.15;          // Image speed, for animation :)
     activated = 0;
-    load_collected(global.save_selected);
+    scr_loadcollect();
 </string>
           </argument>
         </arguments>
@@ -95,7 +95,7 @@ if (activated == 1) {
 
 if(activated &gt; 0)
 {
-    if(audio_is_playing(general_ss_ring))
+    if(!audio_is_playing(general_ss_ring))
     {
     aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
     }
@@ -138,7 +138,7 @@ if(other.player_type == IS_PLAYER &amp;&amp; activated == 0){
         global.player_rings += 50;
         activated = 2;
     } else {
-        alarm[0]  = 60;
+        alarm[0]  = 70;
         activated = 1;
     }
 }
@@ -168,10 +168,7 @@ if(other.player_type == IS_PLAYER &amp;&amp; activated == 0){
             <kind>1</kind>
             <string>if sprite_index==spr_big_ring_disappear
 {
-    if(global.save_selected != 0)
-    {    
-    save_collected(global.save_selected);
-    }
+scr_collected()
 visible = false;
 }
 </string>

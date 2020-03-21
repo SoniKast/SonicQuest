@@ -2,9 +2,14 @@
  // Get the animation data of a instance.
  
  // Sonic:
-    if(player_index == CHAR_SONIC)
+    if(player_index == CHAR_SONIC && CharacterState == CharacterNormal)
     {
        animation_index_sonic();
+    }
+    
+    if(player_index == CHAR_SONIC && CharacterState == CharacterSuper or CharacterState == CharacterHyper)
+    {
+       animation_index_supersonic();
     }
     
  // Tails:

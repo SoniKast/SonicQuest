@@ -56,6 +56,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Go to the bonus stage.
+    global.BonusRings   = global.player_rings;
     global.BonusStage   = false;
     room_goto(global.previous_room);
     global.previous_room = noone;
@@ -63,7 +64,6 @@
     global.checkpoint_y = global.temp_restart_y;
     global.temp_restart_x = -1;
     global.temp_restart_y = -1;
-    global.player_rings = global.BonusRings;
 </string>
           </argument>
         </arguments>

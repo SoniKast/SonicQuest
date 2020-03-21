@@ -112,7 +112,8 @@
     global.bgm_pitch      = 1;     // The pitch used for music. Unused.
     global.sfx_volume     = 1;     // The volume used for sound effects. 
     global.ring_sound     = 1;     // Used to properly play the ring sound.
-   
+    global.Cheats         =  1; // Do we allow cheats?
+      
  // Load save slots:
     global.save_selected  = 1;     // The save slot we're currently using.
     for(i=1; i&lt;9; i+=1)
