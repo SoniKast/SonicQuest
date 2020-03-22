@@ -59,6 +59,7 @@
        instance_activate_region(obj_ai.x-global.screen_width/2, obj_ai.y-global.screen_height/2, global.screen_width, global.screen_height, true);    
     }
 
+    
 </string>
           </argument>
         </arguments>

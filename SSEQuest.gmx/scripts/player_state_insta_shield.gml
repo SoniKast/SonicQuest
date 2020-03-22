@@ -2,7 +2,7 @@
 //  Script to execute the insta shield.
 
    // Only run if we have no shield:
-      if(shield == 0 && global.player_id == 1 && invincibility == 0 && state = STATE_JUMP){
+      if(shield == 0 && CharacterState = CharacterNormal && global.player_id == 1 && invincibility == 0 && state = STATE_JUMP){
          if(shield_usable == true){
             if(input_action_pressed){
                shield_usable = false;

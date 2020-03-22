@@ -28,7 +28,74 @@
             <string>/// Variables.
 
     player_index = obj_player.player_index;
-    //alarm[0]     = 5;
+    game_paused   = false;
+    game_snapshot = noone;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// (Un)Pause Game.
+
+    
+    if(global.do_time == true &amp;&amp; instance_exists(par_fades) == false &amp;&amp; !instance_exists(obj_game_over)){
+    
+       // Check if we pressed Pause:
+          if(keyboard_check_pressed(global.key_enter)){
+           
+             // Pause the Game:   
+                if(game_paused == false &amp;&amp; game_snapshot == noone &amp;&amp; instance_exists(obj_pause) == false){
+                   game_paused = true;
+                   game_snapshot    = background_create_from_surface(application_surface, 0, 0, global.screen_width, global.screen_height, 0, 0);
+                   instance_deactivate_all(1);
+                   audio_pause_all();                   
+                   if(global.BonusStage == false){
+                      instance_create(0, 0, obj_pause);
+                      instance_activate_object(obj_pause)
+                   }
+                   instance_activate_object(obj_gamepad_controller);
+                   instance_activate_object(obj_screen_controller);
+                   instance_activate_object(obj_audio);                
+                   exit;
+                }
+                
+             // Unpause the Game:
+                if(game_paused == true &amp;&amp; game_snapshot != noone){            
+                   background_delete(game_snapshot);
+                   game_paused = false;
+                   game_snapshot    = noone;
+                   instance_activate_all();
+                   audio_resume_all();  
+                   if(instance_exists(obj_pause)){
+                      with(obj_pause){
+                           Finished = true;
+                      }
+                   }
+                   exit;                 
+                }
+             
+          }
+    
+    } 
+
+
 </string>
           </argument>
         </arguments>
@@ -54,7 +121,7 @@
             <string>/// Global timers.
 
  // Game time:
-    if(global.game_paused == false)
+    if(global.BonusStage == false &amp;&amp; global.game_paused == false)
     { 
        if(global.do_time &gt; 0)
        {
@@ -153,7 +220,6 @@
  // Create title card:
     instance_create(0, 0, obj_title_card);
     instance_create(0, 0, obj_instance_region);
-    instance_create(0, 0, obj_pause);
     
  // Set level variables:
     global.player_rings = 0;
@@ -166,16 +232,46 @@
     ring_visibility = 1;
 
  // Save progress. 
+    if(global.time_attack = false)
+    {
         if(global.save_selected != 0)
         {
            save_create(global.save_selected);
         }
+    }
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw snapshot.
+ 
+    if(game_snapshot != noone)
+    {
+       draw_background(game_snapshot, view_xview, view_yview);
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

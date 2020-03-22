@@ -43,12 +43,14 @@
     CheatTime    = 30;
     
     /// Variables
-    menu_mode         = "TITLE" // there's also menu_mode "LEVEL SELECT"
-    title_y           = 0;
-    title_menu_option = 0;
-    title_menu_active = 0;
-    title_menu_string = "START";
-    alarm[0]          = 15;
+    menu_mode            = "TITLE" // there's also menu_mode "LEVEL SELECT"
+    title_y              = 0;
+    title_menu_option    = 0;
+    title_menu_active    = 0;
+    title_menu_string    = "START";
+    title_menu_character = 1;
+    sound_test_option    = 0;
+    alarm[0]             = 15;
 
     title_menu_string0  = "RADIANT VALLEY 1"
     title_menu_string1  = "               2"
@@ -63,16 +65,15 @@
     title_menu_string10 = "EGG GAUNTLET   1"
     title_menu_string11 = "               2"
     title_menu_string12 = "STEAMPUNK EGG  3"
-    title_menu_string13 = " "
-    title_menu_string14 = "BRIDGE         1"
-    title_menu_string15 = "               2"
-    title_menu_string16 = "TEST ZONE      1"
-    title_menu_string17 = "               2"
-    title_menu_string18 = "BONUS STAGE     "
-    title_menu_string19 = "                "
-    title_menu_string20 = "SPECIAL STAGE   "
-    title_menu_string21 = " "
-    title_menu_string22 = " "
+    title_menu_string13 = "BRIDGE         1"
+    title_menu_string14 = "               2"
+    title_menu_string15 = "TEST ZONE      1"
+    title_menu_string16 = "               2"
+    title_menu_string17 = "BONUS STAGE"
+    title_menu_string18 = "SPECIAL STAGE"
+    title_menu_string19 = "SOUND TEST"
+    title_menu_string20 = "BACK"
+    
 </string>
           </argument>
         </arguments>
@@ -97,7 +98,7 @@
             <kind>1</kind>
             <string>/* Create Sparks ! */
 alarm[1] = choose(10,20,15,25)
-dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,187,270), choose(82,36,147,110,50,120,180,200,10),1, 1)
+dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,187,270), choose(82,36,147,110,50,120,180,200,10),-5, -1)
 
 /// dummy_effect_create(sprite, image speed, x, y, depth, looptimes)
  // Creates a dummy effect.
@@ -134,6 +135,32 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if(menu_mode = "LEVEL SELECT")
+{
+game_snapshot = background_create_from_surface(application_surface, 0, 0, global.screen_width, global.screen_height, 0, 0);
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -153,6 +180,14 @@ dummy_effect_create(spr_invincibility_sparkle,0.3,choose(68,50,80,110,226,131,18
             <kind>1</kind>
             <string>///Thing
 // --------------------------------------------------------------
+if(menu_mode = "LEVEL SELECT")
+{
+    if(audio_is_playing(jingle_title))
+    {
+    audio_stop_sound(jingle_title)
+    aud_play_sound(music_options, global.bgm_volume, 1, 1, 0);                
+    }
+}
     switch(SonicState) {
         case 0:
             if (Delay &lt; 60) Delay+=1;
@@ -202,6 +237,7 @@ if(menu_mode = "TITLE")
           if(title_menu_option &lt; 3)
           {
              title_menu_option += 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
           else
           {
@@ -213,6 +249,7 @@ if(menu_mode = "TITLE")
           if(title_menu_option &gt; 0)
           {
              title_menu_option -= 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
           else
           {
@@ -289,9 +326,10 @@ if(menu_mode = "TITLE")
           }
        }    
     }
+    
+// Get key presses:
 
     if(global.Cheats == 1){
-// Get key presses:
           if(keyboard_check_pressed(vk_anykey)){
              switch(keyboard_key){
                     case global.key_up:{
@@ -348,7 +386,7 @@ if(menu_mode = "TITLE")
 else 
 if(menu_mode = "LEVEL SELECT")
 {
-
+// Level selecting
 if(title_menu_active == 1)
     {
        if(keyboard_check_pressed(global.key_down))
@@ -356,6 +394,7 @@ if(title_menu_active == 1)
           if(title_menu_option &lt; 20)
           {
              title_menu_option += 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
           else
           {
@@ -367,6 +406,7 @@ if(title_menu_active == 1)
           if(title_menu_option &gt; 0)
           {
              title_menu_option -= 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
           else
           {
@@ -374,7 +414,68 @@ if(title_menu_active == 1)
           }
        }       
     }
-    
+
+// Sound test
+
+if(title_menu_active == 1)
+{
+    if(title_menu_option = 19)
+    {
+       if(keyboard_check_pressed(global.key_right))
+       {
+          if(sound_test_option &lt; 256)
+          {
+             sound_test_option += 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+          }
+          else
+          {
+             sound_test_option = 0;
+          }
+       }
+       if(keyboard_check_pressed(global.key_left))
+       {
+          if(sound_test_option &gt; 0)
+          {
+             sound_test_option -= 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+          }
+          else
+          {
+             sound_test_option = 256;
+          }
+       }       
+    }
+}
+
+// Character choosing
+if(title_menu_active == 1)
+    {
+        if(keyboard_check_pressed(global.key_action))
+        {
+            if(title_menu_character &lt; 3)
+            {
+               title_menu_character += 1;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+            else
+            {
+               title_menu_character = 1;
+            }
+        }
+        if(keyboard_check_pressed(global.key_special))
+        {
+            if(title_menu_character &gt; 1)
+            {
+               title_menu_character -= 1;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+            else
+            {
+               title_menu_character = 3;
+            }
+        }
+    }
  // Choose.
     if(title_menu_active == 1)
     { 
@@ -384,11 +485,12 @@ if(title_menu_active == 1)
           switch(title_menu_option)
           {
                  case 0:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_radiant_valley1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 1:
@@ -397,14 +499,16 @@ if(title_menu_active == 1)
                       {
                            value = rm_radiant_valley2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 2:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_great_garden1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 3:
@@ -413,122 +517,137 @@ if(title_menu_active == 1)
                       {
                            value = rm_great_garden2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 4:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_pinball_panic1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 5:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_pinball_panic2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 6:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_forest_frenzy1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 7:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_forest_frenzy2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 8:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_aquapolis1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 9:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_aquapolis2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 10:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_egg_gauntlet1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 11:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_egg_gauntlet2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 12:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_egg_gauntlet3;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 13:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = rm_bridge1;
+                           value = rm_bridge_zone1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 14:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_bridge2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 15:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_playground;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 16:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_playground_2;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 17:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = room_goto_bonus();
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 18:
-                 {
+                 {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_special_stage1;
@@ -536,16 +655,708 @@ if(title_menu_active == 1)
                       break;
                  }
                  case 19:
-                 {
-                      with(instance_create(0, 0, obj_fade_to_value))
+                 {    
+                      switch(sound_test_option)
                       {
-                           value = rm_special_stage1;
+                          case 0:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_title, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 1:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_sunshine_valley1, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 2:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_sunshine_valley2, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 3:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_great_garden1, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 4:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_great_garden2, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 5:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_pinball_panic1, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 6:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_jungle_havoc1, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 7:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_test, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 8:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_test, global.bgm_volume, 1.15, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 9:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_dataselect, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 10:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_levelselect, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 11:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_options, global.bgm_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 12:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_continue, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 13:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_drown, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 14:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_gameover, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 15:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_invincibility, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 16:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_sneakers, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 17:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_scoring, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 18:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_super, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 19:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(jingle_sega, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 20:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_accelerator, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 21:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_alarm_count, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 22:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_break, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 23:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_bump, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 24:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_bumper, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 25:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_checkpoint, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 26:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_crumble, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 27:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 28:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 29:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 30:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_fire, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 31:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_flame, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 32:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_flipper, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 33:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_projectile, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 34:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 35:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_score_points, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 36:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_score_result, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 37:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_signpost, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 38:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_spring, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 39:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 40:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_ss_goal, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 41:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 42:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 43:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 44:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_teleport_start, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 45:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(general_water_splash, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 46:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_air, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 47:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_die, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 48:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_dropdash, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 49:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_drowned, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 50:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_flying, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 51:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_flying_drop, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 52:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_hang, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 53:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_hit_spike, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 54:
+                          {
+                          
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_hurt, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 55:
+                          {
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_jump, global.sfx_volume, 1, 0, 0);
+                          }
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 56:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_land, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 57:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 58:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_ring_drop, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 59:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_roll, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 60:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_skidding, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 61:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_slide, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 62:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_spindash_charge, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1; 
+                          break;
+                          }
+                          case 63:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_spindash_release, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 64:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_transform, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 65:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_extra_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 66:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 67:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 68:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_flame, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 69:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 70:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 71:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_default, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 72:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_electricity, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 73:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_flame, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 74:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_insta, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
                       }
                       break;
                  }
                  case 20:
                  {
                       menu_mode = "TITLE";
+                      title_menu_active = 1;
                       break;    
                  }
           }
@@ -625,244 +1436,230 @@ if(title_menu_active == 1)
     }
     if(menu_mode = "LEVEL SELECT")
     {
+    /*
     if(game_snapshot != noone)
     {
        draw_background(game_snapshot, view_xview, view_yview);
-    }
+    }*/
+    draw_sprite(spr_level_select_bg, 0, 0, 0);
     draw_set_color(c_white);
-    draw_set_font(global.main_font);
+    draw_set_font(global.title_font);
     draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
+    draw_text(213, 38, scr_string_number_format(title_menu_character-1, 2));
+    draw_text(245, 38, scr_string_number_format(0, 2));
     if(title_menu_option = 0)
     {
     draw_set_color(c_yellow);
-    draw_text(23, 33, title_menu_string0); 
+    draw_text(20, 23, title_menu_string0); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 33, title_menu_string0); 
+    draw_text(20, 23, title_menu_string0); 
     }
     if(title_menu_option = 1)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 41, title_menu_string1); 
+    draw_text(20, 31, title_menu_string1); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 41, title_menu_string1); 
+    draw_text(20, 31, title_menu_string1); 
     }
     if(title_menu_option = 2)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 57, title_menu_string2); 
+    draw_text(20, 47, title_menu_string2); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 57, title_menu_string2); 
+    draw_text(20, 47, title_menu_string2); 
     }
     if(title_menu_option = 3)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 65, title_menu_string3);
+    draw_text(20, 55, title_menu_string3);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 65, title_menu_string3); 
+    draw_text(20, 55, title_menu_string3); 
     }
     if(title_menu_option = 4)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 81, title_menu_string4); 
+    draw_text(20, 71, title_menu_string4); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 81, title_menu_string4); 
+    draw_text(20, 71, title_menu_string4); 
     }
     if(title_menu_option = 5)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 89, title_menu_string5);
+    draw_text(20, 79, title_menu_string5);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 89, title_menu_string5); 
+    draw_text(20, 79, title_menu_string5); 
     }
     if(title_menu_option = 6)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 105, title_menu_string6);
+    draw_text(20, 95, title_menu_string6);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 105, title_menu_string6);
+    draw_text(20, 95, title_menu_string6);
     }
     if(title_menu_option = 7)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 113, title_menu_string7); 
+    draw_text(20, 103, title_menu_string7); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 113, title_menu_string7);
+    draw_text(20, 103, title_menu_string7);
     }
     if(title_menu_option = 8)
     {
     draw_set_color(c_yellow);
-    draw_text(23, 129, title_menu_string8); 
+    draw_text(20, 119, title_menu_string8); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 129, title_menu_string8); 
+    draw_text(20, 119, title_menu_string8); 
     }
     if(title_menu_option = 9)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 137, title_menu_string9); 
+    draw_text(20, 127, title_menu_string9); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 137, title_menu_string9); 
+    draw_text(20, 127, title_menu_string9); 
     }
     if(title_menu_option = 10)
     {
     draw_set_color(c_yellow);
-    draw_text(23, 153, title_menu_string10); 
+    draw_text(20, 143, title_menu_string10); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 153, title_menu_string10);  
+    draw_text(20, 143, title_menu_string10);  
     }
     if(title_menu_option = 11)
     {
     draw_set_color(c_yellow); 
-    draw_text(23, 161, title_menu_string11); 
+    draw_text(20, 151, title_menu_string11); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 161, title_menu_string11); 
+    draw_text(20, 151, title_menu_string11); 
     }
     if(title_menu_option = 12)
     {
     draw_set_color(c_yellow);
-    draw_text(23, 177, title_menu_string12); 
+    draw_text(20, 167, title_menu_string12); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 177, title_menu_string12); 
+    draw_text(20, 167, title_menu_string12); 
     }
     if(title_menu_option = 13)
     {
     draw_set_color(c_yellow);  
-    draw_text(23, 185, title_menu_string13);
+    draw_text(173, 23, title_menu_string13);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(23, 185, title_menu_string13);
+    draw_text(173, 23, title_menu_string13);
     }
     if(title_menu_option = 14)
     {
     draw_set_color(c_yellow); 
-    draw_text(176, 33, title_menu_string14);
+    draw_text(173, 31, title_menu_string14);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 33, title_menu_string14);
+    draw_text(173, 31, title_menu_string14);
     }
     if(title_menu_option = 15)
     {
     draw_set_color(c_yellow); 
-    draw_text(176, 41, title_menu_string15); 
+    draw_text(173, 47, title_menu_string15); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 41, title_menu_string15); 
+    draw_text(173, 47, title_menu_string15); 
     }
     if(title_menu_option = 16)
     {
     draw_set_color(c_yellow); 
-    draw_text(176, 57, title_menu_string16);
+    draw_text(173, 55, title_menu_string16);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 57, title_menu_string16);
+    draw_text(173, 55, title_menu_string16);
     }
     if(title_menu_option = 17)
     {
     draw_set_color(c_yellow); 
-    draw_text(176, 65, title_menu_string17);
+    draw_text(173, 71, title_menu_string17);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 65, title_menu_string17); 
+    draw_text(173, 71, title_menu_string17); 
     }
     if(title_menu_option = 18)
     {
     draw_set_color(c_yellow); 
-    draw_text(176, 81, title_menu_string18); 
+    draw_text(173, 95, title_menu_string18); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 81, title_menu_string18);
+    draw_text(173, 95, title_menu_string18);
     }
     if(title_menu_option = 19)
     {
     draw_set_color(c_yellow);  
-    draw_text(176, 89, title_menu_string19);
+    draw_text(173, 143, title_menu_string19);
+    draw_text(270, 142, "*"+scr_string_number_format(string_hex(sound_test_option),2)+"*")
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 89, title_menu_string19);
+    draw_text(173, 143, title_menu_string19);
+    draw_text(270, 142, "*"+scr_string_number_format(string_hex(sound_test_option),2)+"*")
     }
     if(title_menu_option = 20)
     {
-    draw_set_color(c_yellow);
-    draw_text(176, 105, title_menu_string20); 
-    }
-    else
-    {
-    draw_set_color(c_white);
-    draw_text(176, 105, title_menu_string20); 
-    }
-    if(title_menu_option = 21)
-    {
-    draw_set_color(c_yellow);  
-    draw_text(176, 121, title_menu_string21);
-    }
-    else
-    {
-    draw_set_color(c_white);
-    draw_text(176, 121, title_menu_string21);
-    }
-    if(title_menu_option = 22)
-    {
     draw_set_color(c_yellow); 
-    draw_text(176, 137, title_menu_string22);
+    draw_text(275, 183, title_menu_string20);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(176, 137, title_menu_string22); 
+    draw_text(275, 183, title_menu_string20); 
     }
+    draw_sprite(spr_level_select, title_menu_option, 189, 161);
     }
     
     /*    // --- Draw Title ----------------------------------------

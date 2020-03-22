@@ -3,7 +3,7 @@
   <spriteName>spr_test_bridge_12_logs</spriteName>
   <solid>0</solid>
   <visible>0</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>par_bridge</parentName>
   <maskName>&lt;undefined&gt;</maskName>

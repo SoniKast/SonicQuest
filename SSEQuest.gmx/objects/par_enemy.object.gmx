@@ -26,9 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Explode.
-              
- // Add Score:
-    global.player_score += score_multiplier(true, x, y-10); 
                                 
  // Dummy Effect:
     dummy_effect_create(spr_explosion, 0.2, x, y, 5, 0);
@@ -61,6 +58,9 @@
     {
     instance_create(x,y-2,choose(obj_animal_lucky,obj_animal_pecky,obj_animal_dicky,obj_animal_docky));
     }
+              
+ // Add Score:
+    global.player_score += score_multiplier(true, x, y-10); 
 
 </string>
           </argument>

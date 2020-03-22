@@ -95,6 +95,20 @@
        exit;
     }
     
+    if(instance_exists(obj_special_results) &amp;&amp; zone_results == false)
+    {
+       zone_results = true;    
+       audio_stop_all();
+       global.bgm_volume = zone_my_bgm_volume;
+       global.sfx_volume = zone_my_sfx_volume;
+       aud_play_sound(jingle_scoring, global.bgm_volume, 1, 0, 0);       
+       exit;
+    }
+    if(zone_results == true)
+    {
+       exit;
+    }
+    
 
  // Lower the music volume if the life jingle is playing.
     if(instance_exists(obj_player))
@@ -147,7 +161,7 @@
     }
     
  // Set the volume of the currently playing zone music and invincibility jingle.
-    if(audio_is_playing(jingle_invincibility) == false or audio_is_playing(jingle_sneakers) == false)
+    if(audio_is_playing(jingle_invincibility) == false || audio_is_playing(jingle_sneakers) == false || audio_is_playing(jingle_super) == false)
     {    
        if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
        {
@@ -167,9 +181,19 @@
        {
           audio_sound_gain(jingle_invincibility, global.bgm_volume, 0);
        }  
+    }
+    if(audio_is_playing(jingle_drown) == false)
+    {
        if(audio_is_playing(jingle_sneakers))
        {
           audio_sound_gain(jingle_sneakers, global.bgm_volume, 0);
+       }
+    }
+    if(audio_is_playing(jingle_drown) == false)
+    {
+       if(audio_is_playing(jingle_super))
+       {
+          audio_sound_gain(jingle_super, global.bgm_volume, 0);
        }
     }
     else
@@ -181,7 +205,11 @@
        if(audio_is_playing(jingle_sneakers))
        {
           audio_sound_gain(jingle_sneakers, 0.00, 0);
-       }         
+       }
+       if(audio_is_playing(jingle_super))
+       {
+          audio_sound_gain(jingle_super, 0.00, 0);
+       }        
     }
     
  // Some sound effects need to have their volume modified too.
@@ -316,6 +344,33 @@
            case rm_great_garden1:
            {
                 zone_bgm = music_great_garden1;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
+           case rm_great_garden2:
+           {
+                zone_bgm = music_great_garden2;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
+           case rm_pinball_panic1:
+           {
+                zone_bgm = music_pinball_panic1;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
+           case rm_forest_frenzy1:
+           {
+                zone_bgm = music_jungle_havoc1;
                 if(audio_is_playing(zone_bgm) == false)
                 {
                     aud_play_music(zone_bgm, global.bgm_volume, 1);

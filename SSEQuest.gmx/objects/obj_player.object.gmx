@@ -147,8 +147,9 @@
     tube_mov_x        = 0;         // The x movement for the player in a tube.
     tube_mov_y        = 0;         // The y movement for the player in a tube.
     
-    death_timer       = -5;       // See death script in the step event.
-
+    death_timer       = -5;        // See death script in the step event.
+    PalettePosition   = 0;         // If we manipulate a sprites palette, this keeps track of the position.  
+       
    // Transforming
     AllowTransformation = 1;    // Checks if we can transform.
     TransformEnded      = 0;    // Checks if a transformation has ended. 
@@ -508,6 +509,12 @@
               if(state == STATE_HURT &amp;&amp; animation != "hurt")
               {
                  animation = "hurt";
+              }                         
+           
+           // Transforming:
+              if(state = STATE_TRANSFORM &amp;&amp; animation != "transform")
+              {
+                 animation = "transform";
               }
     
            // Breath:
@@ -946,7 +953,7 @@
             <kind>1</kind>
             <string>/// Water splash.
 
-    if(global.water_position != -1)
+    if(global.water_position != -1 &amp;&amp; state != STATE_DEATH)
     {
        if ((abs(y_speed) &gt;= 0)
        &amp;&amp; ((y &gt; global.water_position &amp;&amp; previous_y &lt; global.water_position)
@@ -1133,7 +1140,7 @@
           if(death_timer == -5)
           {
              angle = 0;
-             if(physic_mode == 0)
+             if(global.BonusStage == false &amp;&amp; physic_mode == 0)
              {
                 y_speed = -7;
              }
@@ -1147,10 +1154,13 @@
                 }
                 
              // Decrease lives.
-                global.player_lives -= 1;
-                if(global.player_lives &lt; 0)
+             if(global.BonusStage == false)
                 {
-                   global.player_lives = 0;
+                global.player_lives -= 1;
+                    if(global.player_lives &lt; 0)
+                    {
+                       global.player_lives = 0;
+                    }
                 }
                 
              // Play death/drown sound.
@@ -1190,14 +1200,20 @@
           else if(death_timer == 0)
           {
              death_timer = -1;
-             if(global.player_lives &gt; 0)
-             {
-                instance_create(0, 0, obj_fade_restart);
-             }
-             else
-             {  
-                global.previous_room = room;
-                instance_create(0, 0, obj_game_over);            
+             if(global.BonusStage == false){
+                 if(global.player_lives &gt; 0)
+                 {
+                    instance_create(0, 0, obj_fade_restart);
+                 }
+                 else
+                 {  
+                    global.previous_room = room;
+                    instance_create(0, 0, obj_game_over);            
+                 }
+             }else{
+                 if(instance_exists(obj_fade_from_bonus) == false){
+                    instance_create(0, 0, obj_fade_from_bonus);
+                 }
              }
           }
     }
@@ -1969,7 +1985,7 @@
     player_state_transform();
     
  // Sonic only - Dropdash:
-    if(player_index == CHAR_SONIC &amp;&amp; allow_dropdash == true)
+    if(player_index == CHAR_SONIC)
     {
        player_state_insta_shield();
     }
@@ -2088,6 +2104,11 @@
        audio_stop_sound(jingle_sneakers);
     }
     
+    if(audio_is_playing(jingle_super) &amp;&amp; CharacterState == CharacterNormal)
+    {
+       audio_stop_sound(jingle_super);
+    }
+    
  // Don't show shields.
     if(shield != 0 &amp;&amp; invincibility &gt; 1)
     { 
@@ -2112,15 +2133,37 @@
           invincibility_timer = 120;
        }
     }
- 
+    
+   // When we're super, we're always invincible:
+      if(CharacterState = CharacterSuper or CharacterState = CharacterHyper){
+         invincibility =  2;
+         invincibility_timer      = -2;
+      }else{
+         if(invincibility_timer = -2){
+            invincibility = 0;
+            invincibility_timer      = 0;
+         }
+      } 
+         
  // Sparkles.
     if(invincibility &gt; 1)
     {
-       repeat(1)
+       if(CharacterState != CharacterHyper)
        {
-              instance_create(x, y, obj_invincibility_sparkle)
+           repeat(1)
+           {
+                  instance_create(x, y, obj_invincibility_sparkle)
+           }
+       }else{
+       if(CharacterState == CharacterHyper)
+       {
+           repeat(1)
+           {
+                  instance_create(x, y, obj_hyper_sparkle)
+           }
        }
     }
+ }
     
  // Speedshoe timer.
     if(speedshoe_timer &gt; 0)
@@ -2157,15 +2200,68 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Modify Palette position.
+
+ // Default:
+    if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded = 0){
+       PalettePosition = 0;
+    }
+ 
+ // Back to normal Sonic Palette:
+    if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+       if(PalettePosition &gt; 10){
+          TransformEnded  = 0;
+       }else{
+          PalettePosition += 0.50;
+       }
+    }
+    
+ // Super Sonic Palette:
+    if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterSuper){
+       if(PalettePosition &gt; 2){
+          PalettePosition = 0;
+       }
+       PalettePosition += 0.05;
+    }
+    
+ // Hyper Sonic Palette:
+    if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterHyper){
+       if(PalettePosition &gt; 7){
+          PalettePosition = 0;
+       }
+       PalettePosition += 0.10;
+    }
+    
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Underwater handling.
 
  // Don't run in certain cases:
-    if(state != STATE_DEATH &amp;&amp; !instance_exists(obj_results))
+    if(state != STATE_DEATH &amp;&amp; !instance_exists(obj_results) &amp;&amp; !instance_exists(obj_special_results) &amp;&amp; !instance_exists(obj_fake_results))
     {
        if(physic_mode == 1)
        {
           // Destroy the countdown if we have a bubble shield and keep the drown timer fixed.
-             if(shield == SHIELD_BUBBLE)
+             if(shield == SHIELD_BUBBLE &amp;&amp; CharacterState != CharacterHyper)
              {
                 drown_timer = 1800;
                 if(instance_exists(drown_counter))
@@ -2180,7 +2276,7 @@
              }
              
           // Decrease our drown timer.
-             if(drown_timer &gt; 0)
+             if(drown_timer &gt; 0 &amp;&amp; CharacterState != CharacterHyper)
              {
                 drown_timer -= 1;
              }

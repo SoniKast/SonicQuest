@@ -15,6 +15,7 @@
       <sound>sound\music_sunshine_valley2</sound>
       <sound>sound\music_great_garden1</sound>
       <sound>sound\music_great_garden2</sound>
+      <sound>sound\music_pinball_panic1</sound>
       <sound>sound\music_jungle_havoc1</sound>
     </sounds>
     <sounds name="SFX">
@@ -403,15 +404,16 @@
       <sprites name="Display">
         <sprites name="HUD">
           <sprite>sprites\spr_hud</sprite>
-          <sprite>sprites\spr_time_seperator</sprite>
           <sprite>sprites\spr_hud_new</sprite>
           <sprite>sprites\spr_hud_lives</sprite>
-          <sprite>sprites\spr_specialstage_hud</sprite>
+          <sprite>sprites\spr_blue_ring</sprite>
           <sprite>sprites\spr_continues</sprite>
           <sprite>sprites\spr_game_over</sprite>
-          <sprite>sprites\spr_blue_ring</sprite>
-          <sprite>sprites\spr_invincibility_counter</sprite>
+          <sprite>sprites\spr_time_seperator</sprite>
+          <sprite>sprites\spr_pause_menu</sprite>
+          <sprite>sprites\spr_specialstage_hud</sprite>
           <sprite>sprites\spr_sneakers_counter</sprite>
+          <sprite>sprites\spr_invincibility_counter</sprite>
         </sprites>
         <sprites name="Title Card">
           <sprite>sprites\spr_title_card_banner</sprite>
@@ -423,6 +425,7 @@
           <sprite>sprites\font_hud_numbers</sprite>
           <sprite>sprites\font_main</sprite>
           <sprite>sprites\font_lives</sprite>
+          <sprite>sprites\font_title</sprite>
           <sprite>sprites\spr_ss_text</sprite>
         </sprites>
       </sprites>
@@ -455,6 +458,7 @@
         </sprites>
         <sprites name="Sparkles">
           <sprite>sprites\spr_ring_sparkle</sprite>
+          <sprite>sprites\spr_hyper_sparkle</sprite>
           <sprite>sprites\spr_invincibility_sparkle</sprite>
         </sprites>
         <sprites name="Explosions">
@@ -812,6 +816,26 @@
           <sprite>sprites\spr_hpz_platform</sprite>
           <sprite>sprites\spr_sanctuary_orb_end</sprite>
         </sprites>
+        <sprites name="BZ">
+          <sprites name="Gimmicks">
+            <sprite>sprites\sprEngineStopGimmick</sprite>
+            <sprite>sprites\sprGimmickSeesawEdge</sprite>
+            <sprite>sprites\sprGimmickSeesawMask</sprite>
+            <sprite>sprites\sprGimmickSeesawMask0</sprite>
+            <sprite>sprites\spr_bz_swing_platform</sprite>
+            <sprite>sprites\sprObjectSpikeball</sprite>
+            <sprite>sprites\sprObjectSeesaw</sprite>
+          </sprites>
+          <sprites name="Decorations">
+            <sprite>sprites\spr_waterfall_top</sprite>
+            <sprite>sprites\spr_waterfall_bottom</sprite>
+            <sprite>sprites\spr_da_rock</sprite>
+          </sprites>
+          <sprites name="Badniks">
+            <sprite>sprites\spr_badnik_spikes</sprite>
+            <sprite>sprites\spr_badnik_spikes_mask</sprite>
+          </sprites>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Menus / Continue">
@@ -822,6 +846,8 @@
         <sprite>sprites\sprPresentationTitle</sprite>
         <sprite>sprites\sprPresentationSubtitle</sprite>
         <sprite>sprites\spr_title_press_start</sprite>
+        <sprite>sprites\spr_level_select</sprite>
+        <sprite>sprites\spr_level_select_bg</sprite>
       </sprites>
       <sprites name="Level Select">
         <sprite>sprites\spr_levelselect_stage_previews</sprite>
@@ -968,6 +994,14 @@
           <background>background\backBonusZoneTiles</background>
           <background>background\backBonusZoneBackground</background>
         </backgrounds>
+        <backgrounds name="Bridge Zone">
+          <background>background\ts_bridge1</background>
+          <background>background\ts_bridge2</background>
+          <background>background\ts_bridge3</background>
+          <background>background\ts_bridge4_new</background>
+          <background>background\ts_bridge5_new</background>
+          <background>background\ts_seesaw</background>
+        </backgrounds>
       </backgrounds>
       <backgrounds name="Parallax Backgrounds">
         <backgrounds name="Sunshine Valley Zone">
@@ -1017,6 +1051,9 @@
           <background>background\bg_hpz_8</background>
           <background>background\bg_hpz_9</background>
           <background>background\bg_hpz_10</background>
+        </backgrounds>
+        <backgrounds name="Bridge Zone">
+          <background>background\backBZ00</background>
         </backgrounds>
         <backgrounds name="Bonus Stage">
           <background>background\bg_bonus1_1</background>
@@ -1189,7 +1226,8 @@
         <script>scripts\pal_swap_set_tiles.gml</script>
       </scripts>
       <script>scripts\inview.gml</script>
-      <script>scripts\script130.gml</script>
+      <script>scripts\string_hex.gml</script>
+      <script>scripts\sound_test_code.gml</script>
       <script>scripts\string_place_number.gml</script>
       <script>scripts\dummy_effect_create.gml</script>
       <script>scripts\wrap_angle.gml</script>
@@ -1214,7 +1252,9 @@
     </scripts>
   </scripts>
   <shaders name="shaders">
+    <shader type="GLSLES">shaders\shd_sepia_new.shader</shader>
     <shader type="GLSLES">shaders\shd_pal_swapper.shader</shader>
+    <shader type="GLSLES">shaders\shd_sepia.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_debug</font>
@@ -1447,6 +1487,7 @@
             <object>objects\obj_electricity_spark</object>
             <object>objects\obj_skid_dust</object>
             <object>objects\obj_invincibility_sparkle</object>
+            <object>objects\obj_hyper_sparkle</object>
           </objects>
           <objects name="Object">
             <object>objects\obj_sanctuary_orb_beam_a</object>
@@ -1460,8 +1501,8 @@
         <objects name="Flickies">
           <objects name="Zone 1">
             <object>objects\obj_animal_flicky</object>
-            <object>objects\obj_animal_rflicky</object>
             <object>objects\obj_animal_gflicky</object>
+            <object>objects\obj_animal_rflicky</object>
             <object>objects\obj_animal_pflicky</object>
           </objects>
           <objects name="Zone 2">
@@ -1933,12 +1974,34 @@
         <object>objects\obj_hpz_platform</object>
       </objects>
       <objects name="Extra">
+        <objects name="Bridge Zone">
+          <objects name="Parallax">
+            <object>objects\objBZParallax</object>
+          </objects>
+          <objects name="Waterfall">
+            <object>objects\obj_waterfall_bottom</object>
+            <object>objects\obj_waterfall_top</object>
+          </objects>
+          <objects name="Gimmicks">
+            <objects name="Seesaws">
+              <object>objects\objObjectSeesaw</object>
+              <object>objects\objObjectSpikeball</object>
+              <object>objects\objSeesawLimiterLeft</object>
+              <object>objects\objSeesawLimiterRight</object>
+            </objects>
+            <object>objects\obj_bridge_platform</object>
+          </objects>
+          <objects name="Badniks">
+            <object>objects\obj_badnik_spikes</object>
+            <object>objects\obj_badnik_spikes_mask</object>
+          </objects>
+          <object>objects\obj_da_rock</object>
+        </objects>
         <object>objects\obj_bonus1_parallax</object>
         <object>objects\obj_goal_block</object>
       </objects>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
@@ -1997,9 +2060,10 @@
       </rooms>
       <room>rooms\rm_options</room>
       <room>rooms\rm_hidden_palace</room>
+      <room>rooms\rm_bridge_zone1</room>
     </rooms>
   </rooms>
-  <constants number="76">
+  <constants number="77">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2053,6 +2117,7 @@
     <constant name="STATE_SLIPPING">25</constant>
     <constant name="STATE_AIRCORKSCREW">26</constant>
     <constant name="STATE_TRANSFORM">27</constant>
+    <constant name="STATE_PEELOUT">28</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>

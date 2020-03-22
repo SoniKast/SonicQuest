@@ -1,16 +1,13 @@
 /// scr_character_action_transform()
-//  Script to handle t =he Transforming state.
-  
-   //Check if we have all Emeralds, if not, exit.
-   if(global.player_emeralds < 7) exit;
+//  Script to handle the Transforming state.
  
     // Check if we can Transform:
-       if(state != STATE_TRANSFORM && state = STATE_JUMP && CharacterState == CharacterNormal && invincibility == 0 && AllowTransformation == 1 && state != STATE_FLY && state := STATE_FLYDROP){
-          if(global.player_rings >= 50 && input_action_pressed){
+       if(state != STATE_TRANSFORM && state = STATE_JUMP && CharacterState == CharacterNormal && shield = 0 && invincibility == 0 && AllowTransformation == 1 && state != STATE_FLY && state != STATE_FLYDROP){
+          if((global.player_emeralds == 7 || global.player_emeralds = 14) && global.player_rings >= 50 && input_action_pressed){
              state = STATE_TRANSFORM;
              invincibility =  2;
              invincibility_timer      = -3;
-             aud_play_sound(player_transform, global.SFXVolume, 1, 0, 0);
+             aud_play_sound(player_transform, global.sfx_volume, 1, 0, 0);
           }
        }
        
@@ -22,7 +19,11 @@
              if(TransformTimer != 0){
                 TransformTimer--
              }else{
-                CharacterState = CharacterHyper;
+                if(global.player_emeralds == 7){
+                    CharacterState = CharacterSuper;
+                }else if(global.player_emeralds == 14){
+                         CharacterState = CharacterHyper;
+                }
                 state          = STATE_JUMP;
              }
           }
@@ -37,19 +38,27 @@
           }else{
             // Make sure to not run the alarm event:
                alarm[0] = -1;                  
+            // Palette fade:
+               if((player_index = CHAR_SONIC) || (player_index == CHAR_TAILS) || (player_index == CHAR_KNUCKLES && CharacterState == CharacterHyper)){
+                  TransformEnded  = 1;
+                  if(player_index != CHAR_SONIC){
+                     PalettePosition = 1;
+                  }else{
+                     PalettePosition = 0;
+                  }
+               }
             // Reset the Characters state:
                CharacterState = CharacterNormal;                
             // Change the animation to "BLANK" to make sure that the current animation is being reloaded.
                animaton      = "BLANK";
             // Reset the Transform Timer:
-               TransformTimer = 15;
+               if(player_index != CHAR_KNUCKLES){
+                  TransformTimer = 15;
+               }else{
+                  TransformTimer = 3;
+               }
             // Again, change the animation to "BLANK" to make sure that the current animation is being reloaded properly.
                animaton      = "BLANK AGAIN";
-            // Palette fade:
-               if((player_index = CHAR_SONIC)){
-                  TransformEnded  = 1;
-                  PalettePosition = 0;
-               }            
           }
        }
 
