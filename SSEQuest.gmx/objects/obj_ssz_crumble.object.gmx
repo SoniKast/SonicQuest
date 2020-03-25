@@ -73,12 +73,12 @@
     {
         for(tile_w = 0; tile_w &lt; tile_width; tile_w+=1)
         {
-            with(instance_create(x+tile_w*16, y+tile_h*16, obj_collapse_pieces_test))
+            with(instance_create(x+tile_w*16, y+tile_h*16, obj_ssz_crumble_pieces))
             {
                  image_speed = 0;
                  image_index = tile_h*tile_width+tile_w;
                  tile_int    = tile_h*tile_width+tile_w;
-                 mask_index  = spr_collapse_pieces_test;
+                 mask_index  = spr_ssz_platform_crumble;
                  if(image_xscale &gt; 0)
                  {
                     alarm[0] = ((tile_width-tile_w)*other.tile_ox)+(((tile_height-tile_h)-1)*other.tile_oy);

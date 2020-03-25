@@ -66,6 +66,8 @@
         <sound>sound\player_roll</sound>
         <sound>sound\player_skidding</sound>
         <sound>sound\player_slide</sound>
+        <sound>sound\player_peelout_charge</sound>
+        <sound>sound\player_peelout_release</sound>
         <sound>sound\player_spindash_charge</sound>
         <sound>sound\player_spindash_release</sound>
         <sound>sound\player_transform</sound>
@@ -135,6 +137,7 @@
           <sprite>sprites\spr_sonic_transform</sprite>
           <sprite>sprites\spr_sonic_die</sprite>
           <sprite>sprites\spr_sonic_drown</sprite>
+          <sprite>sprites\spr_sonic_float</sprite>
           <sprites name="Super">
             <sprite>sprites\spr_ssonic_idle</sprite>
             <sprite>sprites\spr_ssonic_lookup</sprite>
@@ -177,6 +180,7 @@
           <sprite>sprites\spr_tails_hurt</sprite>
           <sprite>sprites\spr_tails_die</sprite>
           <sprite>sprites\spr_tails_drown</sprite>
+          <sprite>sprites\spr_tails_transform</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
             <sprite>sprites\spr_tail_part_2</sprite>
@@ -240,6 +244,10 @@
           <sprite>sprites\spr_sonic_super_palette</sprite>
           <sprite>sprites\spr_sonic_hyper_palette</sprite>
           <sprite>sprites\spr_sonic_to_normal_palette</sprite>
+          <sprite>sprites\spr_tails_super_palette</sprite>
+          <sprite>sprites\spr_tails_to_normal_palette</sprite>
+          <sprite>sprites\spr_knuckles_super_palette</sprite>
+          <sprite>sprites\spr_knuckles_to_normal_palette</sprite>
         </sprites>
         <sprite>sprites\spr_insta_shield</sprite>
       </sprites>
@@ -399,6 +407,7 @@
           <sprite>sprites\spr_casino_slot</sprite>
           <sprite>sprites\spr_casino_slotbox</sprite>
           <sprite>sprites\spr_casino_slotpanel</sprite>
+          <sprite>sprites\spr_casino_slotpannel</sprite>
         </sprites>
       </sprites>
       <sprites name="Display">
@@ -454,12 +463,14 @@
         <sprites name="Player">
           <sprite>sprites\spr_spindash_dust</sprite>
           <sprite>sprites\spr_electricity_spark</sprite>
+          <sprite>sprites\spr_water_run</sprite>
           <sprite>sprites\spr_skid_dust</sprite>
         </sprites>
         <sprites name="Sparkles">
           <sprite>sprites\spr_ring_sparkle</sprite>
           <sprite>sprites\spr_hyper_sparkle</sprite>
           <sprite>sprites\spr_invincibility_sparkle</sprite>
+          <sprite>sprites\spr_bonus_spark</sprite>
         </sprites>
         <sprites name="Explosions">
           <sprite>sprites\spr_explosion</sprite>
@@ -499,7 +510,6 @@
             </sprites>
           </sprites>
         </sprites>
-        <sprite>sprites\spr_bonus_spark</sprite>
         <sprite>sprites\spr_sanctuary_orb</sprite>
         <sprite>sprites\spr_sanctuary_orb_beam_a</sprite>
         <sprite>sprites\spr_sanctuary_orb_beam_b</sprite>
@@ -744,8 +754,10 @@
             <sprite>sprites\sprite433</sprite>
             <sprite>sprites\spr_ssz_launch</sprite>
             <sprite>sprites\spr_ssz_launch_mask</sprite>
+            <sprite>sprites\spr_ssz_fan</sprite>
           </sprites>
           <sprite>sprites\spr_ssz_platform</sprite>
+          <sprite>sprites\spr_ssz_platform_crumble</sprite>
         </sprites>
         <sprites name="GGZ">
           <sprites name="Gimmicks">
@@ -880,10 +892,13 @@
     </sprites>
     <sprites name="Misc">
       <sprite>sprites\spr_empty</sprite>
+      <sprite>sprites\spr_water_walk</sprite>
       <sprite>sprites\spr_rain</sprite>
       <sprite>sprites\spr_camera</sprite>
       <sprites name="Debug">
         <sprite>sprites\spr_playground</sprite>
+        <sprite>sprites\spr_arrows</sprite>
+        <sprite>sprites\spr_arrows_v</sprite>
         <sprite>sprites\spr_performance_check</sprite>
         <sprite>sprites\spr_tube_icon_down</sprite>
         <sprite>sprites\spr_tube_icon_end</sprite>
@@ -1122,10 +1137,14 @@
         <script>scripts\player_state_edgewobble.gml</script>
         <script>scripts\player_state_respawn.gml</script>
         <script>scripts\player_state_tube.gml</script>
+        <script>scripts\player_state_float.gml</script>
+        <script>scripts\player_state_float_v.gml</script>
         <script>scripts\player_state_transform.gml</script>
         <scripts name="Sonic only">
           <script>scripts\player_state_dropdash.gml</script>
           <script>scripts\player_state_insta_shield.gml</script>
+          <script>scripts\player_state_hyper_dash.gml</script>
+          <script>scripts\player_state_peelout.gml</script>
         </scripts>
         <scripts name="Tails only">
           <script>scripts\player_state_fly.gml</script>
@@ -1153,6 +1172,8 @@
         <script>scripts\player_handle_breakable_walls.gml</script>
         <script>scripts\player_handle_casino.gml</script>
         <script>scripts\player_handle_bonus_slab.gml</script>
+        <script>scripts\player_handle_float.gml</script>
+        <script>scripts\player_handle_float_v.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1224,6 +1245,15 @@
         <script>scripts\pal_swap_reset.gml</script>
         <script>scripts\pal_swap_set.gml</script>
         <script>scripts\pal_swap_set_tiles.gml</script>
+      </scripts>
+      <scripts name="Nasziku GM Recording Tool">
+        <script>scripts\scrWriteKey.gml</script>
+        <script>scripts\scrReadKey.gml</script>
+        <script>scripts\scrRecordInit.gml</script>
+        <script>scripts\scrRecordPlayStep.gml</script>
+        <script>scripts\scrRecordStep.gml</script>
+        <script>scripts\scrRecordEnd.gml</script>
+        <script>scripts\scrRecordKeyHold.gml</script>
       </scripts>
       <script>scripts\inview.gml</script>
       <script>scripts\string_hex.gml</script>
@@ -1478,8 +1508,10 @@
           <object>objects\obj_water_bubble_generator</object>
           <object>objects\obj_water_air_bubble</object>
           <object>objects\obj_water_alarm</object>
+          <object>objects\obj_water_walk</object>
         </objects>
         <objects name="Effects">
+          <object>objects\obj_effect_screenflash</object>
           <object>objects\obj_bonus_spark_generator</object>
           <object>objects\obj_bonus_spark</object>
           <object>objects\obj_dummy_effect</object>
@@ -1861,6 +1893,7 @@
             <object>objects\obj_ssz_loop_top</object>
             <object>objects\obj_water_rush</object>
             <object>objects\obj_ssz_crumble</object>
+            <object>objects\obj_ssz_crumble_pieces</object>
             <object>objects\obj_ssz_flip</object>
           </objects>
           <objects name="Decorations">
@@ -1881,6 +1914,11 @@
           <object>objects\object477</object>
           <object>objects\object478</object>
           <object>objects\object481</object>
+          <object>objects\obj_float_start</object>
+          <object>objects\obj_float_start_v</object>
+          <object>objects\obj_float_end_h</object>
+          <object>objects\obj_float_end_v</object>
+          <object>objects\obj_ssz_fan</object>
         </objects>
         <objects name="Cutscenes">
           <object>objects\obj_metal_cutscene</object>
@@ -2063,7 +2101,7 @@
       <room>rooms\rm_bridge_zone1</room>
     </rooms>
   </rooms>
-  <constants number="77">
+  <constants number="79">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2118,6 +2156,8 @@
     <constant name="STATE_AIRCORKSCREW">26</constant>
     <constant name="STATE_TRANSFORM">27</constant>
     <constant name="STATE_PEELOUT">28</constant>
+    <constant name="STATE_FLOAT">29</constant>
+    <constant name="STATE_FLOAT_V">30</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>

@@ -66,101 +66,108 @@ if (ActionTimer == 800)
 {
 Active = true;
 }
-
-    /*if(Active == true)
+/*  
+    if(Active == true)
     {
+        
         if(obj_slotpanel01.Panel = 1 &amp;&amp; obj_slotpanel02.Panel = 1 &amp;&amp; obj_slotpanel03.Panel = 1)
         {
         global.BonusRings += 30;
+        }*/
+        /*
+        if(obj_slotpanel01.y1 == obj_slotpanel02.y1 &amp;&amp; obj_slotpanel01.y1 == obj_slotpanel03.y1)
+        {
+        global.player_rings += 30;
         }
+    }*/   /*
         if(obj_slotpanel01.Panel = 2 &amp;&amp; obj_slotpanel02.Panel = 2 &amp;&amp; obj_slotpanel03.Panel = 2)
         {
-        global.BonusRings += 20;
+        global.player_rings += 20;
         }
         if(obj_slotpanel01.Panel = 3 &amp;&amp; obj_slotpanel02.Panel = 3 &amp;&amp; obj_slotpanel03.Panel = 3)
         {
-        global.BonusRings += 25;
+        global.player_rings += 25;
         }
         if(obj_slotpanel01.Panel = 4 &amp;&amp; obj_slotpanel02.Panel = 4 &amp;&amp; obj_slotpanel03.Panel = 4)
         {
-        global.BonusRings += 15;
+        global.player_rings += 15;
         }
         if(obj_slotpanel01.Panel = 5 &amp;&amp; obj_slotpanel02.Panel = 5 &amp;&amp; obj_slotpanel03.Panel = 5)
         {
-        global.BonusRings -= 100;
+        global.player_rings -= 100;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 5 &amp;&amp; obj_slotpanel03.Panel = 5)
         {
-        global.BonusRings -= 100;
+        global.player_rings -= 100;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 5)
         {
-        global.BonusRings -= 100;
+        global.player_rings -= 100;
         }
         if(obj_slotpanel01.Panel = 6 &amp;&amp; obj_slotpanel02.Panel = 6 &amp;&amp; obj_slotpanel03.Panel = 6)
         {
-        global.BonusRings += 10;
+        global.player_rings += 10;
         }
         if(obj_slotpanel01.Panel = 7 &amp;&amp; obj_slotpanel02.Panel = 7 &amp;&amp; obj_slotpanel03.Panel = 7)
         {
-        global.BonusRings += 8;
+        global.player_rings += 8;
         }
         
         //Jackpot x1
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 8)
         {
-        global.BonusRings += 100;
+        global.player_rings += 100;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 1 &amp;&amp; obj_slotpanel03.Panel = 1)
         {
-        global.BonusRings += 60;
+        global.player_rings += 60;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 2 &amp;&amp; obj_slotpanel03.Panel = 2)
         {
-        global.BonusRings += 40;
+        global.player_rings += 40;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 3 &amp;&amp; obj_slotpanel03.Panel = 3)
         {
-        global.BonusRings += 45;
+        global.player_rings += 45;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 4 &amp;&amp; obj_slotpanel03.Panel = 4)
         {
-        global.BonusRings += 30;
+        global.player_rings += 30;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 6 &amp;&amp; obj_slotpanel03.Panel = 6)
         {
-        global.BonusRings += 20;
+        global.player_rings += 20;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 7 &amp;&amp; obj_slotpanel03.Panel = 7)
         {
-        global.BonusRings += 8;
+        global.player_rings += 8;
         }
         
         //Jackpot x2
         
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 1)
         {
-        global.BonusRings += 120;
+        global.player_rings += 120;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 2)
         {
-        global.BonusRings += 80;
+        global.player_rings += 80;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 3)
         {
-        global.BonusRings += 100;
+        global.player_rings += 100;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 4)
         {
-        global.BonusRings += 60;
+        global.player_rings += 60;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 6)
         {
-        global.BonusRings += 40;
+        global.player_rings += 40;
         }
         if(obj_slotpanel01.Panel = 8 &amp;&amp; obj_slotpanel02.Panel = 8 &amp;&amp; obj_slotpanel03.Panel = 7)
         {
-        global.BonusRings += 8;
+        global.player_rings += 8;
         }
     }        
 
@@ -204,25 +211,22 @@ Active = true;
     }
     
     with(obj_slotpanel01){
-    if (CanCycle == true){
-    Cycle = true;
-        } 
+    alarm[0] = 15
+    running = true
+    run_speed = 7+random(5)
     }
     with(obj_slotpanel02){
-    if (CanCycle == true){
-    Cycle = true;
-        }
+    alarm[0] = 30
+    running = true
+    run_speed = 7+random(5)
     }
     with(obj_slotpanel03){
-    if (CanCycle == true){
-    Cycle = true;
-        }
+    alarm[0] = 45
+    running = true
+    run_speed = 7+random(5)
     }
-    
     }
-    
     else
-    
     with(par_player){
     state = STATE_DEFAULT;
     }

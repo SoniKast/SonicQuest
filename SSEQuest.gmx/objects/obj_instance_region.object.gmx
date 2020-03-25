@@ -37,6 +37,9 @@
     instance_activate_object(obj_ssz_waterfall_platform);
     instance_activate_object(obj_waterfall_platform_spawner);
     instance_activate_object(obj_waterfall_platform_despawn);
+    instance_activate_object(obj_water_walk);   
+    instance_activate_object(objObjectSeesaw);  
+    instance_activate_object(objObjectSpikeball);
     instance_activate_region(view_xview[0] - global.screen_width/2, view_yview - global.screen_height/2, view_wview[0] + global.screen_width, view_hview[0] + global.screen_height, true);
     
  // Deactivate instances that need to be activated in the middle region:

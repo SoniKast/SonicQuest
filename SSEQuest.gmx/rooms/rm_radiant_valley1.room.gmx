@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>/// Zone init. 
 
-    global.zone_name        = "RADIANT VALLEY"
+    global.zone_name        = "RIVERSIDE VALLEY"
     global.zone_act         =  1;
     global.water_position   = -1;
     global.death_height     = room_height;
@@ -770,7 +770,6 @@
     <instance objName="obj_collision_tile_01" x="7520" y="768" name="inst_38E47367" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_8" x="8000" y="1088" name="inst_5F1A6E79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_8" x="8128" y="1088" name="inst_2856FEC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_waterfall_platform_spawner" x="8128" y="544" name="inst_D7B65595" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_waterfall_platform_despawn" x="8127" y="1066" name="inst_40253079" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="7936" y="928" name="inst_ECE3F859" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="7936" y="704" name="inst_1E66F224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1286,8 +1285,7 @@
     <instance objName="obj_spring_diagonal_up_left" x="11840" y="704" name="inst_B1BAE536" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_diagonal_up_left" x="11840" y="528" name="inst_1A33B4C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_diagonal_up_right" x="11648" y="608" name="inst_0E8BBE3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spring_diagonal_up_right" x="11648" y="480" name="inst_A97CDBB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spring_diagonal_up_right" x="11648" y="384" name="inst_516ADA50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_diagonal_up_right" x="11648" y="448" name="inst_A97CDBB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10304" y="512" name="inst_5020AA4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10368" y="512" name="inst_FBE1AC1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10432" y="512" name="inst_0C0BD897" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1668,7 +1666,6 @@
     <instance objName="obj_flutter" x="4160" y="848" name="inst_25B4A5C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="6304" y="1504" name="inst_E2144CC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="5760" y="1440" name="inst_F639548B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flutter" x="5760" y="1440" name="inst_BD964ED8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="6080" y="1120" name="inst_6905A2ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="5840" y="1152" name="inst_74C1CBDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="6400" y="640" name="inst_B002AD31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1840,10 +1837,8 @@
     <instance objName="obj_ring" x="11680" y="592" name="inst_33444218" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="11712" y="560" name="inst_C015F654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="11808" y="512" name="inst_2D473B5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="11680" y="464" name="inst_895D8FE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="11712" y="432" name="inst_EA69D8AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="11680" y="368" name="inst_B17683E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="11712" y="336" name="inst_952B04D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="11680" y="432" name="inst_895D8FE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="11712" y="400" name="inst_EA69D8AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="11776" y="480" name="inst_096EE271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="12240" y="496" name="inst_B2C95918" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="12272" y="496" name="inst_3C475DED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1893,6 +1888,7 @@
     <instance objName="obj_chaos_emerald" x="240" y="1504" name="inst_ADBDDE39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_chaos_emerald" x="256" y="1504" name="inst_69DF18C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_chaos_emerald" x="272" y="1504" name="inst_7BAE4A88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waterfall_platform_spawner" x="8128" y="480" name="inst_46BEBDE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_sunshine_valley" x="11008" y="1216" w="64" h="64" xo="64" yo="320" id="10023355" name="inst_E2974F9A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

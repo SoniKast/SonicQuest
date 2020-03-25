@@ -11,3 +11,19 @@ if( bonus_slab != noone )
   bonus_slab.object_hp -= 1;
   ground = false; 
 };
+   
+// Gumball:   
+    Gumball  = player_collision_check(COL_MAIN_OBJECT, x, y, obj_gumballs, -1, -1);
+        with(Gumball){
+             Collected = 1;
+             instance_destroy();
+     }
+    
+// Machine Rod:   
+    Rod = player_collision_check(COL_MAIN_OBJECT, x, y, obj_bonus_ball, -1, -1);
+      if(Rod != noone){
+         if(Rod.Triggered == false && Rod.alarm[0] = -1){
+            Rod.Triggered = true;
+            Rod.alarm[0] = 1;
+         }
+      }

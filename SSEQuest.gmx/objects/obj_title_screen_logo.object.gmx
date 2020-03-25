@@ -51,8 +51,9 @@
     title_menu_character = 1;
     sound_test_option    = 0;
     alarm[0]             = 15;
+    alarm[2]             = 1000;
 
-    title_menu_string0  = "RADIANT VALLEY 1"
+    title_menu_string0  = "RIVERS. VALLEY 1"
     title_menu_string1  = "               2"
     title_menu_string2  = "GREAT GARDEN   1"
     title_menu_string3  = "               2"
@@ -74,6 +75,34 @@
     title_menu_string19 = "SOUND TEST"
     title_menu_string20 = "BACK"
     
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(instance_create(0, 0, obj_fade_to_value))
+{
+        value = global.first_zone;
+        global.player_id = CHAR_SONIC;
+        global.Mode = 1;
+}
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,13 @@
 
  // Init. flag:
     initialized     = false;      // Checks if the player has been initialized.
+    if(global.Mode = 1)
+    {
+    alarm[1] = 1000;
+    }
+ 
+ //Initiate recording sequence.    
+    scrRecordInit(global.Mode,working_directory+"\data\demo\demo.rec");
     
  // Character flag.
     player_index    = global.player_id; // Who do we play as?
@@ -153,7 +160,11 @@
    // Transforming
     AllowTransformation = 1;    // Checks if we can transform.
     TransformEnded      = 0;    // Checks if a transformation has ended. 
-    TransformTimer      = 15;   // How long it takes to return to a normal stage.
+    if(player_index != CHAR_KNUCKLES){
+        TransformTimer      = 15;   // How long it takes to return to a normal stage.
+    }else{
+        TransformTimer      = 3;
+    }
      
  // Animation / Sprite.
     animation_init();
@@ -189,6 +200,9 @@
     dropdash_flag  = 0;                      // Returns the dropdash flag. (0 = Null, 1 = Charging, 2 = Ready)
     dropdash_timer = 20;                     // Frames it takes to charge dropdash.
     dropdash_speed = 0;                      // Speed of the dropdash.
+    AbilityPeelout  = 1;       // Can we use the Peelout?
+    PeeloutFlag     = 0;       // Checks if we're performing a peelout.
+    PeeloutTimer    = 0;       // Has to be 12 to perform a peelout.
   
  // Tails: 
     tails_flight_timer    = 0;               // How long we've been flying.
@@ -300,19 +314,56 @@
           <argument>
             <kind>1</kind>
             <string>/// Checkpoint respawn.
- 
-    if(global.checkpoint_x != -1)
-    {
+  if(global.BonusStage == false){
+    if(global.checkpoint_x != -1 &amp;&amp; global.checkpoint_y != -1){
        x                = global.checkpoint_x;
        y                = global.checkpoint_y;
        global.game_time = global.checkpoint_t;
+       if(global.BonusRings != 0){
+          global.player_rings += global.BonusRings;
+          global.BonusRings = 0;
+       }
+       if(global.BonusShield != 0){
+          shield = global.BonusShield;
+          global.BonusShield = 0;
+       }
+          global.player_rings_100 = 1;
+          
     with (obj_camera){
-// Camera position.
-    cam_x       = obj_player.x;
-    cam_y       = obj_player.y;
-    cam_handle = obj_player;
-    }
-    }
+    // Camera position.
+        cam_x       = obj_player.x;
+        cam_y       = obj_player.y;
+        cam_handle = obj_player;
+        }
+     }
+  }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(instance_create(0, 0, obj_fade_to_value))
+{
+        value       = rm_title; 
+        global.Mode = 0
+}
 </string>
           </argument>
         </arguments>
@@ -581,7 +632,19 @@
               if(state == STATE_TRANSFORM &amp;&amp; animation != "transform")
               {
                  animation = "transform";
-              }                                                                                                                               
+              }
+          
+           // Floating:
+              if(state == STATE_FLOAT &amp;&amp; animation != "float")
+              {
+                 animation = "float";
+              }                                                                                       
+          
+           // Floating Vertical:
+              if(state == STATE_FLOAT_V &amp;&amp; animation != "float")
+              {
+                 animation = "float";
+              } 
     }
               
     // Death:
@@ -992,7 +1055,81 @@
     if(initialized = false || state = STATE_DEATH) exit;
   
     if(global.controller_lock == false)
-    {    
+    {
+    // ---- Pressed keys ------------------------------------------------------------
+  switch global.Mode{ //Check Recording Mode.
+  
+  case 0:
+     
+     // Key held.   
+        input_up               = keyboard_check(global.key_up);
+        input_down             = keyboard_check(global.key_down);
+        input_right            = keyboard_check(global.key_right);
+        input_left             = keyboard_check(global.key_left);
+        input_action           = keyboard_check(global.key_action);
+        input_special          = keyboard_check(global.key_special);
+        
+     // Key press.
+        input_up_pressed       = keyboard_check_pressed(global.key_up);
+        input_down_pressed     = keyboard_check_pressed(global.key_down);
+        input_right_pressed    = keyboard_check_pressed(global.key_right);
+        input_left_pressed     = keyboard_check_pressed(global.key_left);
+        input_action_pressed   = keyboard_check_pressed(global.key_action);
+        input_special_pressed  = keyboard_check_pressed(global.key_special);    
+    
+     // Key release.    
+        input_up_released      = keyboard_check_released(global.key_up);
+        input_down_released    = keyboard_check_released(global.key_down);
+        input_right_released   = keyboard_check_released(global.key_right);
+        input_left_released    = keyboard_check_released(global.key_left);
+        input_action_released  = keyboard_check_released(global.key_action);
+        input_special_released = keyboard_check_released(global.key_special);  
+  
+  break;
+  
+  case 1:  //If playing recorded file, load keys.
+      scrRecordPlayStep(); //Perform required playing step procedures.
+      //--LOAD KEYS----\\
+      input_action_pressed     = scrReadKey("input_action",Frame,1);
+      input_action_released    = scrReadKey("input_action",Frame,2);
+         
+      input_left_pressed     = scrReadKey("input_left",Frame,1);
+      input_left_released    = scrReadKey("input_left",Frame,2);
+   
+      input_right_pressed    = scrReadKey("input_right",Frame,1);
+      input_right_released   = scrReadKey("input_right",Frame,2);
+    
+      input_up_pressed       = scrReadKey("input_up",Frame,1);
+      input_up_released      = scrReadKey("input_up",Frame,2);
+
+      input_down_pressed     = scrReadKey("input_down",Frame,1);
+      input_down_released    = scrReadKey("input_down",Frame,2);
+       
+      scrRecordKeyHold();  
+    //----------------\\   
+  break;
+
+  case 2: //If Recording to file, write keys per step.
+      scrRecordStep(); //Perform required recording step procedures.
+  
+      //--Write KEYS----\\
+      scrWriteKey(global.key_action,"input_action",Frame,1);
+      scrWriteKey(global.key_action,"input_action",Frame,2); 
+       
+      scrWriteKey(global.key_left,"input_left",Frame,1);
+      scrWriteKey(global.key_left,"input_left",Frame,2); 
+   
+      scrWriteKey(global.key_right,"input_right",Frame,1);
+      scrWriteKey(global.key_right,"input_right",Frame,2);
+  
+      scrWriteKey(global.key_up,"input_up",Frame,1);
+      scrWriteKey(global.key_up,"input_up",Frame,2);  
+
+      scrWriteKey(global.key_down,"input_down",Frame,1);
+      scrWriteKey(global.key_down,"input_down",Frame,2); 
+      
+      //----------------\\     
+      
      // Key held.   
         input_up               = keyboard_check(global.key_up);
         input_down             = keyboard_check(global.key_down);
@@ -1016,7 +1153,9 @@
         input_left_released    = keyboard_check_released(global.key_left);
         input_action_released  = keyboard_check_released(global.key_action);
         input_special_released = keyboard_check_released(global.key_special);    
-    
+ 
+  break;
+}    
      // Disable input if both left and right is being held.
         if(input_left &amp;&amp; input_right)
         {
@@ -1325,6 +1464,8 @@
               player_handle_breakable_walls();
               player_handle_casino();
               player_handle_bonus_slab();
+              player_handle_float();
+              player_handle_float_v();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1364,6 +1505,8 @@
               player_handle_tunnels();
               player_handle_casino();
               player_handle_bonus_slab();
+              player_handle_float();
+              player_handle_float_v();
               
            // Abort.
               if(x_speed == 0)
@@ -1424,6 +1567,8 @@
                            player_handle_platforms();                           
                            player_handle_casino();
                            player_handle_bonus_slab();
+                           player_handle_float();
+                           player_handle_float_v();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1528,6 +1673,8 @@
                               player_handle_tunnels();
                               player_handle_casino();
                               player_handle_bonus_slab();
+                              player_handle_float();
+                              player_handle_float_v();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -1984,10 +2131,15 @@
  // Transform:
     player_state_transform();
     
- // Sonic only - Dropdash:
+ // Sonic only - Insta Shield and Hyper Dash:
     if(player_index == CHAR_SONIC)
     {
        player_state_insta_shield();
+    }
+    
+    if(player_index == CHAR_SONIC)
+    {
+       player_state_hyper_dash();
     }
     
  // Tails only - Flying:
@@ -2036,9 +2188,20 @@
     
  // Pushing:
     player_state_push();
- 
+    
+ // Floating:
+    player_state_float();
+    player_state_float_v();
+    
  // Tubes:
     player_state_tube();
+ 
+ // Peelout:
+    if(player_index == CHAR_SONIC){
+        if(AbilityPeelout == 1){
+            player_state_peelout();
+        }
+    }
     
  // Balancing:
     player_state_edgewobble();
@@ -2218,7 +2381,7 @@
     
  // Super Sonic Palette:
     if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterSuper){
-       if(PalettePosition &gt; 2){
+       if(PalettePosition &gt; 3){
           PalettePosition = 0;
        }
        PalettePosition += 0.05;
@@ -2489,6 +2652,37 @@ state = STATE_DEFAULT
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(keyboard_check_pressed(global.key_enter))
+{
+    if(global.Mode = 1)
+    {
+        with(instance_create(0, 0, obj_fade_to_value))
+        {
+                value       = rm_title; 
+                global.Mode = 0
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="13">
       <action>
@@ -2529,6 +2723,29 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>   scrRecordEnd(global.Mode);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -2561,6 +2778,19 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
          if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
             pal_swap_set(spr_sonic_to_normal_palette, PalettePosition, false);
          }      
+         if(player_index = CHAR_TAILS &amp;&amp; CharacterState = CharacterSuper &amp;&amp; CharacterState = CharacterHyper){
+            pal_swap_set(spr_tails_super_palette, PalettePosition, false);
+         }
+         if(player_index = CHAR_TAILS &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+            pal_swap_set(spr_tails_to_normal_palette, PalettePosition, false);
+         }      
+         if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState = CharacterSuper &amp;&amp; CharacterState = CharacterHyper){
+            pal_swap_set(spr_knuckles_super_palette, PalettePosition, false);
+         }
+         if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+            pal_swap_set(spr_knuckles_to_normal_palette, PalettePosition, false);
+         }
+               
         // Draw Player:
            if(invincibility == 1 &amp;&amp; invincibility_timer &gt; 0)
            {
@@ -2591,6 +2821,12 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
          if(state == STATE_SPINDASH)
            {
               draw_sprite_ext(spr_spindash_dust, current_time div 40, floor(x-animation_direction*1), floor(y+1), animation_direction, 1, 0, c_white, 1);  
+           }
+        
+        // Draw water running:
+         if(player_collision_check(COL_BOTTOM_OBJECT, MASK_BIG, x, y, angle, obj_water_walk))
+           {
+              draw_sprite_ext(spr_water_run, current_time div 40, floor(x-animation_direction*1), floor(y), animation_direction, 1, 0, c_white, 1);
            }
         
         // Draw Shields:    

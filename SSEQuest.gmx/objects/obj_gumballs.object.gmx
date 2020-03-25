@@ -25,14 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>powerup = 0;
-
+            <string>/// Variables.
+    image_speed = 0;
+    alarm[0]    = 30;
+    Collected   = 0;
+    YSpd        = 0;
+    YGrv        = 0.21875;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="par_player">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,54 +53,68 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>powerup = choose(0, 1, 2, 3, 4, 5)
-if(powerup = 0)
-{
-global.BonusRings += 10; 
-aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
-instance_destroy();
-}
-if(powerup = 1)
-{
-global.player_lives+=1;
-audio_stop_sound(general_bumper);
-aud_play_sound(general_bumper, global.sfx_volume, 1, 0, 0);
-instance_destroy();
-}
-if(powerup = 2)
-{
-aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
-with(obj_player) 
-{global.BonusShield = 1}
-instance_destroy();
-}
-if(powerup = 3)
-{
-aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);
-with(obj_player) 
-{global.BonusShield = 4}
-instance_destroy();
-}
-if(powerup = 4)
-{
-aud_play_sound(shield_get_flame, global.sfx_volume, 1, 0, 0);
-with(obj_player) 
-{global.BonusShield = 2}
-instance_destroy();
-}
-if(powerup = 5)
-{
-aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);
-with(obj_player) 
-{global.BonusShield = 3}
-instance_destroy();
-}
+            <string>/// Rewards.
+    if(Collected != 0){
+       if(image_index == 0){
+          global.player_rings += choose(10, 10, 10, 10, 10, 20, 40, 10, 20, 40, 80, 10, 10, 20) 
+          aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
+       }
+       if(image_index == 1){
+          global.player_lives++
+          aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);
+       }
+       if(image_index == 2){
+          // No normal shield yet
+       }
+       if(image_index == 3){
+          if(par_player.shield != 0)
+          { 
+            par_player.shield = 0;
+            with(par_player.shield_obj)
+            {
+               instance_destroy();
+            }
+            par_player.shield_obj = noone;
+          }
+          par_player.shield = SHIELD_BUBBLE;
+          global.BonusShield = SHIELD_BUBBLE;
+          aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);       
+       }
+       if(image_index == 5){
+          if(par_player.shield != 0)
+          { 
+            par_player.shield = 0;
+            with(par_player.shield_obj)
+            {
+               instance_destroy();
+            }
+            par_player.shield_obj = noone;
+          }
+          par_player.shield = SHIELD_ELECTRICITY;
+          global.BonusShield = SHIELD_ELECTRICITY;
+          aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);      
+       }
+       if(image_index == 4){
+           if(par_player.shield != 0)
+           { 
+              par_player.shield = 0;
+              with(par_player.shield_obj)
+              {
+                   instance_destroy();
+              }
+              par_player.shield_obj = noone;
+           }
+           par_player.shield = SHIELD_FIRE;
+          global.BonusShield = SHIELD_FIRE;
+           aud_play_sound(shield_get_flame, global.sfx_volume, 1, 0, 0);         
+       }
+    }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -113,7 +131,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_gumballs, powerup, x, y);
+            <string>/// Change Depth after the plate spawned us.
+    depth = 0;
 </string>
           </argument>
         </arguments>

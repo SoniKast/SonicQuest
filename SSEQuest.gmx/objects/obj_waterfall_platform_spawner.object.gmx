@@ -2,10 +2,10 @@
 <object>
   <spriteName>spr_waterfall_platform_spawner</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_indestructible</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,13 +25,25 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 1;
+            <string>/// Init.
+Timer = 30
+ID = noone;
+/*       
+ // Call the parent:
+    event_inherited()
+       
+ // X/Y Speed:
+    x_spd = 0;
+    y_spd = 0;
+    
+ // Character Y offset. Default set at 10, you might need to tweak this for other platforms.
+    platform_offset = 10; 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="1">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,32 +60,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_ssz_waterfall_platform);
-alarm[0] = 20;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_create(x, y+10, obj_ssz_waterfall_platform);
-alarm[1] = 20;
+            <string>/// Set direction.
+  /* 
+    x_spd =  0;
+    y_spd =  3;
+*/
+
+if Timer &gt; 0
+    Timer -= 1
+else
+    {
+    if !instance_exists(ID)
+        ID = instance_create(x,y+32,obj_ssz_waterfall_platform);
+    Timer = 30;
+    }
+
 </string>
           </argument>
         </arguments>

@@ -244,6 +244,16 @@
             player_state_hurt(other, false);
        }
     }   
+    
+ // Super Sonic:
+    if(icon == 8)
+    {
+        with(parent)
+        {
+            global.player_emeralds = 7;
+            state = STATE_TRANSFORM;
+        }
+    }
 
 </string>
           </argument>

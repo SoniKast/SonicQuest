@@ -13,30 +13,16 @@
                dummy_effect_create(spr_ring_sparkle, 0.4, x, y, -10, 0);
                instance_destroy();
           }
-          if(global.BonusStage = false)
+          if(player_type == IS_PLAYER)
           {
-              if(player_type == IS_PLAYER)
-              {
-                 global.player_rings += 1;    
-              }
-              else
-              {
-                 ai_ring = 1;
-                 global.player_rings += 1;
-              }
+              global.player_rings += 1;    
           }
-          if(global.BonusStage = true)
+          else
           {
-              if(player_type == IS_PLAYER)
-              {
-                 global.BonusRings += 1;    
-              }
-              else
-              {
-                 ai_ring = 1;
-                 global.BonusRings += 1;
-              }
+              ai_ring = 1;
+              global.player_rings += 1;
           }
+
                 
        // Play ring sound:
           global.ring_sound *= -1;
@@ -57,29 +43,14 @@
                dummy_effect_create(spr_ring_sparkle, 0.4, x, y, -10, 0);          
                instance_destroy();
           }
-          if(global.BonusStage = false)
+          if(player_type == IS_PLAYER)
           {
-              if(player_type == IS_PLAYER)
-              {
-                 global.player_rings += 1;    
-              }
-              else
-              {
-                 ai_ring = 1;
-                 global.player_rings += 1;
-              }
+             global.player_rings += 1;    
           }
-          if(global.BonusStage = true)
+          else
           {
-              if(player_type == IS_PLAYER)
-              {
-                 global.BonusRings += 1;    
-              }
-              else
-              {
-                 ai_ring = 1;
-                 global.BonusRings += 1;
-              }
+             ai_ring = 1;
+             global.player_rings += 1;
           }
           
        // Play ring sound:

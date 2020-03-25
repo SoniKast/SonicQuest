@@ -262,32 +262,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw snapshot.
- 
-    if(game_snapshot != noone)
-    {
-       draw_background(game_snapshot, view_xview, view_yview);
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Draw HUD.
 if(global.cutscene = false){
 
@@ -349,7 +323,7 @@ if(global.cutscene = false){
             {
                 draw_set_halign(fa_left);
                 draw_set_color(c_white);
-                draw_text(view_xview[view_current]+27, view_yview[view_current]+7, global.BonusRings);
+                draw_text(view_xview[view_current]+27, view_yview[view_current]+7, global.player_rings);
                 
             }
         }
@@ -454,6 +428,32 @@ if(global.cutscene = false){
     draw_set_font(global.hud_font);
     draw_set_halign(-1);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw snapshot.
+ 
+    if(game_snapshot != noone)
+    {
+       draw_background(game_snapshot, view_xview, view_yview);
+    }
 </string>
           </argument>
         </arguments>

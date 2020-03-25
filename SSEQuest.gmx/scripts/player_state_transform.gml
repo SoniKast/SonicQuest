@@ -15,6 +15,7 @@
        if(state = STATE_TRANSFORM){
           x_speed = 0;
           y_speed = 0;
+          aud_play_sound(jingle_super, global.sfx_volume, 1, 1, 0);
           if(animation_frame >= 3){
              if(TransformTimer != 0){
                 TransformTimer--

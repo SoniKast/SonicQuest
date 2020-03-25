@@ -44,7 +44,7 @@
 /*    parallaxAdd(RepeatedOver, Background, XFactor, XSpeed, XScroll, XOffset, XSeparation, 
                     YFactor, YSpeed, YScroll, YOffset, YSeparation, Left, Top, Width, Height)*/
 
-    var OverallYOffset; OverallYOffset = 1;
+    var OverallYOffset; OverallYOffset = 0.967;
     
     scr_parallax_add_node(1, bg_bonus1_1,       0.94, 0, 0, 0, 0, OverallYOffset, 0, 0, 0, 0,    0, 0, 512, 256);
     scr_parallax_add_node(1, bg_bonus1_2,       0.92, 0, 0, 0, 0, OverallYOffset, 0, 0, 24, 0,   0, 0, 805, 232);

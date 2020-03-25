@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>       
        
-       PalettePosition = 0;       // If we manipulate a sprites palette, this keeps track of the position.  
+       PalPosition = 0;       // If we manipulate a sprites palette, this keeps track of the position.  
 </string>
           </argument>
         </arguments>
@@ -50,10 +50,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(PalettePosition &gt; 6){
-          PalettePosition = 0;
+            <string>if(PalPosition &gt; 6){
+          PalPosition = 0;
        }
-       PalettePosition += 0.15;
+       PalPosition += 0.15;
 </string>
           </argument>
         </arguments>
@@ -77,7 +77,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_self();
-pal_swap_set(spr_rush_palette, floor(PalettePosition), false);
+pal_swap_set(spr_rush_palette, floor(PalPosition), false);
 </string>
           </argument>
         </arguments>

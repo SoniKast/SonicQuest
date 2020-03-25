@@ -290,6 +290,9 @@
     <instance objName="obj_spike_top" x="1408" y="1760" name="inst_20B9DFC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_up_red" x="1456" y="1776" name="inst_547C65C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_big_ring" x="96" y="2112" name="inst_0A30C228" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel01" x="609" y="1733" name="inst_58E710BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel02" x="641" y="1733" name="inst_6FF6044C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel03" x="673" y="1733" name="inst_C52F451E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_pinball_panic" x="0" y="1152" w="128" h="128" xo="0" yo="256" id="10027274" name="inst_DE5D03B0" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

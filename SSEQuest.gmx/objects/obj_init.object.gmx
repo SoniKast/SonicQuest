@@ -171,6 +171,9 @@
  // Icon speed.
     image_speed = 0;
     
+ //Set the mode
+    global.Mode = 0;
+    
     gml_release_mode(true)
 </string>
           </argument>

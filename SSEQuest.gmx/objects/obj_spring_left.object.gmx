@@ -3,7 +3,7 @@
   <spriteName>spr_spring_left</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>4</depth>
   <persistent>0</persistent>
   <parentName>par_spring</parentName>
   <maskName>&lt;undefined&gt;</maskName>

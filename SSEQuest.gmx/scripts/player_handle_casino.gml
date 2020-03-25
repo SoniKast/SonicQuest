@@ -51,7 +51,7 @@ if( flipper_handle_right != noone )
     
     //Set Player Speed:
     x_speed        = ( (x) - (flipper_handle_right.x) )*0.125;
-    y_speed        = -10;
+    y_speed        = -13;
     ground         = false;
    };  
 };
@@ -77,7 +77,7 @@ if( flipper_handle_left != noone )
     
     //Set Player Speed:
     x_speed    = ( (x) - (flipper_handle_left.x) )*0.125;
-    y_speed    = -10;
+    y_speed    = -13;
     ground     = false; 
    };  
 };
