@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_water_walk</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>par_platform</parentName>
@@ -30,7 +30,7 @@
    if(abs(par_player.x_speed) &gt;= 7 &amp;&amp; par_player.ground &amp;&amp; par_player.y &lt; global.water_position)
    {
        x = par_player.x;
-       y = global.water_position+2;
+       y = global.water_position;
    }
    else
    {

@@ -439,8 +439,11 @@ xspd = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>yspd = 0; 
-xspd = -1; 
+            <string>if(!st_flyaway)
+{
+yspd = 0; 
+xspd = -1;
+}
 </string>
           </argument>
         </arguments>

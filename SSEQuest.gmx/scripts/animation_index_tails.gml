@@ -396,7 +396,7 @@
   // Float.
     if(animation = "float")
     {
-       sprite                 = spr_sonic_float;
+       sprite                 = spr_tails_float;
        animation_start        = 0;
        animation_end          = 7;
        animation_loop         = 0;

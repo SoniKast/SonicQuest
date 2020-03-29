@@ -176,7 +176,7 @@ else
 if menu=1{
 with(instance_create(x, y, obj_fade_to_value))
 {
-    value = rm_sunshine_valley1
+    value = rm_radiant_valley1
 }
 global.time_attack = true;
 canselect = 0;

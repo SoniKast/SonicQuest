@@ -30,6 +30,7 @@
     image_speed = 0.5; 
     aud_play_sound(shield_use_insta, global.sfx_volume, 1, 0, 0);
     parent = obj_player;
+    image_xscale = par_player.animation_direction;
 </string>
           </argument>
         </arguments>

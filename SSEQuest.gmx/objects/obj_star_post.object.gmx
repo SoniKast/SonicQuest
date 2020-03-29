@@ -127,7 +127,7 @@
             <kind>1</kind>
             <string>/// Activate.
 
-    if(activated = false &amp;&amp; finished = false)
+    if(activated = false &amp;&amp; finished = false &amp;&amp; global.Mode = 0)
     {
        if(global.checkpoint_x != x &amp;&amp; global.checkpoint_y != y)
        {

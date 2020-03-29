@@ -181,6 +181,7 @@
           <sprite>sprites\spr_tails_die</sprite>
           <sprite>sprites\spr_tails_drown</sprite>
           <sprite>sprites\spr_tails_transform</sprite>
+          <sprite>sprites\spr_tails_float</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
             <sprite>sprites\spr_tail_part_2</sprite>
@@ -216,6 +217,8 @@
           <sprite>sprites\spr_knuckles_hurt</sprite>
           <sprite>sprites\spr_knuckles_die</sprite>
           <sprite>sprites\spr_knuckles_drown</sprite>
+          <sprite>sprites\spr_knuckles_float</sprite>
+          <sprite>sprites\spr_knuckles_transform</sprite>
         </sprites>
         <sprites name="Shields">
           <sprite>sprites\spr_shield_fire</sprite>
@@ -228,6 +231,7 @@
         <sprites name="Sensors">
           <sprites name="Collision">
             <sprite>sprites\spr_player_mask_main</sprite>
+            <sprite>sprites\spr_mask_main</sprite>
             <sprite>sprites\spr_player_mask_large</sprite>
             <sprite>sprites\spr_player_mask_big</sprite>
             <sprite>sprites\spr_player_mask_mid</sprite>
@@ -436,6 +440,7 @@
           <sprite>sprites\font_lives</sprite>
           <sprite>sprites\font_title</sprite>
           <sprite>sprites\spr_ss_text</sprite>
+          <sprite>sprites\spr_s2_font_credits</sprite>
         </sprites>
       </sprites>
       <sprites name="Sensors">
@@ -526,6 +531,8 @@
       <sprites name="Special Stage">
         <sprite>sprites\spr_big_ring</sprite>
         <sprite>sprites\spr_big_ring_disappear</sprite>
+        <sprite>sprites\spr_tornado_sonic</sprite>
+        <sprite>sprites\spr_tornado_tails</sprite>
         <sprite>sprites\spr_bomb</sprite>
         <sprite>sprites\spr_chaos_emerald1</sprite>
         <sprite>sprites\spr_chaos_emerald2</sprite>
@@ -757,6 +764,7 @@
             <sprite>sprites\spr_ssz_fan</sprite>
           </sprites>
           <sprite>sprites\spr_ssz_platform</sprite>
+          <sprite>sprites\spr_ssz_platform_small</sprite>
           <sprite>sprites\spr_ssz_platform_crumble</sprite>
         </sprites>
         <sprites name="GGZ">
@@ -765,6 +773,8 @@
             <sprite>sprites\spr_ggz_bouncing_flower2</sprite>
             <sprite>sprites\spr_ggz_breakable_wall</sprite>
             <sprite>sprites\spr_ggz_breakable_wall_pieces</sprite>
+            <sprite>sprites\spr_ggz_moving_platform</sprite>
+            <sprite>sprites\spr_ggz_plat_start</sprite>
           </sprites>
           <sprites name="Decorations">
             <sprite>sprites\spr_ggz_flower1</sprite>
@@ -788,6 +798,8 @@
             <sprite>sprites\spr_scatterroach_fly</sprite>
             <sprite>sprites\spr_technomeow_h</sprite>
             <sprite>sprites\spr_technomeow_h_drift</sprite>
+            <sprite>sprites\spr_sun_blade</sprite>
+            <sprite>sprites\spr_sun_blade_attack</sprite>
           </sprites>
         </sprites>
         <sprites name="PPZ">
@@ -827,6 +839,25 @@
           <sprite>sprites\spr_purple_emerald</sprite>
           <sprite>sprites\spr_hpz_platform</sprite>
           <sprite>sprites\spr_sanctuary_orb_end</sprite>
+        </sprites>
+        <sprites name="FFZ">
+          <sprites name="Gimmicks">
+            <sprite>sprites\spr_ffz_loop_right</sprite>
+            <sprite>sprites\spr_ffz_loop_left</sprite>
+            <sprite>sprites\spr_ffz_loop_top</sprite>
+          </sprites>
+          <sprites name="Badniks">
+            <sprite>sprites\spr_butterkiller_follow</sprite>
+            <sprite>sprites\spr_jugglesaw</sprite>
+            <sprite>sprites\spr_turbosnail</sprite>
+          </sprites>
+          <sprites name="Mini-Boss">
+            <sprite>sprites\spr_screen_camera</sprite>
+            <sprite>sprites\spr_MS_proj</sprite>
+            <sprite>sprites\spr_MS_roll</sprite>
+            <sprite>sprites\spr_MS_shoot</sprite>
+            <sprite>sprites\spr_MS_stand</sprite>
+          </sprites>
         </sprites>
         <sprites name="BZ">
           <sprites name="Gimmicks">
@@ -977,6 +1008,7 @@
           <background>background\ts_ggz_ground</background>
           <background>background\ts_ggz_tree_foliage</background>
           <background>background\ts_ggz_tree</background>
+          <background>background\ts_ggz_full_tree</background>
           <background>background\ts_ggz_fence</background>
           <background>background\ts_ggz_rock</background>
           <background>background\ts_pipes</background>
@@ -993,6 +1025,8 @@
           <background>background\ts_ffz_plants</background>
           <background>background\ts_ffz_plants2</background>
           <background>background\ts_ffz_plants3</background>
+          <background>background\ts_ecz</background>
+          <background>background\ts_ffz_alt</background>
         </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\ts_hpz</background>
@@ -1114,6 +1148,7 @@
       <scripts name="Collision">
         <script>scripts\player_collision.gml</script>
         <script>scripts\player_collision_check.gml</script>
+        <script>scripts\scr_character_collision_bottom_object.gml</script>
       </scripts>
       <scripts name="Angle">
         <script>scripts\player_calculate_angle.gml</script>
@@ -1174,6 +1209,7 @@
         <script>scripts\player_handle_bonus_slab.gml</script>
         <script>scripts\player_handle_float.gml</script>
         <script>scripts\player_handle_float_v.gml</script>
+        <script>scripts\player_handle_tornado.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1292,6 +1328,9 @@
   <objects name="objects">
     <objects name="Init">
       <object>objects\obj_init</object>
+      <object>objects\obj_demo_end</object>
+      <object>objects\obj_credits_screen</object>
+      <object>objects\obj_disclaimer</object>
       <objects name="Startup">
         <objects name="STT">
           <object>objects\obj_sonic_run</object>
@@ -1515,6 +1554,7 @@
           <object>objects\obj_bonus_spark_generator</object>
           <object>objects\obj_bonus_spark</object>
           <object>objects\obj_dummy_effect</object>
+          <object>objects\obj_empty</object>
           <objects name="Player">
             <object>objects\obj_electricity_spark</object>
             <object>objects\obj_skid_dust</object>
@@ -1787,40 +1827,43 @@
         </objects>
       </objects>
       <objects name="Special Stage">
+        <objects name="Old">
+          <objects name="SS1">
+            <object>objects\obj_ce_1</object>
+            <object>objects\obj_challenge1</object>
+            <object>objects\obj_challenge2</object>
+            <object>objects\obj_challenge3</object>
+            <object>objects\obj_challenge4</object>
+            <object>objects\obj_nice</object>
+          </objects>
+          <objects name="SS2">
+            <object>objects\obj_ce_2</object>
+          </objects>
+          <objects name="SS3">
+            <object>objects\obj_ce_3</object>
+          </objects>
+          <objects name="SS4">
+            <object>objects\obj_ce_4</object>
+          </objects>
+          <objects name="SS5">
+            <object>objects\obj_ce_5</object>
+          </objects>
+          <objects name="SS6">
+            <object>objects\obj_ce_6</object>
+          </objects>
+          <objects name="SS7">
+            <object>objects\obj_ce_7</object>
+          </objects>
+          <object>objects\obj_camera_new</object>
+          <object>objects\par_ss_player</object>
+          <object>objects\obj_ring_new</object>
+          <object>objects\obj_ss_sonic</object>
+        </objects>
         <object>objects\obj_special_results</object>
-        <object>objects\obj_camera_new</object>
-        <object>objects\par_ss_player</object>
-        <object>objects\obj_ss_sonic</object>
         <object>objects\obj_big_ring</object>
-        <object>objects\obj_ring_new</object>
-        <object>objects\obj_empty</object>
+        <object>objects\obj_tornado</object>
         <object>objects\obj_bomb</object>
         <object>objects\obj_hud</object>
-        <objects name="SS1">
-          <object>objects\obj_ce_1</object>
-          <object>objects\obj_challenge1</object>
-          <object>objects\obj_challenge2</object>
-          <object>objects\obj_challenge3</object>
-          <object>objects\obj_nice</object>
-        </objects>
-        <objects name="SS2">
-          <object>objects\obj_ce_2</object>
-        </objects>
-        <objects name="SS3">
-          <object>objects\obj_ce_3</object>
-        </objects>
-        <objects name="SS4">
-          <object>objects\obj_ce_4</object>
-        </objects>
-        <objects name="SS5">
-          <object>objects\obj_ce_5</object>
-        </objects>
-        <objects name="SS6">
-          <object>objects\obj_ce_6</object>
-        </objects>
-        <objects name="SS7">
-          <object>objects\obj_ce_7</object>
-        </objects>
       </objects>
       <objects name="Bonus Stage">
         <objects name="Bonus Stage 1">
@@ -1854,10 +1897,11 @@
       <object>objects\obj_screenshotter</object>
     </objects>
     <objects name="Zone">
-      <objects name="Sunshine Valley Zone">
+      <objects name="Riverside Valley Zone">
         <objects name="Parallax">
           <object>objects\obj_ssz1_parallax</object>
           <object>objects\obj_ssz2_parallax</object>
+          <object>objects\obj_ssz2_water</object>
         </objects>
         <objects name="Enemies">
           <objects name="Boss">
@@ -1884,6 +1928,7 @@
               <object>objects\obj_ssz_waterfall_platform</object>
             </objects>
             <object>objects\obj_ssz_platform</object>
+            <object>objects\obj_ssz_platform_small</object>
             <object>objects\obj_ssz_break_wall</object>
             <object>objects\obj_ssz_break_wall_knuckles</object>
             <object>objects\obj_ssz_break_wall_metal</object>
@@ -1955,6 +2000,7 @@
         <objects name="Badniks">
           <object>objects\obj_ggz_chowhound</object>
           <object>objects\obj_technomeow_ground</object>
+          <object>objects\obj_dove_bomber</object>
           <object>objects\par_smoothmov_badnick</object>
         </objects>
         <objects name="Boss">
@@ -1983,6 +2029,23 @@
       <objects name="Forest Frenzy Zone">
         <objects name="Parallax">
           <object>objects\obj_ffz_parallax</object>
+        </objects>
+        <objects name="Gimmicks">
+          <object>objects\obj_ffz_loop_solid</object>
+          <object>objects\obj_ffz_loop_left</object>
+          <object>objects\obj_ffz_loop_right</object>
+        </objects>
+        <objects name="Badniks">
+          <object>objects\obj_butterkiller_follow</object>
+          <object>objects\obj_jugglesaw</object>
+          <object>objects\obj_turbosnail</object>
+        </objects>
+        <objects name="Mini Boss">
+          <object>objects\obj_screen_camera</object>
+          <object>objects\obj_MS_stand</object>
+          <object>objects\obj_C1_MS_proj</object>
+          <object>objects\obj_fade_in_white</object>
+          <object>objects\par_cutscene_star</object>
         </objects>
       </objects>
       <objects name="Hidden Palace Zone">
@@ -2043,6 +2106,7 @@
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
+      <room>rooms\rm_disclaimer</room>
       <room>rooms\rm_sega</room>
       <room>rooms\rm_stt</room>
     </rooms>
@@ -2068,6 +2132,7 @@
       </rooms>
       <rooms name="Forest Frenzy">
         <room>rooms\rm_forest_frenzy1</room>
+        <room>rooms\rm_demo_end</room>
       </rooms>
     </rooms>
     <rooms name="Extra">

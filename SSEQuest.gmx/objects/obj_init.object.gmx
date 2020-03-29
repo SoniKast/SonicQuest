@@ -37,6 +37,7 @@
     global.title_card      = font_add_sprite(font_title_card, ord("A"), true , 0);   
     global.dataselect_font = font_add_sprite(spr_dataselect_font, ord("0"), false, 0); 
     global.title_font      = font_add_sprite(font_title, ord("!"), true , 0);
+    global.fnt_credits     = font_add_sprite(spr_s2_font_credits, ord('A'), true, 0); 
     
  // Keyboard input:
     global.key_up           = vk_up;

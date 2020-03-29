@@ -119,7 +119,7 @@ if(on_ground == true)
  if(image_index == 0) {image_index = 1}
  if(vspeed == 0)
  {
- vspeed = - choose( 3, 1.5, 2, 2.5 );
+ vspeed = - choose( -4.5, -5 );
  hspeed = image_xscale*choose(3,1,2,2.4,1.1);
  };
  if(capsule_flag == true)

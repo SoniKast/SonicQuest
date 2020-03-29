@@ -97,11 +97,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(instance_create(0, 0, obj_fade_to_value))
+            <string>if(menu_mode = "TITLE")
 {
-        value = global.first_zone;
-        global.player_id = CHAR_SONIC;
-        global.Mode = 1;
+    with(instance_create(0, 0, obj_fade_to_value))
+    {
+            value = global.first_zone;
+            global.player_id = CHAR_SONIC;
+            global.Mode = 1;
+    }
 }
 </string>
           </argument>
@@ -681,6 +684,7 @@ if(title_menu_active == 1)
                       {
                            value = rm_special_stage1;
                       }
+                      global.player_id = title_menu_character;
                       break;
                  }
                  case 19:

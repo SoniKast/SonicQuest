@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = global.object_time div 60;
+            <string>image_index = 0.125;
 </string>
           </argument>
         </arguments>

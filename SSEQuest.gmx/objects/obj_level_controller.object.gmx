@@ -121,7 +121,7 @@
             <string>/// Global timers.
 
  // Game time:
-    if(global.BonusStage == false &amp;&amp; global.game_paused == false)
+    if(global.BonusStage == false &amp;&amp; game_paused == false)
     { 
        if(global.do_time &gt; 0)
        {

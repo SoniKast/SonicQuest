@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>par_hurt</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="1" enumb="0">
@@ -26,42 +26,42 @@
           <argument>
             <kind>1</kind>
             <string> // Dummy Effect:
-    dummy_effect_create(spr_explosion, 0.2, x, y, -5, 0);
+    dummy_effect_create(spr_explosion, 0.2, x, y, -5, 1);
+    aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0); 
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="par_ss_player">
+    <event eventtype="4" ename="par_player">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>604</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.player_rings &gt; 10)
-{
-global.player_rings -= 10;
-}
-else if(global.player_rings &lt; 10)
-{
-global.player_rings = 0;
-}
-instance_destroy();
-
-</string>
-          </argument>
-        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

@@ -1558,6 +1558,7 @@
                            player_handle_layers();     
                            player_handle_grabs();                      
                            player_handle_monitors("top");
+                           player_handle_tornado();
                            player_handle_breakable_walls();
                            player_handle_corkscrews();    
                            player_handle_enemies();
@@ -2826,7 +2827,7 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
         // Draw water running:
          if(player_collision_check(COL_BOTTOM_OBJECT, MASK_BIG, x, y, angle, obj_water_walk))
            {
-              draw_sprite_ext(spr_water_run, current_time div 40, floor(x-animation_direction*1), floor(y), animation_direction, 1, 0, c_white, 1);
+              draw_sprite_ext(spr_water_run, current_time div 40, floor(x-animation_direction), floor(y), animation_direction, 1, 0, c_white, 1);
            }
         
         // Draw Shields:    
