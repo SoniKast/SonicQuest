@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 0.125;
+            <string>image_index = 0.0125;
 </string>
           </argument>
         </arguments>

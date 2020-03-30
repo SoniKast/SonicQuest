@@ -480,6 +480,7 @@
         <sprites name="Explosions">
           <sprite>sprites\spr_explosion</sprite>
           <sprite>sprites\spr_monitor_explosion</sprite>
+          <sprite>sprites\spr_boss_explosion</sprite>
         </sprites>
         <sprites name="Score">
           <sprite>sprites\spr_score</sprite>
@@ -530,6 +531,7 @@
       </sprites>
       <sprites name="Special Stage">
         <sprite>sprites\spr_big_ring</sprite>
+        <sprite>sprites\spr_big_ring_unavailable</sprite>
         <sprite>sprites\spr_big_ring_disappear</sprite>
         <sprite>sprites\spr_tornado_sonic</sprite>
         <sprite>sprites\spr_tornado_tails</sprite>
@@ -624,6 +626,8 @@
           <sprite>sprites\sprite330</sprite>
           <sprite>sprites\sprite501</sprite>
           <sprite>sprites\sprite502</sprite>
+          <sprite>sprites\sprite641</sprite>
+          <sprite>sprites\sprite642</sprite>
         </sprites>
         <sprites name="Terrain (Layer 0)">
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile01</sprite>
@@ -734,6 +738,11 @@
             <sprite>sprites\spr_kabuturbo</sprite>
             <sprite>sprites\spr_flutter</sprite>
             <sprite>sprites\spr_snapper</sprite>
+            <sprites name="Mini-boss">
+              <sprite>sprites\spr_npc_sth3_firebreather</sprite>
+              <sprite>sprites\spr_npc_sth3_firebreather_parts</sprite>
+              <sprite>sprites\spr_npc_sth3_firebreather_flames</sprite>
+            </sprites>
           </sprites>
           <sprites name="Loop">
             <sprite>sprites\spr_ssz_loop_top</sprite>
@@ -808,6 +817,9 @@
             <sprite>sprites\spr_ppz_bumper_hit</sprite>
             <sprite>sprites\spr_ppz_flipping_card</sprite>
             <sprite>sprites\spr_ppz_flipping_card_mask</sprite>
+            <sprite>sprites\spr_ppz_spike_block</sprite>
+            <sprite>sprites\spr_ppz_bonus_block</sprite>
+            <sprite>sprites\spr_ppz_question_block</sprite>
           </sprites>
           <sprites name="Badniks">
             <sprite>sprites\spr_crawl_ace</sprite>
@@ -1210,6 +1222,7 @@
         <script>scripts\player_handle_float.gml</script>
         <script>scripts\player_handle_float_v.gml</script>
         <script>scripts\player_handle_tornado.gml</script>
+        <script>scripts\player_handle_bosses.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1667,6 +1680,8 @@
             <object>objects\obj_collision_tile_45</object>
             <object>objects\obj_collision_tile_46</object>
             <object>objects\obj_collision_tile_47</object>
+            <object>objects\obj_collision_tile_48</object>
+            <object>objects\obj_collision_tile_49</object>
             <object>objects\obj_collision_tile_s_tunnel</object>
             <object>objects\obj_collision_tile_loop_20</object>
           </objects>
@@ -1861,6 +1876,7 @@
         </objects>
         <object>objects\obj_special_results</object>
         <object>objects\obj_big_ring</object>
+        <object>objects\obj_big_ring_unavailable</object>
         <object>objects\obj_tornado</object>
         <object>objects\obj_bomb</object>
         <object>objects\obj_hud</object>
@@ -1911,6 +1927,17 @@
               <object>objects\obj_boss1_create</object>
               <objects name="Projectile">
                 <object>objects\obj_boss_coconut</object>
+              </objects>
+            </objects>
+            <objects name="Mini-Boss">
+              <object>objects\obj_trigger_miniboss1</object>
+              <object>objects\obj_miniboss1_cam</object>
+              <object>objects\obj_npc_sth3_firebreather</object>
+              <object>objects\obj_miniboss1_create</object>
+              <objects name="Parts">
+                <object>objects\obj_npc_sth3_firebreather_flame</object>
+                <object>objects\obj_npc_sth3_firebreather_projectile</object>
+                <object>objects\obj_npc_sth3_firebreather_parts</object>
               </objects>
             </objects>
           </objects>
@@ -1972,7 +1999,7 @@
           <object>objects\obj_fake_results</object>
         </objects>
       </objects>
-      <objects name="Great Garden Zone">
+      <objects name="Petal Park Zone">
         <objects name="Gimmicks">
           <objects name="Bouncing Flowers">
             <object>objects\obj_ggz_bouncing_flower1</object>
@@ -1991,6 +2018,7 @@
         </objects>
         <objects name="Parallax">
           <object>objects\obj_ggz_parallax</object>
+          <object>objects\obj_ggz2_parallax</object>
         </objects>
         <objects name="Decorations">
           <object>objects\obj_ggz_flower1</object>
@@ -2011,9 +2039,13 @@
           </objects>
         </objects>
       </objects>
-      <objects name="Pinball Panic Zone">
+      <objects name="Chaotic Casino Zone">
         <objects name="Gimmicks">
           <object>objects\obj_ppz_flipping_card</object>
+          <object>objects\obj_casino_accelerator</object>
+          <object>objects\obj_ppz_question_block</object>
+          <object>objects\obj_ppz_spike_block</object>
+          <object>objects\obj_ppz_bonus_block</object>
         </objects>
         <objects name="Badniks">
           <object>objects\obj_duonaut</object>

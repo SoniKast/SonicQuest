@@ -3,7 +3,7 @@
   <spriteName>spr_sign_post</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>5</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -31,6 +31,10 @@
     sign_post_activated = false;
     sign_post_duration  = 128;
     sign_post_timer     = 2;
+    Drop                = 0;                  // Is the sign dropping?
+    SpecialFlag         = 0;                  // Creates a different result object if true.
+    XSpeed              = 0;                  // Horizontal speed of the sign post.
+    YSpeed              = 0;                  // Vertical speed of the sign post.
     sign_post_finished  = false;
     image_speed         = 0;
 
@@ -105,6 +109,53 @@
        }       
        sign_post_duration -= 1;
     }
+    // Drop:
+       if(place_meeting(x, y + YSpeed, par_solid) &amp;&amp; YSpeed &gt; 0){ 
+          while(!place_meeting(x, y + sign(YSpeed), par_solid)){ 
+                y += sign(YSpeed);
+          } 
+          Drop   = false;
+          XSpeed = 0;
+          YSpeed = 0;
+          event_user(0);
+       }
+       if(Drop == true){
+          YSpeed += 0.21875 
+          if(YSpeed &gt; 4){
+             YSpeed = 4;
+          }
+          y  += YSpeed;
+          if(sign_post_activated == false){
+             sign_post_activated = true;
+          }
+       }
+       
+    // Bounce:
+       if(instance_exists(par_player) &amp;&amp; Drop == true){
+          if(place_meeting(x, y-1, par_player)){
+             if(par_player.state == STATE_JUMP){
+                YSpeed  = -6;
+                XSpeed  = (x - par_player.x)/6;
+                if(audio_is_playing(general_signpost) == false){
+                   aud_play_sound(general_signpost, global.sfx_volume, 1, 0, 0);
+                }
+             }
+          }       
+       }
+       if(SpecialFlag != 0 &amp;&amp; Drop != false){
+          if(x &lt; view_xview+sprite_width/2){
+             XSpeed = 2;
+          }  
+          if(x &gt; view_xview+view_wview-sprite_width/2){
+             XSpeed = -2;
+          }              
+          x += XSpeed; 
+          }     
+
+    // Update Camera position (for dropping)
+       if(SpecialFlag != 0){    
+          Camera.y = y-80;
+       }         
 
 </string>
           </argument>
@@ -130,7 +181,7 @@
             <kind>1</kind>
             <string>/// Trigger.
 
-    if(sign_post_activated == false)
+    if(sign_post_activated == false &amp;&amp; Drop == false)
     {
        // Activate and play sound.
           sign_post_activated = true;
@@ -138,7 +189,81 @@
                     
        // Disable timer.
           global.do_time = 0;       
-    }
+
+    with(obj_player){
+               // Make sure that you can no longer transform after this.
+                  AllowTransformation = 0;       
+            if(CharacterState != CharacterNormal){
+               // Make sure to not run the alarm event:
+                  alarm[0] = -1;
+               // Reset the Characters state:
+                  CharacterState = CharacterNormal;                
+               // Change the animation to "BLANK" to make sure that the current animation is being reloaded.
+                  animation      = "BLANK";
+               // Reset the Transform Timer:
+                  TransformTimer = 15;
+               // Again, change the animation to "BLANK" to make sure that the current animation is being reloaded properly.
+                  animation      = "BLANK AGAIN";    
+               // If we're Sonic, use a little fade palette:
+                  if(global.player_index = CHAR_SONIC){
+                     TransformEnded  = 1;    
+                     PalettePosition = 0;       
+                  }           
+            }            
+       }
+       
+     }
+                 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// After drop, finish everything.
+
+    if(sign_post_activated == false &amp;&amp; Drop == false){
+       sign_post_activated = true;       
+       with(obj_player){
+               // Make sure that you can no longer transform after this.
+                  AllowTransformation = 0;       
+            if(CharacterState != CharacterNormal){
+               // Make sure to not run the alarm event:
+                  alarm[0] = -1;
+               // Reset the Characters state:
+                  CharacterState = CharacterNormal;                
+               // Change the animation to "BLANK" to make sure that the current animation is being reloaded.
+                  animation      = "BLANK";
+               // Reset the Transform Timer:
+                  TransformTimer = 15;
+               // Again, change the animation to "BLANK" to make sure that the current animation is being reloaded properly.
+                  animation      = "BLANK AGAIN";    
+               // If we're Sonic, use a little fade palette:
+                  if(global.player_index = CHAR_SONIC){
+                     TransformEnded  = 1;    
+                     PalettePosition = 0;       
+                  }           
+            }            
+       }
+       
+     }
+     global.do_time = 0;     
 
 </string>
           </argument>

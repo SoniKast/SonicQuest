@@ -439,7 +439,7 @@ xspd = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!st_flyaway)
+            <string>if(state != st_flyaway)
 {
 yspd = 0; 
 xspd = -1;

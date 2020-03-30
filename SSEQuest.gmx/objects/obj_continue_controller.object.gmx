@@ -30,7 +30,8 @@
     continue_time   = 60*10;
     continue_accept = false;
     alarm[0]        = continue_time;
-
+    _i = "";
+    
  // Sign post.
     sign_post = instance_create(global.screen_width/2, global.screen_height - 28, obj_continue_post);
 
@@ -205,7 +206,14 @@
        draw_set_font(global.hud_font);
        draw_set_color(c_white);
        draw_set_halign(fa_center) 
-       draw_text(global.screen_width/2, global.screen_height/2, string((alarm[0]&lt;=60*9)*"0")+string(ceil(alarm[0]/room_speed)))
+       if(alarm[0] != -1)
+       {
+          if(alarm[0] &lt;= 60*9)
+          {
+             _i = "0"
+          }
+       }
+       draw_text(global.screen_width/2, global.screen_height/2, string(_i)+string(ceil(alarm[0]/room_speed)))
     }
     else
     {
@@ -215,7 +223,6 @@
        }
     }
     
-
 </string>
           </argument>
         </arguments>

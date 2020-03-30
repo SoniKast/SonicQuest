@@ -815,7 +815,7 @@
     <instance objName="obj_ssz_flower_red" x="2048" y="1152" name="inst_AC4E2D97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_flower_yellow" x="2000" y="1152" name="inst_56B96619" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_platform" x="848" y="1168" name="inst_B62C2BF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ssz_platform" x="1408" y="1088" name="inst_59A2177F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_platform" x="1104" y="1088" name="inst_59A2177F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="848" y="1184" name="inst_21232FDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="1104" y="1104" name="inst_68821CC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_left" x="1280" y="1184" name="inst_E6AE9ADD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1484,9 +1484,6 @@
     <instance objName="obj_ssz_break_wall_knuckles" x="9520" y="1472" name="inst_8B4697BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_break_wall_knuckles" x="7168" y="1536" name="inst_CF0B630E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_break_wall_knuckles" x="7184" y="1536" name="inst_3F88F797" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ssz_break_wall_metal" x="13872" y="768" name="inst_35310B61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ssz_break_wall_metal" x="13856" y="768" name="inst_01A4CEEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fake_sign_post" x="13728" y="832" name="inst_75E58054" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_12" x="13504" y="640" name="inst_C5F41A71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_big_ring" x="11072" y="640" name="inst_D7102C30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="11136" y="704" name="inst_558C1FAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1884,6 +1881,14 @@
     <instance objName="obj_waterfall_platform_spawner" x="8128" y="480" name="inst_46BEBDE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor_lock_tunnel_right" x="9264" y="1056" name="inst_F034379F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor_lock_tunnel_left" x="9536" y="1312" name="inst_0564BFE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_miniboss1_cam" x="13728" y="784" name="inst_DFA85A44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star_post" x="13312" y="768" name="inst_B3129346" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="13888" y="768" name="inst_CB1C75EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="13888" y="832" name="inst_988E7B0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall_metal" x="13856" y="768" name="inst_A6E78B2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall_metal" x="13872" y="768" name="inst_4EFB6EC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_right" x="13568" y="736" name="inst_1DEE26BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_left" x="13824" y="736" name="inst_B3A6E4F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_sunshine_valley" x="11008" y="1216" w="64" h="64" xo="64" yo="320" id="10023355" name="inst_E2974F9A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

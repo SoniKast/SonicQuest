@@ -23,6 +23,25 @@ else if( hex_bumper_handle != noone )
   ground = false; 
 };
 
+/* STH 3 Accelerator */
+var accel_handle;
+
+accel_handle = player_collision_check(COL_MAIN_OBJECT, x, y, obj_casino_accelerator, -1, -1);
+
+if (accel_handle != noone)
+{
+ if (animation_direction = 1)
+ {
+  x_speed = 12;
+  with(accel_handle) {activated = true}
+ }
+if (animation_direction = -1)
+ {
+ x_speed += 0.95;
+ }
+}
+else with(accel_handle) {activated = false};
+
 /* STH2 Flipper */
 var flipper_handle_right;
 var flipper_handle_left;

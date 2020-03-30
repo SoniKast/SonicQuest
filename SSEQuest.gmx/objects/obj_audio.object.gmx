@@ -180,17 +180,11 @@
        if(audio_is_playing(jingle_invincibility))
        {
           audio_sound_gain(jingle_invincibility, global.bgm_volume, 0);
-       }  
-    }
-    if(audio_is_playing(jingle_drown) == false)
-    {
+       }
        if(audio_is_playing(jingle_sneakers))
        {
           audio_sound_gain(jingle_sneakers, global.bgm_volume, 0);
        }
-    }
-    if(audio_is_playing(jingle_drown) == false)
-    {
        if(audio_is_playing(jingle_super))
        {
           audio_sound_gain(jingle_super, global.bgm_volume, 0);

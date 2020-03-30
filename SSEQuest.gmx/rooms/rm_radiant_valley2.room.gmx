@@ -1507,6 +1507,10 @@
     <instance objName="obj_ssz_flower_red" x="6224" y="1040" name="inst_79B7EC14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor_lock_tunnel_right" x="6320" y="992" name="inst_EF6BAB80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sensor_lock_tunnel_left" x="6592" y="1248" name="inst_DC272663" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall" x="320" y="768" name="inst_8FA24C44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall" x="336" y="768" name="inst_20A45BB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall" x="352" y="768" name="inst_FF97940E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz_break_wall" x="368" y="768" name="inst_CFDFC9E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ssz_tree" x="6944" y="352" w="90" h="203" xo="0" yo="0" id="10035136" name="inst_7F2C67CF" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -86,6 +86,10 @@ if(!instance_exists(obj_fade_hpz))
 {
 instance_destroy();
 }
+if(global.demo = true)
+{
+instance_change(obj_big_ring_unavailable, true);
+}
 
 if (activated == 1) {
     obj_player.visible = false;

@@ -117,8 +117,8 @@
     <instance objName="obj_collision_terrain_platform_02" x="832" y="112" name="inst_B5B00A88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_water" x="0" y="32" name="inst_869E894C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_controller" x="16" y="0" name="inst_DF4A188C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_waterfall_a" x="448" y="288" name="inst_10F0E5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_waterfall_b" x="448" y="416" name="inst_481D8E3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waterfall_a" x="448" y="320" name="inst_10F0E5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waterfall_b" x="448" y="448" name="inst_481D8E3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_hpz" x="0" y="256" w="128" h="128" xo="130" yo="259" id="10000003" name="tile_9D4B69C6" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -80,6 +80,7 @@
     can_do      = 0; 
     can_count   = 0;
     count_sound = 1;
+    gone        = 0;
     
  // Skip:
     can_skip = 0; 
@@ -133,11 +134,10 @@
     {
     if(global.time_attack = false)
     {
-       if(instance_exists(obj_metal_cutscene) == false)
+       if(instance_exists(obj_miniboss1_create) == false)
        {
           // Create fade.
-             instance_create(14064, 816, obj_metal_cutscene);
-             alarm[6] = 5;
+             instance_create(13808, 752, obj_miniboss1_create);
           // Save progress.
              if(global.save_selected != 0)
              {
@@ -541,7 +541,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Draw Results.
-if(global.cutscene = false)
+if(global.cutscene = false || gone = 1)
 {
 
  // "Character" Got:

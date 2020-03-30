@@ -88,6 +88,7 @@
     global.save_icon        = 0;
     global.data_select_icon = 1;             //To correctly display the level preview.
     global.cutscene         = false;
+    global.demo             = true;
     
     /* Modes */
     global.time_attack      = false;  //Used in time attack mode so the big rings don't spawn
