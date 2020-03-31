@@ -12,7 +12,7 @@
   <showcolour>-1</showcolour>
   <code>/// Zone init. 
 
-    global.zone_name      = "FOREST FRENZY"
+    global.zone_name      = "FRANTIC FOREST"
     global.zone_act       =  1;
     global.water_position = -1;
     global.death_height   = room_height;

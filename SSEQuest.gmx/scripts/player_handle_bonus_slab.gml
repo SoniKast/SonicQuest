@@ -8,7 +8,11 @@ if( bonus_slab != noone )
   angle_to_bumper = degtorad(round(wrap_angle(point_direction(x, y, bonus_slab.x, bonus_slab.y)-90)/22.5)*24);
   x_speed = sin(wrap_angle(angle_to_bumper))*8;
   y_speed = cos(wrap_angle(angle_to_bumper))*8;     
+  if(bonus_slab.object_hp != 0)
+  {
   bonus_slab.object_hp -= 1;
+  aud_play_sound(general_slab, global.sfx_volume, 1, 0, 0);
+  }
   ground = false; 
 };
    

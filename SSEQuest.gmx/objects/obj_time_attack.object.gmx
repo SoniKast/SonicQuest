@@ -210,21 +210,22 @@ canselect = 0;
 canmove = 1;
 }
 if menu=5{
-with(instance_create(x, y, obj_fade_to_value))
+/*with(instance_create(x, y, obj_fade_to_value))
 {
     value = rm_aquapolis1
-}
-global.time_attack = true;
-canselect = 0;
+}*/
+aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+canselect = 1;
 canmove = 1;
 }
 if menu=6{
-with(instance_create(x, y, obj_fade_to_value))
+/*with(instance_create(x, y, obj_fade_to_value))
 {
     value = rm_egg_gauntlet
 }
-global.time_attack = true;
-canselect = 0;
+*/
+aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+canselect = 1;
 canmove = 1;
 }
 //Play Sound:

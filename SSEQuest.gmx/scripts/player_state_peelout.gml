@@ -7,7 +7,7 @@
          // Get Ready to peelout:
             if(x_speed == 0 && y_speed == 0 && input_up && input_action_pressed && state != STATE_PEELOUT){
                state = STATE_PEELOUT;
-               aud_play_sound(player_peelout_charge, global.sfx_volume, 1, 0, 1);                 
+               aud_play_sound(player_peelout_charge, global.sfx_volume, 1, 0, 0);                 
             }
       
          // Increase the Peelout timer:
@@ -25,7 +25,7 @@
                x_speed      = animation_direction*12;
                PeeloutFlag  = 1;
                PeeloutTimer = 0;
-               aud_play_sound(player_peelout_release, global.sfx_volume, 1, 0, 1);        
+               aud_play_sound(player_peelout_release, global.sfx_volume, 1, 0, 0);        
                audio_stop_sound(player_spindash_release);                          
             }
             

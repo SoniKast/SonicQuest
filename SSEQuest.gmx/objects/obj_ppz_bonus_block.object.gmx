@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x+32, y-16, choose(obj_monitor_ring, obj_monitor_electricity, obj_monitor_invincibility, obj_monitor_life));
+            <string>if(!instance_exists(obj_spring_up))
+{
+instance_create(x+8, y-16, obj_spring_up);
+}
+// instance_create(x+16, y-16, choose(obj_monitor_ring, obj_monitor_electricity, obj_monitor_invincibility, obj_monitor_life));
 </string>
           </argument>
         </arguments>
@@ -48,7 +52,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 10;
+            <string>alarm[0] = 5;
 </string>
           </argument>
         </arguments>

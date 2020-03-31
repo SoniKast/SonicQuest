@@ -48,6 +48,7 @@
         <sound>sound\general_teleport</sound>
         <sound>sound\general_teleport_start</sound>
         <sound>sound\general_water_splash</sound>
+        <sound>sound\general_slab</sound>
       </sounds>
       <sounds name="Player">
         <sound>sound\player_air</sound>
@@ -86,6 +87,7 @@
       </sounds>
       <sounds name="Jingle">
         <sound>sound\jingle_continue</sound>
+        <sound>sound\jingle_disclaimer</sound>
         <sound>sound\jingle_drown</sound>
         <sound>sound\jingle_gameover</sound>
         <sound>sound\jingle_invincibility</sound>
@@ -138,6 +140,7 @@
           <sprite>sprites\spr_sonic_die</sprite>
           <sprite>sprites\spr_sonic_drown</sprite>
           <sprite>sprites\spr_sonic_float</sprite>
+          <sprite>sprites\spr_sonic_peelout</sprite>
           <sprites name="Super">
             <sprite>sprites\spr_ssonic_idle</sprite>
             <sprite>sprites\spr_ssonic_lookup</sprite>
@@ -181,6 +184,7 @@
           <sprite>sprites\spr_tails_die</sprite>
           <sprite>sprites\spr_tails_drown</sprite>
           <sprite>sprites\spr_tails_transform</sprite>
+          <sprite>sprites\spr_tails_falling</sprite>
           <sprite>sprites\spr_tails_float</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
@@ -562,10 +566,15 @@
         <sprite>sprites\spr_bonus_flipperL</sprite>
         <sprite>sprites\spr_bonus_flipperR</sprite>
         <sprite>sprites\spr_bonus_slab1</sprite>
+        <sprite>sprites\spr_slab_preview1</sprite>
         <sprite>sprites\spr_bonus_slab2</sprite>
+        <sprite>sprites\spr_slab_preview2</sprite>
         <sprite>sprites\spr_bonus_slab3</sprite>
+        <sprite>sprites\spr_slab_preview3</sprite>
         <sprite>sprites\spr_bonus_slab4</sprite>
+        <sprite>sprites\spr_slab_preview4</sprite>
         <sprite>sprites\spr_bonus_slab5</sprite>
+        <sprite>sprites\spr_slab_preview5</sprite>
         <sprite>sprites\spr_goal_block</sprite>
       </sprites>
       <sprites name="Collision Masks">
@@ -626,8 +635,6 @@
           <sprite>sprites\sprite330</sprite>
           <sprite>sprites\sprite501</sprite>
           <sprite>sprites\sprite502</sprite>
-          <sprite>sprites\sprite641</sprite>
-          <sprite>sprites\sprite642</sprite>
         </sprites>
         <sprites name="Terrain (Layer 0)">
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile01</sprite>
@@ -656,6 +663,7 @@
           <sprite>sprites\spr_collision_tile_loop_low</sprite>
           <sprite>sprites\sprite522</sprite>
           <sprite>sprites\sprite523</sprite>
+          <sprite>sprites\sprite648</sprite>
         </sprites>
         <sprites name="Terrain (Layer 1)">
           <sprite>sprites\spr_collision_mask_terrain_layer1_tile1</sprite>
@@ -684,6 +692,7 @@
           <sprite>sprites\spr_collision_tile_loop_high</sprite>
           <sprite>sprites\sprite524</sprite>
           <sprite>sprites\sprite525</sprite>
+          <sprite>sprites\sprite649</sprite>
         </sprites>
         <sprites name="Terrain (Platforms)">
           <sprite>sprites\spr_collision_mask_terrain_platform_tile01</sprite>
@@ -709,6 +718,8 @@
           <sprite>sprites\spr_collision_mask_terrain_platform_tile21</sprite>
           <sprite>sprites\spr_collision_mask_terrain_platform_tile22</sprite>
           <sprite>sprites\spr_collision_mask_terrain_platform_tile23</sprite>
+          <sprite>sprites\sprite641</sprite>
+          <sprite>sprites\sprite642</sprite>
         </sprites>
         <sprite>sprites\spr_test_chain</sprite>
         <sprite>sprites\spr_test_chain_top</sprite>
@@ -820,9 +831,11 @@
             <sprite>sprites\spr_ppz_spike_block</sprite>
             <sprite>sprites\spr_ppz_bonus_block</sprite>
             <sprite>sprites\spr_ppz_question_block</sprite>
+            <sprite>sprites\spr_ppz_platform</sprite>
           </sprites>
           <sprites name="Badniks">
             <sprite>sprites\spr_crawl_ace</sprite>
+            <sprite>sprites\spr_crawl_ace_mask</sprite>
             <sprite>sprites\spr_crawl_ace_break</sprite>
             <sprite>sprites\spr_duonaut</sprite>
             <sprite>sprites\spr_jack_stomper</sprite>
@@ -989,7 +1002,9 @@
     <backgrounds name="Titlescreen and Menus">
       <backgrounds name="Disclaimer">
         <background>background\bg_disclaimer</background>
+        <background>background\bg_disclaimer_gms</background>
         <background>background\bg_demo_end</background>
+        <background>background\bg_demo_end_gms</background>
       </backgrounds>
       <backgrounds name="STT">
         <background>background\bg_STT</background>
@@ -1367,6 +1382,7 @@
         <object>objects\par_layer1</object>
         <object>objects\par_layer1_no_angle</object>
         <object>objects\par_moving_platform</object>
+        <object>objects\par_moving_solid</object>
         <object>objects\par_swing</object>
         <object>objects\par_parallax</object>
         <object>objects\par_spring</object>
@@ -1680,8 +1696,6 @@
             <object>objects\obj_collision_tile_45</object>
             <object>objects\obj_collision_tile_46</object>
             <object>objects\obj_collision_tile_47</object>
-            <object>objects\obj_collision_tile_48</object>
-            <object>objects\obj_collision_tile_49</object>
             <object>objects\obj_collision_tile_s_tunnel</object>
             <object>objects\obj_collision_tile_loop_20</object>
           </objects>
@@ -1709,6 +1723,8 @@
             <object>objects\obj_collision_terrain_platform_21</object>
             <object>objects\obj_collision_terrain_platform_22</object>
             <object>objects\obj_collision_terrain_platform_23</object>
+            <object>objects\obj_collision_terrain_platform_24</object>
+            <object>objects\obj_collision_terrain_platform_25</object>
           </objects>
           <objects name="Layer0">
             <object>objects\obj_collision_tile_19_new</object>
@@ -1737,6 +1753,7 @@
             <object>objects\obj_collision_terrain_layer_0_23</object>
             <object>objects\object426</object>
             <object>objects\object427</object>
+            <object>objects\object517</object>
           </objects>
           <objects name="Layer1">
             <object>objects\obj_collision_terrain_layer_1_01</object>
@@ -1765,6 +1782,7 @@
             <object>objects\obj_collision_tile_18_new</object>
             <object>objects\object428</object>
             <object>objects\object429</object>
+            <object>objects\object518</object>
           </objects>
         </objects>
         <objects name="Sensors">
@@ -2046,12 +2064,17 @@
           <object>objects\obj_ppz_question_block</object>
           <object>objects\obj_ppz_spike_block</object>
           <object>objects\obj_ppz_bonus_block</object>
+          <object>objects\obj_ppz_block</object>
         </objects>
         <objects name="Badniks">
+          <object>objects\obj_crawl_ace</object>
+          <object>objects\obj_crawl_ace_break</object>
           <object>objects\obj_duonaut</object>
           <objects name="Projectiles">
             <object>objects\obj_diamond_projectile</object>
             <object>objects\obj_ace_projectile</object>
+            <object>objects\obj_crawl_ace_bumper</object>
+            <object>objects\obj_crawl_ace_bumper_break</object>
           </objects>
         </objects>
         <objects name="Parallax">
@@ -2151,18 +2174,18 @@
       <room>rooms\rm_data_select</room>
     </rooms>
     <rooms name="Stages">
-      <rooms name="Sunshine Valley">
+      <rooms name="Riverside Valley">
         <room>rooms\rm_radiant_valley1</room>
         <room>rooms\rm_radiant_valley2</room>
       </rooms>
-      <rooms name="Great Garden">
+      <rooms name="Petal Park">
         <room>rooms\rm_great_garden1</room>
         <room>rooms\rm_great_garden2</room>
       </rooms>
-      <rooms name="Pinball Panic">
+      <rooms name="Chaotic Casino">
         <room>rooms\rm_pinball_panic1</room>
       </rooms>
-      <rooms name="Forest Frenzy">
+      <rooms name="Frantic Forest">
         <room>rooms\rm_forest_frenzy1</room>
         <room>rooms\rm_demo_end</room>
       </rooms>
@@ -2194,6 +2217,7 @@
         <room>rooms\rm_special_stage7</room>
       </rooms>
       <room>rooms\rm_options</room>
+      <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
     </rooms>

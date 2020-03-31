@@ -161,7 +161,7 @@
     }
     
  // Set the volume of the currently playing zone music and invincibility jingle.
-    if(audio_is_playing(jingle_invincibility) == false || audio_is_playing(jingle_sneakers) == false || audio_is_playing(jingle_super) == false)
+    if(audio_is_playing(jingle_invincibility) == false)
     {    
        if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
        {
@@ -181,14 +181,6 @@
        {
           audio_sound_gain(jingle_invincibility, global.bgm_volume, 0);
        }
-       if(audio_is_playing(jingle_sneakers))
-       {
-          audio_sound_gain(jingle_sneakers, global.bgm_volume, 0);
-       }
-       if(audio_is_playing(jingle_super))
-       {
-          audio_sound_gain(jingle_super, global.bgm_volume, 0);
-       }
     }
     else
     {
@@ -196,16 +188,68 @@
        {    
           audio_sound_gain(jingle_invincibility, 0.00, 0);      
        }
-       if(audio_is_playing(jingle_sneakers))
-       {
-          audio_sound_gain(jingle_sneakers, 0.00, 0);
-       }
-       if(audio_is_playing(jingle_super))
-       {
-          audio_sound_gain(jingle_super, 0.00, 0);
-       }        
     }
     
+ // Set the volume of the currently playing zone music and speed shoes jingle.
+    if(audio_is_playing(jingle_sneakers) == false)
+    {    
+       if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
+       {
+          audio_sound_gain(zone_bgm, global.bgm_volume, 0);  
+       }
+    }
+    else
+    {
+       if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
+       {    
+          audio_sound_gain(zone_bgm, 0.00, 0);   
+       }  
+    }
+    if(audio_is_playing(jingle_drown) == false)
+    {    
+       if(audio_is_playing(jingle_sneakers))
+       {
+          audio_sound_gain(jingle_sneakers, global.bgm_volume, 0);
+       }
+    }
+    else
+    {
+       if(audio_is_playing(jingle_sneakers))
+       {    
+          audio_sound_gain(jingle_sneakers, 0.00, 0);      
+       }
+    }
+
+ // Set the volume of the currently playing zone music and super sonic jingle.
+    if(audio_is_playing(jingle_super) == false)
+    {    
+       if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
+       {
+          audio_sound_gain(zone_bgm, global.bgm_volume, 0);  
+       }
+    }
+    else
+    {
+       if(audio_is_playing(zone_bgm) &amp;&amp; zone_bgm != -1)
+       {    
+          audio_sound_gain(zone_bgm, 0.00, 0);   
+       }  
+    }
+    if(audio_is_playing(jingle_drown) == false)
+    {    
+       if(audio_is_playing(jingle_super))
+       {
+          audio_sound_gain(jingle_super, global.bgm_volume, 0);
+       }
+    }
+    else
+    {
+       if(audio_is_playing(jingle_super))
+       {    
+          audio_sound_gain(jingle_super, 0.00, 0);      
+       }
+    }
+            
  // Some sound effects need to have their volume modified too.
     if(audio_is_playing(player_flying))
     {   
@@ -215,6 +259,14 @@
     {       
        audio_sound_gain(player_flying_drop, global.sfx_volume, 0);
     }    
+    
+    /* Extra Fix */
+    if(audio_is_playing(jingle_invincibility) or audio_is_playing(jingle_sneakers) or audio_is_playing(jingle_super))
+    {
+    audio_stop_sound(zone_bgm);
+    };
+
+    
 </string>
           </argument>
         </arguments>
@@ -278,6 +330,15 @@
  // Then play the stage music.
     switch(room)
     {
+           case rm_disclaimer:
+           {
+                zone_bgm = jingle_disclaimer;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }
            case rm_title:
            {
                 zone_bgm = -1;

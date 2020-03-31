@@ -46,6 +46,54 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>          Boss_Moving = 3;
+          x -= 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>          Boss_Moving = 4;
+          x += 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -165,11 +213,15 @@
           }
 
        // Reset Camera:
-          with(obj_camera){
+       /*   with(obj_camera){
                cam_handle    = obj_player;
                limit_left  = 0;
                limit_right = room_width;
-          }       
+          } */
+          with(instance_create(x, y, obj_sign_post))
+          {
+          Drop = 1;
+          }      
 
        // Destroy:  
           instance_destroy();
@@ -237,12 +289,14 @@
           y = Boss_AngPosition+lengthdir_y(6, Boss_AngRadius)
        }
        if(Boss_Moving = 3){
-          x -= 1;
+          Boss_Moving = 1;
           Boss_Direction = -1;
+          alarm[1] = 5;
        }
        if(Boss_Moving = 4){
-          x += 1;
+          Boss_Moving = 1;
           Boss_Direction = 1;
+          alarm[0] = 5;
        }
     }
 </string>

@@ -65,10 +65,7 @@
  // Activate:
     if(active == false)
     {
-       if(inview())
-       {
-          active = true;
-       }
+        active = true;
     }
     
  // Only run if active.

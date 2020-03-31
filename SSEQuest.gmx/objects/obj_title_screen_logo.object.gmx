@@ -53,13 +53,13 @@
     alarm[0]             = 15;
     alarm[2]             = 1000;
 
-    title_menu_string0  = "RIVERS. VALLEY 1"
+    title_menu_string0  = "RIVER.  VALLEY 1"
     title_menu_string1  = "               2"
     title_menu_string2  = "PETAL PARK     1"
     title_menu_string3  = "               2"
     title_menu_string4  = "CHAOTIC CASINO 1"
     title_menu_string5  = "               2"
-    title_menu_string6  = "FOREST FRENZY  1"
+    title_menu_string6  = "FRANTIC FOREST 1"
     title_menu_string7  = "               2"
     title_menu_string8  = "AQUAPOLIS      1"
     title_menu_string9  = "               2"
@@ -274,6 +274,7 @@ if(menu_mode = "TITLE")
           else
           {
              title_menu_option = 0;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
        }
        if(keyboard_check_pressed(global.key_left))
@@ -286,6 +287,7 @@ if(menu_mode = "TITLE")
           else
           {
              title_menu_option = 3;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
        }       
     }
@@ -328,10 +330,12 @@ if(menu_mode = "TITLE")
           {
                  case 0:
                  {
-                      with(instance_create(0, 0, obj_fade_to_value))
+                      /*with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_data_select;
-                      }
+                      }*/
+                      aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+                      title_menu_active = 1;
                       break;
                  }
                  case 1:
@@ -463,6 +467,7 @@ if(title_menu_active == 1)
           else
           {
              sound_test_option = 0;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
        }
        if(keyboard_check_pressed(global.key_left))
@@ -475,6 +480,7 @@ if(title_menu_active == 1)
           else
           {
              sound_test_option = 256;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
        }       
     }
@@ -493,6 +499,7 @@ if(title_menu_active == 1)
             else
             {
                title_menu_character = 1;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
             }
         }
         if(keyboard_check_pressed(global.key_special))
@@ -505,6 +512,7 @@ if(title_menu_active == 1)
             else
             {
                title_menu_character = 3;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
             }
         }
     }
@@ -523,6 +531,8 @@ if(title_menu_active == 1)
                            value = rm_radiant_valley1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 1:
@@ -532,6 +542,8 @@ if(title_menu_active == 1)
                            value = rm_radiant_valley2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 2:
@@ -541,6 +553,8 @@ if(title_menu_active == 1)
                            value = rm_great_garden1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 3:
@@ -550,6 +564,8 @@ if(title_menu_active == 1)
                            value = rm_great_garden2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 4:
@@ -559,6 +575,8 @@ if(title_menu_active == 1)
                            value = rm_pinball_panic1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 5:
@@ -568,6 +586,8 @@ if(title_menu_active == 1)
                            value = rm_pinball_panic2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 6:
@@ -577,6 +597,8 @@ if(title_menu_active == 1)
                            value = rm_forest_frenzy1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 7:
@@ -586,6 +608,8 @@ if(title_menu_active == 1)
                            value = rm_forest_frenzy2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 8:
@@ -595,6 +619,8 @@ if(title_menu_active == 1)
                            value = rm_aquapolis1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 9:
@@ -604,6 +630,8 @@ if(title_menu_active == 1)
                            value = rm_aquapolis2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 10:
@@ -613,6 +641,8 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 11:
@@ -622,6 +652,8 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 12:
@@ -631,6 +663,8 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet3;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 13:
@@ -640,6 +674,8 @@ if(title_menu_active == 1)
                            value = rm_bridge_zone1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 14:
@@ -649,6 +685,8 @@ if(title_menu_active == 1)
                            value = rm_bridge2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 15:
@@ -658,6 +696,8 @@ if(title_menu_active == 1)
                            value = rm_playground;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 16:
@@ -667,15 +707,19 @@ if(title_menu_active == 1)
                            value = rm_playground_2;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 17:
                  {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = room_goto_bonus();
+                           value = rm_bonus1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 18:
@@ -685,6 +729,8 @@ if(title_menu_active == 1)
                            value = rm_special_stage1;
                       }
                       global.player_id = title_menu_character;
+                      global.cpu       = 0;
+                      global.time_attack = false;
                       break;
                  }
                  case 19:

@@ -10,7 +10,7 @@
  // Full jump:
     if((ground == true || state == STATE_CORKSCREW || state == STATE_CORKSCREW_ROLL) && !player_collision_check(COL_TOP, MASK_BIG, x, y-6, angle, -1) && input_action_pressed)
     {
-       if(state != STATE_CROUCH && state != STATE_SPINDASH && tunnel_lock == 0 )
+       if(state != STATE_CROUCH && state != STATE_SPINDASH && state != STATE_LOOKUP && state != STATE_PEELOUT && tunnel_lock == 0 )
        {       
           // Set horizontal and vertical speed.
              x_speed =  (dcos(angle_relative) * g_speed) - (dsin(angle_relative) * -jump_strength);

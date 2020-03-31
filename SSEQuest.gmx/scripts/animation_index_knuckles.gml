@@ -419,5 +419,34 @@
        animation_repeat_times = -1;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
+    }    
+    
+ // Roll:
+    if(animation = "tube")
+    {
+       sprite                 = spr_knuckles_roll;
+       animation_start        = 0;
+       animation_end          = 7;
+       animation_loop         = 0;
+       animation_speed        = 0.2;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;       
+    }  
+           
+ // Falling.
+    if(animation = "falling")
+    {
+       sprite                 = spr_knuckles_glide_drop;
+       animation_start        = 1;
+       animation_end          = 1;
+       animation_loop         = 1;
+       animation_speed        = 0.2;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;      
     }
+       
                              

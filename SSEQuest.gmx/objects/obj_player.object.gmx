@@ -486,7 +486,7 @@
              }
              
           // Run:
-             if(abs(x_speed) &gt;= 5.50 &amp;&amp; animation != "run")
+             if(x_speed != 0 &amp;&amp; PeeloutFlag == 0 &amp;&amp; abs(x_speed) &gt;= 5.50 &amp;&amp; animation != "run")
              {
                 animation = "run";
              }          
@@ -520,13 +520,29 @@
           if(state == STATE_PUSH &amp;&amp; animation != "push")
           {
              animation = "push";
+          }     
+          
+       // Peelout:
+          if(x_speed != 0 &amp;&amp; PeeloutFlag == 1 &amp;&amp; abs(x_speed) &gt;= 7){
+             animation = "peelout";
           }      
               
        // Slide:
           if(state == STATE_SLIDE &amp;&amp; animation != "slide")
           {
              animation = "slide";
-          }                                               
+          }          
+          
+      // Peelout (getting ready) animation:
+          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt; 0 &amp;&amp; PeeloutTimer &lt; 3 &amp;&amp; animation != "walk"){
+             animation = "walk";
+          }
+          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt; 3 &amp;&amp; PeeloutTimer &lt; 6 &amp;&amp; animation != "run"){
+             animation = "run";
+          }
+          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt;= 6 &amp;&amp; animation != "peelout"){
+             animation = "peelout";
+          }                                                 
     }
     if not(ground)
     {
@@ -553,7 +569,7 @@
               }              
               if(state != STATE_SPRING &amp;&amp; y_speed &gt; 0 &amp;&amp; animation == "spring")
               {
-                 animation = "walk";              
+                 animation = "falling";              
               }
     
            // Hurt:
@@ -645,6 +661,12 @@
               {
                  animation = "float";
               } 
+           
+           // Tube:
+              if(state == STATE_TUBE &amp;&amp; animation != "tube")
+              {
+                 animation = "tube";
+              }
     }
               
     // Death:
@@ -2186,7 +2208,6 @@
     
  // Rolling:
     player_state_roll();
-    
  // Skidding:
     player_state_skid();
     
@@ -2199,13 +2220,13 @@
     
  // Tubes:
     player_state_tube();
- 
+
  // Peelout:
-    if(player_index == CHAR_SONIC){
+    if(global.player_id == CHAR_SONIC){
         if(AbilityPeelout == 1){
             player_state_peelout();
         }
-    }
+    }    
     
  // Balancing:
     player_state_edgewobble();
@@ -2715,8 +2736,8 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
   y_speed = cos(wrap_angle(angle_to_boss))*5;   
   ground  = false; 
   }else{
-  if(state != STATE_HURT &amp;&amp; state != STATE_DEATH &amp;&amp; other.player_type == IS_PLAYER){
-   player_state_hurt(enemy, false);
+  if(state != STATE_HURT &amp;&amp; state != STATE_DEATH &amp;&amp; player_type == IS_PLAYER){
+   player_state_hurt(objHandle, false);
    };
   };
 }

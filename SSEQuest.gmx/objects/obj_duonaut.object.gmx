@@ -126,14 +126,14 @@ instance_destroy();
 x -= 0.30;
 
 /* Attack */
-if ( instance_exists(par_player) )
+if ( instance_exists(obj_player) )
 {
 
 if( attack != 5 )
 {
-if( abs(par_player.x - x) &lt; 120 )
+if( abs(obj_player.x - x) &lt; 120 )
 {
-if( x &gt; par_player.x )
+if( x &gt; obj_player.x )
 {
  if( timer != 0 )
  {
@@ -155,9 +155,9 @@ if( x &gt; par_player.x )
 };
 
 
-if(instance_exists(par_player))
+if(instance_exists(obj_player))
 {
-if( abs(par_player.x - x) &gt; 50 )
+if( abs(obj_player.x - x) &gt; 50 )
 {
 phase = 1;
 };

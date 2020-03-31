@@ -56,7 +56,7 @@ start = true;
     limit_left  = 0;
     limit_right = room_width;
     }
-instance_create(x, y-40, obj_sign_post);
+
 </string>
           </argument>
         </arguments>
