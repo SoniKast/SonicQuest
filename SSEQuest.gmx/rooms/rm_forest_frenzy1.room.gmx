@@ -15,12 +15,16 @@
     global.zone_name      = "FRANTIC FOREST"
     global.zone_act       =  1;
     global.water_position = -1;
-    global.death_height   = room_height;
-    global.zone_id        =  4;
+    global.death_height     = room_height;
+    global.zone_id          =  4;
+    global.data_select_icon =  4;   
+    global.special          =  0;
     if(global.time_attack = false)
     {
+    save_create(global.save_selected);
     scr_save()
-    }</code>
+    }
+    global.cutscene         = false;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -1113,8 +1117,8 @@
     <instance objName="obj_moving_dir_up" x="4544" y="656" name="inst_CFB72ECF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="9344" y="1120" name="inst_74B159EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="4496" y="768" name="inst_C168445D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_screen_camera" x="12992" y="1504" name="inst_979E8CD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_MS_stand" x="13056" y="1488" name="inst_358E6B8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_screen_camera" x="12992" y="1520" name="inst_63853EAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_MS_stand" x="13056" y="1488" name="inst_429E81B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ffz_tree" x="3136" y="0" w="128" h="128" xo="0" yo="0" id="10030663" name="inst_3606A765" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

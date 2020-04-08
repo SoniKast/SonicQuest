@@ -54,6 +54,7 @@
     <instance objName="obj_init" x="-80" y="-16" name="inst_88D3B773" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_in" x="0" y="0" name="inst_076ED922" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_screenshotter" x="32" y="0" name="inst_76364D3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SharedTweener" x="16" y="0" name="inst_4A7B93DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

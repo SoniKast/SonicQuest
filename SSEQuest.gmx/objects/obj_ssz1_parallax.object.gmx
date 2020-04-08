@@ -49,7 +49,8 @@
     
     scr_parallax_add_node(1, backGhzClouds,       0.83, 0.3, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 128, 62);
     scr_parallax_add_node(1, backGhzClouds2,      0.8, 0.2, 0, 0, 0,     OverallYOffset, 0, 0, 62, 0,    0, 0, 128, 58);
-    scr_parallax_add_node(1, backGhzMountains1,   0.7,  0, 0, 0, 0,       OverallYOffset, 0, 0, 71, 0,    0, 0, 420, 83);
+    scr_parallax_add_node(1, backGhzMountains1,   0.7,  0, 0, 0, 0,       OverallYOffset, 0, 0, 71, 0,    0, 0, 420, 51);
+    scr_parallax_add_node(1, backGhzBushes,   0.65,  0, 0, 0, 0,       OverallYOffset, 0, 0, 71, 0,    0, 0, 420, 83);
           
 //    PalettePosition = 0;       // If we manipulate a sprites palette, this keeps track of the position.  
           

@@ -6,7 +6,7 @@
        
     // Lock the character to the plane:   
        if(PlaneHandle != noone){
-          PlaneHandle.x = x_speed; 
+          PlaneHandle.x += x_speed; 
        if keyboard_check(global.key_up){
        PlaneHandle.y -= 2;
        }

@@ -58,6 +58,7 @@
             <string>/// Go to the level select.
    
     room_goto(rm_level_select);
+    global.time_attack = false;
 </string>
           </argument>
         </arguments>

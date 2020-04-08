@@ -3,7 +3,7 @@
   <spriteName>spr_unused_emerald</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>5</depth>
+  <depth>6</depth>
   <persistent>0</persistent>
   <parentName>par_platform</parentName>
   <maskName>&lt;undefined&gt;</maskName>

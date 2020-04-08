@@ -3,7 +3,7 @@
   <spriteName>spr_time_attack</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,93 @@
             <string>///Sets the variable menu
 canmove = 1;
 menu=1;
+turnoff = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//this shows a message saying what ever menu you are on-you can change this to room_goto_next() etc...
+if(turnoff = true)
+{exit}
+save_load_trial();
+if(keyboard_check_pressed(global.key_enter))
+{
+      turnoff = true;
+      switch(menu)
+      {
+             case 1:
+             {    
+                  instance_create(0, 0, obj_time_attack_ssz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+             case 2:
+             {    
+                  instance_create(0, 0, obj_time_attack_ggz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+             case 3:
+             {    
+                  instance_create(0, 0, obj_time_attack_ppz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+             case 4:
+             {    
+                  instance_create(0, 0, obj_time_attack_jhz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+             case 5:
+             {    
+                  instance_create(0, 0, obj_time_attack_ccz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+             case 6:
+             {    
+                  instance_create(0, 0, obj_time_attack_egz)
+                  global.time_attack = false;
+                  canselect = 0;
+                  canmove = 0;
+                  break;
+             }
+      }
+}
+//Play Sound:
+sound_stop(general_score_points);
+
+
+
 </string>
           </argument>
         </arguments>
@@ -76,7 +163,9 @@ draw_sprite(spr_time_attack, menu, x, y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!instance_exists(obj_fade_to_value))
+            <string>if(turnoff = true)
+{exit}
+if(!instance_exists(obj_fade_to_value))
 {
     {
         with(instance_create(x, y, obj_fade_to_value))
@@ -111,7 +200,9 @@ draw_sprite(spr_time_attack, menu, x, y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (canmove = 1)
+            <string>if(turnoff = true)
+{exit}
+if (canmove = 1)
 {
 aud_play_sound(general_score_points, global.sfx_volume, 1, 0, 0)
 if menu&lt;6
@@ -141,7 +232,9 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (canmove = 1)
+            <string>if(turnoff = true)
+{exit}
+if (canmove = 1)
 {
 aud_play_sound(general_score_points, global.sfx_volume, 1, 0, 0)
 if menu&gt;1
@@ -149,90 +242,6 @@ if menu&gt;1
 else
 {menu=6}
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//this shows a message saying what ever menu you are on-you can change this to room_goto_next() etc...
-
-if menu=1{
-with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_radiant_valley1
-}
-global.time_attack = true;
-canselect = 0;
-canmove = 1;
-}
-if menu=2{
-with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_great_garden1
-}
-global.time_attack = true;
-canselect = 0;
-canmove = 1;
-}
-if menu=3{
-with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_pinball_panic1
-}
-global.time_attack = true;
-canselect = 0;
-canmove = 1;
-}
-if menu=4{
-with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_forest_frenzy1
-}
-global.time_attack = true;
-canselect = 0;
-canmove = 1;
-}
-if menu=5{
-/*with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_aquapolis1
-}*/
-aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
-canselect = 1;
-canmove = 1;
-}
-if menu=6{
-/*with(instance_create(x, y, obj_fade_to_value))
-{
-    value = rm_egg_gauntlet
-}
-*/
-aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
-canselect = 1;
-canmove = 1;
-}
-//Play Sound:
-sound_stop(general_score_points);
-
-
-
 </string>
           </argument>
         </arguments>

@@ -61,7 +61,7 @@
             <string>/// Set direction.
 
     x_spd =  0;
-    y_spd =  3;
+    y_spd =  2;
     
 </string>
           </argument>

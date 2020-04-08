@@ -58,6 +58,7 @@
             <string>/// Go to the first stage.
 
     room_goto(global.first_zone);
+    global.time_attack = false;
 
 </string>
           </argument>

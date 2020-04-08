@@ -149,6 +149,85 @@
         {   
             if(instance_exists(obj_fade_to_value) == false)
             {
+                if(global.zone_id = 1 || global.zone_act = 1)
+                {
+                global.best_time_ssz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 1 || global.zone_act = 2)
+                {
+                global.best_time_ssz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 2 || global.zone_act = 1)
+                {
+                global.best_time_ggz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 2 || global.zone_act = 2)
+                {
+                global.best_time_ggz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 3 || global.zone_act = 1)
+                {
+                global.best_time_ppz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 3 || global.zone_act = 2)
+                {
+                global.best_time_ppz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 4 || global.zone_act = 1)
+                {
+                global.best_time_ffz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 4 || global.zone_act = 2)
+                {
+                global.best_time_ffz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 5 || global.zone_act = 1)
+                {
+                global.best_time_ccz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 5 || global.zone_act = 2)
+                {
+                global.best_time_ccz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 6 || global.zone_act = 1)
+                {
+                global.best_time_ttz1 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 6 || global.zone_act = 2)
+                {
+                global.best_time_ttz2 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                if(global.zone_id = 7 || global.zone_act = 1)
+                {
+                global.best_time_ttz3 = global.game_time;
+                save_create_trial();
+                global.game_time = 0;
+                }
+                
             // Create fade.
                 with(instance_create(0, 0, obj_fade_to_value))
                 {

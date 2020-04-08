@@ -3,8 +3,8 @@
   <caption></caption>
   <width>13888</width>
   <height>2348</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>64</vsnap>
+  <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -19,6 +19,7 @@
     global.zone_id        =  1;
     if(global.time_attack = false)
     {
+    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;
@@ -771,7 +772,6 @@
     <instance objName="obj_collision_tile_03" x="7040" y="1056" name="inst_7659F15A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="7040" y="1120" name="inst_9B6E2BCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="7040" y="1184" name="inst_47B9CC16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ssz2_water" x="80" y="16" name="inst_AF32DC9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_top" x="7424" y="1568" name="inst_7FA23AFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_top" x="7456" y="1568" name="inst_B2728CC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_top" x="7488" y="1568" name="inst_E3A5AA51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1372,7 +1372,6 @@
     <instance objName="obj_flutter" x="2176" y="448" name="inst_873CA709" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="3008" y="208" name="inst_432F3FB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="3600" y="256" name="inst_A6F99115" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_monitor_sneaker" x="2848" y="272" name="inst_1EE17D3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flutter" x="4864" y="464" name="inst_107DDC17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="5616" y="432" name="inst_BC0D426F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="1056" y="944" name="inst_3BBBCF4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1511,6 +1510,7 @@
     <instance objName="obj_ssz_break_wall" x="336" y="768" name="inst_20A45BB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_break_wall" x="352" y="768" name="inst_FF97940E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_break_wall" x="368" y="768" name="inst_CFDFC9E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_monitor_invincibility" x="2848" y="272" name="inst_FB1AE9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ssz_tree" x="6944" y="352" w="90" h="203" xo="0" yo="0" id="10035136" name="inst_7F2C67CF" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

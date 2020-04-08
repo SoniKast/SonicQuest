@@ -198,7 +198,11 @@
              with(instance_create(0, 0, obj_fade_to_value))
              {
                 value = rm_title;
-             }
+             } 
+             global.checkpoint_x = global.temp_restart_x;
+             global.checkpoint_y = global.temp_restart_y;
+             global.temp_restart_x = -1;
+             global.temp_restart_y = -1;
           }
        }             
     }

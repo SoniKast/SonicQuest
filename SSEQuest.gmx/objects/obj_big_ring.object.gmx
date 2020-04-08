@@ -57,7 +57,12 @@
 }    
 if(!instance_exists(obj_fade_hpz))
 {
-    instance_create(par_player.x, par_player.y, obj_fade_hpz);   
+    if(global.specialring_x != x &amp;&amp; global.specialring_y != y)
+    {
+        instance_create(par_player.x, par_player.y, obj_fade_hpz);   
+        global.specialring_x = x;
+        global.specialring_y = y-5;
+    }
 }
 
 </string>
@@ -82,14 +87,10 @@ if(!instance_exists(obj_fade_hpz))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.time_attack = true)
+            <string>if(global.time_attack = true || global.demo = true)
 {
 instance_change(obj_big_ring_unavailable, true);
 //instance_destroy();
-}
-if(global.demo = true)
-{
-instance_change(obj_big_ring_unavailable, true);
 }
 
 if (activated == 1) {
@@ -100,7 +101,7 @@ if (activated == 1) {
 
 if(activated &gt; 0)
 {
-    if(!audio_is_playing(general_ss_ring))
+if(!audio_is_playing(general_ss_ring))
     {
     aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
     }

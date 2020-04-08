@@ -200,9 +200,9 @@
     dropdash_flag  = 0;                      // Returns the dropdash flag. (0 = Null, 1 = Charging, 2 = Ready)
     dropdash_timer = 20;                     // Frames it takes to charge dropdash.
     dropdash_speed = 0;                      // Speed of the dropdash.
-    AbilityPeelout  = 1;       // Can we use the Peelout?
-    PeeloutFlag     = 0;       // Checks if we're performing a peelout.
-    PeeloutTimer    = 0;       // Has to be 12 to perform a peelout.
+    allow_peelout  = true;                   // If true, we allow the player to use the figure 8 move.
+    peelout_flag   = 0;                      // Used to keep Sonic in his figure 8 animation after performing it.
+    peelout_timer  = 0;                      // Used while charging the figure 8 move.
   
  // Tails: 
     tails_flight_timer    = 0;               // How long we've been flying.
@@ -333,7 +333,20 @@
     // Camera position.
         cam_x       = obj_player.x;
         cam_y       = obj_player.y;
-        cam_handle = obj_player;
+        cam_handle  = obj_player;
+        }
+     }
+    if(global.coming_from_special == 1 &amp;&amp; global.specialring_x != -1 &amp;&amp; global.specialring_y != -1){
+        x               = global.specialring_x;
+        y               = global.specialring_y;
+       global.game_time = global.checkpoint_t;
+       global.coming_from_special = 0;
+    
+    with (obj_camera){
+    // Camera position.
+        cam_x       = obj_player.x;
+        cam_y       = obj_player.y;
+        cam_handle  = obj_player;
         }
      }
   }
@@ -486,11 +499,25 @@
              }
              
           // Run:
-             if(x_speed != 0 &amp;&amp; PeeloutFlag == 0 &amp;&amp; abs(x_speed) &gt;= 5.50 &amp;&amp; animation != "run")
+             if(abs(x_speed) &gt;= 5.50 &amp;&amp; (animation != "run" || animation != "peelout"))
              {
-                animation = "run";
+                if(peelout_flag == 0)
+                {
+                   animation = "run";
+                }
+                else if(peelout_flag == 1)
+                {
+                        if(abs(x_speed) &gt; 8)
+                        {
+                           animation = "peelout"
+                        }
+                        else if(abs(x_speed) &lt; 8)
+                        {
+                           peelout_flag = 0;
+                        }
+                }
              }          
-       }  
+       }    
              
        // Looking up:
           if(state == STATE_LOOKUP &amp;&amp; animation != "look up")
@@ -516,33 +543,34 @@
              animation = "roll";
           }      
           
+       // Peelout:
+          if(state == STATE_PEELOUT)
+          {
+             if(peelout_timer &lt; 16)
+             {
+                animation = "walk";
+             }
+             else if(peelout_timer &gt;= 16 &amp;&amp; peelout_timer &lt; 32)
+             {
+                     animation = "run"
+             }
+             else if(peelout_timer &gt;= 32)
+             {
+                     animation       = "peelout";
+             }
+          }     
+          
        // Push:
           if(state == STATE_PUSH &amp;&amp; animation != "push")
           {
              animation = "push";
           }     
-          
-       // Peelout:
-          if(x_speed != 0 &amp;&amp; PeeloutFlag == 1 &amp;&amp; abs(x_speed) &gt;= 7){
-             animation = "peelout";
-          }      
               
        // Slide:
           if(state == STATE_SLIDE &amp;&amp; animation != "slide")
           {
              animation = "slide";
-          }          
-          
-      // Peelout (getting ready) animation:
-          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt; 0 &amp;&amp; PeeloutTimer &lt; 3 &amp;&amp; animation != "walk"){
-             animation = "walk";
-          }
-          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt; 3 &amp;&amp; PeeloutTimer &lt; 6 &amp;&amp; animation != "run"){
-             animation = "run";
-          }
-          if(state == STATE_PEELOUT &amp;&amp; PeeloutTimer &gt;= 6 &amp;&amp; animation != "peelout"){
-             animation = "peelout";
-          }                                                 
+          }                                                       
     }
     if not(ground)
     {
@@ -2223,7 +2251,7 @@
 
  // Peelout:
     if(global.player_id == CHAR_SONIC){
-        if(AbilityPeelout == 1){
+        if(allow_peelout == true){
             player_state_peelout();
         }
     }    

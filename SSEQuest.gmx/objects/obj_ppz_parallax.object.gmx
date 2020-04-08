@@ -46,75 +46,11 @@
     
     var OverallYOffset; OverallYOffset = 0.978;
     
-    scr_parallax_add_node(1, bg_ppz,       0.85, -0.4, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 512, 256);
-          
-    PalettePosition = 0;       // If we manipulate a sprites palette, this keeps track of the position.  
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(PalettePosition &gt; 2){
-          PalettePosition = 0;
-       }
-       PalettePosition += 0.15;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_self();
-pal_swap_set(spr_ppz_pal1, floor(PalettePosition), false);
-pal_swap_set(spr_ppz_pal2, floor(PalettePosition), false);
-pal_swap_set(spr_ppz_pal3, floor(PalettePosition), false);
+    scr_parallax_add_node(1, bg_ppz,       0.86, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.84, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 65, 0,    0, 65, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.82, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 112, 0,   0, 112, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.80, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 192, 0,   0, 192, 512, 256);
+ 
 </string>
           </argument>
         </arguments>

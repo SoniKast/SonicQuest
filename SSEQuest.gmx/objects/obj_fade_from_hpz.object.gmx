@@ -58,6 +58,7 @@
             <string>/// Go to the next room.
     room_goto(global.previous_room);
     global.previous_room = noone;
+    global.coming_from_special = 1;
 </string>
           </argument>
         </arguments>

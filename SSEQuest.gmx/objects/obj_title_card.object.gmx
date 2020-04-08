@@ -41,7 +41,7 @@
     zone_x        = -string_width(zone_text);
     zone_y        = 98;
     zone_add_text = "ZONE"
-    zone_add_x    = -string_width(zone_add_text)*3;
+    zone_add_x    = -string_width(zone_add_text)*4;
     zone_add_y    = 128; 
     zone_act_x    = -sprite_get_width(spr_title_card_act);
     zone_act_y    = 128;
@@ -270,9 +270,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Draw elements.
+  if(global.zone_act = 1)
+  {
   draw_set_color(c_black);
   draw_set_alpha(tc_backdrop_alpha);
   draw_rectangle(view_xview[0], view_yview[0], view_xview[0]+view_wview[0], view_yview[0]+view_hview[0], false);
+  }
   draw_set_alpha(1);
   draw_set_color(c_white);
   

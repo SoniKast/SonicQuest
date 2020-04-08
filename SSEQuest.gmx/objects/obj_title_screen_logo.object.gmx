@@ -330,12 +330,12 @@ if(menu_mode = "TITLE")
           {
                  case 0:
                  {
-                      /*with(instance_create(0, 0, obj_fade_to_value))
+                      with(instance_create(0, 0, obj_fade_to_value))
                       {
                            value = rm_data_select;
-                      }*/
-                      aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
-                      title_menu_active = 1;
+                      }
+                      /*aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+                      title_menu_active = 1;*/
                       break;
                  }
                  case 1:

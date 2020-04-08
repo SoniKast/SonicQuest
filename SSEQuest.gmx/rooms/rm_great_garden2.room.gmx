@@ -15,10 +15,13 @@
     global.zone_name      = "PETAL PARK"
     global.zone_act       =  2;
     global.water_position = -1;
-    global.death_height   = room_height;
-    global.zone_id        =  2;
+    global.death_height     = room_height;
+    global.zone_id          =  2;
+    global.data_select_icon =  2;   
+    global.special          =  0;
     if(global.time_attack = false)
     {
+    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;</code>

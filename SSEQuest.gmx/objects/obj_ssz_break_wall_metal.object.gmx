@@ -87,7 +87,7 @@
                }                   
            }
        }
-       aud_play_sound(general_crumble, global.sfx_volume, 1, 0, 0);
+       aud_play_sound(general_wallbreak, global.sfx_volume, 1, 0, 0);
     }
     
     

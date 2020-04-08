@@ -3,7 +3,7 @@
   <spriteName>spr_green_emerald</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>5</depth>
+  <depth>6</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
   <maskName>spr_player_mask_small</maskName>

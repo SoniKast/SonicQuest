@@ -94,8 +94,7 @@
             <kind>1</kind>
             <string>/// Collect &amp; set image index.
 
-    image_index = (global.player_emeralds);
-    if(instance_place(x, y, par_ss_player))
+    if(instance_place(x, y, par_player))
     {
        collected = true;
        instance_destroy();

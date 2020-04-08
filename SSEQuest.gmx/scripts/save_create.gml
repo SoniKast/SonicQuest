@@ -54,7 +54,7 @@
           file_text_write_string(dfile, string(global.used_emerald_6^dkey));
           file_text_writeln(dfile);  
           file_text_write_string(dfile, string(global.used_emerald_7^dkey));
-          file_text_writeln(dfile);  
+          file_text_writeln(dfile);
        // Close.                  
           file_text_close(dfile);
     }

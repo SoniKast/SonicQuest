@@ -3,11 +3,14 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles"/>
-  <NewExtensions/>
+  <datafiles number="3" name="datafiles"/>
+  <NewExtensions>
+    <extension index="0">extensions\TweenGMS</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sounds name="BGM">
       <sound>sound\music_dataselect</sound>
+      <sound>sound\music_time_attack</sound>
       <sound>sound\music_levelselect</sound>
       <sound>sound\music_options</sound>
       <sound>sound\music_test</sound>
@@ -27,6 +30,7 @@
         <sound>sound\general_bumper</sound>
         <sound>sound\general_checkpoint</sound>
         <sound>sound\general_crumble</sound>
+        <sound>sound\general_wallbreak</sound>
         <sound>sound\general_destroy</sound>
         <sound>sound\general_emerald</sound>
         <sound>sound\general_error</sound>
@@ -443,6 +447,7 @@
           <sprite>sprites\font_main</sprite>
           <sprite>sprites\font_lives</sprite>
           <sprite>sprites\font_title</sprite>
+          <sprite>sprites\font_trial</sprite>
           <sprite>sprites\spr_ss_text</sprite>
           <sprite>sprites\spr_s2_font_credits</sprite>
         </sprites>
@@ -828,6 +833,8 @@
             <sprite>sprites\spr_ppz_bumper_hit</sprite>
             <sprite>sprites\spr_ppz_flipping_card</sprite>
             <sprite>sprites\spr_ppz_flipping_card_mask</sprite>
+            <sprite>sprites\spr_ppz_wall_break</sprite>
+            <sprite>sprites\spr_ppz_wall_break_pieces</sprite>
             <sprite>sprites\spr_ppz_spike_block</sprite>
             <sprite>sprites\spr_ppz_bonus_block</sprite>
             <sprite>sprites\spr_ppz_question_block</sprite>
@@ -855,6 +862,7 @@
             <sprite>sprites\spr_glow</sprite>
           </sprites>
           <sprite>sprites\spr_unused_emerald</sprite>
+          <sprite>sprites\spr_g_unused_emerald</sprite>
           <sprite>sprites\spr_green_emerald</sprite>
           <sprite>sprites\spr_yellow_emerald</sprite>
           <sprite>sprites\spr_gray_emerald</sprite>
@@ -864,6 +872,7 @@
           <sprite>sprites\spr_purple_emerald</sprite>
           <sprite>sprites\spr_hpz_platform</sprite>
           <sprite>sprites\spr_sanctuary_orb_end</sprite>
+          <sprite>sprites\spr_hpz_scenery</sprite>
         </sprites>
         <sprites name="FFZ">
           <sprites name="Gimmicks">
@@ -933,9 +942,6 @@
         <sprite>sprites\spr_menu_rotating_piece</sprite>
         <sprite>sprites\spr_menu_picture</sprite>
         <sprite>sprites\spr_menu_sonic_run</sprite>
-        <sprites name="Time Trial">
-          <sprite>sprites\spr_time_attack</sprite>
-        </sprites>
         <sprites name="New Data Select">
           <sprite>sprites\spr_data_select</sprite>
           <sprite>sprites\spr_data_emerald_counter</sprite>
@@ -945,28 +951,11 @@
           <sprite>sprites\spr_data_select_player</sprite>
         </sprites>
       </sprites>
-    </sprites>
-    <sprites name="Misc">
-      <sprite>sprites\spr_empty</sprite>
-      <sprite>sprites\spr_water_walk</sprite>
-      <sprite>sprites\spr_rain</sprite>
-      <sprite>sprites\spr_camera</sprite>
-      <sprites name="Debug">
-        <sprite>sprites\spr_playground</sprite>
-        <sprite>sprites\spr_arrows</sprite>
-        <sprite>sprites\spr_arrows_v</sprite>
-        <sprite>sprites\spr_performance_check</sprite>
-        <sprite>sprites\spr_tube_icon_down</sprite>
-        <sprite>sprites\spr_tube_icon_end</sprite>
-        <sprite>sprites\spr_tube_icon_left</sprite>
-        <sprite>sprites\spr_tube_icon_right</sprite>
-        <sprite>sprites\spr_tube_icon_up</sprite>
-        <sprite>sprites\spr_tube_path_icon</sprite>
-        <sprite>sprites\spr_tube_path_icon_2</sprite>
+      <sprites name="Time Trial">
+        <sprite>sprites\spr_time_attack</sprite>
+        <sprite>sprites\spr_time_attack_picture</sprite>
       </sprites>
-    </sprites>
-    <sprites name="Old">
-      <sprites name="Old Data Select">
+      <sprites name="Data Select">
         <sprites name="Slot and Cursor">
           <sprite>sprites\spr_dataselect_slot</sprite>
           <sprite>sprites\spr_dataselect_slot_no_save</sprite>
@@ -995,6 +984,25 @@
           <sprite>sprites\spr_dataselect_font</sprite>
           <sprite>sprites\spr_dataselect_lives</sprite>
         </sprites>
+      </sprites>
+    </sprites>
+    <sprites name="Misc">
+      <sprite>sprites\spr_empty</sprite>
+      <sprite>sprites\spr_water_walk</sprite>
+      <sprite>sprites\spr_rain</sprite>
+      <sprite>sprites\spr_camera</sprite>
+      <sprites name="Debug">
+        <sprite>sprites\spr_playground</sprite>
+        <sprite>sprites\spr_arrows</sprite>
+        <sprite>sprites\spr_arrows_v</sprite>
+        <sprite>sprites\spr_performance_check</sprite>
+        <sprite>sprites\spr_tube_icon_down</sprite>
+        <sprite>sprites\spr_tube_icon_end</sprite>
+        <sprite>sprites\spr_tube_icon_left</sprite>
+        <sprite>sprites\spr_tube_icon_right</sprite>
+        <sprite>sprites\spr_tube_icon_up</sprite>
+        <sprite>sprites\spr_tube_path_icon</sprite>
+        <sprite>sprites\spr_tube_path_icon_2</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -1055,6 +1063,12 @@
           <background>background\ts_ecz</background>
           <background>background\ts_ffz_alt</background>
         </backgrounds>
+        <backgrounds name="Aquapolis">
+          <background>background\ts_aquapolis</background>
+        </backgrounds>
+        <backgrounds name="Egg Gauntlet">
+          <background>background\ts_egg_gauntlet</background>
+        </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\ts_hpz</background>
         </backgrounds>
@@ -1085,6 +1099,7 @@
             <background>background\backGhzClouds</background>
             <background>background\backGhzClouds2</background>
             <background>background\backGhzMountains1</background>
+            <background>background\backGhzBushes</background>
             <background>background\backGhzWater</background>
             <background>background\backGhzIsland</background>
             <background>background\backDeathEgg</background>
@@ -1093,6 +1108,7 @@
             <background>background\backGhzCloudsAct2</background>
             <background>background\backGhzClouds2Act2</background>
             <background>background\backGhzMountains1Act2</background>
+            <background>background\backGhzBushesAct2</background>
             <background>background\backGhzWaterAct2</background>
           </backgrounds>
         </backgrounds>
@@ -1111,6 +1127,9 @@
           <background>background\bg_jhz_back1</background>
           <background>background\bg_jhz_back2</background>
           <background>background\bg_jhz_back3</background>
+        </backgrounds>
+        <backgrounds name="Egg Gauntlet Zone">
+          <background>background\bg_egg_gauntlet</background>
         </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\bg_hpz_1</background>
@@ -1281,6 +1300,8 @@
       <scripts name="Sonic Quest Save System">
         <script>scripts\scr_save.gml</script>
         <script>scripts\scr_load.gml</script>
+        <script>scripts\save_create_trial.gml</script>
+        <script>scripts\save_load_trial.gml</script>
         <script>scripts\scr_save_delete.gml</script>
         <script>scripts\scr_collected.gml</script>
         <script>scripts\scr_loadcollect.gml</script>
@@ -1343,6 +1364,241 @@
     <scripts name="Audio">
       <script>scripts\aud_play_sound.gml</script>
       <script>scripts\aud_play_music.gml</script>
+    </scripts>
+    <scripts name="TweenGMS">
+      <scripts name="Tweening">
+        <scripts name="Tween Fire">
+          <script>scripts\TweenFire.gml</script>
+          <script>scripts\TweenFireTo.gml</script>
+          <script>scripts\TweenFireFrom.gml</script>
+          <script>scripts\TweenMore.gml</script>
+          <script>scripts\TGMS_TweenFire.gml</script>
+        </scripts>
+        <scripts name="Tween Create">
+          <script>scripts\TweenCreate.gml</script>
+          <script>scripts\TGMS_TweenCreate.gml</script>
+        </scripts>
+        <scripts name="Tween Play">
+          <script>scripts\TweenPlay.gml</script>
+          <script>scripts\TweenPlayDelay.gml</script>
+          <script>scripts\TGMS_TweenPlay.gml</script>
+        </scripts>
+        <scripts name="Tween Define">
+          <script>scripts\TweenDefine.gml</script>
+          <script>scripts\TGMS_TweenDefine.gml</script>
+        </scripts>
+        <scripts name="Tween Script">
+          <script>scripts\TweenScript.gml</script>
+          <script>scripts\TweenScriptMore.gml</script>
+        </scripts>
+        <scripts name="Tween Selection">
+          <script>scripts\Tweens.gml</script>
+          <script>scripts\TweensAll.gml</script>
+          <script>scripts\TweensGroup.gml</script>
+          <script>scripts\TweensTarget.gml</script>
+          <script>scripts\TweensIncludeDeactivated.gml</script>
+        </scripts>
+        <scripts name="Tween Control">
+          <script>scripts\TweenStop.gml</script>
+          <script>scripts\TweenPause.gml</script>
+          <script>scripts\TweenResume.gml</script>
+          <script>scripts\TweenReverse.gml</script>
+          <script>scripts\TweenFinish.gml</script>
+          <script>scripts\TweenFinishDelay.gml</script>
+        </scripts>
+        <scripts name="Tween State">
+          <script>scripts\TweenGet.gml</script>
+          <script>scripts\TweenSet.gml</script>
+          <script>scripts\TweenExists.gml</script>
+          <script>scripts\TweenIsActive.gml</script>
+          <script>scripts\TweenIsPlaying.gml</script>
+          <script>scripts\TweenIsPaused.gml</script>
+          <script>scripts\TweenIsStopped.gml</script>
+        </scripts>
+        <scripts name="Tween Destroy">
+          <script>scripts\TweenDestroy.gml</script>
+          <script>scripts\TweenDestroySafe.gml</script>
+          <script>scripts\TweenDestroyWhenDone.gml</script>
+        </scripts>
+        <scripts name="Tween Events">
+          <scripts name="Tween Callbacks">
+            <script>scripts\TweenAddCallback.gml</script>
+            <script>scripts\TweenAddCallbackUser.gml</script>
+            <script>scripts\TweenCallbackNull.gml</script>
+            <script>scripts\TweenCallbackIsValid.gml</script>
+            <script>scripts\TweenCallbackInvalidate.gml</script>
+            <script>scripts\TweenCallbackEnable.gml</script>
+            <script>scripts\TweenCallbackIsEnabled.gml</script>
+          </scripts>
+          <script>scripts\TweenEventClear.gml</script>
+          <script>scripts\TweenEventEnable.gml</script>
+          <script>scripts\TweenEventIsEnabled.gml</script>
+        </scripts>
+        <scripts name="Tween Tools">
+          <script>scripts\Ease.gml</script>
+          <script>scripts\TweenStep.gml</script>
+          <script>scripts\TweenCalc.gml</script>
+          <script>scripts\TweenCalcTime.gml</script>
+          <script>scripts\TweenCalcAmount.gml</script>
+        </scripts>
+        <scripts name="Tween Path">
+          <script>scripts\TweenPath.gml</script>
+          <script>scripts\ext_path__.gml</script>
+        </scripts>
+        <scripts name="Special Handles">
+          <script>scripts\TweenNull.gml</script>
+          <script>scripts\TweenDefault.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Easy Tweens">
+        <script>scripts\TweenEasyMove.gml</script>
+        <script>scripts\TweenEasyScale.gml</script>
+        <script>scripts\TweenEasyRotate.gml</script>
+        <script>scripts\TweenEasyTurn.gml</script>
+        <script>scripts\TweenEasyFade.gml</script>
+        <script>scripts\TweenEasyBlend.gml</script>
+        <script>scripts\TweenEasyImage.gml</script>
+        <script>scripts\TweenEasySpeed.gml</script>
+        <script>scripts\TweenEasySpeedHV.gml</script>
+        <script>scripts\TweenEasyUseDelta.gml</script>
+      </scripts>
+      <scripts name="Ease Algorithms">
+        <script>scripts\EaseLinear.gml</script>
+        <script>scripts\EaseInQuad.gml</script>
+        <script>scripts\EaseOutQuad.gml</script>
+        <script>scripts\EaseInOutQuad.gml</script>
+        <script>scripts\EaseInCubic.gml</script>
+        <script>scripts\EaseOutCubic.gml</script>
+        <script>scripts\EaseInOutCubic.gml</script>
+        <script>scripts\EaseInQuart.gml</script>
+        <script>scripts\EaseOutQuart.gml</script>
+        <script>scripts\EaseInOutQuart.gml</script>
+        <script>scripts\EaseInQuint.gml</script>
+        <script>scripts\EaseOutQuint.gml</script>
+        <script>scripts\EaseInOutQuint.gml</script>
+        <script>scripts\EaseInSine.gml</script>
+        <script>scripts\EaseOutSine.gml</script>
+        <script>scripts\EaseInOutSine.gml</script>
+        <script>scripts\EaseInCirc.gml</script>
+        <script>scripts\EaseOutCirc.gml</script>
+        <script>scripts\EaseInOutCirc.gml</script>
+        <script>scripts\EaseInExpo.gml</script>
+        <script>scripts\EaseOutExpo.gml</script>
+        <script>scripts\EaseInOutExpo.gml</script>
+        <script>scripts\EaseInElastic.gml</script>
+        <script>scripts\EaseOutElastic.gml</script>
+        <script>scripts\EaseInOutElastic.gml</script>
+        <script>scripts\EaseInBack.gml</script>
+        <script>scripts\EaseOutBack.gml</script>
+        <script>scripts\EaseInOutBack.gml</script>
+        <script>scripts\EaseInBounce.gml</script>
+        <script>scripts\EaseOutBounce.gml</script>
+        <script>scripts\EaseInOutBounce.gml</script>
+      </scripts>
+      <scripts name="Enhanced Properties">
+        <scripts name="Property Builders">
+          <script>scripts\TGMS_BuildProperty.gml</script>
+          <script>scripts\TGMS_BuildPropertyNormalize.gml</script>
+        </scripts>
+        <scripts name="Default Properties">
+          <script>scripts\TGMS_BuildDefaultProperties.gml</script>
+          <scripts name="Auto">
+            <script>scripts\TGMS_Variable_Instance_Get.gml</script>
+            <script>scripts\TGMS_Variable_Instance_Set.gml</script>
+            <script>scripts\TGMS_Variable_Global_Get.gml</script>
+            <script>scripts\TGMS_Variable_Global_Set.gml</script>
+          </scripts>
+          <scripts name="Global">
+            <script>scripts\score__.gml</script>
+            <script>scripts\__score.gml</script>
+            <script>scripts\health__.gml</script>
+            <script>scripts\__health.gml</script>
+            <script>scripts\background_colour__.gml</script>
+            <script>scripts\__background_colour.gml</script>
+          </scripts>
+          <scripts name="Instance">
+            <script>scripts\x__.gml</script>
+            <script>scripts\__x.gml</script>
+            <script>scripts\y__.gml</script>
+            <script>scripts\__y.gml</script>
+            <script>scripts\roundx__.gml</script>
+            <script>scripts\roundy__.gml</script>
+            <script>scripts\speed__.gml</script>
+            <script>scripts\__speed.gml</script>
+            <script>scripts\hspeed__.gml</script>
+            <script>scripts\__hspeed.gml</script>
+            <script>scripts\vspeed__.gml</script>
+            <script>scripts\__vspeed.gml</script>
+            <script>scripts\direction__.gml</script>
+            <script>scripts\__direction.gml</script>
+            <script>scripts\image_speed__.gml</script>
+            <script>scripts\image_index__.gml</script>
+            <script>scripts\image_alpha__.gml</script>
+            <script>scripts\__image_alpha.gml</script>
+            <script>scripts\image_angle__.gml</script>
+            <script>scripts\__image_angle.gml</script>
+            <script>scripts\image_scale__.gml</script>
+            <script>scripts\image_xscale__.gml</script>
+            <script>scripts\__image_xscale.gml</script>
+            <script>scripts\image_yscale__.gml</script>
+            <script>scripts\__image_yscale.gml</script>
+            <script>scripts\image_blend__.gml</script>
+            <script>scripts\__image_blend.gml</script>
+            <script>scripts\path_position__.gml</script>
+            <script>scripts\path_scale__.gml</script>
+            <script>scripts\path_speed__.gml</script>
+            <script>scripts\path_orientation__.gml</script>
+          </scripts>
+          <scripts name="User Events">
+            <script>scripts\TPUser.gml</script>
+            <script>scripts\ext_PropUser__.gml</script>
+            <script>scripts\__ext_PropUser.gml</script>
+          </scripts>
+          <scripts name="Data Structures">
+            <script>scripts\TPArray.gml</script>
+            <script>scripts\TPList.gml</script>
+            <script>scripts\TPGrid.gml</script>
+            <script>scripts\TPMap.gml</script>
+            <script>scripts\ext_Array1D__.gml</script>
+            <script>scripts\__ext_Array1D.gml</script>
+            <script>scripts\ext_Array2D__.gml</script>
+            <script>scripts\__ext_Array2D.gml</script>
+            <script>scripts\ext_DSList__.gml</script>
+            <script>scripts\__ext_DSList.gml</script>
+            <script>scripts\ext_DSGrid__.gml</script>
+            <script>scripts\__ext_DSGrid.gml</script>
+            <script>scripts\ext_DSMap__.gml</script>
+            <script>scripts\__ext_DSMap.gml</script>
+          </scripts>
+          <scripts name="Other">
+            <script>scripts\TPNull.gml</script>
+            <script>scripts\TPExt.gml</script>
+          </scripts>
+        </scripts>
+      </scripts>
+      <scripts name="System Utilities">
+        <script>scripts\TweenSystemGet.gml</script>
+        <script>scripts\TweenSystemSet.gml</script>
+        <script>scripts\TweenSystemCount.gml</script>
+        <script>scripts\TweenSystemClearRoom.gml</script>
+        <script>scripts\TweenSystemFlushDestroyed.gml</script>
+        <script>scripts\SharedTweenerActivate.gml</script>
+        <script>scripts\SharedTweenerDestroy.gml</script>
+      </scripts>
+      <scripts name="Support (DO NOT TOUCH)">
+        <script>scripts\TGMS_Init.gml</script>
+        <script>scripts\TGMS_Final.gml</script>
+        <script>scripts\TGMS_ExecuteEvent.gml</script>
+        <script>scripts\TGMS_TweensExecute.gml</script>
+        <script>scripts\TGMS_ClearRoom.gml</script>
+        <script>scripts\TGMS_FetchTween.gml</script>
+        <script>scripts\TGMS_TargetExists.gml</script>
+        <script>scripts\TGMS_EventUser.gml</script>
+        <script>scripts\TGMS_NULL__.gml</script>
+        <script>scripts\TGMS_MultiPropertySetter__.gml</script>
+        <script>scripts\TweenForcePropertyUpdate.gml</script>
+        <script>scripts\SharedTweener.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -1804,6 +2060,7 @@
       </objects>
       <objects name="Fades">
         <object>objects\obj_fade_in</object>
+        <object>objects\obj_fade_in_white2</object>
         <object>objects\obj_fade_next</object>
         <object>objects\obj_fade_next_white</object>
         <object>objects\obj_fade_bonus</object>
@@ -1850,8 +2107,16 @@
           <object>objects\obj_menu_background</object>
           <object>objects\obj_menu</object>
           <object>objects\obj_menu_rotating_piece</object>
-          <object>objects\obj_time_attack</object>
           <object>objects\obj_data_select</object>
+        </objects>
+        <objects name="Time Attack">
+          <object>objects\obj_time_attack</object>
+          <object>objects\obj_time_attack_ssz</object>
+          <object>objects\obj_time_attack_ggz</object>
+          <object>objects\obj_time_attack_ppz</object>
+          <object>objects\obj_time_attack_jhz</object>
+          <object>objects\obj_time_attack_ccz</object>
+          <object>objects\obj_time_attack_egz</object>
         </objects>
         <objects name="Continue">
           <object>objects\obj_continue_controller</object>
@@ -1935,7 +2200,6 @@
         <objects name="Parallax">
           <object>objects\obj_ssz1_parallax</object>
           <object>objects\obj_ssz2_parallax</object>
-          <object>objects\obj_ssz2_water</object>
         </objects>
         <objects name="Enemies">
           <objects name="Boss">
@@ -2065,6 +2329,8 @@
           <object>objects\obj_ppz_spike_block</object>
           <object>objects\obj_ppz_bonus_block</object>
           <object>objects\obj_ppz_block</object>
+          <object>objects\obj_ppz_breakable_wall</object>
+          <object>objects\obj_ppz_breakable_wall_pieces</object>
         </objects>
         <objects name="Badniks">
           <object>objects\obj_crawl_ace</object>
@@ -2109,6 +2375,7 @@
         </objects>
         <objects name="Decorations">
           <object>objects\obj_glow</object>
+          <object>objects\obj_hpz_scenery</object>
         </objects>
         <objects name="Gimmicks">
           <object>objects\obj_hpz_emerald1</object>
@@ -2127,6 +2394,7 @@
           <object>objects\obj_hpz_orb_end7</object>
         </objects>
         <object>objects\obj_unused_emerald</object>
+        <object>objects\obj_g_unused_emerald</object>
         <object>objects\obj_hpz_platform</object>
       </objects>
       <objects name="Extra">
@@ -2157,6 +2425,9 @@
         <object>objects\obj_goal_block</object>
       </objects>
     </objects>
+    <objects name="TweenGMS">
+      <object>objects\obj_SharedTweener</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="Init">
@@ -2167,7 +2438,6 @@
     </rooms>
     <rooms name="Title &amp; Options">
       <room>rooms\rm_title</room>
-      <room>rooms\rm_menu</room>
       <room>rooms\rm_time_attack</room>
     </rooms>
     <rooms name="Data / Level Select">
@@ -2184,10 +2454,16 @@
       </rooms>
       <rooms name="Chaotic Casino">
         <room>rooms\rm_pinball_panic1</room>
+        <room>rooms\rm_pinball_panic2</room>
       </rooms>
       <rooms name="Frantic Forest">
         <room>rooms\rm_forest_frenzy1</room>
-        <room>rooms\rm_demo_end</room>
+      </rooms>
+      <rooms name="Aquapolis">
+        <room>rooms\rm_aquapolis1</room>
+      </rooms>
+      <rooms name="Egg Gauntlet">
+        <room>rooms\rm_egg_gauntlet1</room>
       </rooms>
     </rooms>
     <rooms name="Extra">
@@ -2202,6 +2478,7 @@
         <room>rooms\rm_new_data_select</room>
         <room>rooms\rm_sunshine_valley1</room>
         <room>rooms\rm_sunshine_valley2</room>
+        <room>rooms\rm_menu</room>
       </rooms>
       <rooms name="Bonus Stage">
         <room>rooms\rm_bonus1</room>
@@ -2220,6 +2497,7 @@
       <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
+      <room>rooms\rm_demo_end</room>
     </rooms>
   </rooms>
   <constants number="79">

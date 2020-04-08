@@ -58,6 +58,7 @@
             <string>/// Go to the saved stage.
  
     save_zonelist();
+    global.time_attack = false;
 </string>
           </argument>
         </arguments>

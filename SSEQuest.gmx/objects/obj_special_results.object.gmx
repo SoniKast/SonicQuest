@@ -561,33 +561,62 @@
     draw_sprite_ext(spr_dot,-1,view_xview,view_yview,320,224,0,c_white,1)
 
  // "Character" Got:
-    draw_sprite(spr_results_name, 0, view_xview+57+result_gfx_position[0], view_yview+63);
+    draw_sprite(spr_results_name, 0, view_xview+51+result_gfx_position[0], view_yview+63);
 
  // Through:
     if(can_be = false)
     {
-    draw_sprite(spr_results_through, 1, view_xview+114+result_gfx_position[1], view_yview+83);
+    draw_sprite(spr_results_through, 1, view_xview+66+result_gfx_position[1], view_yview+81);
     }
     if(can_be = false &amp;&amp; global.player_emeralds = 7)
     {
-    draw_sprite(spr_results_through, 2, view_xview+114+result_gfx_position[1], view_yview+83);
+    draw_sprite(spr_results_through, 2, view_xview+66+result_gfx_position[1], view_yview+81);
     }
+    /*
  // Act Letter:
     draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+236+result_gfx_position[1], view_yview+66);
+    */
+ // Display emeralds
+    if(global.used_emerald_1 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 0, view_xview+112, view_yview+110);
+    }
+    if(global.used_emerald_2 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 1, view_xview+126, view_yview+110);
+    }
+    if(global.used_emerald_3 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 2, view_xview+138, view_yview+110);
+    }
+    if(global.used_emerald_4 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 3, view_xview+150, view_yview+110);
+    }
+    if(global.used_emerald_5 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 4, view_xview+162, view_yview+110);
+    }
+    if(global.used_emerald_6 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 5, view_xview+174, view_yview+110);
+    }
+    if(global.used_emerald_7 == true)
+    {
+    draw_sprite(spr_chaos_emerald, 6, view_xview+186, view_yview+110);
+    }
     
-    draw_sprite(spr_emerald_counter, global.player_emeralds, view_xview+112, view_yview+112);
-
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 0, view_xview+77+result_gfx_position[2], view_yview+110);
+    draw_sprite(spr_results_bonuses, 0, view_xview+60+result_gfx_position[2], view_yview+125);
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(view_xview+261+result_gfx_position[2], view_yview+112,''+ string(bonus_time),  0);
-    draw_number_zero(view_xview+261+result_gfx_position[3], view_yview+128,''+ string(bonus_rings), 0);
-    draw_number_zero(view_xview+261+result_gfx_position[4], view_yview+156,    string(bonus_total), 0);
+    draw_number_zero(view_xview+230+result_gfx_position[2], view_yview+131,''+ string(bonus_time),  0);
+    draw_number_zero(view_xview+230+result_gfx_position[3], view_yview+146,''+ string(bonus_rings), 0);
+    draw_number_zero(view_xview+230+result_gfx_position[4], view_yview+172,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
 </string>

@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_sega_startup" x="0" y="0" name="inst_F74513D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade_in" x="0" y="0" name="inst_81C368CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

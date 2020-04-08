@@ -3,8 +3,8 @@
   <caption></caption>
   <width>9952</width>
   <height>2000</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -17,9 +17,11 @@
     global.water_position   = -1;
     global.death_height     = room_height;
     global.zone_id          =  2;
+    global.data_select_icon =  2;   
     global.special          =  0;
     if(global.time_attack = false)
     {
+    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;</code>
@@ -767,7 +769,7 @@
     <instance objName="obj_collision_tile_02" x="6656" y="576" name="inst_F8B23751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6688" y="1056" name="inst_C8D8508E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6720" y="1312" name="inst_D8DF6C19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_16" x="6720" y="575" name="inst_19A84039" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_16" x="6720" y="576" name="inst_19A84039" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="6750" y="353" name="inst_BE0C3EEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="6750" y="384" name="inst_94390586" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6752" y="1056" name="inst_56CE10E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1992,7 +1994,6 @@
     <tile bgName="ts_great_garden" x="6432" y="512" w="128" h="256" xo="256" yo="64" id="10017687" name="tile_0C7397DF" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="6432" y="768" w="128" h="128" xo="256" yo="192" id="10017688" name="tile_4A1B7284" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="6432" y="896" w="128" h="128" xo="256" yo="256" id="10017689" name="tile_7FD43BD8" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_great_garden" x="6688" y="576" w="128" h="128" xo="1664" yo="512" id="10017701" name="tile_0921AB3A" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="6816" y="576" w="128" h="128" xo="1792" yo="512" id="10017702" name="tile_35E8A54D" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="6528" y="320" w="128" h="128" xo="1408" yo="512" id="10017704" name="tile_8A5A9636" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="6656" y="320" w="128" h="128" xo="1536" yo="512" id="10017705" name="tile_04674988" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -2162,6 +2163,8 @@
     <tile bgName="ts_great_garden" x="2720" y="1120" w="128" h="32" xo="256" yo="352" id="10026921" name="inst_8C0DF33C" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="9824" y="896" w="128" h="192" xo="64" yo="64" id="10026975" name="inst_BE2E89CE" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_great_garden" x="9824" y="1088" w="128" h="64" xo="64" yo="192" id="10026976" name="inst_123A8661" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_great_garden" x="6720" y="576" w="96" h="128" xo="1696" yo="512" id="10037326" name="inst_E46BD8DB" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_great_garden" x="6688" y="608" w="32" h="96" xo="96" yo="480" id="10037327" name="inst_29A9BED4" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

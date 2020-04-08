@@ -52,6 +52,7 @@ ini_close()
 
 
 
+
 /* call this script to save the stuff/game
 // scr_collected(true or false)
         
