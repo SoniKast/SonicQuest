@@ -21,7 +21,6 @@
     global.special          =  0;
     if(global.time_attack = false)
     {
-    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;</code>
@@ -1323,7 +1322,6 @@
     <instance objName="obj_ring" x="2736" y="2240" name="inst_D66A9794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="2736" y="2208" name="inst_C16E0F6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_left" x="2864" y="2160" name="inst_2EAA5965" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spike_bottom" x="1408" y="2496" name="inst_C7738751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_bottom" x="1440" y="2496" name="inst_534E00DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_bottom" x="1472" y="2496" name="inst_8B77AB92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_bottom" x="1504" y="2496" name="inst_77910E8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

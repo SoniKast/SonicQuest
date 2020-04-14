@@ -195,7 +195,21 @@
        animation_repeat_times = 0;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
-    }         
+    }       
+    
+ // Glider
+    if(animation = "glider")
+    {
+       sprite                 = spr_tails_grab;
+       animation_start        = 0;
+       animation_end          = 0;
+       animation_loop         = 0;
+       animation_speed        = 0.06;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;      
+    }     
     
  // Grab move.
     if(animation = "grab move")
@@ -433,5 +447,20 @@
        animation_repeat_times = 0;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
-    }
+    }            
+    
+   // Goal:            
+     if(animation = "goal")
+     {
+        sprite                 = spr_tails_goal;         
+        animation_start        = 0;
+        animation_end          = 1;
+        animation_loop         = 1;
+        animation_speed        = 0.2;
+        animation_repeat       = 1; 
+        animation_repeat_times = -1;
+        animation_linked_to    = "";
+        animation_linked_frame = 0;     
+     }      
+           
                    

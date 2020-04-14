@@ -105,6 +105,9 @@
              sign_post_finished = true;          
              image_index        = obj_level_controller.player_index*4;
              instance_create(x, y, obj_results);
+             with(obj_player){
+                 goal_state = 1;     
+             }
           }
        }       
        sign_post_duration -= 1;
@@ -154,7 +157,7 @@
 
     // Update Camera position (for dropping)
        if(SpecialFlag != 0){    
-          Camera.y = y-80;
+          sign_post_camera.y = y-80;
        }         
 
 </string>

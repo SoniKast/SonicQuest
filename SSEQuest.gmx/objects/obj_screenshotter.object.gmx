@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>   screen_save(working_directory + "Screenshot"+string(num)+".png")
+            <string>screen_save(working_directory+"screenshot"+string(100+num)+".png")
    num += 1;
 
 </string>

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>13888</width>
   <height>2348</height>
-  <vsnap>64</vsnap>
-  <hsnap>64</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -19,7 +19,6 @@
     global.zone_id        =  1;
     if(global.time_attack = false)
     {
-    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;
@@ -1220,7 +1219,6 @@
     <instance objName="obj_ring" x="12688" y="624" name="inst_E85DFDFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="12720" y="624" name="inst_F252E019" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="12752" y="624" name="inst_592549A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_capsule_goal" x="13616" y="592" name="inst_5F2BF2A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cg_mobile_camera" x="13232" y="560" name="inst_1AD88847" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="13056" y="512" name="inst_E2DA8870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_left" x="13408" y="512" name="inst_07251CFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1511,6 +1509,7 @@
     <instance objName="obj_ssz_break_wall" x="352" y="768" name="inst_FF97940E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ssz_break_wall" x="368" y="768" name="inst_CFDFC9E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monitor_invincibility" x="2848" y="272" name="inst_FB1AE9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_new_capsule_goal" x="13616" y="592" name="inst_7A968099" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ssz_tree" x="6944" y="352" w="90" h="203" xo="0" yo="0" id="10035136" name="inst_7F2C67CF" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

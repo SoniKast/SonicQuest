@@ -148,6 +148,8 @@
     
     push_timer        = 0;         // Used to trigger pushing state.
     push_timer_max    = 3;
+    goal_state        = 0;
+    goal_timer        = 5;         // Keeps track how many frames it takes to stop the player from movement.
     
     tube_type         = 0;         // Used for correct movement.
     tube_timer        = 0;         // Used for playing the roll sound at the correct time when in a tube.
@@ -560,6 +562,15 @@
              }
           }     
           
+       // Goal:
+          if(goal_state = 1 &amp;&amp; ground &amp;&amp; animation != "goal"){
+             animation = "goal";
+             animation_direction = 1;
+          }else if(goal_state = 1 &amp;&amp; !ground &amp;&amp; animation = "roll"){
+             animation = "roll";
+             animation_direction = 1;
+          }
+                
        // Push:
           if(state == STATE_PUSH &amp;&amp; animation != "push")
           {
@@ -694,6 +705,12 @@
               if(state == STATE_TUBE &amp;&amp; animation != "tube")
               {
                  animation = "tube";
+              }
+           
+           // Glider:
+              if(state == STATE_GLIDER &amp;&amp; animation != "glider")
+              {
+                 animation = "glider";
               }
     }
               
@@ -1518,6 +1535,7 @@
               player_handle_bonus_slab();
               player_handle_float();
               player_handle_float_v();
+              player_handle_glider();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1559,6 +1577,7 @@
               player_handle_bonus_slab();
               player_handle_float();
               player_handle_float_v();
+              player_handle_glider();
               
            // Abort.
               if(x_speed == 0)
@@ -1623,6 +1642,7 @@
                            player_handle_bonus_slab();
                            player_handle_float();
                            player_handle_float_v();
+                           player_handle_glider();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1729,6 +1749,7 @@
                               player_handle_bonus_slab();
                               player_handle_float();
                               player_handle_float_v();
+                              player_handle_glider();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -1952,6 +1973,7 @@
         x_speed = 0;
     }
 
+
 </string>
           </argument>
         </arguments>
@@ -2048,6 +2070,17 @@
        }
     }
 
+ //----Check if Squashed Left and Right
+    if (player_collision_check(COL_RIGHT_OBJECT, MASK_SMALL, x, y, angle, par_solid) &amp;&amp; player_collision_check(COL_LEFT_OBJECT, MASK_SMALL, x, y, angle, par_solid))
+    {
+        state = STATE_DEATH;
+    }
+ //----Check if Squashed Up and Down
+    if (player_collision_check(COL_BOTTOM_OBJECT, MASK_SMALL, x, y, angle, par_solid) &amp;&amp; player_collision_check(COL_TOP_OBJECT, MASK_SMALL, x, y, angle, par_solid))
+    {
+        state = STATE_DEATH;
+    }   
+        
 </string>
           </argument>
         </arguments>
@@ -2176,6 +2209,9 @@
     if(initialized = false || state = STATE_DEATH) exit;
     if(x_allow == false &amp;&amp; y_allow == false) exit;
     
+ // Goal:
+    player_state_goal();
+    
  // Ass:
     player_state_slipping();
     
@@ -2249,6 +2285,9 @@
  // Tubes:
     player_state_tube();
 
+ // Glider:
+    player_state_glider();
+    
  // Peelout:
     if(global.player_id == CHAR_SONIC){
         if(allow_peelout == true){

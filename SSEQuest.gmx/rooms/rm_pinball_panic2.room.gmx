@@ -21,7 +21,6 @@
     global.special          =  0;
     if(global.time_attack = false)
     {
-    save_create(global.save_selected);
     scr_save()
     }
     global.cutscene         = false;</code>

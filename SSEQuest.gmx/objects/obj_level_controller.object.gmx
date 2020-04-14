@@ -231,19 +231,12 @@
     time_visibility = 1;
     ring_visibility = 1;
 
- // Ass:
-    if(global.screen_mode == "Classic"){
-    view_wview[0]           = 320;
-    view_hview[0]           = 224;
-    view_wport[0]           = 320;
-    view_hport[0]           = 224;
+ // Save progress. 
+    if(global.save_selected != 0)
+    {
+       save_create(global.save_selected);
     }
-    else if(global.screen_mode == "Widescreen"){
-    view_wview[0]           = 424;
-    view_hview[0]           = 240;
-    view_xport[0]           = 424;
-    view_yport[0]           = 240;
-    }
+
 </string>
           </argument>
         </arguments>
@@ -352,21 +345,24 @@ if(global.cutscene = false || instance_exists(obj_special_results)){
       }
         if(instance_exists(obj_player))
         {
-          if(obj_player.invincibility_timer &gt; 0 &amp;&amp; obj_player.invincibility == 2)
+          if(obj_player.invincibility == 2)
           {
-          draw_sprite(spr_invincibility_counter, 0, view_xview[view_current]+8, view_yview[view_current]+180);
           draw_set_color(c_blue);
-          draw_rectangle(view_xview[view_current]+24, view_yview[view_current]+180, view_xview[view_current]+obj_player.invincibility_timer/200*(50), view_yview[view_current]+195, 0)
+          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+180), floor(view_xview[view_current])+(obj_player.invincibility_timer/200*(64)), floor(view_yview[view_current]+195), false)
+          draw_set_color(c_white);
+          draw_sprite(spr_invincibility_counter, 0, view_xview[view_current]+8, view_yview[view_current]+180);
           }
-          if(obj_player.speedshoe_timer &gt; 0 &amp;&amp; obj_player.speedshoe == 1) 
+          if(obj_player.speedshoe == 1) 
           {
-          draw_sprite(spr_sneakers_counter, 0, view_xview[view_current]+8, view_yview[view_current]+200);
           draw_set_color(c_red);
-          draw_rectangle(view_xview[view_current]+24, view_yview[view_current]+200, view_xview[view_current]+obj_player.speedshoe_timer/200*(50), view_yview[view_current]+215, 0)
+          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+200), floor(view_xview[view_current])+(obj_player.speedshoe_timer/200*(64)), floor(view_yview[view_current]+215), false)
+          draw_set_color(c_white);
+          draw_sprite(spr_sneakers_counter, 0, view_xview[view_current]+8, view_yview[view_current]+200);
           }
         }
       }; 
     }
+    
 /*
  // Exit if paused.
     if(global.game_paused == true) exit;

@@ -65,7 +65,13 @@
        global.sfx_volume = zone_my_sfx_volume;  
        exit;
     }
-    
+ 
+ // Play boss music
+    if(instance_exists(par_boss))
+    {
+        aud_play_sound(music_boss, global.bgm_volume, 1, 1, 0);
+    }
+           
  // Exit when the results are on screen.
     if(instance_exists(obj_results) &amp;&amp; zone_results == false)
     {
@@ -261,7 +267,7 @@
     }    
     
     /* Extra Fix */
-    if(audio_is_playing(jingle_invincibility) or audio_is_playing(jingle_sneakers) or audio_is_playing(jingle_super))
+    if(audio_is_playing(jingle_invincibility) or audio_is_playing(jingle_sneakers) or audio_is_playing(jingle_super) or audio_is_playing(music_boss))
     {
     audio_stop_sound(zone_bgm);
     };
@@ -458,6 +464,7 @@
            }
     }
   
+
 </string>
           </argument>
         </arguments>

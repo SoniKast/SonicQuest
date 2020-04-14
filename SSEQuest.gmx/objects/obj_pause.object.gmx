@@ -199,6 +199,10 @@
              {
                 value = rm_title;
              } 
+             if(global.save_selected != 0)
+             {
+                save_create(global.save_selected);
+             }
              global.checkpoint_x = global.temp_restart_x;
              global.checkpoint_y = global.temp_restart_y;
              global.temp_restart_x = -1;

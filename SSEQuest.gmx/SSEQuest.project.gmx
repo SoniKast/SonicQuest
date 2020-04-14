@@ -20,6 +20,7 @@
       <sound>sound\music_great_garden2</sound>
       <sound>sound\music_pinball_panic1</sound>
       <sound>sound\music_jungle_havoc1</sound>
+      <sound>sound\music_boss</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -134,6 +135,7 @@
           <sprite>sprites\spr_sonic_spindash</sprite>
           <sprite>sprites\spr_sonic_breath</sprite>
           <sprite>sprites\spr_sonic_grab</sprite>
+          <sprite>sprites\spr_sonic_glider</sprite>
           <sprite>sprites\spr_sonic_grab_move</sprite>
           <sprite>sprites\spr_sonic_grab_shimmy</sprite>
           <sprite>sprites\spr_sonic_corkscrew</sprite>
@@ -144,6 +146,7 @@
           <sprite>sprites\spr_sonic_die</sprite>
           <sprite>sprites\spr_sonic_drown</sprite>
           <sprite>sprites\spr_sonic_float</sprite>
+          <sprite>sprites\spr_sonic_goal</sprite>
           <sprite>sprites\spr_sonic_peelout</sprite>
           <sprites name="Super">
             <sprite>sprites\spr_ssonic_idle</sprite>
@@ -189,6 +192,7 @@
           <sprite>sprites\spr_tails_drown</sprite>
           <sprite>sprites\spr_tails_transform</sprite>
           <sprite>sprites\spr_tails_falling</sprite>
+          <sprite>sprites\spr_tails_goal</sprite>
           <sprite>sprites\spr_tails_float</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
@@ -226,6 +230,7 @@
           <sprite>sprites\spr_knuckles_die</sprite>
           <sprite>sprites\spr_knuckles_drown</sprite>
           <sprite>sprites\spr_knuckles_float</sprite>
+          <sprite>sprites\spr_knuckles_goal</sprite>
           <sprite>sprites\spr_knuckles_transform</sprite>
         </sprites>
         <sprites name="Shields">
@@ -398,6 +403,11 @@
             <sprite>sprites\spr_capsule_goal_switch</sprite>
             <sprite>sprites\spr_capsule_lock</sprite>
           </sprites>
+          <sprites name="New Capsule">
+            <sprite>sprites\spr_new_capsule_goal</sprite>
+            <sprite>sprites\spr_new_capsule_goal_mask</sprite>
+            <sprite>sprites\spr_new_capsule_goal_switch</sprite>
+          </sprites>
           <sprite>sprites\spr_sign_post</sprite>
           <sprite>sprites\spr_results_passed</sprite>
           <sprite>sprites\spr_results_name</sprite>
@@ -541,6 +551,7 @@
       <sprites name="Special Stage">
         <sprite>sprites\spr_big_ring</sprite>
         <sprite>sprites\spr_big_ring_unavailable</sprite>
+        <sprite>sprites\spr_big_ring_unavailable_old</sprite>
         <sprite>sprites\spr_big_ring_disappear</sprite>
         <sprite>sprites\spr_tornado_sonic</sprite>
         <sprite>sprites\spr_tornado_tails</sprite>
@@ -799,6 +810,7 @@
             <sprite>sprites\spr_ggz_breakable_wall</sprite>
             <sprite>sprites\spr_ggz_breakable_wall_pieces</sprite>
             <sprite>sprites\spr_ggz_moving_platform</sprite>
+            <sprite>sprites\spr_ggz_glider</sprite>
             <sprite>sprites\spr_ggz_plat_start</sprite>
           </sprites>
           <sprites name="Decorations">
@@ -1044,6 +1056,7 @@
           <background>background\ts_ggz_tree_foliage</background>
           <background>background\ts_ggz_tree</background>
           <background>background\ts_ggz_full_tree</background>
+          <background>background\ts_ggz_better_tree</background>
           <background>background\ts_ggz_fence</background>
           <background>background\ts_ggz_rock</background>
           <background>background\ts_pipes</background>
@@ -1220,6 +1233,8 @@
         <script>scripts\player_state_tube.gml</script>
         <script>scripts\player_state_float.gml</script>
         <script>scripts\player_state_float_v.gml</script>
+        <script>scripts\player_state_goal.gml</script>
+        <script>scripts\player_state_glider.gml</script>
         <script>scripts\player_state_transform.gml</script>
         <scripts name="Sonic only">
           <script>scripts\player_state_dropdash.gml</script>
@@ -1257,6 +1272,7 @@
         <script>scripts\player_handle_float_v.gml</script>
         <script>scripts\player_handle_tornado.gml</script>
         <script>scripts\player_handle_bosses.gml</script>
+        <script>scripts\player_handle_glider.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1891,10 +1907,14 @@
             <object>objects\obj_capsule_goal_lock</object>
             <object>objects\obj_capsule_goal_switch</object>
           </objects>
+          <objects name="New Capsule Parts">
+            <object>objects\obj_new_capsule_goal_switch</object>
+          </objects>
           <object>objects\obj_results</object>
           <object>objects\obj_sign_post</object>
           <object>objects\obj_sign_post_camera</object>
           <object>objects\obj_capsule_goal</object>
+          <object>objects\obj_new_capsule_goal</object>
         </objects>
       </objects>
       <objects name="Display">
@@ -2291,6 +2311,10 @@
             <object>objects\obj_ggz_platform_collapse_pieces</object>
             <object>objects\obj_ggz_breakable_wall_pieces</object>
           </objects>
+          <objects name="Glider">
+            <object>objects\obj_glider_parent</object>
+            <object>objects\obj_ggz_glider</object>
+          </objects>
           <object>objects\obj_ggz_loop_high</object>
           <object>objects\obj_ggz_loop_low</object>
           <object>objects\obj_ggz_loop_top</object>
@@ -2500,7 +2524,7 @@
       <room>rooms\rm_demo_end</room>
     </rooms>
   </rooms>
-  <constants number="79">
+  <constants number="80">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v2.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2557,6 +2581,7 @@
     <constant name="STATE_PEELOUT">28</constant>
     <constant name="STATE_FLOAT">29</constant>
     <constant name="STATE_FLOAT_V">30</constant>
+    <constant name="STATE_GLIDER">31</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>

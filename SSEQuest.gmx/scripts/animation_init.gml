@@ -7,7 +7,7 @@
         }
         if(player_index == CHAR_SONIC && CharacterState == CharacterSuper or CharacterState == CharacterHyper)
         {
-           sprite = spr_sonic_idle;
+           sprite = spr_ssonic_idle;
         }
         if(player_index == CHAR_TAILS)
         {
@@ -16,7 +16,8 @@
         if(player_index == CHAR_KNUCKLES)
         {
            sprite = spr_knuckles_idle;
-        }                
+        }    
+                    
         animation                 = "";
         animation_previous        = "";
         animation_frame           = 0;

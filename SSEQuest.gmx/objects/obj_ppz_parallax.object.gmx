@@ -46,10 +46,10 @@
     
     var OverallYOffset; OverallYOffset = 0.978;
     
-    scr_parallax_add_node(1, bg_ppz,       0.86, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 512, 256);
-    scr_parallax_add_node(1, bg_ppz,       0.84, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 65, 0,    0, 65, 512, 256);
-    scr_parallax_add_node(1, bg_ppz,       0.82, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 112, 0,   0, 112, 512, 256);
-    scr_parallax_add_node(1, bg_ppz,       0.80, 0.4, 0, 0, 0,    OverallYOffset, 0, 0, 192, 0,   0, 192, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.86, 0, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.84, 0, 0, 0, 0,    OverallYOffset, 0, 0, 65, 0,    0, 65, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.82, 0, 0, 0, 0,    OverallYOffset, 0, 0, 112, 0,   0, 112, 512, 256);
+    scr_parallax_add_node(1, bg_ppz,       0.80, 0, 0, 0, 0,    OverallYOffset, 0, 0, 192, 0,   0, 192, 512, 256);
  
 </string>
           </argument>

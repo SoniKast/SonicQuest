@@ -297,11 +297,11 @@
     draw_set_font(global.trial_font);
     draw_set_halign(fa_left);
     draw_text(35, 56, "-"+"BEST TIME"+"-");
-    if(trial_act_string = 0)
+    if(trial_act_string = "ACT 1" || trial_act_string != "ACT 2")
     {
     draw_text(35, 77, string(floor(global.best_time_ggz1/60000))+":"+scr_string_number_format(floor(global.best_time_ggz1/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ggz1/10) mod 100,2));
     }
-    if(trial_act_string = 1)
+    if(trial_act_string = "ACT 2" || trial_act_string != "ACT 1")
     {
     draw_text(35, 77, string(floor(global.best_time_ggz2/60000))+":"+scr_string_number_format(floor(global.best_time_ggz2/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ggz2/10) mod 100,2));
     }

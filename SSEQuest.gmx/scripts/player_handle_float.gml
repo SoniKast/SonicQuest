@@ -1,7 +1,8 @@
 // ==== FUNCTION ====================================================================
 // scrPlayerHandleObjectFloatStart()
 // ==================================================================================
-//  
+// Ported from Time Twisted 2010
+
     var _ObjectHandle;
 
             _ObjectHandle = instance_nearest(x, y, obj_float_start);

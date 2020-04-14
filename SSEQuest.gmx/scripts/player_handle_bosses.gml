@@ -1,5 +1,5 @@
 /// player_handle_bosses()
-//  Script to handle each boss.
+//  Script to handle each boss. Code from Flicky
 
     // Set F.Breather handle:
     if(instance_exists(obj_npc_sth3_firebreather)){
