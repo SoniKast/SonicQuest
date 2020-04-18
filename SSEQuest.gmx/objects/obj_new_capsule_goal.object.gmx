@@ -56,12 +56,12 @@ s_capsule = 0;
 s_interior = 1;
 s_destroyed = 2;
 
-/* Disable Default Image Speed and Set Mask */
+// Disable Default Image Speed and Set Mask */
 image_speed = 0;
 image_index = s_capsule;
 mask_index = spr_new_capsule_goal_mask;
 
-/* Create Switch &amp;&amp; Bottom */
+// Create Switch &amp; Generator
 instance_create(floor(x),floor(y),obj_new_capsule_goal_switch);
 //instance_create(floor(x),floor(y),obj_capsule_goal_bottom);
 
@@ -125,9 +125,10 @@ if(used_spring == true)
 }
  
 /* Create flicky generator */
-if(door_y == 13 &amp;&amp; instance_exists(obj_capsule_flicky_generator) == false)
+if(door_y == 6 &amp;&amp; !instance_exists(obj_capsule_flicky_generator))
 {
  instance_create(x,y+30,obj_capsule_flicky_generator);
+ mask_index = noone;
 };
 </string>
           </argument>

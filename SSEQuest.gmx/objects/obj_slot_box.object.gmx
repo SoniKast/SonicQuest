@@ -229,6 +229,7 @@ Active = true;
     else
     with(par_player){
     state = STATE_DEFAULT;
+    y_speed -= 2;
     }
 }
 </string>

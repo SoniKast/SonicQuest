@@ -1229,7 +1229,6 @@
            input_left  = false;
            input_right = false;
         }
-     }
     
  // Input alarm.
     if(input_alarm)
@@ -1253,7 +1252,7 @@
     {
        input_right = false;
     }
-
+}
 </string>
           </argument>
         </arguments>

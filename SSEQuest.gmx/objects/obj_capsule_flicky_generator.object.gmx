@@ -54,18 +54,25 @@ repeat(flickys)
 {
  if(generate_type == 1)
  {
-  ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_flicky,obj_animal_squirel,obj_animal_rabbit,obj_animal_bear,obj_animal_rflicky))
+  ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_flicky,obj_animal_gflicky,obj_animal_rflicky,obj_animal_pflicky))
  }
  else if(generate_type == 2)
  {
- ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_gflicky,obj_animal_rabbit,obj_animal_bear,obj_animal_flicky))
+ ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_rabbit,obj_animal_vicky,obj_animal_nicky,obj_animal_clucky,obj_animal_plucky))
+ }
+ else if(generate_type == 3)
+ {
+ ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_bear,obj_animal_vicky,obj_animal_nicky,obj_animal_clucky,obj_animal_plucky))
  };
- 
+};
+
+/* Movement */
+if(obj_new_capsule_goal.used_spring == true)
+{
   ID.move_timer = choose(flicky_timer*5);
   ID.capsule_flag = true;
   flicky_timer += 1;
-};
-
+}
 </string>
           </argument>
         </arguments>

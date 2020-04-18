@@ -235,7 +235,7 @@
     <instance objName="obj_collision_tile_39" x="1664" y="2112" name="inst_01CC6A6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="1728" y="2240" name="inst_E587910C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_bouncing_flower2" x="3296" y="1764" name="inst_C3ED2D4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ggz_glider" x="4064" y="1536" name="inst_0B6A06EF" locked="0" code="glider_x=4&#xA;glider_y=4&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ggz_glider" x="4064" y="1536" name="inst_0B6A06EF" locked="0" code="glider_x=4&#xA;glider_y=-2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2848" y="2208" name="inst_7B8077B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2848" y="2272" name="inst_5BC041FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2848" y="2336" name="inst_B72A8D84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

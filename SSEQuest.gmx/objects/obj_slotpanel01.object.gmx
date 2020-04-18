@@ -57,7 +57,7 @@ Panel = 0;
           <argument>
             <kind>1</kind>
             <string>running = false
-y1-=y1 mod (sprite_height/img)
+y1 -= y1 mod (sprite_height/img)
 /*
 CanCycle = false;
 Cycle = false;

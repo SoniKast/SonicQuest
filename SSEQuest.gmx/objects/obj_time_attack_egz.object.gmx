@@ -236,6 +236,16 @@
           trial_menu_active = 0;
           switch(trial_menu_option)
           {
+                 case 0:
+                 {
+                 trial_menu_active = 1;
+                 break;
+                 }
+                 case 1:
+                 {
+                 trial_menu_active = 1;
+                 break;
+                 }
                  case 2:
                  {
                       if(act_select = 0)

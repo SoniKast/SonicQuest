@@ -153,79 +153,66 @@
                 {
                 global.best_time_ssz1 = global.game_time;
                 save_create_trial(global.best_time_ssz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 1 || global.zone_act = 2)
                 {
                 global.best_time_ssz2 = global.game_time;
                 save_create_trial(global.best_time_ssz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 2 || global.zone_act = 1)
                 {
                 global.best_time_ggz1 = global.game_time;
                 save_create_trial(global.best_time_ggz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 2 || global.zone_act = 2)
                 {
                 global.best_time_ggz2 = global.game_time;
                 save_create_trial(global.best_time_ggz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 3 || global.zone_act = 1)
                 {
                 global.best_time_ppz1 = global.game_time;
                 save_create_trial(global.best_time_ppz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 3 || global.zone_act = 2)
                 {
                 global.best_time_ppz2 = global.game_time;
                 save_create_trial(global.best_time_ppz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 4 || global.zone_act = 1)
                 {
                 global.best_time_ffz1 = global.game_time;
                 save_create_trial(global.best_time_ffz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 4 || global.zone_act = 2)
                 {
                 global.best_time_ffz2 = global.game_time;
                 save_create_trial(global.best_time_ffz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 5 || global.zone_act = 1)
                 {
                 global.best_time_ccz1 = global.game_time;
                 save_create_trial(global.best_time_ccz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 5 || global.zone_act = 2)
                 {
                 global.best_time_ccz2 = global.game_time;
                 save_create_trial(global.best_time_ccz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 6 || global.zone_act = 1)
                 {
                 global.best_time_ttz1 = global.game_time;
                 save_create_trial(global.best_time_ttz1);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 6 || global.zone_act = 2)
                 {
                 global.best_time_ttz2 = global.game_time;
                 save_create_trial(global.best_time_ttz2);
-                global.game_time = 0;
                 }
                 if(global.zone_id = 7 || global.zone_act = 1)
                 {
                 global.best_time_ttz3 = global.game_time;
                 save_create_trial(global.best_time_ttz3);
-                global.game_time = 0;
                 }
                 
             // Create fade.
@@ -622,25 +609,25 @@
             <string>/// Draw Results.
 
  // "Character" Got:
-    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+57+result_gfx_position[0], view_yview+63);
+    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+42+result_gfx_position[0], view_yview+56);
 
  // Through:
-    draw_sprite(spr_results_through, 0, view_xview+114+result_gfx_position[1], view_yview+83);
+    draw_sprite(spr_results_through, 0, view_xview+106+result_gfx_position[1], view_yview+74);
     
  // Act Letter:
     draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+236+result_gfx_position[1], view_yview+66);
     
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 0, view_xview+77+result_gfx_position[2], view_yview+110);
+    draw_sprite(spr_results_bonuses, 0, view_xview+63+result_gfx_position[2], view_yview+113);
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(view_xview+261+result_gfx_position[2], view_yview+112,''+ string(bonus_time),  0);
-    draw_number_zero(view_xview+261+result_gfx_position[3], view_yview+128,''+ string(bonus_rings), 0);
-    draw_number_zero(view_xview+261+result_gfx_position[4], view_yview+156,    string(bonus_total), 0);
+    draw_number_zero(view_xview+246+result_gfx_position[2], view_yview+116,''+ string(bonus_time),  0);
+    draw_number_zero(view_xview+246+result_gfx_position[3], view_yview+134,''+ string(bonus_rings), 0);
+    draw_number_zero(view_xview+246+result_gfx_position[4], view_yview+159,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
 </string>

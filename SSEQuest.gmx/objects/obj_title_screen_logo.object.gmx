@@ -212,14 +212,7 @@ game_snapshot = background_create_from_surface(application_surface, 0, 0, global
             <kind>1</kind>
             <string>///Thing
 // --------------------------------------------------------------
-if(menu_mode = "LEVEL SELECT")
-{
-    if(audio_is_playing(jingle_title))
-    {
-    audio_stop_sound(jingle_title)
-    aud_play_sound(music_options, global.bgm_volume, 1, 1, 0);                
-    }
-}
+
     switch(SonicState) {
         case 0:
             if (Delay &lt; 60) Delay+=1;
@@ -416,12 +409,19 @@ if(menu_mode = "TITLE")
                 CheatTime     = 30;
                 menu_mode     = "LEVEL SELECT"
                 aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
+                audio_stop_sound(jingle_title);
              }  
        } 
 }
 else 
 if(menu_mode = "LEVEL SELECT")
 {
+    if(audio_is_playing(jingle_title))
+    {
+    audio_stop_sound(jingle_title);
+    aud_play_sound(music_options, global.bgm_volume, 1, 1, 0);                
+    }
+    
 // Level selecting
 if(title_menu_active == 1)
     {
@@ -521,7 +521,6 @@ if(title_menu_active == 1)
     { 
        if(keyboard_check_pressed(global.key_enter))
        {
-          title_menu_active = 0;
           switch(title_menu_option)
           {
                  case 0:
@@ -1502,7 +1501,7 @@ if(title_menu_active == 1)
     
     // --- Draw Subtitle / Title band ------------------------
     draw_sprite(sprPresentationTitleBand, 0, 160, 150);
-    draw_sprite(sprPresentationSubtitle, 0, 160, 185);
+//  draw_sprite(sprPresentationSubtitle, 0, 160, 185);
        
     // Draw menu.
     if(menu_mode = "TITLE")

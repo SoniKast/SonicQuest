@@ -36,7 +36,7 @@
     y_speed    = 0; // Vertical speed.
     xd_speed   = 0; // Increases/Decreases horizontal speed while changing directions.
     yd_speed   = 0; // Increases/Decreases vertial speed while changing directions.
-    active     = 0; // Is the platform active?
+    active     = 1; // Is the platform active?
 
 </string>
           </argument>
@@ -63,10 +63,12 @@
             <string>/// Movement &amp; Player position.
 
  // Activate:
+
+    /*
     if(active == false)
     {
         active = true;
-    }
+    }*/
     
  // Only run if active.
     if(active == false) exit;

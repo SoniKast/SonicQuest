@@ -222,11 +222,13 @@
     instance_create(0, 0, obj_instance_region);
     
  // Set level variables:
-    global.player_rings = 0;
-    global.do_time      = 0;
-    global.game_time    = 0;
-    global.object_time  = 0;
-
+    if(global.BonusStage = false){
+        global.player_rings = 0;
+        global.do_time      = 0;
+        global.game_time    = 0;
+        global.object_time  = 0;
+    }
+    
  // HUD Pieces:
     time_visibility = 1;
     ring_visibility = 1;
@@ -260,7 +262,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Draw HUD.
-if(global.cutscene = false || instance_exists(obj_special_results)){
+if(global.cutscene = false || instance_exists(obj_special_results) || room != rm_hidden_palace){
 
     //Set the Alpha while there's a fading object*:
     draw_set_alpha(1);

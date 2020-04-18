@@ -1065,6 +1065,10 @@
           <background>background\ts_pinball_panic</background>
           <background>background\ts_ppz_slot</background>
           <background>background\ts_ppz_slot2</background>
+          <background>background\ts_ppz_up</background>
+          <background>background\ts_ppz_cpu</background>
+          <background>background\ts_ppz_on</background>
+          <background>background\ts_ppz_cope</background>
         </backgrounds>
         <backgrounds name="Forest Frenzy">
           <background>background\ts_forest_frenzy</background>
