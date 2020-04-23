@@ -10,7 +10,7 @@
           var dfile;
           dfile = file_text_open_write(working_directory+"\data\save\time_trial_data.sav");
        // Warning:
-          file_text_write_string(dfile, ""+string(GAME_NAME)+" Time Attack Data - Editing this file can cause issues. That is, if you figure out how.");
+          file_text_write_string(dfile, ""+string(GAME_NAME)+" Time Attack Data - Editing this file can cause issues.");
           file_text_writeln(dfile);
        // Time Attack Values:
           file_text_write_string(dfile, string(argument0^dkey));

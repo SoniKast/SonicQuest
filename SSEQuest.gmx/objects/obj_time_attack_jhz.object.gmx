@@ -260,6 +260,7 @@
                       global.player_id   = player_select+1;
                       global.cpu         = 0;
                       global.time_attack = true;
+                      global.save_selected = -1;
                       break;
                  }
                  case 3:

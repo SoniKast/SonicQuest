@@ -34,14 +34,42 @@
     {
        sprite                 = spr_tails_idle_bored;
        animation_start        = 3;
-       animation_end          = 6;
-       animation_loop         = 5;
+       animation_end          = 7;
+       animation_loop         = 6;
        animation_speed        = 0.15;
        animation_repeat       = 1; 
        animation_repeat_times = -1;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
-    }    
+    }  
+    
+ // Idle (Tapping foot):
+    if(animation = "idle bored 3")
+    {
+       sprite                 = spr_tails_idle_bored;
+       animation_start        = 8;
+       animation_end          = 9;
+       animation_loop         = 8;
+       animation_speed        = 0.15;
+       animation_repeat       = 0; 
+       animation_repeat_times = 6;
+       animation_linked_to    = "idle bored 4";
+       animation_linked_frame = 0;      
+    }  
+    
+ // Idle (Sleeping):
+    if(animation = "idle bored 4")
+    {
+       sprite                 = spr_tails_idle_bored;
+       animation_start        = 10;
+       animation_end          = 12;
+       animation_loop         = 12;
+       animation_speed        = 0.15;
+       animation_repeat       = 0; 
+       animation_repeat_times = 6;
+       animation_linked_to    = "idle";
+       animation_linked_frame = 0;      
+    }     
     
  // Crouch:
     if(animation = "crouch")
@@ -90,7 +118,7 @@
     {
        sprite                 = spr_tails_run;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 1;
        animation_loop         = 0;
        animation_speed        = 0.125;
        animation_repeat       = 1; 

@@ -615,7 +615,7 @@
     draw_sprite(spr_results_through, 0, view_xview+106+result_gfx_position[1], view_yview+74);
     
  // Act Letter:
-    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+236+result_gfx_position[1], view_yview+66);
+    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+226+result_gfx_position[1], view_yview+61);
     
  // Bonuses:
     draw_sprite(spr_results_bonuses, 0, view_xview+63+result_gfx_position[2], view_yview+113);

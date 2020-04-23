@@ -54,6 +54,7 @@
         <sound>sound\general_teleport_start</sound>
         <sound>sound\general_water_splash</sound>
         <sound>sound\general_slab</sound>
+        <sound>sound\general_shine</sound>
       </sounds>
       <sounds name="Player">
         <sound>sound\player_air</sound>
@@ -115,6 +116,7 @@
       <sprite>sprites\spr_sega</sprite>
       <sprite>sprites\spr_sega_text</sprite>
       <sprite>sprites\spr_engine_boot</sprite>
+      <sprite>sprites\spr_loading</sprite>
     </sprites>
     <sprites name="Gameplay">
       <sprites name="Playables">
@@ -411,6 +413,7 @@
           <sprite>sprites\spr_sign_post</sprite>
           <sprite>sprites\spr_results_passed</sprite>
           <sprite>sprites\spr_results_name</sprite>
+          <sprite>sprites\spr_ss_results_name</sprite>
           <sprite>sprites\spr_results_through</sprite>
           <sprite>sprites\spr_results_bonuses</sprite>
           <sprite>sprites\spr_results_time</sprite>
@@ -535,6 +538,7 @@
             </sprites>
           </sprites>
         </sprites>
+        <sprite>sprites\spr_white</sprite>
         <sprite>sprites\spr_sanctuary_orb</sprite>
         <sprite>sprites\spr_sanctuary_orb_beam_a</sprite>
         <sprite>sprites\spr_sanctuary_orb_beam_b</sprite>
@@ -1631,6 +1635,7 @@
   </fonts>
   <objects name="objects">
     <objects name="Init">
+      <object>objects\objects/obj_engine_screen</object>
       <object>objects\obj_init</object>
       <object>objects\obj_demo_end</object>
       <object>objects\obj_credits_screen</object>
@@ -2084,6 +2089,7 @@
       </objects>
       <objects name="Fades">
         <object>objects\obj_fade_in</object>
+        <object>objects\obj_white</object>
         <object>objects\obj_fade_in_white2</object>
         <object>objects\obj_fade_next</object>
         <object>objects\obj_fade_next_white</object>
@@ -2103,6 +2109,7 @@
       </objects>
       <objects name="Menus / Continue">
         <objects name="Title Screen">
+          <object>objects\obj_presentation_title_band</object>
           <object>objects\obj_title_screen_logo</object>
           <object>objects\obj_title_screen</object>
         </objects>
@@ -2461,10 +2468,12 @@
     <rooms name="Init">
       <room>rooms\rm_init</room>
       <room>rooms\rm_disclaimer</room>
+      <room>rooms\rm_engine_logo</room>
       <room>rooms\rm_sega</room>
       <room>rooms\rm_stt</room>
     </rooms>
     <rooms name="Title &amp; Options">
+      <room>rooms\rm_title_animation</room>
       <room>rooms\rm_title</room>
       <room>rooms\rm_time_attack</room>
     </rooms>
