@@ -185,6 +185,7 @@
           <sprite>sprites\spr_tails_grab_shimmy</sprite>
           <sprite>sprites\spr_tails_corkscrew</sprite>
           <sprite>sprites\spr_tails_balance</sprite>
+          <sprite>sprites\spr_tails_balance_alt</sprite>
           <sprite>sprites\spr_tails_fly</sprite>
           <sprite>sprites\spr_tails_fly_exhausted</sprite>
           <sprite>sprites\spr_tails_swim</sprite>
@@ -196,6 +197,7 @@
           <sprite>sprites\spr_tails_falling</sprite>
           <sprite>sprites\spr_tails_goal</sprite>
           <sprite>sprites\spr_tails_float</sprite>
+          <sprite>sprites\spr_super_flicky</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
             <sprite>sprites\spr_tail_part_2</sprite>
@@ -267,6 +269,7 @@
           <sprite>sprites\spr_tails_to_normal_palette</sprite>
           <sprite>sprites\spr_knuckles_super_palette</sprite>
           <sprite>sprites\spr_knuckles_to_normal_palette</sprite>
+          <sprite>sprites\spr_super_flicky_palette</sprite>
         </sprites>
         <sprite>sprites\spr_insta_shield</sprite>
       </sprites>
@@ -453,6 +456,7 @@
           <sprite>sprites\spr_title_card_banner</sprite>
           <sprite>sprites\spr_title_card_stripe</sprite>
           <sprite>sprites\spr_title_card_act</sprite>
+          <sprite>sprites\spr_act_clear_act</sprite>
         </sprites>
         <sprites name="Font">
           <sprite>sprites\font_title_card</sprite>
@@ -1317,18 +1321,16 @@
         <script>scripts\save_zonelist.gml</script>
         <script>scripts\save_zonelist_select.gml</script>
       </scripts>
-      <scripts name="Global">
-        <script>scripts\save_global_create.gml</script>
-        <script>scripts\save_global_load.gml</script>
-      </scripts>
       <scripts name="Sonic Quest Save System">
         <script>scripts\scr_save.gml</script>
         <script>scripts\scr_load.gml</script>
-        <script>scripts\save_create_trial.gml</script>
-        <script>scripts\save_load_trial.gml</script>
         <script>scripts\scr_save_delete.gml</script>
         <script>scripts\scr_collected.gml</script>
         <script>scripts\scr_loadcollect.gml</script>
+      </scripts>
+      <scripts name="Global">
+        <script>scripts\save_global_create.gml</script>
+        <script>scripts\save_global_load.gml</script>
       </scripts>
     </scripts>
     <scripts name="Utils">
@@ -1635,8 +1637,8 @@
   </fonts>
   <objects name="objects">
     <objects name="Init">
-      <object>objects\objects/obj_engine_screen</object>
       <object>objects\obj_init</object>
+      <object>objects\obj_engine_screen</object>
       <object>objects\obj_demo_end</object>
       <object>objects\obj_credits_screen</object>
       <object>objects\obj_disclaimer</object>
@@ -1847,6 +1849,7 @@
             <object>objects\obj_monitor_sneaker</object>
             <object>objects\obj_monitor_eggman</object>
             <object>objects\obj_monitor_combiring</object>
+            <object>objects\obj_monitor_super</object>
           </objects>
           <objects name="Don't use.">
             <object>objects\obj_monitor_collision</object>
@@ -2495,12 +2498,16 @@
       </rooms>
       <rooms name="Frantic Forest">
         <room>rooms\rm_forest_frenzy1</room>
+        <room>rooms\rm_forest_frenzy2</room>
       </rooms>
       <rooms name="Aquapolis">
         <room>rooms\rm_aquapolis1</room>
+        <room>rooms\rm_aquapolis2</room>
       </rooms>
       <rooms name="Egg Gauntlet">
         <room>rooms\rm_egg_gauntlet1</room>
+        <room>rooms\rm_egg_gauntlet2</room>
+        <room>rooms\rm_egg_gauntlet3</room>
       </rooms>
     </rooms>
     <rooms name="Extra">
@@ -2539,7 +2546,7 @@
   </rooms>
   <constants number="80">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
-    <constant name="GAME_VERSION">"v2.0"</constant>
+    <constant name="GAME_VERSION">"v3.0"</constant>
     <constant name="SFX">obj_audio</constant>
     <constant name="COL_MAIN">1</constant>
     <constant name="COL_MAIN_OBJECT">2</constant>

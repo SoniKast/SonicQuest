@@ -145,74 +145,152 @@
              }          
        }
     }
-    else if(global.time_attack = true)
+    else 
+    if(global.time_attack = true)
         {   
             if(instance_exists(obj_fade_to_value) == false)
             {
-                if(global.zone_id = 1 || global.zone_act = 1)
+                if(room = rm_radiant_valley1)
                 {
                 global.best_time_ssz1 = global.game_time;
-                save_create_trial(global.best_time_ssz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {
+                ini_write_real("RIVERSIDE VALLEY 1", "RVZ1", global.best_time_ssz1);
                 }
-                if(global.zone_id = 1 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_radiant_valley2)
                 {
                 global.best_time_ssz2 = global.game_time;
-                save_create_trial(global.best_time_ssz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {
+                ini_write_real("RIVERSIDE VALLEY 2", "RVZ2", global.best_time_ssz2);
                 }
-                if(global.zone_id = 2 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_great_garden1)
                 {
                 global.best_time_ggz1 = global.game_time;
-                save_create_trial(global.best_time_ggz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {
+                ini_write_real("PETAL PARK 1", "PPZ1", global.best_time_ggz1);
                 }
-                if(global.zone_id = 2 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_great_garden2)
                 {
                 global.best_time_ggz2 = global.game_time;
-                save_create_trial(global.best_time_ggz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {
+                ini_write_real("PETAL PARK 2", "PPZ2", global.best_time_ggz2);
                 }
-                if(global.zone_id = 3 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_pinball_panic1)
                 {
                 global.best_time_ppz1 = global.game_time;
-                save_create_trial(global.best_time_ppz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("CHAOTIC CASINO 1", "CCZ1", global.best_time_ppz1);    
                 }
-                if(global.zone_id = 3 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_pinball_panic2)
                 {
                 global.best_time_ppz2 = global.game_time;
-                save_create_trial(global.best_time_ppz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("CHAOTIC CASINO 2", "CCZ2", global.best_time_ppz2);    
                 }
-                if(global.zone_id = 4 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_forest_frenzy1)
                 {
                 global.best_time_ffz1 = global.game_time;
-                save_create_trial(global.best_time_ffz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("FRANTIC FOREST 1", "FFZ1", global.best_time_ffz1);    
                 }
-                if(global.zone_id = 4 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_forest_frenzy2)
                 {
                 global.best_time_ffz2 = global.game_time;
-                save_create_trial(global.best_time_ffz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("FRANTIC FOREST 2", "FFZ2", global.best_time_ffz2);    
                 }
-                if(global.zone_id = 5 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_aquapolis1)
                 {
                 global.best_time_ccz1 = global.game_time;
-                save_create_trial(global.best_time_ccz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("WILD WATERWORKS 1", "WWZ1", global.best_time_ccz1);
                 }
-                if(global.zone_id = 5 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_aquapolis2)
                 {
                 global.best_time_ccz2 = global.game_time;
-                save_create_trial(global.best_time_ccz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("WILD WATERWORKS 2", "WWZ2", global.best_time_ccz2);
                 }
-                if(global.zone_id = 6 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_egg_gauntlet1)
                 {
                 global.best_time_ttz1 = global.game_time;
-                save_create_trial(global.best_time_ttz1);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("TWISTED TOWERS 1", "TTZ1", global.best_time_ttz1); 
                 }
-                if(global.zone_id = 6 || global.zone_act = 2)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_egg_gauntlet2)
                 {
                 global.best_time_ttz2 = global.game_time;
-                save_create_trial(global.best_time_ttz2);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("TWISTED TOWERS 2", "TTZ2", global.best_time_ttz2); 
                 }
-                if(global.zone_id = 7 || global.zone_act = 1)
+                ini_close()
+                global.game_time = 0;
+                }
+                else
+                if(room = rm_egg_gauntlet3)
                 {
                 global.best_time_ttz3 = global.game_time;
-                save_create_trial(global.best_time_ttz3);
+                ini_open(working_directory+"\data\save\quest_time_trial_data.bin");
+                {       
+                ini_write_real("TWISTED TOWERS 3", "TTZ3", global.best_time_ttz3); 
+                }
+                ini_close()
+                global.game_time = 0;
                 }
                 
             // Create fade.
@@ -615,7 +693,7 @@
     draw_sprite(spr_results_through, 0, view_xview+106+result_gfx_position[1], view_yview+74);
     
  // Act Letter:
-    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+226+result_gfx_position[1], view_yview+61);
+    draw_sprite(spr_act_clear_act, global.zone_act-1, view_xview+226+result_gfx_position[1], view_yview+61);
     
  // Bonuses:
     draw_sprite(spr_results_bonuses, 0, view_xview+63+result_gfx_position[2], view_yview+113);

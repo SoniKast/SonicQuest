@@ -1,6 +1,9 @@
 /// player_state_fly()
  // Script to handle Miles flying.
- 
+
+ // Don't fly if you're transforming.
+    if(state != STATE_TRANSFORM){
+    
  // While flying...
     if(state == STATE_FLY)
     {
@@ -97,4 +100,5 @@
        {
           audio_stop_sound(player_flying_drop);
        }      
-    }    
+    }      
+ }

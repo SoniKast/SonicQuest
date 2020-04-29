@@ -208,7 +208,7 @@
                // Again, change the animation to "BLANK" to make sure that the current animation is being reloaded properly.
                   animation      = "BLANK AGAIN";    
                // If we're Sonic, use a little fade palette:
-                  if(global.player_index = CHAR_SONIC){
+                  if(global.player_id = CHAR_SONIC){
                      TransformEnded  = 1;    
                      PalettePosition = 0;       
                   }           

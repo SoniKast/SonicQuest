@@ -45,28 +45,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* Initialize some variables: */
-alarm[0] = 120;                             /* This alarm is required to hide and show the text. */
-credit_font = global.fnt_credits;           /* The Font we draw on Screen. */
-credit_numb = 0;                            /* We will need this to End the credits later. */
-credit_max_numb = 12;                       /* Should be the value of the text that only uses "" */
-credit_alpha = 3;                           /* The Alpha for the text. */
-credit_hide = false;                        /* Is the Text hiding? */
-credit_show = false;                        /* Should the text be drawn? */
-credit_fade_music = 11;                     /* Once Text 12 will be drawn,the music starts to fade out.*/
+            <string>/// Initialize some variables: 
+alarm[0] = 120;                             // This alarm is required to hide and show the text. 
+credit_font = global.fnt_credits;           // The Font we draw on Screen. 
+credit_numb = 0;                            // We will need this to End the credits later. 
+credit_max_numb = 12;                       // Should be the value of the text that only uses "" 
+credit_alpha = 3;                           // The Alpha for the text. 
+credit_hide = false;                        // Is the Text hiding? 
+credit_show = false;                        // Should the text be drawn?
+credit_fade_music = 11;                     // Once Text 12 will be drawn,the music starts to fade out.
 
 /* Add Everything you want to draw on the Screen here: */
-credit_text[0] = "SONIC QUEST DX##CREDITS";
-credit_text[1] = "PROGRAMMED BY##SONIKAST##TITLECARD BY ALEKS##PPZ BUMPERS CODE FROM TPOT##";
-credit_text[2] = "ACCURACY##VIOLETX##TRUE POWER OF TEAMWORK##MR LANGE";
-credit_text[3] = "TITLE GRAPHICS##SONIKAST##DERZOCKER";
-credit_text[4] = "####TESTERS##SONIC TRIBUTE TEAM##KAST INC SERVER";
-credit_text[5] = "GIMMICKS##SONIKAST##PVIC##JOHNKUN##ALEKS##";
-credit_text[6] = "PHYSICS##LILACCHIPS##VIOLETX##TRUE POWER OF TEAMWORK##HOBBERS##SONIC RETRO PHYSICS GUIDE";
+credit_text[0] = "SONIC QUEST##CREDITS";
+credit_text[1] = "PROGRAMMED BY##SONIKAST##ALEKS##PVIC##JOHN-KUN##";
+credit_text[2] = "TITLE GRAPHICS##SONIKAST##DERZOCKER##DOLPHMAN";
+credit_text[3] = "GRAPHICS##SEGA##SONIKAST##DARKVAMPIREDEE##WIZTOAD##MRLEVROCKS##DANIELMANIA123##DOLPHMAN##OVERBOUND";
+credit_text[4] = "TESTERS##SONIC TRIBUTE TEAM##KAST INC SERVER##SIDVANIA";
+credit_text[5] = "GIMMICKS##SONIKAST##PVIC##JOHN-KUN##ALEKS##";
+credit_text[6] = "PHYSICS##LILACCHIPS##ALEKS NORBERG";
 credit_text[7] = "LEVEL DESIGN##SONIKAST##WIZTOAD";
-credit_text[8] = "MUSIC##THEBLURCAFE##SPEEDBLITZ##SONIKAST##S3 COMPLETE#SOUNDS##SONIC TEAM####SOUND EFFECTS RIPPED BY##MR LANGE";
-credit_text[9] = "GRAPHICS##SEGA##SONIKAST##DARKVAMPIREDEE##WIZTOAD##DANIELMANIA123##DOLPHMAN##OVERBOUND";
-credit_text[10] = "THANKS TO EVERYONE##WHO DECIDED TO HELP ME TEST##THIS GAME";
+credit_text[8] = "MUSIC##THEBLURCAFE##SPEEDBLITZ##SONIKAST##S3 COMPLETE#SOUNDS##SONIC TEAM##SOUND EFFECTS RIPPED BY##MR LANGE";
+credit_text[9] = "SPECIAL THANKS TO##";
+credit_text[10] = "THANKS TO EVERYONE##WHO DECIDED TO HELP ME##TEST THIS GAME";
 credit_text[11] = "AND THANK YOU##FOR PLAYING";
 credit_text[12] = "";
 
@@ -179,14 +179,28 @@ else if( credit_hide == false &amp;&amp; credit_alpha &lt;= 3 &amp;&amp; credit_
 };
 else if( credit_hide == false &amp;&amp; credit_alpha &gt;= 2.9 &amp;&amp; credit_show = true ) { credit_show = false; alarm[0] = 180 };
 
-/* Restart the Game: */
+// Restart the Game: 
 
-if ( credit_numb &gt;= credit_max_numb ) 
+if ( credit_numb &gt;= credit_max_numb &amp;&amp; global.previous_room = noone) 
 {
 draw_set_alpha(1);
 draw_set_halign(-1)
 draw_set_valign(-1)
 game_restart();
+}
+else
+if ( credit_numb &gt;= credit_max_numb &amp;&amp; global.previous_room = rm_credits)
+{
+draw_set_alpha(1);
+draw_set_halign(-1)
+draw_set_valign(-1)
+if(!instance_exists(obj_fade_to_value))
+    {
+       with(instance_create(0, 0, obj_fade_to_value))
+       {
+            value = rm_credits
+       }
+    }
 }
 </string>
           </argument>
@@ -231,16 +245,16 @@ game_restart();
           <argument>
             <kind>1</kind>
             <string>/* First Exit if we already drawn everything: */
-if ( credit_numb &gt;= credit_max_numb ) exit;
+if (credit_numb &gt;= credit_max_numb) exit;
 
 /* Draw it: */
-draw_set_font( credit_font );
+draw_set_font(credit_font);
 {
- draw_set_alpha( credit_alpha );
- draw_set_color( c_white );
- draw_set_halign( fa_center )
- draw_set_valign( fa_center )
- draw_text( round(view_xview)+160,round(view_xview)+room_height-130,string(credit_text[credit_numb]) )
+ draw_set_alpha(credit_alpha);
+ draw_set_color(c_white);
+ draw_set_halign(fa_center)
+ draw_set_valign(fa_center)
+ draw_text(round(view_xview)+160,round(view_xview)+room_height-130,string(credit_text[credit_numb]))
 };
 
 </string>

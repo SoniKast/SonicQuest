@@ -2,7 +2,7 @@
  // Load a save file containing settings.
  
  // Open/Create ini.
-    ini_open("settings.bin");
+    ini_open("quest_settings.bin");
     {
        global.screen_scale = ini_read_real("Display",   "Scale",      1);
        global.bgm_volume   = ini_read_real("Audio", "BGMVolume",      1);       

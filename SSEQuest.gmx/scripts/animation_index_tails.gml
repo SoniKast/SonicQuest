@@ -76,13 +76,13 @@
     {
        sprite                 = spr_tails_crouch;
        animation_start        = 0;
-       animation_end          = 0;
+       animation_end          = 1;
        animation_loop         = 0;
-       animation_speed        = 0;
+       animation_speed        = 0.15;
        animation_repeat       = 0; 
        animation_repeat_times = 0;
        animation_linked_to    = "";
-       animation_linked_frame = 0;      
+       animation_linked_frame = 0;     
     }
     
  // Look up:
@@ -90,13 +90,13 @@
     {
        sprite                 = spr_tails_lookup;
        animation_start        = 0;
-       animation_end          = 0;
+       animation_end          = 1;
        animation_loop         = 0;
-       animation_speed        = 0;
+       animation_speed        = 0.15;
        animation_repeat       = 0; 
        animation_repeat_times = 0;
        animation_linked_to    = "";
-       animation_linked_frame = 0;      
+       animation_linked_frame = 0;    
     }
          
  // Walk:
@@ -132,7 +132,7 @@
     {
        sprite                 = spr_tails_roll;
        animation_start        = 0;
-       animation_end          = 3;
+       animation_end          = 2;
        animation_loop         = 0;
        animation_speed        = 0.2;
        animation_repeat       = 1; 
@@ -146,7 +146,7 @@
     {
        sprite                 = spr_tails_spindash;
        animation_start        = 0;
-       animation_end          = 5;
+       animation_end          = 2;
        animation_loop         = 0;
        animation_speed        = 0.5;
        animation_repeat       = 1; 
@@ -174,8 +174,8 @@
     {
        sprite                 = spr_tails_skid;
        animation_start        = 0;
-       animation_end          = 1;
-       animation_loop         = 1;
+       animation_end          = 2;
+       animation_loop         = 2;
        animation_speed        = 0.25;
        animation_repeat       = 0; 
        animation_repeat_times = 0;
@@ -187,9 +187,9 @@
     if(animation = "skid turn")
     {
        sprite                 = spr_tails_skid;
-       animation_start        = 0;
-       animation_end          = 1;
-       animation_loop         = 0;
+       animation_start        = 3;
+       animation_end          = 3;
+       animation_loop         = 3;
        animation_speed        = 0.25;
        animation_repeat       = 0; 
        animation_repeat_times = 0;
@@ -342,7 +342,7 @@
     {
        sprite                 = spr_tails_balance;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 3;
        animation_loop         = 0;
        animation_speed        = 0.15;
        animation_repeat       = 1; 
@@ -354,9 +354,9 @@
  // Balance alt.
     if(animation = "balance alt")
     {
-       sprite                 = spr_tails_balance;
+       sprite                 = spr_tails_balance_alt;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 3;
        animation_loop         = 0;
        animation_speed        = 0.15;
        animation_repeat       = 1; 
@@ -482,8 +482,8 @@
      {
         sprite                 = spr_tails_goal;         
         animation_start        = 0;
-        animation_end          = 1;
-        animation_loop         = 1;
+        animation_end          = 2;
+        animation_loop         = 2;
         animation_speed        = 0.2;
         animation_repeat       = 1; 
         animation_repeat_times = -1;

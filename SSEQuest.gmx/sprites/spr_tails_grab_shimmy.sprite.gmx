@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
+  <bbox_left>1</bbox_left>
   <bbox_right>28</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>40</bbox_bottom>
+  <bbox_bottom>41</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>29</width>
-  <height>41</height>
+  <height>42</height>
   <frames>
     <frame index="0">images\spr_tails_grab_shimmy_0.png</frame>
     <frame index="1">images\spr_tails_grab_shimmy_1.png</frame>

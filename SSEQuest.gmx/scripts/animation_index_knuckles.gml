@@ -412,14 +412,14 @@
     {
        sprite                 = spr_knuckles_transform;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 3;
        animation_loop         = 2;
        animation_speed        = 0.18;
        animation_repeat       = 1; 
        animation_repeat_times = -1;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
-    }   
+    }     
     
   // Float.
     if(animation = "float")

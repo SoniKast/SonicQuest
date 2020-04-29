@@ -123,15 +123,8 @@
     
  // Rendering:
     global.screen_scale     = 1;         // The screen scale value.
-    global.screen_mode      = "Classic"; // "Classic" or "Widescreen"
-    if(global.screen_mode == "Classic"){
     global.screen_width     = 320;       // The screen width.
     global.screen_height    = 224;       // The screen height.
-    }
-    else if(global.screen_mode == "Widescreen"){
-    global.screen_width     = 424;       // The screen width.
-    global.screen_height    = 240;       // The screen height.
-    }
     global.angle_mode       = 0;         // How to rotate the player. (0 for classic, 1 for smooth)
         
  // Sounds:
@@ -191,7 +184,11 @@
  //Set the mode
     global.Mode = 0;
     
+ // Icon speed.
+    image_speed = 0;
+    
     gml_release_mode(true)
+    
 </string>
           </argument>
         </arguments>
@@ -240,7 +237,7 @@
             <kind>1</kind>
             <string>/// Finish sequence.
  
-    instance_create(x, y, obj_fade_next);
+    room_goto_next();
 </string>
           </argument>
         </arguments>
@@ -264,7 +261,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize audio, screen and gamepad controller.
-/// Things to set up that we moved from obj_init to here.
   
     instance_create(0, 0, obj_screen_controller);
     instance_create(0, 0, obj_gamepad_controller);

@@ -66,7 +66,7 @@
     }
  
  // Trigger glide.
-    if(ground == false && (animation == "roll") && input_action_pressed)
+    if(ground == false && (animation == "roll") && input_action_pressed && state != STATE_TRANSFORM)
     {
        // Reset angle and switch states.
           angle = 0;

@@ -221,7 +221,7 @@
           if(keyboard_check_pressed(global.key_down) &amp;&amp; option_ended != 1)
           {  
              aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
-             if(option_selected &lt; 5)
+             if(option_selected &lt; 6)
              {
                 option_selected += 1;
              }
@@ -239,7 +239,7 @@
              }
              else
              {
-                option_selected = 5;
+                option_selected = 6;
              }
           } 
            
@@ -417,6 +417,29 @@
           draw_text(global.screen_width/2, 112, "GAMEPAD BINDINGS") 
                            
           if(option_selected == 5)
+          {
+             option_description = "- View the credits -"
+             draw_set_color(c_yellow);
+             if(keyboard_check_pressed(global.key_enter) &amp;&amp; option_ended != 1)
+             {
+                if(instance_exists(obj_fade_to_value) == false)
+                {                   
+                   option_ended         = 1;
+                   global.previous_room = room;
+                   with(instance_create(0, 0, obj_fade_to_value))
+                   {
+                        value = rm_credits;
+                   }
+                }
+             }
+          }
+          else
+          {
+             draw_set_color(c_white);
+          }  
+          draw_text(global.screen_width/2, 128, "CREDITS") 
+                           
+          if(option_selected == 6)
           {
              option_description = "- Return to the Menu -"
              draw_set_color(c_yellow);

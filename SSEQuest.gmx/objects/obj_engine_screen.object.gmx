@@ -51,6 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Boot sequence.
+
 if(alarm[2] = -1)
 {
     alarm[2]  = 120;

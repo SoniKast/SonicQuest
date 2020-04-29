@@ -2,7 +2,7 @@
  // Creates a save file containing settings.
  
  // Open/Create ini.
-    ini_open("settings.bin");
+    ini_open("quest_settings.bin");
     {
        ini_write_real("Display",   "Scale",      global.screen_scale);
        ini_write_real("Audio", "BGMVolume",      global.bgm_volume);       

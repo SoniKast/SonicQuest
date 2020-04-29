@@ -250,7 +250,8 @@
     {
         with(parent)
         {
-            global.player_emeralds = 7;
+            global.player_emeralds += 7;
+            global.player_rings    += 50;
             state = STATE_TRANSFORM;
         }
     }

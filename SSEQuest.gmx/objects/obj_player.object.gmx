@@ -2470,6 +2470,26 @@
        }
     }
     
+ // Back to normal Tails Palette:
+    if(player_index = CHAR_TAILS &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+       if(PalettePosition &gt;= 6){
+          TransformEnded   = 0;
+          PalettePosition  = 0;
+       }else{
+          PalettePosition += 0.25;
+       }
+    }    
+    
+ // Back to normal Knuckles Palette:
+    if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
+       if(PalettePosition &gt;= 5){
+          TransformEnded   = 0;
+          PalettePosition  = 0;
+       }else{
+          PalettePosition += 0.25;
+       }
+    } 
+    
  // Super Sonic Palette:
     if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterSuper){
        if(PalettePosition &gt; 3){
@@ -2485,6 +2505,23 @@
        }
        PalettePosition += 0.10;
     }
+    
+ // Super Tails Palette:
+    if(player_index = CHAR_TAILS &amp;&amp; CharacterState != CharacterNormal){
+       if(PalettePosition &gt; 9){
+          PalettePosition = 0;
+       }
+       PalettePosition += 0.15;
+    }    
+    
+ // Hyper Knuckles Palette:
+    if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState != CharacterNormal){
+       if(PalettePosition &gt; 11){
+          PalettePosition = 0;
+       }
+       PalettePosition += 0.20;
+    }        
+    
     
     
 </string>
@@ -2869,13 +2906,13 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
          if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
             pal_swap_set(spr_sonic_to_normal_palette, PalettePosition, false);
          }      
-         if(player_index = CHAR_TAILS &amp;&amp; CharacterState = CharacterSuper &amp;&amp; CharacterState = CharacterHyper){
+         if(player_index = CHAR_TAILS &amp;&amp; CharacterState != CharacterNormal){
             pal_swap_set(spr_tails_super_palette, PalettePosition, false);
          }
          if(player_index = CHAR_TAILS &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
             pal_swap_set(spr_tails_to_normal_palette, PalettePosition, false);
          }      
-         if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState = CharacterSuper &amp;&amp; CharacterState = CharacterHyper){
+         if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState != CharacterNormal){
             pal_swap_set(spr_knuckles_super_palette, PalettePosition, false);
          }
          if(player_index = CHAR_KNUCKLES &amp;&amp; CharacterState = CharacterNormal &amp;&amp; TransformEnded == 1){
@@ -2995,6 +3032,56 @@ if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
           }              
     }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="118">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.player_emeralds = 14
+global.player_rings += 50;
+state = STATE_TRANSFORM;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="117">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.player_emeralds = 7;
+global.player_rings += 50;
+state = STATE_TRANSFORM;
 </string>
           </argument>
         </arguments>

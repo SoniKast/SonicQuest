@@ -8,20 +8,20 @@
     }
     
  // If the save does not exist, exit.    
-    if(file_exists(working_directory+"\data\save\data"+string(argument0)+".sav") == false)
+    if(file_exists(working_directory+"\data\save\quest_data"+string(argument0)+".sav") == false)
     {
        return false;
     }
     
  // Load data:
-    if(file_exists(working_directory+"\data\save\data"+string(argument0)+".sav") == true)
+    if(file_exists(working_directory+"\data\save\quest_data"+string(argument0)+".sav") == true)
     {
        // Decryption key:
           var dkey;
           dkey = $4ad682aeb7218;
        // Open save:
           var dfile;
-          dfile = file_text_open_read(working_directory+"\data\save\data"+string(argument0)+".sav");
+          dfile = file_text_open_read(working_directory+"\data\save\quest_data"+string(argument0)+".sav");
        // Skip Warning:
           file_text_readln(dfile);
        // Zone:

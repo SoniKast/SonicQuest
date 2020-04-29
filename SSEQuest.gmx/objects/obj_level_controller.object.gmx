@@ -222,7 +222,8 @@
     instance_create(0, 0, obj_instance_region);
     
  // Set level variables:
-    if(global.BonusStage = false){
+    if(global.BonusStage = false)
+    {
         global.player_rings = 0;
         global.do_time      = 0;
         global.game_time    = 0;
@@ -234,11 +235,13 @@
     ring_visibility = 1;
 
  // Save progress. 
-    if(global.save_selected != 0)
+    if(global.time_attack != true)
     {
-       save_create(global.save_selected);
+        if(global.save_selected != 0)
+        {
+           save_create(global.save_selected);
+        }
     }
-
 </string>
           </argument>
         </arguments>

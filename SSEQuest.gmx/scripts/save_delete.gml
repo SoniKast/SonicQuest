@@ -8,9 +8,9 @@
     }
     
  // Check if the save exists and delete it. Otherwise return false.   
-    if(file_exists(working_directory+"\data\save\data"+string(argument0)+".sav"))
+    if(file_exists(working_directory+"\data\save\quest_data"+string(argument0)+".sav"))
     { 
-       file_delete(working_directory+"\data\save\data"+string(argument0)+".sav");
+       file_delete(working_directory+"\data\save\quest_data"+string(argument0)+".sav");
        return true;
     }
     else

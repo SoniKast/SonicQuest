@@ -15,7 +15,7 @@
           dkey = $4ad682aeb7218;
        // Open save:
           var dfile;
-          dfile = file_text_open_write(working_directory+"\data\save\data"+string(argument0)+".sav");
+          dfile = file_text_open_write(working_directory+"\data\save\quest_data"+string(argument0)+".sav");
        // Warning:
           file_text_write_string(dfile, ""+string(GAME_NAME)+" Save Data - Editing this file can cause issues.");
           file_text_writeln(dfile);
