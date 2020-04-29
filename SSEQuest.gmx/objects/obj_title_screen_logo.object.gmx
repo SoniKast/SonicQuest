@@ -53,27 +53,27 @@
     alarm[0]             = 15;
     alarm[2]             = 1000;
 
-    title_menu_string0  = "RIVER.  VALLEY 1"
-    title_menu_string1  = "               2"
-    title_menu_string2  = "PETAL PARK     1"
-    title_menu_string3  = "               2"
-    title_menu_string4  = "CHAOTIC CASINO 1"
-    title_menu_string5  = "               2"
-    title_menu_string6  = "FRANTIC FOREST 1"
-    title_menu_string7  = "               2"
-    title_menu_string8  = "AQUAPOLIS      1"
-    title_menu_string9  = "               2"
-    title_menu_string10 = "EGG GAUNTLET   1"
-    title_menu_string11 = "               2"
-    title_menu_string12 = "STEAMPUNK EGG  3"
-    title_menu_string13 = "BRIDGE         1"
-    title_menu_string14 = "               2"
-    title_menu_string15 = "TEST ZONE      1"
-    title_menu_string16 = "               2"
-    title_menu_string17 = "BONUS STAGE"
-    title_menu_string18 = "SPECIAL STAGE"
-    title_menu_string19 = "SOUND TEST"
-    title_menu_string20 = "BACK"
+    title_menu_string0  = "RIVERS. VALLEY"
+    title_menu_string1  = ""
+    title_menu_string2  = "PETAL PARK    "
+    title_menu_string3  = ""
+    title_menu_string4  = "CHAOTIC CASINO"
+    title_menu_string5  = ""
+    title_menu_string6  = "FRANTIC FOREST"
+    title_menu_string7  = "              "
+    title_menu_string8  = "AQUAPOLIS     "
+    title_menu_string9  = "              "
+    title_menu_string10 = "EGG GAUNTLET  "
+    title_menu_string11 = "              "
+    title_menu_string12 = "STEAMPUNK EGG "
+    title_menu_string13 = "BRIDGE        "
+    title_menu_string14 = "              "
+    title_menu_string15 = "TEST ZONE     "
+    title_menu_string16 = "              "
+    title_menu_string17 = "BONUS STAGE   "
+    title_menu_string18 = "SPECIAL STAGE "
+    title_menu_string19 = "SOUND TEST    "
+    title_menu_string20 = "BACK          "
     
 </string>
           </argument>
@@ -1486,7 +1486,9 @@ if(title_menu_active == 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    // --- Draw Title ----------------------------------------
+            <string>/// It's a draw event what do you expect
+
+    // --- Draw Title ----------------------------------------
     draw_sprite(sprPresentationTitle, 0, 160, 115);
     
     // --- Draw Sonic ----------------------------------------
@@ -1529,171 +1531,205 @@ if(title_menu_active == 1)
     {
     draw_set_color(c_yellow);
     draw_text(20, 23, title_menu_string0); 
+    draw_text(141, 23, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 23, title_menu_string0); 
+    draw_text(141, 23, "1");
     }
     if(title_menu_option = 1)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 31, title_menu_string1); 
+    draw_text(140, 31, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 31, title_menu_string1); 
+    draw_text(140, 31, "2");
     }
     if(title_menu_option = 2)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 47, title_menu_string2); 
+    draw_text(141, 47, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 47, title_menu_string2); 
+    draw_text(141, 47, "1");
     }
     if(title_menu_option = 3)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 55, title_menu_string3);
+    draw_text(140, 55, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 55, title_menu_string3); 
+    draw_text(140, 55, "2");
     }
     if(title_menu_option = 4)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 71, title_menu_string4); 
+    draw_text(141, 71, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 71, title_menu_string4); 
+    draw_text(141, 71, "1");
     }
     if(title_menu_option = 5)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 79, title_menu_string5);
+    draw_text(140, 79, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 79, title_menu_string5); 
+    draw_text(140, 79, "2");
     }
     if(title_menu_option = 6)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 95, title_menu_string6);
+    draw_text(141, 95, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 95, title_menu_string6);
+    draw_text(141, 95, "1");
     }
     if(title_menu_option = 7)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 103, title_menu_string7); 
+    draw_text(140, 103, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 103, title_menu_string7);
+    draw_text(140, 103, "2");
     }
     if(title_menu_option = 8)
     {
     draw_set_color(c_yellow);
     draw_text(20, 119, title_menu_string8); 
+    draw_text(141, 119, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 119, title_menu_string8); 
+    draw_text(141, 119, "1");
     }
     if(title_menu_option = 9)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 127, title_menu_string9); 
+    draw_text(140, 127, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 127, title_menu_string9); 
+    draw_text(140, 127, "2");
     }
     if(title_menu_option = 10)
     {
     draw_set_color(c_yellow);
     draw_text(20, 143, title_menu_string10); 
+    draw_text(141, 143, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 143, title_menu_string10);  
+    draw_text(141, 143, "1");
     }
     if(title_menu_option = 11)
     {
     draw_set_color(c_yellow); 
     draw_text(20, 151, title_menu_string11); 
+    draw_text(140, 151, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 151, title_menu_string11); 
+    draw_text(140, 151, "2");
     }
     if(title_menu_option = 12)
     {
     draw_set_color(c_yellow);
     draw_text(20, 167, title_menu_string12); 
+    draw_text(140, 167, "3");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(20, 167, title_menu_string12); 
+    draw_text(140, 167, "3");
     }
     if(title_menu_option = 13)
     {
     draw_set_color(c_yellow);  
     draw_text(173, 23, title_menu_string13);
+    draw_text(294, 23, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(173, 23, title_menu_string13);
+    draw_text(294, 23, "1");
     }
     if(title_menu_option = 14)
     {
     draw_set_color(c_yellow); 
     draw_text(173, 31, title_menu_string14);
+    draw_text(293, 31, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(173, 31, title_menu_string14);
+    draw_text(293, 31, "2");
     }
     if(title_menu_option = 15)
     {
     draw_set_color(c_yellow); 
     draw_text(173, 47, title_menu_string15); 
+    draw_text(294, 47, "1");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(173, 47, title_menu_string15); 
+    draw_text(294, 47, "1");
     }
     if(title_menu_option = 16)
     {
     draw_set_color(c_yellow); 
     draw_text(173, 55, title_menu_string16);
+    draw_text(293, 55, "2");
     }
     else
     {
     draw_set_color(c_white);
     draw_text(173, 55, title_menu_string16);
+    draw_text(293, 55, "2");
     }
     if(title_menu_option = 17)
     {
