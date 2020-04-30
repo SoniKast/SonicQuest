@@ -490,5 +490,33 @@
         animation_linked_to    = "";
         animation_linked_frame = 0;     
      }      
+    
+ // Pole grab vertical:
+    if(animation = "pole grab")
+    {
+       sprite                 = spr_tails_pole_grab;
+       animation_start        = 0;
+       animation_end          = 5;
+       animation_loop         = 0;
+       animation_speed        = 0.2;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;       
+    }  
+    
+ // Pole grab horizontal:
+    if(animation = "pole grab horizontal")
+    {
+       sprite                 = spr_tails_pole_grab_h;
+       animation_start        = 0;
+       animation_end          = 1;
+       animation_loop         = 0;
+       animation_speed        = 0.1;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to    = "";
+       animation_linked_frame = 0;       
+    }            
            
                    

@@ -202,6 +202,8 @@
           <sprite>sprites\spr_tails_falling</sprite>
           <sprite>sprites\spr_tails_goal</sprite>
           <sprite>sprites\spr_tails_float</sprite>
+          <sprite>sprites\spr_tails_pole_grab_h</sprite>
+          <sprite>sprites\spr_tails_pole_grab</sprite>
           <sprite>sprites\spr_super_flicky</sprite>
           <sprites name="Tail Parts">
             <sprite>sprites\spr_tail_part_1</sprite>
@@ -241,6 +243,8 @@
           <sprite>sprites\spr_knuckles_float</sprite>
           <sprite>sprites\spr_knuckles_goal</sprite>
           <sprite>sprites\spr_knuckles_transform</sprite>
+          <sprite>sprites\spr_knuckles_pole_grab_h</sprite>
+          <sprite>sprites\spr_knuckles_pole_grab</sprite>
         </sprites>
         <sprites name="Shields">
           <sprite>sprites\spr_shield_fire</sprite>
