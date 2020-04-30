@@ -479,6 +479,15 @@ if(instance_exists(par_boss)){
                 }
                 break;
            }    
+           case rm_pinball_panic2:
+           {
+                zone_bgm = music_pinball_panic2;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
            case rm_forest_frenzy1:
            {
                 zone_bgm = music_jungle_havoc1;
@@ -488,6 +497,24 @@ if(instance_exists(par_boss)){
                 }
                 break;
            }
+           case rm_forest_frenzy2:
+           {
+                zone_bgm = music_jungle_havoc2;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
+           case rm_aquapolis1:
+           {
+                zone_bgm = music_colossal_conduit1;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }    
            case rm_playground:
            {
                 zone_bgm = music_test;

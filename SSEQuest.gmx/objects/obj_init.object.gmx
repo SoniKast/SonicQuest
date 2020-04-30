@@ -110,7 +110,7 @@
     global.best_time_ttz2       = 0;
     global.best_time_ttz3       = 0;
     
-    /* Special Stages*/
+ // Special Stages:
     global.special              = 0;    //This will be used for the controller object to count down when in a special stage     
     global.coming_from_special  = 0;
     global.used_emerald_1       = false;

@@ -34,7 +34,14 @@
     var water_y;
         water_y = max(global.water_position-view_yview, 0); 
         draw_set_blend_mode_ext(bm_dest_color, bm_src_alpha_sat);
-        draw_set_color(make_color_rgb(107, 107, 148)); // &lt; Change this if you want to use a different color.
+        if(room != rm_aquapolis1 || room != rm_aquapolis2)
+        {
+            draw_set_color(make_color_rgb(107, 107, 148)); // Base water color
+        }
+        else if(room = rm_aquapolis1 || room = rm_aquapolis2)
+        {
+            draw_set_color(make_color_rgb(68, 52, 33));
+        }
         draw_rectangle(view_xview, view_yview+water_y-8, view_xview+view_wview, view_yview+view_hview, 0);
         draw_set_color(c_white);  
         draw_set_blend_mode(bm_normal);

@@ -19,7 +19,10 @@
       <sound>sound\music_great_garden1</sound>
       <sound>sound\music_great_garden2</sound>
       <sound>sound\music_pinball_panic1</sound>
+      <sound>sound\music_pinball_panic2</sound>
       <sound>sound\music_jungle_havoc1</sound>
+      <sound>sound\music_jungle_havoc2</sound>
+      <sound>sound\music_colossal_conduit1</sound>
       <sound>sound\music_boss</sound>
     </sounds>
     <sounds name="SFX">
@@ -150,6 +153,8 @@
           <sprite>sprites\spr_sonic_float</sprite>
           <sprite>sprites\spr_sonic_goal</sprite>
           <sprite>sprites\spr_sonic_peelout</sprite>
+          <sprite>sprites\spr_sonic_pole_grab_h</sprite>
+          <sprite>sprites\spr_sonic_pole_grab</sprite>
           <sprites name="Super">
             <sprite>sprites\spr_ssonic_idle</sprite>
             <sprite>sprites\spr_ssonic_lookup</sprite>
@@ -659,6 +664,10 @@
           <sprite>sprites\sprite330</sprite>
           <sprite>sprites\sprite501</sprite>
           <sprite>sprites\sprite502</sprite>
+          <sprite>sprites\sprite676</sprite>
+          <sprite>sprites\sprite677</sprite>
+          <sprite>sprites\sprite678</sprite>
+          <sprite>sprites\sprite679</sprite>
         </sprites>
         <sprites name="Terrain (Layer 0)">
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile01</sprite>
@@ -877,23 +886,6 @@
             <sprite>sprites\spr_ppz_pal3</sprite>
           </sprites>
         </sprites>
-        <sprites name="HPZ">
-          <sprites name="Decorations">
-            <sprite>sprites\spr_glow</sprite>
-          </sprites>
-          <sprite>sprites\spr_unused_emerald</sprite>
-          <sprite>sprites\spr_g_unused_emerald</sprite>
-          <sprite>sprites\spr_green_emerald</sprite>
-          <sprite>sprites\spr_yellow_emerald</sprite>
-          <sprite>sprites\spr_gray_emerald</sprite>
-          <sprite>sprites\spr_blue_emerald</sprite>
-          <sprite>sprites\spr_lightblue_emerald</sprite>
-          <sprite>sprites\spr_red_emerald</sprite>
-          <sprite>sprites\spr_purple_emerald</sprite>
-          <sprite>sprites\spr_hpz_platform</sprite>
-          <sprite>sprites\spr_sanctuary_orb_end</sprite>
-          <sprite>sprites\spr_hpz_scenery</sprite>
-        </sprites>
         <sprites name="FFZ">
           <sprites name="Gimmicks">
             <sprite>sprites\spr_ffz_loop_right</sprite>
@@ -911,6 +903,12 @@
             <sprite>sprites\spr_MS_roll</sprite>
             <sprite>sprites\spr_MS_shoot</sprite>
             <sprite>sprites\spr_MS_stand</sprite>
+          </sprites>
+        </sprites>
+        <sprites name="WWZ">
+          <sprites name="Gimmicks">
+            <sprite>sprites\spr_wwz_cork</sprite>
+            <sprite>sprites\spr_wwz_platform</sprite>
           </sprites>
         </sprites>
         <sprites name="BZ">
@@ -932,6 +930,23 @@
             <sprite>sprites\spr_badnik_spikes</sprite>
             <sprite>sprites\spr_badnik_spikes_mask</sprite>
           </sprites>
+        </sprites>
+        <sprites name="HPZ">
+          <sprites name="Decorations">
+            <sprite>sprites\spr_glow</sprite>
+          </sprites>
+          <sprite>sprites\spr_unused_emerald</sprite>
+          <sprite>sprites\spr_g_unused_emerald</sprite>
+          <sprite>sprites\spr_green_emerald</sprite>
+          <sprite>sprites\spr_yellow_emerald</sprite>
+          <sprite>sprites\spr_gray_emerald</sprite>
+          <sprite>sprites\spr_blue_emerald</sprite>
+          <sprite>sprites\spr_lightblue_emerald</sprite>
+          <sprite>sprites\spr_red_emerald</sprite>
+          <sprite>sprites\spr_purple_emerald</sprite>
+          <sprite>sprites\spr_hpz_platform</sprite>
+          <sprite>sprites\spr_sanctuary_orb_end</sprite>
+          <sprite>sprites\spr_hpz_scenery</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -1285,6 +1300,7 @@
         <script>scripts\player_handle_tornado.gml</script>
         <script>scripts\player_handle_bosses.gml</script>
         <script>scripts\player_handle_glider.gml</script>
+        <script>scripts\player_handle_pole_grab.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1984,6 +2000,10 @@
             <object>objects\obj_collision_tile_45</object>
             <object>objects\obj_collision_tile_46</object>
             <object>objects\obj_collision_tile_47</object>
+            <object>objects\obj_collision_tile_48</object>
+            <object>objects\obj_collision_tile_49</object>
+            <object>objects\obj_collision_tile_50</object>
+            <object>objects\obj_collision_tile_51</object>
             <object>objects\obj_collision_tile_s_tunnel</object>
             <object>objects\obj_collision_tile_loop_20</object>
           </objects>
@@ -2384,6 +2404,33 @@
         <objects name="Parallax">
           <object>objects\obj_ppz_parallax</object>
         </objects>
+        <objects name="Extra">
+          <objects name="Bridge Zone">
+            <objects name="Parallax">
+              <object>objects\objBZParallax</object>
+            </objects>
+            <objects name="Waterfall">
+              <object>objects\obj_waterfall_bottom</object>
+              <object>objects\obj_waterfall_top</object>
+            </objects>
+            <objects name="Gimmicks">
+              <objects name="Seesaws">
+                <object>objects\objObjectSeesaw</object>
+                <object>objects\objObjectSpikeball</object>
+                <object>objects\objSeesawLimiterLeft</object>
+                <object>objects\objSeesawLimiterRight</object>
+              </objects>
+              <object>objects\obj_bridge_platform</object>
+            </objects>
+            <objects name="Badniks">
+              <object>objects\obj_badnik_spikes</object>
+              <object>objects\obj_badnik_spikes_mask</object>
+            </objects>
+            <object>objects\obj_da_rock</object>
+          </objects>
+          <object>objects\obj_bonus1_parallax</object>
+          <object>objects\obj_goal_block</object>
+        </objects>
       </objects>
       <objects name="Forest Frenzy Zone">
         <objects name="Parallax">
@@ -2405,6 +2452,12 @@
           <object>objects\obj_C1_MS_proj</object>
           <object>objects\obj_fade_in_white</object>
           <object>objects\par_cutscene_star</object>
+        </objects>
+      </objects>
+      <objects name="Wild Waterworks">
+        <objects name="Gimmicks">
+          <object>objects\obj_wwz_platform</object>
+          <object>objects\obj_wwz_cork</object>
         </objects>
       </objects>
       <objects name="Hidden Palace Zone">
@@ -2434,33 +2487,6 @@
         <object>objects\obj_unused_emerald</object>
         <object>objects\obj_g_unused_emerald</object>
         <object>objects\obj_hpz_platform</object>
-      </objects>
-      <objects name="Extra">
-        <objects name="Bridge Zone">
-          <objects name="Parallax">
-            <object>objects\objBZParallax</object>
-          </objects>
-          <objects name="Waterfall">
-            <object>objects\obj_waterfall_bottom</object>
-            <object>objects\obj_waterfall_top</object>
-          </objects>
-          <objects name="Gimmicks">
-            <objects name="Seesaws">
-              <object>objects\objObjectSeesaw</object>
-              <object>objects\objObjectSpikeball</object>
-              <object>objects\objSeesawLimiterLeft</object>
-              <object>objects\objSeesawLimiterRight</object>
-            </objects>
-            <object>objects\obj_bridge_platform</object>
-          </objects>
-          <objects name="Badniks">
-            <object>objects\obj_badnik_spikes</object>
-            <object>objects\obj_badnik_spikes_mask</object>
-          </objects>
-          <object>objects\obj_da_rock</object>
-        </objects>
-        <object>objects\obj_bonus1_parallax</object>
-        <object>objects\obj_goal_block</object>
       </objects>
     </objects>
     <objects name="TweenGMS">
@@ -2544,7 +2570,7 @@
       <room>rooms\rm_demo_end</room>
     </rooms>
   </rooms>
-  <constants number="80">
+  <constants number="82">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v3.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2602,6 +2628,8 @@
     <constant name="STATE_FLOAT">29</constant>
     <constant name="STATE_FLOAT_V">30</constant>
     <constant name="STATE_GLIDER">31</constant>
+    <constant name="STATE_POLE_GRAB">32</constant>
+    <constant name="STATE_POLE_GRAB_H">33</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>
