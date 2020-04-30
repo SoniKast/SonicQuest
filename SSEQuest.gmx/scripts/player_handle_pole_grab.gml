@@ -6,7 +6,7 @@
    if(state != STATE_DEATH)
    {
       var _ObjectHandle;
-          _ObjectHandle = player_collision_check(COL_MAIN_OBJECT, x, y, obj_wwz_pole, -1, -1);
+          _ObjectHandle = player_collision_check(COL_MAIN_OBJECT, x, y, obj_wwz_pole_v, -1, -1);
       if(_ObjectHandle != noone)
       {
          if(PoleTimer == -1 && PoleDelay == 0)
@@ -18,7 +18,7 @@
       }
    }
    
-   if(STATE = STATE_POLE_GRAB)
+   if(state = STATE_POLE_GRAB)
    {
       animation  = "pole grab";
       y_speed    = 0;
@@ -28,12 +28,13 @@
          PoleTimer -= 1; 
       }  
    }
+   
    if(PoleTimer == 0){
       PoleTimer  = -1;
       PoleDelay  =  1;
       y_speed    = PoleSpeed;
       animation  = "spring";
       state      = STATE_SPRING;
-      alarm[0]   = 5;
+      alarm[2]   = 5;
    }     
             

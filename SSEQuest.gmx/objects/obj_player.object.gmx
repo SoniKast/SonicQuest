@@ -150,6 +150,14 @@
     push_timer_max    = 3;
     goal_state        = 0;
     goal_timer        = 5;         // Keeps track how many frames it takes to stop the player from movement.
+        
+    PoleTimer         = -1;
+    PoleSpeed         = 0;
+    PoleDelay         = 0;
+
+    VPoleTimer        = -1;
+    VPoleSpeed        = 0;
+    VPoleDelay        = 0;
     
     tube_type         = 0;         // Used for correct movement.
     tube_timer        = 0;         // Used for playing the roll sound at the correct time when in a tube.
@@ -352,6 +360,29 @@
         }
      }
   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>PoleDelay = 0;
 </string>
           </argument>
         </arguments>
@@ -1535,6 +1566,7 @@
               player_handle_float();
               player_handle_float_v();
               player_handle_glider();
+              player_handle_pole_grab();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1577,6 +1609,7 @@
               player_handle_float();
               player_handle_float_v();
               player_handle_glider();
+              player_handle_pole_grab();
               
            // Abort.
               if(x_speed == 0)
@@ -1642,6 +1675,7 @@
                            player_handle_float();
                            player_handle_float_v();
                            player_handle_glider();
+                           player_handle_pole_grab();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1749,6 +1783,7 @@
                               player_handle_float();
                               player_handle_float_v();
                               player_handle_glider();
+                              player_handle_pole_grab();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -2807,6 +2842,7 @@ state = STATE_DEFAULT
         }
     }
 }
+
 </string>
           </argument>
         </arguments>

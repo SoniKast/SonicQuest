@@ -3,8 +3,8 @@
   <caption></caption>
   <width>16000</width>
   <height>3000</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>64</vsnap>
+  <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -14,7 +14,7 @@
 
     global.zone_name        =  "WILD WATERWORKS"
     global.zone_act         =  1;
-    global.water_position   =  1872;
+    global.water_position   =  1888;
     global.death_height     =  room_height;
     global.zone_id          =  5;
     global.data_select_icon =  5;   
@@ -189,8 +189,8 @@
     <instance objName="obj_collision_tile_03" x="1504" y="1120" name="inst_81550B40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1504" y="1056" name="inst_0903DDDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1632" y="1184" name="inst_10B158F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_03" x="1792" y="1056" name="inst_D7BAF430" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_03" x="1792" y="992" name="inst_6F866E88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2144" y="928" name="inst_D7BAF430" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2144" y="864" name="inst_6F866E88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1504" y="992" name="inst_D6CCA0A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1536" y="1440" name="inst_2F7A624E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1344" y="1760" name="inst_50E905F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -210,17 +210,13 @@
     <instance objName="obj_ring" x="240" y="1392" name="inst_EB87A358" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="272" y="1392" name="inst_F75C9556" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="336" y="1392" name="inst_2971EEE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="496" y="1376" name="inst_5D066046" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="496" y="1344" name="inst_C2E36612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="496" y="1312" name="inst_AE9E79D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="496" y="1280" name="inst_E15B7408" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_layer_switch_0" x="528" y="1632" name="inst_C7914909" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_layer_switch_0" x="528" y="1600" name="inst_D4A543CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_layer_switch_0" x="528" y="1568" name="inst_FB826C3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_loop_switch_1" x="864" y="1472" name="inst_88B3D702" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_loop_switch_1" x="864" y="1504" name="inst_65100C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_loop_switch_1" x="864" y="1440" name="inst_9ADFF473" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_loop_switch_1" x="864" y="1408" name="inst_01BA680D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2784" y="2112" name="inst_88B3D702" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2784" y="2144" name="inst_65100C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2784" y="2080" name="inst_9ADFF473" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2784" y="2048" name="inst_01BA680D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_layer_switch_0" x="528" y="1536" name="inst_CCDAA6E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_31" x="1664" y="1280" name="inst_FCB04CF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="1792" y="1312" name="inst_554C1BD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -242,8 +238,8 @@
     <instance objName="obj_collision_tile_02" x="1792" y="1632" name="inst_30F966C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="1856" y="1632" name="inst_B42D93E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="1920" y="1280" name="inst_280030B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_02" x="1984" y="1312" name="inst_92144AA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision_tile_03" x="1952" y="1312" name="inst_0C3EEB8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1984" y="1280" name="inst_92144AA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2016" y="1312" name="inst_0C3EEB8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2016" y="1472" name="inst_406619F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2016" y="1536" name="inst_9DCC8BBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="2016" y="1408" name="inst_BD9E3664" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -251,9 +247,228 @@
     <instance objName="obj_collision_tile_03" x="2016" y="1568" name="inst_3D195FA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_48" x="1536" y="1664" name="inst_F93FE1C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_50" x="1536" y="1536" name="inst_2DE897CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_float_start" x="1536" y="1584" name="inst_BFC150BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_float_end_h" x="1776" y="1648" name="inst_D43982D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wwz_platform" x="1856" y="1760" name="inst_36FD1F1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2240" y="1248" name="inst_CF90D1DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="1248" name="inst_B87D334E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1248" name="inst_C7EF84F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1248" name="inst_CDD4B941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1248" name="inst_CF1ACCE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2560" y="1248" name="inst_C5CCE6DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2240" y="1120" name="inst_53DEAAD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="1088" name="inst_11187291" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1056" name="inst_40074501" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1024" name="inst_DEB5BD30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1024" name="inst_C29B4271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2560" y="1024" name="inst_EF27C450" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1920" y="1120" name="inst_50FCA7FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1984" y="1120" name="inst_111EB9D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2048" y="992" name="inst_0F18548C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2112" y="992" name="inst_B25D4741" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2176" y="864" name="inst_DF77E500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2240" y="864" name="inst_E703A048" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="864" name="inst_8ECABAE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="864" name="inst_FAF59A27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="864" name="inst_516CBEB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="864" name="inst_68A60EDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2624" y="864" name="inst_54B7293C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2560" y="864" name="inst_DE1717F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2176" y="1536" name="inst_5E31C7BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2240" y="1536" name="inst_217E2912" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="1408" name="inst_CAD20B37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1408" name="inst_0AA76612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1408" name="inst_B2060565" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1408" name="inst_AC220B99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1920" y="2176" name="inst_1D889728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1856" y="2176" name="inst_E565691B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1984" y="2144" name="inst_432DEC84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2048" y="2112" name="inst_7D611287" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2048" y="2016" name="inst_642CF572" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="1984" y="2016" name="inst_08425D92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2240" y="1568" name="inst_544BD160" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="1536" name="inst_FCA5DB99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1536" name="inst_B2D6281B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="2048" name="inst_56B999EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="2048" name="inst_EAAA8E0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_30" x="1792" y="2048" name="inst_EBAB6F50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1760" y="2048" name="inst_48DCE4DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_platform" x="2112" y="1184" name="inst_9997F00C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1792" y="992" name="inst_336F9DA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1792" y="1056" name="inst_99E7011C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2016" y="992" name="inst_7BDE69F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2016" y="1056" name="inst_EBB75E68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2880" y="1152" name="inst_78CE92FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2528" y="1440" name="inst_F8302A10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2240" y="1120" name="inst_D888D088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2240" y="1184" name="inst_9A0B1923" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2528" y="1504" name="inst_92BF3F84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2592" y="1184" name="inst_1BF722FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2880" y="1216" name="inst_03A944A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2304" y="1504" name="inst_D405DFE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2304" y="1440" name="inst_A8706F64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1984" y="1888" name="inst_80354C2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1984" y="1824" name="inst_26F4BE60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1984" y="1952" name="inst_56F42FC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_49" x="2112" y="2048" name="inst_D693FBFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_51" x="2112" y="1920" name="inst_A9497F5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_float_start" x="2080" y="2016" name="inst_F336AE0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="1984" y="2176" name="inst_5BCF7362" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2048" y="2144" name="inst_242E1891" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2336" name="inst_626D9045" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2400" name="inst_CC1D0BE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2464" name="inst_3995E6D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2528" name="inst_4111B1F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_left_red" x="1968" y="2160" name="inst_BDDD7F48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_water_bubble_generator" x="2016" y="2144" name="inst_8EEDD96D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_float_end_h" x="2400" y="1952" name="inst_881C990F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_48" x="2112" y="1792" name="inst_B7BF9641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1952" name="inst_E33FDA97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2560" y="1952" name="inst_28575146" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1952" name="inst_2F19A945" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1856" name="inst_A4CA2201" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1856" name="inst_7127BA83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1856" name="inst_81234E2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2176" y="1568" name="inst_9A300F33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1536" name="inst_B4AAF5F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1536" name="inst_425C840D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2304" y="1568" name="inst_79845539" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2368" y="1568" name="inst_BB1B91C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2432" y="1568" name="inst_65AC9DAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1568" name="inst_7721E4A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_33" x="2240" y="1600" name="inst_791C6197" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_34" x="2368" y="1600" name="inst_B376D98E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_1_03" x="2208" y="1600" name="inst_7F90D83B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_1_03" x="2208" y="1664" name="inst_9A0DF6A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_1_03" x="2208" y="1728" name="inst_35895F76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_1_03" x="2208" y="1792" name="inst_CD2958E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2592" y="1888" name="inst_D460B0A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_example_bridge_12" x="2624" y="1856" name="inst_C9123134" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2512" y="2208" name="inst_DDCFEF26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2512" y="2176" name="inst_77A2F1A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2512" y="2240" name="inst_E74F4993" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2512" y="2272" name="inst_461705C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1600" name="inst_3CE5DF02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1600" name="inst_87018715" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1600" name="inst_05235235" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1632" name="inst_E588C577" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1664" name="inst_143FFD76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1696" name="inst_D881E3D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1728" name="inst_F0C5F919" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1760" name="inst_C5D228C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1792" name="inst_FBFB6890" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="2528" y="1824" name="inst_D3D4AB0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1600" name="inst_6B8383F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1632" name="inst_94D235AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1664" name="inst_8CCCCFD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1696" name="inst_9AE23EC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1728" name="inst_A9664BF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1760" name="inst_FB829767" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_0" x="2192" y="1792" name="inst_0DED9F36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch" x="2360" y="1600" name="inst_8F7D4487" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_1_16" x="2240" y="1728" name="inst_D7B975F2" locked="0" code="" scaleX="1.33333337306976" scaleY="1.31958758831024" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_0_17" x="2368" y="1728" name="inst_E0DD3A30" locked="0" code="" scaleX="1.33333337306976" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_0_03" x="2496" y="1600" name="inst_27885AA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_0_03" x="2496" y="1664" name="inst_F6E5F798" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_0_03" x="2496" y="1728" name="inst_0EB6446E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_layer_0_03" x="2496" y="1792" name="inst_8B93DD01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_24" x="2048" y="1280" name="inst_431BACA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_platform" x="1664" y="1152" name="inst_7ACA941F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2496" y="1952" name="inst_E70EE301" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2560" y="1856" name="inst_E42628F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_example_bridge_8" x="3264" y="1792" name="inst_85D055F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_pole_v" x="3328" y="2176" name="inst_6513B968" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_pole_v" x="3328" y="2048" name="inst_C14B7FDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_pole_v" x="3328" y="1920" name="inst_3F535FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object517" x="2560" y="2304" name="inst_B586DE6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object517" x="2496" y="2048" name="inst_290B3D35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object518" x="2560" y="2176" name="inst_ADC63D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_02" x="2496" y="2304" name="inst_322E38B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_02" x="2496" y="2304" name="inst_7E2A2764" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_02" x="2752" y="2176" name="inst_4AACC35B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2272" name="inst_735B5DEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2208" name="inst_5C3EAAAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2080" name="inst_670A09AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2144" name="inst_216EF564" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2464" name="inst_4FCC45B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2464" y="2528" name="inst_191E8D84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2592" name="inst_EB6F2B08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2656" name="inst_81D03EF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2880" y="2272" name="inst_F8A7389F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2816" y="2272" name="inst_E3C74296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3200" y="2208" name="inst_36CEC270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3200" y="2368" name="inst_CD7CBB9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3264" y="2368" name="inst_BF9BEEFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3328" y="2368" name="inst_C61481B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3200" y="1792" name="inst_0CBA9BC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2816" y="1856" name="inst_06F17A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2880" y="1856" name="inst_00C6F925" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2944" y="1856" name="inst_EBCF721F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3008" y="1856" name="inst_4DE4468E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2816" y="2432" name="inst_940B9F95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2880" y="2432" name="inst_0AE85E33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2944" y="2432" name="inst_B7F4574C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3008" y="2432" name="inst_22A8C330" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_28" x="2944" y="2368" name="inst_75EF87F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_28" x="2944" y="1792" name="inst_58C8732E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_29" x="3072" y="1792" name="inst_9B7504F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_29" x="3072" y="2368" name="inst_FAB79A5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_51" x="2944" y="2176" name="inst_7744C4C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="1888" name="inst_40CC0360" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="1952" name="inst_B90BBBEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2016" name="inst_709B6C75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2080" name="inst_5AACBD34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2144" name="inst_AF33942F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2816" y="2208" name="inst_F5BCAB58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="1824" name="inst_668BA5A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="1888" name="inst_BE1CB6B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="1952" name="inst_CD9D354F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="2016" name="inst_0C106E3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="2080" name="inst_66B2A187" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3232" y="2144" name="inst_208BC146" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="1824" name="inst_A7B57E85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="1888" name="inst_E5C8D5CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="1952" name="inst_DE4E3A2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2016" name="inst_B56A546C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2080" name="inst_54122F98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2144" name="inst_196E5E80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2208" name="inst_1317AC42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2272" name="inst_16BD5A12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="3392" y="2336" name="inst_FF6204EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3392" y="1792" name="inst_EB3F35C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3456" y="1792" name="inst_E193257B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_24" x="2560" y="1408" name="inst_9CECCFF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_24" x="2624" y="1024" name="inst_55EB9EF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2368" y="1088" name="inst_3C9772CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2432" y="1056" name="inst_C85D4EF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2304" y="1120" name="inst_21F82099" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2592" y="1056" name="inst_5F1D8C23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2592" y="1120" name="inst_550848CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2912" y="1152" name="inst_2310386A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="2976" y="1152" name="inst_FEDF008B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_02" x="2816" y="1536" name="inst_93266D8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_terrain_platform_02" x="2880" y="1536" name="inst_7721BB75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_up_red" x="3312" y="2352" name="inst_05BADD74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_up_red" x="3344" y="2352" name="inst_F77EC465" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_monitor_bubble" x="3376" y="2352" name="inst_34440D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_water_bubble_generator" x="2880" y="2432" name="inst_B1856D65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star_post" x="3216" y="1792" name="inst_30602C9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="496" y="1344" name="inst_D493EF62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="496" y="1376" name="inst_9A42E3D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="496" y="1312" name="inst_1A137A2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="496" y="1280" name="inst_8C5EECC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2480" y="1984" name="inst_1510EBE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2480" y="2016" name="inst_960C9758" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2480" y="1952" name="inst_76549B30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2480" y="1920" name="inst_31200C46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="864" y="1408" name="inst_AEAD72B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="864" y="1472" name="inst_7B5488F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="864" y="1504" name="inst_8619A310" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_loop_switch_1" x="864" y="1440" name="inst_3BE54A62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_left_red" x="2800" y="2160" name="inst_8FE86C82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_right_red" x="2512" y="2288" name="inst_24D29AC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star_post" x="3008" y="1536" name="inst_F8734EEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_star_post" x="3008" y="1152" name="inst_9F03F401" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_02" x="3040" y="1152" name="inst_67FF50D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_tile_03" x="2880" y="1152" name="inst_88FB278B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_aquapolis" x="768" y="1664" w="128" h="128" xo="0" yo="384" id="10038085" name="inst_C325A380" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -303,12 +518,26 @@
     <tile bgName="ts_aquapolis" x="1536" y="1920" w="128" h="128" xo="128" yo="128" id="10038239" name="inst_8317BF89" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1408" y="2016" w="128" h="128" xo="128" yo="128" id="10038244" name="inst_7CC42E40" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1536" y="2016" w="128" h="128" xo="128" yo="128" id="10038245" name="inst_4476A25B" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_aquapolis" x="1664" y="1792" w="128" h="128" xo="128" yo="256" id="10038254" name="inst_4D7E6198" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1792" y="1792" w="128" h="128" xo="0" yo="384" id="10038256" name="inst_3D5E97DB" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1920" y="1792" w="128" h="128" xo="0" yo="384" id="10038257" name="inst_F5711E4C" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1920" y="1920" w="128" h="128" xo="0" yo="384" id="10038258" name="inst_73A176DB" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1792" y="1920" w="128" h="128" xo="0" yo="384" id="10038259" name="inst_83A4B424" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1664" y="1920" w="128" h="128" xo="0" yo="384" id="10038260" name="inst_1C2E7186" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="2176" w="128" h="128" xo="128" yo="128" id="10038454" name="inst_FD2B916D" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="2176" w="128" h="128" xo="128" yo="128" id="10038455" name="inst_724F796B" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="2048" w="128" h="128" xo="128" yo="128" id="10038456" name="inst_6BABDA23" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1536" y="2176" w="128" h="128" xo="128" yo="128" id="10038457" name="inst_92D24C64" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1408" y="2176" w="128" h="128" xo="128" yo="128" id="10038458" name="inst_50B25B1F" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1408" y="2048" w="128" h="128" xo="128" yo="128" id="10038459" name="inst_70C92983" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1280" y="2176" w="128" h="128" xo="128" yo="128" id="10038460" name="inst_DA8A79D6" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="2048" w="128" h="128" xo="0" yo="384" id="10038462" name="inst_63079364" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="2048" w="128" h="128" xo="0" yo="384" id="10038463" name="inst_9B4A9B7A" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="2048" w="128" h="128" xo="0" yo="384" id="10038468" name="inst_543CB19E" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="2048" w="128" h="128" xo="0" yo="384" id="10038469" name="inst_030F3617" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1920" w="128" h="128" xo="0" yo="384" id="10038470" name="inst_A43E6CEC" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="1920" w="128" h="128" xo="0" yo="384" id="10038471" name="inst_917A18E6" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="1920" w="128" h="128" xo="0" yo="384" id="10038472" name="inst_318197F7" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="2048" w="128" h="128" xo="0" yo="384" id="10038473" name="inst_38837529" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="512" y="1408" w="256" h="256" xo="384" yo="256" id="10037760" name="inst_22626014" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="0" y="1280" w="128" h="128" xo="0" yo="384" id="10038055" name="inst_FED7E6FF" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="128" y="1280" w="128" h="128" xo="0" yo="384" id="10038056" name="inst_8BB60A27" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -316,6 +545,20 @@
     <tile bgName="ts_aquapolis" x="384" y="1280" w="128" h="128" xo="0" yo="384" id="10038058" name="inst_B45C91B9" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1536" y="1024" w="128" h="128" xo="0" yo="384" id="10038172" name="inst_15D609E4" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1664" y="1408" w="128" h="128" xo="128" yo="128" id="10038194" name="inst_B3F62477" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1920" w="64" h="64" xo="192" yo="256" id="10038309" name="inst_4878AA6E" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1856" w="64" h="64" xo="192" yo="192" id="10038310" name="inst_6D3AECD4" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="1856" w="64" h="64" xo="256" yo="192" id="10038311" name="inst_BBF0FDC8" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="1920" w="64" h="64" xo="256" yo="256" id="10038312" name="inst_C7DB20AF" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1792" w="64" h="64" xo="0" yo="192" id="10038314" name="inst_D4B48FAD" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1728" w="64" h="64" xo="0" yo="96" id="10038320" name="inst_91ADEA4E" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1664" w="64" h="64" xo="0" yo="192" id="10038323" name="inst_36EF254D" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1536" w="256" h="64" xo="0" yo="0" id="10038331" name="inst_06DA5557" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="1536" w="64" h="64" xo="256" yo="0" id="10038332" name="inst_051BF6D2" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1600" w="64" h="64" xo="0" yo="224" id="10038343" name="inst_606F6BFF" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1920" w="128" h="128" xo="768" yo="512" id="10038386" name="inst_74DF74B6" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="2304" w="256" h="256" xo="384" yo="256" id="10038512" name="inst_73CD583B" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="1408" w="256" h="256" xo="384" yo="256" id="10038513" name="inst_64706A7D" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="1536" w="128" h="128" xo="640" yo="384" id="10038514" name="inst_DA9F09E3" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="640" y="1536" w="256" h="256" xo="768" yo="256" id="10037761" name="inst_28ACE40F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="896" y="1280" w="128" h="128" xo="0" yo="384" id="10037968" name="inst_B4949CE5" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1024" y="1280" w="128" h="128" xo="0" yo="384" id="10037969" name="inst_FB3DF5DE" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -328,6 +571,61 @@
     <tile bgName="ts_aquapolis" x="1792" y="1152" w="128" h="128" xo="0" yo="384" id="10038151" name="inst_F3264BAC" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="512" y="1280" w="128" h="128" xo="0" yo="384" id="10038152" name="inst_F0DA241F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="640" y="1280" w="128" h="128" xo="0" yo="384" id="10038153" name="inst_BC85A66D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1728" w="128" h="256" xo="896" yo="0" id="10038384" name="inst_77F30BDD" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="2176" w="256" h="256" xo="768" yo="256" id="10038478" name="inst_5A0C12A6" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="2304" w="64" h="64" xo="640" yo="384" id="10038480" name="inst_2D36BFF9" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2624" y="1024" w="256" h="256" xo="384" yo="256" id="10038481" name="inst_4BB641E3" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2880" y="1152" w="128" h="128" xo="0" yo="0" id="10038482" name="inst_5DB51BFA" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="768" w="128" h="128" xo="128" yo="256" id="10038483" name="inst_4A386C42" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="768" w="128" h="128" xo="128" yo="256" id="10038484" name="inst_1689707B" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="768" w="128" h="128" xo="128" yo="256" id="10038485" name="inst_85309DDE" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="768" w="128" h="128" xo="128" yo="256" id="10038486" name="inst_7327E3FB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="768" w="128" h="128" xo="256" yo="256" id="10038487" name="inst_FF76D253" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="640" w="256" h="128" xo="128" yo="128" id="10038488" name="inst_C317E7B8" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="0" w="256" h="128" xo="128" yo="128" id="10038489" name="inst_135DACB0" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="128" w="256" h="128" xo="128" yo="128" id="10038490" name="inst_AC937D1A" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="256" w="256" h="128" xo="128" yo="128" id="10038491" name="inst_47C47BB3" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="384" w="256" h="128" xo="128" yo="128" id="10038492" name="inst_6C26067D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="512" w="256" h="128" xo="128" yo="128" id="10038493" name="inst_27D92776" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="128" w="128" h="128" xo="128" yo="128" id="10038494" name="inst_93815410" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="128" w="128" h="128" xo="128" yo="128" id="10038495" name="inst_485BDB36" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="128" w="128" h="128" xo="128" yo="128" id="10038496" name="inst_916D1F5F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="256" w="128" h="128" xo="128" yo="128" id="10038497" name="inst_06DC7BFA" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="384" w="128" h="128" xo="128" yo="128" id="10038498" name="inst_CF096AF4" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="512" w="128" h="128" xo="128" yo="128" id="10038499" name="inst_FFE46FD2" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="640" w="128" h="128" xo="128" yo="128" id="10038500" name="inst_88499566" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="640" w="128" h="128" xo="128" yo="128" id="10038501" name="inst_9109099E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="640" w="128" h="128" xo="128" yo="128" id="10038502" name="inst_25586A27" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="512" w="128" h="128" xo="128" yo="128" id="10038503" name="inst_84E73930" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="512" w="128" h="128" xo="128" yo="128" id="10038504" name="inst_5D9AA6A3" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="384" w="128" h="128" xo="128" yo="128" id="10038505" name="inst_1B46FCBB" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="384" w="128" h="128" xo="128" yo="128" id="10038506" name="inst_A0785886" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2688" y="256" w="128" h="128" xo="128" yo="128" id="10038507" name="inst_A792B0C7" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="256" w="128" h="128" xo="128" yo="128" id="10038508" name="inst_32893233" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="1856" w="128" h="128" xo="128" yo="128" id="10038545" name="inst_5708AA9B" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="1856" w="128" h="128" xo="128" yo="128" id="10038546" name="inst_67DCA9F4" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="1984" w="128" h="128" xo="128" yo="128" id="10038547" name="inst_57F76C8A" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="1984" w="128" h="128" xo="128" yo="128" id="10038548" name="inst_B15C2020" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="2112" w="128" h="64" xo="128" yo="128" id="10038549" name="inst_2F782F39" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="2112" w="128" h="64" xo="128" yo="128" id="10038550" name="inst_550E7332" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="1792" w="64" h="320" xo="320" yo="0" id="10038551" name="inst_4F8F73F4" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="2112" w="64" h="64" xo="320" yo="96" id="10038557" name="inst_4DA8E767" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3232" y="2208" w="32" h="32" xo="352" yo="352" id="10038558" name="inst_97D3A708" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3232" y="2176" w="32" h="32" xo="352" yo="320" id="10038559" name="inst_94D6FE28" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="2208" w="32" h="32" xo="192" yo="352" id="10038564" name="inst_89EDD791" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="2176" w="32" h="32" xo="272" yo="240" id="10038567" name="inst_F7E50340" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="2368" w="128" h="128" xo="128" yo="0" id="10038568" name="inst_C3A63A76" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3328" y="2368" w="64" h="128" xo="128" yo="0" id="10038570" name="inst_0892C78D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="2432" w="128" h="128" xo="128" yo="128" id="10038576" name="inst_42F34687" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="2432" w="128" h="128" xo="128" yo="128" id="10038577" name="inst_43433126" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3200" y="2496" w="128" h="128" xo="128" yo="128" id="10038578" name="inst_22A81298" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3328" y="2496" w="128" h="128" xo="128" yo="128" id="10038579" name="inst_57B5DA84" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="2368" w="128" h="128" xo="128" yo="128" id="10038580" name="inst_D2313A4F" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="2560" w="128" h="128" xo="128" yo="128" id="10038581" name="inst_07372489" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="2560" w="128" h="128" xo="128" yo="128" id="10038582" name="inst_1FC79B76" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="2560" w="128" h="128" xo="0" yo="128" id="10038583" name="inst_AB0FF7E8" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="1600" w="128" h="64" xo="0" yo="320" id="10038586" name="inst_CB43A8A3" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="1536" w="128" h="64" xo="0" yo="0" id="10038587" name="inst_D5AAFC33" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="0" y="1408" w="128" h="128" xo="128" yo="0" id="10037749" name="inst_C3C395AA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="128" y="1408" w="128" h="128" xo="128" yo="0" id="10037750" name="inst_28FBE3E9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="256" y="1408" w="128" h="128" xo="128" yo="0" id="10037751" name="inst_CAD56835" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -508,18 +806,137 @@
     <tile bgName="ts_aquapolis" x="1536" y="1536" w="128" h="128" xo="384" yo="512" id="10038190" name="inst_412C2FD5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1536" y="1472" w="128" h="64" xo="0" yo="192" id="10038193" name="inst_DFD90A6F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1792" y="1408" w="128" h="128" xo="128" yo="128" id="10038195" name="inst_88E59856" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_aquapolis" x="1920" y="1280" w="128" h="128" xo="0" yo="512" id="10038196" name="inst_E43214FD" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1920" y="1408" w="128" h="128" xo="256" yo="128" id="10038197" name="inst_6E743765" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1408" y="1664" w="128" h="128" xo="0" yo="640" id="10038199" name="inst_0E261165" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1280" y="1664" w="128" h="128" xo="256" yo="640" id="10038201" name="inst_8F6D4D4D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1280" y="1792" w="128" h="96" xo="128" yo="160" id="10038203" name="inst_EC38FBC8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1792" y="1536" w="128" h="128" xo="128" yo="256" id="10038249" name="inst_B7848A28" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1920" y="1536" w="128" h="128" xo="256" yo="256" id="10038250" name="inst_8362036A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_aquapolis" x="1984" y="1920" w="128" h="128" xo="0" yo="256" id="10038261" name="inst_C606DE6A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1984" y="1792" w="128" h="128" xo="0" yo="0" id="10038262" name="inst_6CA495C1" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1664" y="2016" w="128" h="128" xo="256" yo="0" id="10038264" name="inst_8DF6599D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_aquapolis" x="1664" y="2144" w="128" h="128" xo="256" yo="256" id="10038267" name="inst_CD097A1E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_aquapolis" x="1536" y="2144" w="128" h="128" xo="128" yo="256" id="10038268" name="inst_8E76F947" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="2048" w="128" h="256" xo="896" yo="0" id="10038271" name="inst_BBDEB417" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="2048" w="128" h="128" xo="640" yo="640" id="10038278" name="inst_820FEF27" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="2048" w="128" h="128" xo="768" yo="640" id="10038279" name="inst_088C0DAB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="1792" w="128" h="128" xo="256" yo="256" id="10038282" name="inst_0FFE6D4E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="1920" w="64" h="128" xo="0" yo="256" id="10038283" name="inst_81A12EC4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="1280" w="128" h="128" xo="384" yo="256" id="10038285" name="inst_CE6EB9C7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="1280" w="128" h="128" xo="256" yo="0" id="10038286" name="inst_0EFD260C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1280" w="128" h="128" xo="512" yo="256" id="10038287" name="inst_0CEBB5F3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="1408" w="128" h="128" xo="512" yo="384" id="10038288" name="inst_7FF1F5B9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="1408" w="128" h="128" xo="0" yo="0" id="10038289" name="inst_25C35CB9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="1792" w="128" h="128" xo="384" yo="640" id="10038292" name="inst_3F973FA9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1792" w="128" h="128" xo="512" yo="640" id="10038293" name="inst_07F24E6A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1472" w="128" h="256" xo="1152" yo="256" id="10038297" name="inst_35DFA1A1" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1472" w="128" h="256" xo="1024" yo="256" id="10038298" name="inst_D66DCA12" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="2048" w="128" h="128" xo="256" yo="640" id="10038360" name="inst_D3896B17" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="2176" w="64" h="128" xo="128" yo="0" id="10038362" name="inst_36865EAA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="2176" w="128" h="64" xo="0" yo="64" id="10038365" name="inst_1B0C60D6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="2240" w="128" h="64" xo="64" yo="192" id="10038367" name="inst_14304BAC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="2176" w="128" h="128" xo="128" yo="128" id="10038379" name="inst_F9F2B5F5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="2176" w="128" h="128" xo="128" yo="128" id="10038380" name="inst_41A88F11" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="1984" w="64" h="64" xo="64" yo="320" id="10038381" name="inst_4652930D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="1920" w="64" h="64" xo="64" yo="256" id="10038382" name="inst_95A56A58" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="1920" w="128" h="128" xo="640" yo="512" id="10038383" name="inst_ADB2018E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="1408" w="128" h="128" xo="256" yo="0" id="10038387" name="inst_FB20F0F8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1024" w="128" h="128" xo="256" yo="0" id="10038388" name="inst_DB5494F7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1152" w="128" h="128" xo="256" yo="256" id="10038389" name="inst_2DFDE049" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1152" w="128" h="128" xo="128" yo="256" id="10038390" name="inst_5E1E69EA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1152" w="128" h="128" xo="0" yo="256" id="10038391" name="inst_E1C87EE7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="1024" w="128" h="128" xo="256" yo="640" id="10038394" name="inst_8AD36D67" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1024" w="128" h="128" xo="0" yo="640" id="10038397" name="inst_64327342" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="1024" w="128" h="128" xo="256" yo="256" id="10038398" name="inst_FA328933" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="768" w="128" h="128" xo="128" yo="256" id="10038402" name="inst_DD9EA782" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="768" w="128" h="128" xo="128" yo="256" id="10038403" name="inst_D5AA07AC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="768" w="128" h="128" xo="128" yo="256" id="10038404" name="inst_5E93DDE9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="768" w="128" h="128" xo="128" yo="256" id="10038406" name="inst_6E7AED70" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="896" w="128" h="128" xo="256" yo="256" id="10038407" name="inst_C844147F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="896" w="128" h="128" xo="128" yo="128" id="10038408" name="inst_341529AA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="768" w="128" h="128" xo="128" yo="128" id="10038409" name="inst_CE8CEA88" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="768" w="128" h="128" xo="128" yo="128" id="10038410" name="inst_F07E6F9D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="640" w="128" h="128" xo="128" yo="128" id="10038411" name="inst_C6E106F6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="640" w="128" h="128" xo="128" yo="128" id="10038412" name="inst_F08DD6C9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="640" w="128" h="128" xo="128" yo="128" id="10038413" name="inst_B3138F41" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="640" w="128" h="128" xo="128" yo="128" id="10038414" name="inst_39EFB81D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="640" w="128" h="128" xo="128" yo="128" id="10038415" name="inst_7B278E20" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="640" w="128" h="128" xo="128" yo="128" id="10038416" name="inst_16549AB4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1536" y="512" w="128" h="128" xo="128" yo="128" id="10038417" name="inst_A84777DB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1536" y="256" w="128" h="128" xo="128" yo="128" id="10038418" name="inst_1829019B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1536" y="128" w="128" h="128" xo="128" yo="128" id="10038419" name="inst_6B35C0BD" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="128" w="128" h="128" xo="128" yo="128" id="10038420" name="inst_2FE58DAF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="256" w="128" h="128" xo="128" yo="128" id="10038421" name="inst_1A9B9876" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="384" w="128" h="128" xo="128" yo="128" id="10038422" name="inst_9B99C736" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1536" y="384" w="128" h="128" xo="128" yo="128" id="10038423" name="inst_E1D5EE70" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="384" w="128" h="128" xo="128" yo="128" id="10038424" name="inst_406EC794" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1664" y="512" w="128" h="128" xo="128" yo="128" id="10038425" name="inst_C838412C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="512" w="128" h="128" xo="128" yo="128" id="10038426" name="inst_B80CE677" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="512" w="128" h="128" xo="128" yo="128" id="10038427" name="inst_3A22C174" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="384" w="128" h="128" xo="128" yo="128" id="10038428" name="inst_9EAE39A9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="384" w="128" h="128" xo="128" yo="128" id="10038429" name="inst_5D1F2C66" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="256" w="128" h="128" xo="128" yo="128" id="10038430" name="inst_E872B68E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1792" y="128" w="128" h="128" xo="128" yo="128" id="10038431" name="inst_F4B639EA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="128" w="128" h="128" xo="128" yo="128" id="10038432" name="inst_B0BFA0B9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="256" w="128" h="128" xo="128" yo="128" id="10038433" name="inst_89B4B96F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1920" y="256" w="128" h="128" xo="128" yo="128" id="10038434" name="inst_5E43397F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="128" w="128" h="128" xo="128" yo="128" id="10038435" name="inst_A675127D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="128" w="128" h="128" xo="128" yo="128" id="10038436" name="inst_626EB646" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="256" w="128" h="128" xo="128" yo="128" id="10038437" name="inst_BC3B4272" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="384" w="128" h="128" xo="128" yo="128" id="10038438" name="inst_8016C6EA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2176" y="512" w="128" h="128" xo="128" yo="128" id="10038439" name="inst_8CCA33A5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="512" w="128" h="128" xo="128" yo="128" id="10038440" name="inst_B811F8D0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2048" y="384" w="128" h="128" xo="128" yo="128" id="10038441" name="inst_EA9EE943" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="384" w="128" h="128" xo="128" yo="128" id="10038442" name="inst_C9977085" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="384" w="128" h="128" xo="128" yo="128" id="10038443" name="inst_649298BC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="384" w="128" h="128" xo="128" yo="128" id="10038444" name="inst_EFE183E2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="512" w="128" h="128" xo="128" yo="128" id="10038445" name="inst_3D6939D3" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="512" w="128" h="128" xo="128" yo="128" id="10038446" name="inst_C05BB4BA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="512" w="128" h="128" xo="128" yo="128" id="10038447" name="inst_90F0056E" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="256" w="128" h="128" xo="128" yo="128" id="10038448" name="inst_7698C5E6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2304" y="128" w="128" h="128" xo="128" yo="128" id="10038449" name="inst_0F18225D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="128" w="128" h="128" xo="128" yo="128" id="10038450" name="inst_87CC2263" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="128" w="128" h="128" xo="128" yo="128" id="10038451" name="inst_8FA1B582" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2560" y="256" w="128" h="128" xo="128" yo="128" id="10038452" name="inst_05AF8B6B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2432" y="256" w="128" h="128" xo="128" yo="128" id="10038453" name="inst_C8C108EE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="2048" w="128" h="256" xo="256" yo="0" id="10038475" name="inst_150BB052" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="2048" w="256" h="256" xo="384" yo="256" id="10038476" name="inst_DE69AA0C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2752" y="2176" w="64" h="64" xo="640" yo="384" id="10038479" name="inst_0B98C139" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="1856" w="128" h="128" xo="0" yo="0" id="10038509" name="inst_EF3463A6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="1984" w="128" h="128" xo="0" yo="128" id="10038510" name="inst_698C3912" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="2176" w="128" h="128" xo="0" yo="256" id="10038511" name="inst_74D0EBB2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="2304" w="256" h="128" xo="128" yo="128" id="10038515" name="inst_852F51AF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2240" y="2432" w="256" h="128" xo="128" yo="128" id="10038516" name="inst_09A77776" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="2304" w="128" h="128" xo="128" yo="128" id="10038525" name="inst_C914745A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="2304" w="128" h="128" xo="128" yo="128" id="10038526" name="inst_BF27A51A" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1856" y="2304" w="128" h="128" xo="128" yo="128" id="10038527" name="inst_DFB2791F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1728" y="2304" w="128" h="128" xo="128" yo="128" id="10038528" name="inst_3ACBA9A4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1600" y="2304" w="128" h="128" xo="128" yo="128" id="10038529" name="inst_8D4EE61F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1472" y="2304" w="128" h="128" xo="128" yo="128" id="10038530" name="inst_14446F4C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1344" y="2304" w="128" h="128" xo="128" yo="128" id="10038531" name="inst_B0DE1AD0" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1984" y="2432" w="128" h="128" xo="128" yo="128" id="10038532" name="inst_B58EFD82" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2112" y="2432" w="128" h="128" xo="128" yo="128" id="10038533" name="inst_F44CA4B1" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1856" y="2432" w="128" h="128" xo="128" yo="128" id="10038534" name="inst_C3145A17" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="1728" y="2432" w="128" h="128" xo="128" yo="128" id="10038535" name="inst_27518C8C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="2432" w="128" h="128" xo="0" yo="0" id="10038536" name="inst_138D9D85" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2816" y="2112" w="128" h="64" xo="0" yo="128" id="10038540" name="inst_9DFB6AFF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="2304" w="256" h="256" xo="256" yo="768" id="10038541" name="inst_F06C53AB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="2176" w="256" h="128" xo="640" yo="512" id="10038542" name="inst_93E46EFF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2944" y="1728" w="256" h="256" xo="256" yo="768" id="10038544" name="inst_AEBAECCC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="2240" w="128" h="128" xo="0" yo="128" id="10038571" name="inst_84DD3627" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="2112" w="128" h="128" xo="0" yo="128" id="10038572" name="inst_4EF1863B" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="1984" w="128" h="128" xo="0" yo="128" id="10038573" name="inst_EEAE84EC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="1856" w="128" h="128" xo="0" yo="128" id="10038574" name="inst_D188E8CE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3392" y="1792" w="128" h="64" xo="0" yo="0" id="10038575" name="inst_7C6F12DC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3072" y="1408" w="256" h="256" xo="256" yo="768" id="10038588" name="inst_6FA78EFB" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2880" y="1280" w="128" h="128" xo="0" yo="256" id="10038589" name="inst_726A7168" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3008" y="1280" w="128" h="128" xo="256" yo="256" id="10038591" name="inst_70E3FEAE" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="3008" y="1152" w="128" h="128" xo="256" yo="0" id="10038592" name="inst_F2FCC397" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2368" y="1728" w="128" h="256" xo="1024" yo="0" id="10038295" name="inst_8776ACA0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1536" w="64" h="64" xo="320" yo="0" id="10038333" name="inst_46452F6F" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1664" w="64" h="64" xo="320" yo="64" id="10038335" name="inst_DFA81538" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1600" w="64" h="64" xo="320" yo="224" id="10038342" name="inst_705FDEEC" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1728" w="64" h="64" xo="320" yo="96" id="10038350" name="inst_AECD4BAB" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1792" w="64" h="64" xo="320" yo="160" id="10038354" name="inst_7C9B0F82" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_aquapolis" x="2496" y="1856" w="64" h="128" xo="320" yo="192" id="10038356" name="inst_0BC54D77" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

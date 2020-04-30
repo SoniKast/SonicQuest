@@ -913,6 +913,7 @@
           <sprites name="Gimmicks">
             <sprite>sprites\spr_wwz_cork</sprite>
             <sprite>sprites\spr_wwz_platform</sprite>
+            <sprite>sprites\spr_wwz_pole_v</sprite>
           </sprites>
         </sprites>
         <sprites name="BZ">
@@ -960,6 +961,7 @@
         <sprite>sprites\sprPresentationSonicOG</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
         <sprite>sprites\sprPresentationTitle</sprite>
+        <sprite>sprites\spr_retrosonicquest_title</sprite>
         <sprite>sprites\sprPresentationSubtitle</sprite>
         <sprite>sprites\spr_title_press_start</sprite>
         <sprite>sprites\spr_level_select</sprite>
@@ -2462,6 +2464,7 @@
         <objects name="Gimmicks">
           <object>objects\obj_wwz_platform</object>
           <object>objects\obj_wwz_cork</object>
+          <object>objects\obj_wwz_pole_v</object>
         </objects>
       </objects>
       <objects name="Hidden Palace Zone">

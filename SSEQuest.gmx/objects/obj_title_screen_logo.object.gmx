@@ -50,6 +50,7 @@
     title_menu_string    = "START";
     title_menu_character = 1;
     sound_test_option    = 0;
+    retro_sonic_quest    = 0;
     alarm[0]             = 15;
     alarm[2]             = 1000;
 
@@ -250,7 +251,14 @@ game_snapshot = background_create_from_surface(application_surface, 0, 0, global
           <argument>
             <kind>1</kind>
             <string>/// Change menu option.
-             
+
+// No one will find this LMAO        
+if(keyboard_check(ord("X")) &amp;&amp; keyboard_check(ord("G")) &amp;&amp; (retro_sonic_quest == 0)) {
+retro_sonic_quest = 1;
+aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0);
+instance_create(0, 0, obj_white);
+}  
+    
 // Change options.
 if(menu_mode = "TITLE")
 {
@@ -1487,7 +1495,8 @@ if(title_menu_active == 1)
           <argument>
             <kind>1</kind>
             <string>/// It's a draw event what do you expect
-
+if(retro_sonic_quest = 0)
+{
     // --- Draw Title ----------------------------------------
     draw_sprite(sprPresentationTitle, 0, 160, 115);
     
@@ -1504,7 +1513,11 @@ if(title_menu_active == 1)
     // --- Draw Subtitle / Title band ------------------------
     draw_sprite(sprPresentationTitleBand, 0, 160, 150);
 //  draw_sprite(sprPresentationSubtitle, 0, 160, 185);
-       
+}
+else if(retro_sonic_quest = 1)
+{
+    draw_sprite(spr_retrosonicquest_title, 0, x, y);
+}       
     // Draw menu.
     if(menu_mode = "TITLE")
     {

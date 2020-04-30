@@ -350,7 +350,7 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
       }
         if(instance_exists(obj_player))
         {
-          if(obj_player.invincibility == 2)
+          if(obj_player.invincibility == 2 &amp;&amp; obj_player.CharacterState = CharacterNormal)
           {
           draw_set_color(c_blue);
           draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+180), floor(view_xview[view_current])+(obj_player.invincibility_timer/200*(64)), floor(view_yview[view_current]+195), false)
