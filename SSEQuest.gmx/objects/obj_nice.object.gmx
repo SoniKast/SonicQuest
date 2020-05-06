@@ -3,7 +3,7 @@
   <spriteName>spr_nice</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-25</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -49,21 +49,21 @@
           <argument>
             <kind>1</kind>
             <string>
-    if(!instance_exists(obj_challenge2) &amp;&amp; global.player_rings = 20)
+    if(!instance_exists(obj_challenge2) &amp;&amp; global.ss_rings = 20)
     {
     instance_create(0,1216,obj_challenge2)
     global.nice_created = false;
     instance_destroy();
     }
 
-    if(!instance_exists(obj_challenge3) &amp;&amp; global.player_rings = 50)
+    if(!instance_exists(obj_challenge3) &amp;&amp; global.ss_rings = 50)
     {
     instance_create(0,2432,obj_challenge3);
     global.nice_created = false;
     instance_destroy();
     }
 
-    if(global.player_rings = 100)
+    if(global.ss_rings = 100)
     {
     global.nice_created = false;    
     instance_destroy();
@@ -91,7 +91,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_nice, 0, view_xview[view_current]+114, view_yview[view_current]+89);
+            <string>d3d_set_fog(false, c_white, 100, 5000);
+d3d_set_projection_ortho(0,0,320,224,0);
+d3d_set_hidden(false);
+draw_set_color(c_white);
+draw_sprite(spr_nice, 0, 114, 89);
+draw_set_alpha(1);
+d3d_set_fog(true, c_white, 100, 5000);   
+d3d_set_hidden(true);
 </string>
           </argument>
         </arguments>

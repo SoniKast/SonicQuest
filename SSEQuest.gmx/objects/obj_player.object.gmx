@@ -1567,6 +1567,7 @@
               player_handle_float_v();
               player_handle_glider();
               player_handle_pole_grab();
+              player_handle_switches();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1610,6 +1611,7 @@
               player_handle_float_v();
               player_handle_glider();
               player_handle_pole_grab();
+              player_handle_switches();
               
            // Abort.
               if(x_speed == 0)
@@ -1676,6 +1678,7 @@
                            player_handle_float_v();
                            player_handle_glider();
                            player_handle_pole_grab();
+                           player_handle_switches();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1784,6 +1787,7 @@
                               player_handle_float_v();
                               player_handle_glider();
                               player_handle_pole_grab();
+                              player_handle_switches();
                               
                            // Abort:
                               if(y_speed == 0)

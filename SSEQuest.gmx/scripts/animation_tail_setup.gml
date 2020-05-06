@@ -23,7 +23,6 @@
                 break;
            }  
            case "balance":
-           case "balance alt":
            {
                 animation_tail_apply(spr_tail_part_1, 0.14, animation_direction*-10, -4, 0, animation_direction);
                 break;
@@ -35,6 +34,7 @@
                 break;
            }  
            case "roll":
+           case "tube":
            {
                 animation_tail_apply(spr_tail_part_3, 0.25, 0, 0, tails_tail_angle, tails_tail_direction);                
                 break;

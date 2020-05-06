@@ -44,6 +44,7 @@
     instance_activate_object(obj_crawl_ace_break);
     instance_activate_object(obj_crawl_ace_bumper);
     instance_activate_object(obj_crawl_ace_bumper_break);
+    instance_activate_object(obj_ggz_door);
     instance_activate_region(view_xview[0] - global.screen_width/2, view_yview - global.screen_height/2, view_wview[0] + global.screen_width, view_hview[0] + global.screen_height, true);
     
  // Deactivate instances that need to be activated in the middle region:

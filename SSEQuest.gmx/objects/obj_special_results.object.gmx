@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-999995</depth>
+  <depth>-25</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,7 +28,7 @@
             <string>/// Variables.
 
  // Bonuses:
-    bonus_rings = (global.player_rings * 100);
+    bonus_rings = (global.ss_rings * 100);
     bonus_total = (0);
 
     seconds = floor(global.game_time/1000);
@@ -557,65 +557,74 @@
             <kind>1</kind>
             <string>/// Draw Results.
 
+ // 3D... stuff
+    d3d_set_fog(false, c_white, 100, 5000);
+    d3d_set_projection_ortho(0,0,320,224,0);
+    d3d_set_hidden(false);
+    draw_set_color(c_white);
+ 
  // White Screen
-    draw_sprite_ext(spr_dot,-1,view_xview,view_yview,320,224,0,c_white,1)
+    draw_sprite_ext(spr_dot,-1, 0, 0,320,224,0,c_white,1)
 
  // "Character" Got:
-    draw_sprite(spr_ss_results_name, obj_level_controller.player_index-1, view_xview+32+result_gfx_position[0], view_yview+24);
+    draw_sprite(spr_ss_results_name, global.player_id-1, 32+result_gfx_position[0], 24);
 
  // Through:
     if(can_be = false)
     {
-    draw_sprite(spr_results_through, 1, view_xview+60+result_gfx_position[1], view_yview+48);
+    draw_sprite(spr_results_through, 1, 60+result_gfx_position[1], 48);
     }
     if(can_be = false &amp;&amp; global.player_emeralds = 7)
     {
-    draw_sprite(spr_results_through, 2, view_xview+60+result_gfx_position[1], view_yview+48);
+    draw_sprite(spr_results_through, 2, 60+result_gfx_position[1], 48);
     }
 
  // Display emeralds
     if(global.used_emerald_1 == true)
     {
-    draw_sprite(spr_chaos_emerald, 0, view_xview+112, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 0, 112, 74);
     }
     if(global.used_emerald_2 == true)
     {
-    draw_sprite(spr_chaos_emerald, 1, view_xview+126, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 1, 126, 74);
     }
     if(global.used_emerald_3 == true)
     {
-    draw_sprite(spr_chaos_emerald, 2, view_xview+138, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 2, 140, 74);
     }
     if(global.used_emerald_4 == true)
     {
-    draw_sprite(spr_chaos_emerald, 3, view_xview+150, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 3, 154, 74);
     }
     if(global.used_emerald_5 == true)
     {
-    draw_sprite(spr_chaos_emerald, 4, view_xview+162, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 4, 168, 74);
     }
     if(global.used_emerald_6 == true)
     {
-    draw_sprite(spr_chaos_emerald, 5, view_xview+174, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 5, 182, 74);
     }
     if(global.used_emerald_7 == true)
     {
-    draw_sprite(spr_chaos_emerald, 6, view_xview+186, view_yview+74);
+    draw_sprite(spr_chaos_emerald, 6, 196, 74);
     }
     
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 1, view_xview+63+result_gfx_position[2], view_yview+113);
+    draw_sprite(spr_results_bonuses, 1, 63+result_gfx_position[2], 113);
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(view_xview+246+result_gfx_position[2], view_yview+116,''+ string(bonus_time),  0);
-    draw_number_zero(view_xview+246+result_gfx_position[3], view_yview+134,''+ string(bonus_rings), 0);
-    draw_number_zero(view_xview+246+result_gfx_position[4], view_yview+159,    string(bonus_total), 0);
+    draw_number_zero(246+result_gfx_position[2], 116,''+ string(bonus_time),  0);
+    draw_number_zero(246+result_gfx_position[3], 134,''+ string(bonus_rings), 0);
+    draw_number_zero(246+result_gfx_position[4], 159,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
+    draw_set_alpha(1);
+    d3d_set_fog(true, c_white, 100, 5000);   
+    d3d_set_hidden(true);
 
 
 </string>

@@ -98,12 +98,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(menu_mode = "TITLE")
+            <string>if(menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_title) || menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_easteregg))
 {
     with(instance_create(0, 0, obj_fade_to_value))
     {
             value = global.first_zone;
-            global.player_id = CHAR_SONIC;
+            global.player_id = choose(CHAR_SONIC, CHAR_TAILS, CHAR_KNUCKLES);
             global.Mode = 1;
     }
 }
@@ -258,6 +258,13 @@ retro_sonic_quest = 1;
 aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0);
 instance_create(0, 0, obj_white);
 }  
+
+// Sonic Nexus theme
+if(audio_is_playing(jingle_title) &amp;&amp; (retro_sonic_quest == 1))
+{
+audio_stop_sound(jingle_title);
+aud_play_sound(jingle_easteregg, global.bgm_volume, 1, 0, 0);
+}
     
 // Change options.
 if(menu_mode = "TITLE")
@@ -429,7 +436,6 @@ if(menu_mode = "LEVEL SELECT")
     audio_stop_sound(jingle_title);
     aud_play_sound(music_options, global.bgm_volume, 1, 1, 0);                
     }
-    
 // Level selecting
 if(title_menu_active == 1)
     {

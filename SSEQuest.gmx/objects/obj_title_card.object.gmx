@@ -156,7 +156,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Move Title card.
- 
+
+if(global.special = 1)
+{
+    depth = -25;
+}
+
     if(title_delay &gt; 0)
     {
        title_delay -= 1;
@@ -271,30 +276,59 @@
             <kind>1</kind>
             <string>/// Draw elements.
 
-  draw_set_color(c_black);
-  draw_set_alpha(tc_backdrop_alpha);
-  draw_rectangle(view_xview[0], view_yview[0], view_xview[0]+view_wview[0], view_yview[0]+view_hview[0], false);
-  draw_set_alpha(1);
-  draw_set_color(c_white);
-  
-    if(global.BonusStage = false)
+    if(global.special == 0)
     {
- // Banner.
-    draw_sprite(spr_title_card_banner, -1, view_xview+banner_x, view_yview+banner_y);
-    
- // Stripe
-    draw_sprite(spr_title_card_stripe, -1, view_xview+stripe_x, view_yview+stripe_y);
+        draw_set_color(c_black);
+        draw_set_alpha(tc_backdrop_alpha);
+        draw_rectangle(view_xview[0], view_yview[0], view_xview[0]+view_wview[0], view_yview[0]+view_hview[0], false);
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+          
+        if(global.BonusStage = false)
+        {
+     // Banner.
+        draw_sprite(spr_title_card_banner, -1, view_xview+banner_x, view_yview+banner_y);
+        
+     // Stripe
+        draw_sprite(spr_title_card_stripe, -1, view_xview+stripe_x, view_yview+stripe_y);
+        }
+        
+     // Text.
+        draw_set_font(zone_font);
+        draw_set_color(c_white);
+        draw_text(view_xview+zone_x, view_yview+zone_y, zone_text);
+        draw_text(view_xview+zone_add_x, view_yview+zone_add_y, zone_add_text);
+        if(global.BonusStage = false)
+        {  
+        draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+zone_act_x, view_yview+zone_act_y);
+        }
+        draw_set_font(-1);
     }
+    else
+    
+    if(global.special == 1)
+    {    
+ // Setup the 3D stuff
+    d3d_set_fog(false, c_white, 100, 5000);
+    d3d_set_projection_ortho(0,0,320,224,0);
+    d3d_set_hidden(false);
+    draw_set_color(c_black);
+    draw_set_alpha(tc_backdrop_alpha);
+    draw_rectangle(0, 224, 320, 224, false);
+    draw_set_alpha(1);
+    draw_set_color(c_white);
+    
  // Text.
     draw_set_font(zone_font);
     draw_set_color(c_white);
-    draw_text(view_xview+zone_x, view_yview+zone_y, zone_text);
-    draw_text(view_xview+zone_add_x, view_yview+zone_add_y, zone_add_text);
-    if(global.BonusStage = false)
-    {  
-    draw_sprite(spr_title_card_act, global.zone_act-1, view_xview+zone_act_x, view_yview+zone_act_y);
+    draw_text(zone_x, zone_y, zone_text);
+    draw_text(zone_add_x, zone_add_y, zone_add_text);
+    draw_sprite(spr_title_card_act, global.zone_act-1, zone_act_x, zone_act_y);
+    draw_set_font(-1);    
+    draw_set_alpha(1);
+    d3d_set_fog(true, c_white, 100, 5000);   
+    d3d_set_hidden(true);
     }
-    draw_set_font(-1);
 </string>
           </argument>
         </arguments>

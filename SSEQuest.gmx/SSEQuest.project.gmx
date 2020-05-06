@@ -23,6 +23,8 @@
       <sound>sound\music_jungle_havoc1</sound>
       <sound>sound\music_jungle_havoc2</sound>
       <sound>sound\music_colossal_conduit1</sound>
+      <sound>sound\music_hidden_palace</sound>
+      <sound>sound\music_special_stage</sound>
       <sound>sound\music_boss</sound>
     </sounds>
     <sounds name="SFX">
@@ -99,6 +101,7 @@
         <sound>sound\jingle_disclaimer</sound>
         <sound>sound\jingle_drown</sound>
         <sound>sound\jingle_gameover</sound>
+        <sound>sound\jingle_easteregg</sound>
         <sound>sound\jingle_invincibility</sound>
         <sound>sound\jingle_sneakers</sound>
         <sound>sound\jingle_scoring</sound>
@@ -392,6 +395,7 @@
           <sprite>sprites\spr_test_bridge_log</sprite>
           <sprite>sprites\spr_test_bridge_6_logs</sprite>
           <sprite>sprites\spr_test_bridge_8_logs</sprite>
+          <sprite>sprites\spr_test_bridge_10_logs</sprite>
           <sprite>sprites\spr_test_bridge_12_logs</sprite>
         </sprites>
         <sprites name="Grabs">
@@ -566,23 +570,72 @@
         <sprite>sprites\spr_water_splash</sprite>
       </sprites>
       <sprites name="Special Stage">
+        <sprites name="Player">
+          <sprites name="Sonic">
+            <sprite>sprites\tex_sonic</sprite>
+            <sprite>sprites\tex_sonic_curl</sprite>
+            <sprite>sprites\msk_player</sprite>
+          </sprites>
+          <sprites name="Tails">
+            <sprite>sprites\tex_tails</sprite>
+            <sprite>sprites\tex_tails_curl</sprite>
+          </sprites>
+          <sprites name="Knuckles">
+            <sprite>sprites\tex_knuckles</sprite>
+            <sprite>sprites\tex_knuckles_curl</sprite>
+          </sprites>
+          <sprite>sprites\spr_sonic_specialstage</sprite>
+        </sprites>
+        <sprites name="NPCs">
+          <sprite>sprites\tex_ring</sprite>
+          <sprite>sprites\tex_ring_sparkle</sprite>
+          <sprite>sprites\spr_bomb</sprite>
+        </sprites>
+        <sprites name="Textures">
+          <sprite>sprites\msk_ground</sprite>
+          <sprite>sprites\tex_wall_editor_l</sprite>
+          <sprite>sprites\tex_wall</sprite>
+          <sprites name="SS1">
+            <sprite>sprites\tex_ground</sprite>
+          </sprites>
+          <sprites name="SS2">
+            <sprite>sprites\tex_ground2</sprite>
+          </sprites>
+          <sprites name="SS3">
+            <sprite>sprites\tex_ground3</sprite>
+          </sprites>
+          <sprites name="SS4">
+            <sprite>sprites\tex_ground4</sprite>
+          </sprites>
+          <sprites name="SS5">
+            <sprite>sprites\tex_ground5</sprite>
+          </sprites>
+          <sprites name="SS6">
+            <sprite>sprites\tex_ground6</sprite>
+          </sprites>
+          <sprites name="SS7">
+            <sprite>sprites\tex_ground7</sprite>
+          </sprites>
+        </sprites>
+        <sprites name="HUD">
+          <sprite>sprites\tex_ring_hud</sprite>
+          <sprite>sprites\spr_nice</sprite>
+          <sprite>sprites\spr_line</sprite>
+        </sprites>
+        <sprites name="Emeralds">
+          <sprite>sprites\spr_chaos_emerald1</sprite>
+          <sprite>sprites\spr_chaos_emerald2</sprite>
+          <sprite>sprites\spr_chaos_emerald3</sprite>
+          <sprite>sprites\spr_chaos_emerald4</sprite>
+          <sprite>sprites\spr_chaos_emerald5</sprite>
+          <sprite>sprites\spr_chaos_emerald6</sprite>
+          <sprite>sprites\spr_chaos_emerald7</sprite>
+        </sprites>
         <sprite>sprites\spr_big_ring</sprite>
         <sprite>sprites\spr_big_ring_unavailable</sprite>
-        <sprite>sprites\spr_big_ring_unavailable_old</sprite>
         <sprite>sprites\spr_big_ring_disappear</sprite>
         <sprite>sprites\spr_tornado_sonic</sprite>
         <sprite>sprites\spr_tornado_tails</sprite>
-        <sprite>sprites\spr_bomb</sprite>
-        <sprite>sprites\spr_chaos_emerald1</sprite>
-        <sprite>sprites\spr_chaos_emerald2</sprite>
-        <sprite>sprites\spr_chaos_emerald3</sprite>
-        <sprite>sprites\spr_chaos_emerald4</sprite>
-        <sprite>sprites\spr_chaos_emerald5</sprite>
-        <sprite>sprites\spr_chaos_emerald6</sprite>
-        <sprite>sprites\spr_chaos_emerald7</sprite>
-        <sprite>sprites\spr_line</sprite>
-        <sprite>sprites\spr_sonic_specialstage</sprite>
-        <sprite>sprites\spr_nice</sprite>
       </sprites>
       <sprites name="Bonus Stage">
         <sprite>sprites\spr_slot_machine</sprite>
@@ -833,11 +886,15 @@
             <sprite>sprites\spr_ggz_moving_platform</sprite>
             <sprite>sprites\spr_ggz_glider</sprite>
             <sprite>sprites\spr_ggz_plat_start</sprite>
+            <sprite>sprites\spr_ggz_switch</sprite>
+            <sprite>sprites\spr_ggz_door</sprite>
+            <sprite>sprites\spr_ggz_door_stopper</sprite>
           </sprites>
           <sprites name="Decorations">
             <sprite>sprites\spr_ggz_flower1</sprite>
             <sprite>sprites\spr_ggz_flower2</sprite>
             <sprite>sprites\spr_ggz_fountain</sprite>
+            <sprite>sprites\spr_ggz_lamp</sprite>
           </sprites>
           <sprites name="Platforms">
             <sprite>sprites\spr_ggz_platform</sprite>
@@ -975,6 +1032,7 @@
         <sprites name="Text">
           <sprite>sprites\spr_continue_text</sprite>
         </sprites>
+        <sprite>sprites\spr_dataselect_continues</sprite>
       </sprites>
       <sprites name="Menu">
         <sprite>sprites\spr_header</sprite>
@@ -1007,6 +1065,7 @@
         <sprites name="Slot data">
           <sprite>sprites\spr_dataselect_characters</sprite>
           <sprite>sprites\spr_dataselect_emeralds</sprite>
+          <sprite>sprites\spr_dataselect_emerald</sprite>
           <sprite>sprites\spr_dataselect_emeralds_white</sprite>
         </sprites>
         <sprites name="Robotnik">
@@ -1159,11 +1218,18 @@
           </backgrounds>
         </backgrounds>
         <backgrounds name="Great Garden Zone">
-          <background>background\bg_ggz_clouds</background>
-          <background>background\bg_ggz_building1</background>
-          <background>background\bg_ggz_building2</background>
-          <background>background\bg_ggz_building</background>
-          <background>background\bg_ggz_grass</background>
+          <backgrounds name="Act 1">
+            <background>background\bg_ggz_clouds</background>
+            <background>background\bg_ggz_building1</background>
+            <background>background\bg_ggz_building2</background>
+            <background>background\bg_ggz_building</background>
+            <background>background\bg_ggz_grass</background>
+          </backgrounds>
+          <backgrounds name="Act 2">
+            <background>background\bg_ggz_clouds_act2</background>
+            <background>background\bg_ggz_grass_act2</background>
+            <background>background\bg_ggz_grass2_act2</background>
+          </backgrounds>
         </backgrounds>
         <backgrounds name="Pinball Panic Zone">
           <background>background\bg_ppz</background>
@@ -1209,6 +1275,7 @@
       </backgrounds>
       <backgrounds name="Special Stage">
         <backgrounds name="SS1">
+          <background>background\bg_ss1</background>
           <background>background\bg_ss1_floor</background>
         </backgrounds>
         <backgrounds name="SS2">
@@ -1216,15 +1283,19 @@
           <background>background\bg_ss2_floor</background>
         </backgrounds>
         <backgrounds name="SS3">
+          <background>background\bg_ss3</background>
           <background>background\bg_ssz3_floor</background>
         </backgrounds>
         <backgrounds name="SS4">
+          <background>background\bg_ss4</background>
           <background>background\bg_ssz4_floor</background>
         </backgrounds>
         <backgrounds name="SS5">
+          <background>background\bg_ss5</background>
           <background>background\bg_ssz5_floor</background>
         </backgrounds>
         <backgrounds name="SS6">
+          <background>background\bg_ss6</background>
           <background>background\bg_ssz6_floor</background>
         </backgrounds>
         <backgrounds name="SS7">
@@ -1299,6 +1370,7 @@
         <script>scripts\player_handle_tunnels.gml</script>
         <script>scripts\player_handle_platforms.gml</script>
         <script>scripts\player_handle_breakable_walls.gml</script>
+        <script>scripts\player_handle_switches.gml</script>
         <script>scripts\player_handle_casino.gml</script>
         <script>scripts\player_handle_bonus_slab.gml</script>
         <script>scripts\player_handle_float.gml</script>
@@ -1387,6 +1459,9 @@
         <script>scripts\scrRecordStep.gml</script>
         <script>scripts\scrRecordEnd.gml</script>
         <script>scripts\scrRecordKeyHold.gml</script>
+      </scripts>
+      <scripts name="Special Stage">
+        <script>scripts\d3d_draw_2d.gml</script>
       </scripts>
       <script>scripts\inview.gml</script>
       <script>scripts\string_hex.gml</script>
@@ -1699,6 +1774,7 @@
         <object>objects\par_fades</object>
         <object>objects\par_bonus_slab</object>
         <object>objects\par_hurt</object>
+        <object>objects\par_switches</object>
         <object>objects\par_casino_bumper</object>
         <object>objects\par_casino_flipper_l</object>
         <object>objects\par_casino_flipper_r</object>
@@ -1745,6 +1821,7 @@
             <object>objects\par_bridge</object>
             <object>objects\obj_example_bridge_6</object>
             <object>objects\obj_example_bridge_8</object>
+            <object>objects\obj_example_bridge_10</object>
             <object>objects\obj_example_bridge_12</object>
             <objects name="Don't use.">
               <object>objects\obj_bridge_node</object>
@@ -2186,43 +2263,70 @@
       </objects>
       <objects name="Special Stage">
         <objects name="Old">
-          <objects name="SS1">
-            <object>objects\obj_ce_1</object>
-            <object>objects\obj_challenge1</object>
-            <object>objects\obj_challenge2</object>
-            <object>objects\obj_challenge3</object>
-            <object>objects\obj_challenge4</object>
-            <object>objects\obj_nice</object>
-          </objects>
-          <objects name="SS2">
-            <object>objects\obj_ce_2</object>
-          </objects>
-          <objects name="SS3">
-            <object>objects\obj_ce_3</object>
-          </objects>
-          <objects name="SS4">
-            <object>objects\obj_ce_4</object>
-          </objects>
-          <objects name="SS5">
-            <object>objects\obj_ce_5</object>
-          </objects>
-          <objects name="SS6">
-            <object>objects\obj_ce_6</object>
-          </objects>
-          <objects name="SS7">
-            <object>objects\obj_ce_7</object>
-          </objects>
-          <object>objects\obj_camera_new</object>
           <object>objects\par_ss_player</object>
           <object>objects\obj_ring_new</object>
           <object>objects\obj_ss_sonic</object>
+        </objects>
+        <objects name="New">
+          <objects name="Camera &amp; Hud">
+            <object>objects\obj_hud_new</object>
+            <object>objects\obj_camera_new</object>
+          </objects>
+          <objects name="Player">
+            <object>objects\obj_ss_player</object>
+          </objects>
+          <objects name="NPCs">
+            <objects name="Chaos Emeralds">
+              <object>objects\obj_ce_1</object>
+              <object>objects\obj_ce_2</object>
+              <object>objects\obj_ce_3</object>
+              <object>objects\obj_ce_4</object>
+              <object>objects\obj_ce_5</object>
+              <object>objects\obj_ce_6</object>
+              <object>objects\obj_ce_7</object>
+            </objects>
+            <object>objects\obj_ss_ring</object>
+            <object>objects\obj_ss_ring_sparkle</object>
+          </objects>
+          <objects name="Floor">
+            <object>objects\par_floor</object>
+            <object>objects\obj_wall_l</object>
+            <object>objects\obj_wall_r</object>
+          </objects>
+          <objects name="Special Stage Objects">
+            <objects name="SS1">
+              <object>objects\obj_challenge1</object>
+              <object>objects\obj_challenge2</object>
+              <object>objects\obj_challenge3</object>
+              <object>objects\obj_challenge4</object>
+              <object>objects\obj_nice</object>
+              <object>objects\obj_floor</object>
+            </objects>
+            <objects name="SS2">
+              <object>objects\obj_floor2</object>
+            </objects>
+            <objects name="SS3">
+              <object>objects\obj_floor3</object>
+            </objects>
+            <objects name="SS4">
+              <object>objects\obj_floor4</object>
+            </objects>
+            <objects name="SS5">
+              <object>objects\obj_floor5</object>
+            </objects>
+            <objects name="SS6">
+              <object>objects\obj_floor6</object>
+            </objects>
+            <objects name="SS7">
+              <object>objects\obj_floor7</object>
+            </objects>
+          </objects>
         </objects>
         <object>objects\obj_special_results</object>
         <object>objects\obj_big_ring</object>
         <object>objects\obj_big_ring_unavailable</object>
         <object>objects\obj_tornado</object>
         <object>objects\obj_bomb</object>
-        <object>objects\obj_hud</object>
       </objects>
       <objects name="Bonus Stage">
         <objects name="Bonus Stage 1">
@@ -2355,6 +2459,9 @@
             <object>objects\obj_glider_parent</object>
             <object>objects\obj_ggz_glider</object>
           </objects>
+          <object>objects\obj_ggz_switch</object>
+          <object>objects\obj_ggz_door</object>
+          <object>objects\obj_ggz_door_stopper</object>
           <object>objects\obj_ggz_loop_high</object>
           <object>objects\obj_ggz_loop_low</object>
           <object>objects\obj_ggz_loop_top</object>
@@ -2370,6 +2477,7 @@
           <object>objects\obj_ggz_flower1</object>
           <object>objects\obj_ggz_flower2</object>
           <object>objects\obj_ggz_fountain</object>
+          <object>objects\obj_ggz_lamppost</object>
         </objects>
         <objects name="Badniks">
           <object>objects\obj_ggz_chowhound</object>
@@ -2465,6 +2573,11 @@
           <object>objects\obj_wwz_platform</object>
           <object>objects\obj_wwz_cork</object>
           <object>objects\obj_wwz_pole_v</object>
+        </objects>
+      </objects>
+      <objects name="Egg Gauntlet">
+        <objects name="Gimmicks">
+          <object>objects\obj_ttz_parallax</object>
         </objects>
       </objects>
       <objects name="Hidden Palace Zone">

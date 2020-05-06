@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.fnt_hud = font_add_sprite(font_hud_numbers, ord("0"), false, 0);
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -48,12 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_specialstage_hud, 0, view_xview+3, view_yview+3);
-draw_set_font(global.fnt_hud);
-draw_set_color(c_white);
-draw_set_halign(fa_right);
-draw_text(view_xview[view_current]+51, view_yview[view_current]+8, global.player_rings);
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

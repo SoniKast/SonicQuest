@@ -128,7 +128,10 @@ if(used_spring == true)
 if(door_y == 6 &amp;&amp; !instance_exists(obj_capsule_flicky_generator))
 {
  instance_create(x,y+30,obj_capsule_flicky_generator);
- mask_index = noone;
+ with(obj_new_capsule_goal)
+ {
+ mask_index = noone
+ }
 };
 </string>
           </argument>

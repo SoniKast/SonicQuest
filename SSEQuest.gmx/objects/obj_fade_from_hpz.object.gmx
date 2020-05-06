@@ -59,6 +59,8 @@
     room_goto(global.previous_room);
     global.previous_room = noone;
     global.coming_from_special = 1;
+    global.special             = 0;
+    d3d_end();
 </string>
           </argument>
         </arguments>

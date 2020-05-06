@@ -3,7 +3,7 @@
   <spriteName>spr_chaos_emerald1</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,14 +28,9 @@
             <string>/// Variables.
 
     collected   = 0;
-    
- // Destroy if we already have 7 emeralds.
-    if(global.player_emeralds &gt;= 7)
-    {
-       instance_destroy();
-    }
-    
-    image_speed = 0.25;
+    z           = 30;   // "Y" position.
+    interact_z  = 50;   // The "Y" position that the player needs to be below at to interact with this object.
+    image_speed = 0.15; // You know what this does...
 </string>
           </argument>
         </arguments>
@@ -58,17 +53,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Add emerald.
+            <string>/// Add emerald
 
-    if(collected == true)
+    instance_create(x, y, obj_ss_ring_sparkle);
+    global.player_emeralds += 1;   
+    aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
+    if(!instance_exists(obj_special_results))
     {
-       global.player_emeralds += 1;
-       aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
-       if(!instance_exists(obj_special_results))
-       {
-       instance_create(x, y, obj_special_results);
-       dummy_effect_create(spr_ring_sparkle, 0.2, x, y, -1, 0);
-       }
+    instance_create(x, y, obj_special_results);
     }
 </string>
           </argument>
@@ -92,14 +84,76 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Collect &amp; set image index.
+            <string>/// Collect &amp;&amp; Depth change.
 
-    if(instance_place(x, y, par_player))
+    if(instance_exists(obj_ss_player))
     {
-       collected = true;
-       instance_destroy();
+       if(obj_ss_player.z &lt;= interact_z)
+       { 
+          if(instance_place(x, y, obj_ss_player))
+          {
+             instance_destroy();
+             collected = 1;
+             with(obj_camera_new)
+             {
+                x   = // 64 obj_ss_player.xprevious+camera_angle*cos(degtorad(direction))
+                y   = obj_ss_player.yprevious // Bruh: obj_ss_player.yprevious-camera_angle*sin(degtorad(direction))
+                vx  = (x-xto); vy = (y-yto); vz = (z-zto);
+                xto = obj_ss_player.x;
+                yto = obj_ss_player.y;
+                zto = obj_ss_player.z+_angle;
+             }
+          }
+       }
+       
+       if(x &gt; obj_ss_player.x)
+       { 
+          depth = -4;
+       }
+       else if(x &lt; obj_ss_player.x)
+       {
+               depth = -6;
+       }
+       
     }
+
     
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw.
+
+ // Shadow:
+    draw_set_color(c_white);
+    draw_sprite_ext(spr_chaos_emerald1, image_index, x, y, 1, 1, 90, c_black, 0.5);
+    d3d_transform_set_identity();
+    d3d_transform_add_rotation_x(90);
+    d3d_transform_add_rotation_z(point_direction(x,y,obj_camera_new.x,obj_camera_new.y)+90);
+
+ // Ring:
+    d3d_transform_add_translation(x,y,z)
+    draw_sprite_ext(sprite_index,image_index,0, 0, 1, 1, 0, c_white, 1);
+    d3d_transform_set_identity(); 
+
 </string>
           </argument>
         </arguments>

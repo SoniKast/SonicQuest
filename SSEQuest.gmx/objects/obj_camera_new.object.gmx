@@ -3,11 +3,54 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>500</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Variables.
+
+    _angle = 1;
+    z=0;
+    vx=0; 
+    vy=0; 
+    vz=0;
+    xto=0;
+    yto=0;
+    zto=0;
+    direction    = 90;
+    global.camup = 20;
+    camera_angle = 290;
+    xlast = 0;
+    ylast = 0
+    fog_color = 0;
+    _x = 0;    
+    
+// Init. 3D:
+   d3d_start()   
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,7 +68,99 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y = obj_ss_sonic.y+80
+            <string>/// Change Fog and Position camera.
+    fog_color += 1; 
+    if(fog_color &gt; 255) fog_color -= 255;
+
+ // Position.
+    direction=obj_ss_player.direction+180;
+    if (global.camup&lt;50) { global.camup =  50 }
+    if (global.camup&gt;150){ global.camup = 150 }
+    x   = obj_ss_player.xprevious+camera_angle*cos(degtorad(direction))
+    y   = 335 // Bruh: obj_ss_player.yprevious-camera_angle*sin(degtorad(direction))
+    vx  = (x-xto); vy = (0); vz = (z-zto);
+    xto = obj_ss_player.x;
+    yto = 335 // obj_ss_player.y;
+    zto = obj_ss_player.z+_angle;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw BG and 3D.
+
+ // Draw the background:
+    _x += 1; // &lt; Scrolls bg. Edit if you don't want it.
+    d3d_set_depth(-10000);
+    d3d_set_fog(false, make_color_hsv(fog_color, 255, 255), 100, 5000);
+    d3d_set_projection_ortho(view_xview,view_yview,320,224,0);
+    d3d_set_zwriteenable(false);   
+    if(room == rm_special_stage1)
+    { 
+    draw_background_tiled(bg_ss1, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage2)
+    {
+    draw_background_tiled(bg_ss2, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage3)
+    {
+    draw_background_tiled(bg_ss3, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage4)
+    {
+    draw_background_tiled(bg_ss4, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage5)
+    {
+    draw_background_tiled(bg_ss5, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage6)
+    {
+    draw_background_tiled(bg_ss6, _x, _x);  
+    }
+    else
+    if(room == rm_special_stage7)
+    {
+    draw_background_tiled(bg_ss7, _x, _x);  
+    }
+    
+    d3d_set_zwriteenable(true);    
+    
+  // Draw 3D elements:
+    d3d_set_projection_perspective(0,0,320,224,0);
+    d3d_set_perspective(1)  ;
+    d3d_set_depth(10000);
+    draw_set_color(c_white);
+    d3d_set_fog(true, make_color_hsv(fog_color, 255, 255), 100, 5000);    
+    d3d_set_projection(x, y, global.camup+obj_ss_player.z, obj_ss_player.x, 335 ,obj_ss_player.z+19, 0, 0, 1);
+    // d3d_set_projection(x, y, global.camup+obj_ss_player.z, obj_ss_player.x,obj_ss_player.y,obj_ss_player.z+19, 0, 0, 1);
+    draw_set_color(c_white);
+    d3d_set_lighting(0);
+
 </string>
           </argument>
         </arguments>

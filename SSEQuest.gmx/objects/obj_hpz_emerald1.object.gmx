@@ -106,7 +106,7 @@ if (can_set_alpha == true)
 
 if(global.used_emerald_1 = true)
 {
-instance_change(obj_unused_emerald,true)
+instance_change(obj_g_unused_emerald,true)
 }
 </string>
           </argument>

@@ -94,7 +94,7 @@
     global.cutscene         = false;
     global.demo             = false;
     
-    /* Modes */
+ // Modes
     global.time_attack      = false;  //Used in time attack mode so the big rings don't spawn
     global.best_time_ssz1       = 0;
     global.best_time_ssz2       = 0;
@@ -113,6 +113,7 @@
  // Special Stages:
     global.special              = 0;    //This will be used for the controller object to count down when in a special stage     
     global.coming_from_special  = 0;
+    global.ss_rings             = 0;
     global.used_emerald_1       = false;
     global.used_emerald_2       = false;
     global.used_emerald_3       = false;
