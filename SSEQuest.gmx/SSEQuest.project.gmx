@@ -1227,6 +1227,8 @@
           </backgrounds>
           <backgrounds name="Act 2">
             <background>background\bg_ggz_clouds_act2</background>
+            <background>background\bg_ggz_building1_act2</background>
+            <background>background\bg_ggz_building2_act2</background>
             <background>background\bg_ggz_grass_act2</background>
             <background>background\bg_ggz_grass2_act2</background>
           </backgrounds>
