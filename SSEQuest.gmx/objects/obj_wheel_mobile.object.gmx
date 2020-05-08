@@ -319,38 +319,12 @@ img_dir = 1;
 x+= xspd;
 y-= yspd;
 
-if instance_place(x,y,obj_moving_dir_up)
-{
-yspd = -1; 
-xspd = 0; 
-}
-
-if instance_place(x,y,obj_moving_dir_down)
-{
-yspd = 1; 
-xspd = 0; 
-}
-
-if instance_place(x,y,obj_moving_dir_left)
-{
-yspd = 0; 
-xspd = -3; 
-img_dir = 1;
-}
-
-if instance_place(x,y,obj_moving_dir_right)
-{
-yspd = 0; 
-xspd = 3; 
-img_dir = -1;
-}
-
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_badnik_block">
+    <event eventtype="4" ename="obj_moving_dir_right">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -368,7 +342,93 @@ img_dir = -1;
           <argument>
             <kind>1</kind>
             <string>///Change Direction
-xspd = -xspd;
+
+yspd = 0; 
+xspd = 3; 
+img_dir = -1;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_moving_dir_left">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Direction
+
+yspd = 0; 
+xspd = -3; 
+img_dir = 1;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_moving_dir_down">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Direction
+
+yspd = 1; 
+xspd = 0; 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_moving_dir_up">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Direction
+
+yspd = -1; 
+xspd = 0; 
 </string>
           </argument>
         </arguments>

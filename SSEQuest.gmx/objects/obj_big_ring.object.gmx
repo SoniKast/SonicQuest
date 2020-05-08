@@ -99,12 +99,6 @@ if (activated == 1) {
     obj_player.y = y;
 }
 
-if(activated &gt; 0)
-{
-aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
-sprite_index = spr_big_ring_disappear;
-image_speed  = 1;
-}
 
 </string>
           </argument>
@@ -147,6 +141,12 @@ if(other.player_type == IS_PLAYER &amp;&amp; activated == 0){
     }
 }
 
+if(activated &gt; 0)
+{
+aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 1);
+sprite_index = spr_big_ring_disappear;
+image_speed  = 1;
+}
 
 </string>
           </argument>

@@ -1568,6 +1568,7 @@
               player_handle_glider();
               player_handle_pole_grab();
               player_handle_switches();
+              player_handle_block();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1612,6 +1613,7 @@
               player_handle_glider();
               player_handle_pole_grab();
               player_handle_switches();
+              player_handle_block();
               
            // Abort.
               if(x_speed == 0)
@@ -1679,6 +1681,7 @@
                            player_handle_glider();
                            player_handle_pole_grab();
                            player_handle_switches();
+                           player_handle_block();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1788,6 +1791,7 @@
                               player_handle_glider();
                               player_handle_pole_grab();
                               player_handle_switches();
+                              player_handle_block();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -2873,7 +2877,7 @@ state = STATE_DEFAULT
 objHandle = player_collision_check(COL_MAIN_OBJECT, x, y, par_boss, -1, -1);
 if (objHandle != noone)
 {
-if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE){
+if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE or state = STATE_FLY or state = STATE_SPINDASH or state = STATE_CORKSCREW_ROLL){
   angle_to_boss = degtorad(round(wrap_angle(point_direction(x, y, par_boss.x, par_boss.y)-90)/22.5)*24);
   x_speed = sin(wrap_angle(angle_to_boss))*5;
   y_speed = cos(wrap_angle(angle_to_boss))*5;   

@@ -109,7 +109,7 @@ if(handle != noone &amp;&amp; image_index = s_spring[1])
    with(parent) {used_spring = true};
     instance_destroy();
     /* Create a Dummy explosion and Lock object */
-    dummy_effect_create(spr_explosion,0.6,x,y-10,1,5);   
+    dummy_effect_create(spr_explosion,0.2,x-random(40)+20,self.y-10+random(20),1,-1); 
     
  //Lock the camera:
         with(obj_camera)

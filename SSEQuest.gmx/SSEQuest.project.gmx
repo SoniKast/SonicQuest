@@ -883,6 +883,7 @@
             <sprite>sprites\spr_ggz_bouncing_flower2</sprite>
             <sprite>sprites\spr_ggz_breakable_wall</sprite>
             <sprite>sprites\spr_ggz_breakable_wall_pieces</sprite>
+            <sprite>sprites\spr_ggz_breakable_block</sprite>
             <sprite>sprites\spr_ggz_moving_platform</sprite>
             <sprite>sprites\spr_ggz_glider</sprite>
             <sprite>sprites\spr_ggz_plat_start</sprite>
@@ -1381,6 +1382,7 @@
         <script>scripts\player_handle_bosses.gml</script>
         <script>scripts\player_handle_glider.gml</script>
         <script>scripts\player_handle_pole_grab.gml</script>
+        <script>scripts\player_handle_block.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -2456,6 +2458,10 @@
           <objects name="Reeces Pieces">
             <object>objects\obj_ggz_platform_collapse_pieces</object>
             <object>objects\obj_ggz_breakable_wall_pieces</object>
+            <object>objects\obj_ggz_breakable_wall_piece1</object>
+            <object>objects\obj_ggz_breakable_wall_piece2</object>
+            <object>objects\obj_ggz_breakable_wall_piece3</object>
+            <object>objects\obj_ggz_breakable_wall_piece4</object>
           </objects>
           <objects name="Glider">
             <object>objects\obj_glider_parent</object>
@@ -2469,6 +2475,7 @@
           <object>objects\obj_ggz_loop_top</object>
           <object>objects\obj_ggz_platform</object>
           <object>objects\obj_ggz_platform_collapse</object>
+          <object>objects\obj_ggz_breakable_block</object>
           <object>objects\obj_ggz_breakable_wall</object>
         </objects>
         <objects name="Parallax">
