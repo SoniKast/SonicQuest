@@ -3,8 +3,8 @@
   <caption></caption>
   <width>10880</width>
   <height>3000</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>64</vsnap>
+  <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -184,6 +184,11 @@
     <tile bgName="ts_pinball_panic" x="960" y="2304" w="64" h="128" xo="64" yo="0" id="10037738" name="inst_67F192BD" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_pinball_panic" x="1024" y="2304" w="64" h="128" xo="64" yo="0" id="10037739" name="inst_7F465B14" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_pinball_panic" x="1088" y="2176" w="128" h="192" xo="320" yo="256" id="10037740" name="inst_D1244FB5" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1216" y="2176" w="64" h="64" xo="128" yo="0" id="10040649" name="inst_9FD5D204" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1216" y="2304" w="64" h="64" xo="128" yo="64" id="10040650" name="inst_C95D8683" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1216" y="2240" w="64" h="64" xo="128" yo="64" id="10040651" name="inst_1285A4B7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1216" y="2368" w="64" h="64" xo="128" yo="64" id="10040652" name="inst_12999BFC" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_pinball_panic" x="1280" y="2304" w="128" h="192" xo="192" yo="256" id="10040653" name="inst_0EE20C57" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
