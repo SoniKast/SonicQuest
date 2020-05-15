@@ -27,7 +27,14 @@
             <kind>1</kind>
             <string>/// Variables.
  
+    if(room != rm_forest_frenzy1)
+    {
     sign_post_camera    = instance_create(x, y-80, obj_sign_post_camera); 
+    }
+    else if(room = rm_forest_frenzy1)
+    {
+    sign_post_camera    = instance_create(12992, 1520, obj_sign_post_camera); 
+    }
     sign_post_activated = false;
     sign_post_duration  = 128;
     sign_post_timer     = 2;
@@ -66,17 +73,20 @@
     if(sign_post_finished == true) exit;
     
  // Set camera.
-    if(bbox_right  &gt; view_xview
-    &amp;&amp; bbox_left   &lt; view_xview + view_wview
-    &amp;&amp; bbox_bottom &gt; view_yview
-    &amp;&amp; bbox_top    &lt; view_yview + view_hview)   
+    if(Drop = false)
     {
-       with(obj_camera)
-       {
-            cam_handle  = other.sign_post_camera;
-            limit_left  = other.sign_post_camera.x-view_wview/2;
-            limit_right = other.sign_post_camera.x+view_wview/2;
-       }
+        if(bbox_right  &gt; view_xview
+        &amp;&amp; bbox_left   &lt; view_xview + view_wview
+        &amp;&amp; bbox_bottom &gt; view_yview
+        &amp;&amp; bbox_top    &lt; view_yview + view_hview)   
+        {
+           with(obj_camera)
+           {
+                cam_handle  = other.sign_post_camera;
+                limit_left  = other.sign_post_camera.x-view_wview/2;
+                limit_right = other.sign_post_camera.x+view_wview/2;
+           }
+        }
     }
     
  // Spin. 
@@ -100,6 +110,8 @@
        }
        else // Finish.
        {
+       if(room != rm_forest_frenzy1)
+       {
           if(instance_exists(obj_results) == false)       
           {
              sign_post_finished = true;          
@@ -109,6 +121,20 @@
                  goal_state = 1;     
              }
           }
+       }
+       else 
+       if(room = rm_forest_frenzy1)
+       {
+          if(instance_exists(obj_alt_results) == false)       
+          {
+             sign_post_finished = true;          
+             image_index        = obj_level_controller.player_index*4;
+             instance_create(x, y, obj_alt_results);
+             with(obj_player){
+                 goal_state = 1;     
+             }
+          }
+       }
        }       
        sign_post_duration -= 1;
     }

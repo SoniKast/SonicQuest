@@ -40,7 +40,7 @@
     
     // Cheat Input
     CheatCode    = "";
-    CheatTime    = 30;
+    CheatTime    = 20;
     
     /// Variables
     menu_mode            = "TITLE" // there's also menu_mode "LEVEL SELECT"
@@ -52,8 +52,10 @@
     sound_test_option    = 0;
     retro_sonic_quest    = 0;
     alarm[0]             = 15;
+    if(menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_title) or !audio_is_playing(jingle_easteregg))
+    {
     alarm[2]             = 1000;
-
+    }
     title_menu_string0  = "RIVERS. VALLEY"
     title_menu_string1  = ""
     title_menu_string2  = "PETAL PARK    "
@@ -98,15 +100,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_title) || menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_easteregg))
-{
-    with(instance_create(0, 0, obj_fade_to_value))
+            <string>    with(instance_create(0, 0, obj_fade_to_value))
     {
             value = global.first_zone;
             global.player_id = choose(CHAR_SONIC, CHAR_TAILS, CHAR_KNUCKLES);
             global.Mode = 1;
     }
-}
 </string>
           </argument>
         </arguments>
@@ -402,8 +401,8 @@ if(menu_mode = "TITLE")
                     }                                                                
              }
 
-             if(CheatTime != 30){
-                CheatTime  = 30;
+             if(CheatTime != 20){
+                CheatTime  = 20;
              }
              
           }
@@ -414,14 +413,14 @@ if(menu_mode = "TITLE")
                 CheatTime --
              }else{
                 CheatCode = "";
-                CheatTime = 30;
+                CheatTime = 20;
              }
           }
           
           // 50 Rings:       
              if(CheatCode = ".UP.UP.DOWN.DOWN.LEFT.RIGHT.LEFT.RIGHT.ACTION"){
                 CheatCode     = "";
-                CheatTime     = 30;
+                CheatTime     = 20;
                 menu_mode     = "LEVEL SELECT"
                 aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
                 audio_stop_sound(jingle_title);
@@ -1504,8 +1503,9 @@ if(title_menu_active == 1)
 if(retro_sonic_quest = 0)
 {
     // --- Draw Title ----------------------------------------
-    draw_sprite(sprPresentationTitle, 0, 160, 115);
+    draw_sprite(sprPresentationTitleScreen, 0, x, y);
     
+    /*
     // --- Draw Sonic ----------------------------------------
     switch(SonicState) {
         case 1:
@@ -1518,7 +1518,8 @@ if(retro_sonic_quest = 0)
     
     // --- Draw Subtitle / Title band ------------------------
     draw_sprite(sprPresentationTitleBand, 0, 160, 150);
-//  draw_sprite(sprPresentationSubtitle, 0, 160, 185);
+    draw_sprite(sprPresentationSubtitle, 0, 160, 185);  
+    */
 }
 else if(retro_sonic_quest = 1)
 {

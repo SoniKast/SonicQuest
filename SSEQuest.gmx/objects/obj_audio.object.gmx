@@ -109,6 +109,20 @@
        exit;
     }
     
+    if(instance_exists(obj_alt_results) &amp;&amp; zone_results == false)
+    {
+       zone_results = true;    
+       audio_stop_all();
+       global.bgm_volume = zone_my_bgm_volume;
+       global.sfx_volume = zone_my_sfx_volume;
+       aud_play_sound(jingle_scoring, global.bgm_volume, 1, 0, 0);       
+       exit;
+    }
+    if(zone_results == true)
+    {
+       exit;
+    }
+    
 
  // Lower the music volume if the life jingle is playing.
     if(instance_exists(obj_player))
@@ -434,14 +448,25 @@
            }    
            case rm_forest_frenzy1:
            {
-                zone_bgm = music_jungle_havoc1;
-                if(audio_is_playing(zone_bgm) == false)
+                if(global.zone_act == 1)
                 {
-                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                    zone_bgm = music_jungle_havoc1;
+                    if(audio_is_playing(zone_bgm) == false)
+                    {
+                        aud_play_music(zone_bgm, global.bgm_volume, 1);
+                    }
+                }
+                else if(global.zone_act == 2)
+                {
+                    zone_bgm = music_jungle_havoc2;
+                    if(audio_is_playing(zone_bgm) == false)
+                    {
+                        aud_play_music(zone_bgm, global.bgm_volume, 1);
+                    }
                 }
                 break;
            }
-           case rm_forest_frenzy2:
+/*         case rm_forest_frenzy2:
            {
                 zone_bgm = music_jungle_havoc2;
                 if(audio_is_playing(zone_bgm) == false)
@@ -449,7 +474,7 @@
                     aud_play_music(zone_bgm, global.bgm_volume, 1);
                 }
                 break;
-           }    
+           }    */
            case rm_aquapolis1:
            {
                 zone_bgm = music_colossal_conduit1;

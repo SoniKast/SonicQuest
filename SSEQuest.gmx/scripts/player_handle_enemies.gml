@@ -6,7 +6,7 @@
     {
        if(state != STATE_JUMP && state != STATE_ROLL && state != STATE_SPINDASH && state != STATE_HURT && state != STATE_GLIDE && state != STATE_SLIDE)
        {
-          if(invincibility == 0 /*&& instance_exists(obj_insta_shield) == false*/)
+          if(invincibility == 0 && invincibility_timer <= 0 && instance_exists(obj_insta_shield) == false)
           {
              var enemy;
              enemy = player_collision_check(COL_MAIN_OBJECT, x, y, par_enemy, -1, -1);
@@ -20,7 +20,7 @@
     }  
  
  // Hurting enemy:
-    if(state == STATE_JUMP || state == STATE_ROLL || state == STATE_SPINDASH || state == STATE_FLY || state == STATE_GLIDE || state == STATE_SLIDE || invincibility == 2)
+    if(state == STATE_JUMP || state == STATE_ROLL || state == STATE_SPINDASH || state == STATE_FLY || state == STATE_GLIDE || state == STATE_SLIDE || invincibility == 2 || animation = "roll")
     {
        var enemy;
        enemy = player_collision_check(COL_MAIN_OBJECT, x, y, par_enemy, -1, -1);     

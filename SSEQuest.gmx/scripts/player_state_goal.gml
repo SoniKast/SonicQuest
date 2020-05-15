@@ -7,6 +7,5 @@
       y_speed                = 0;
       global.controller_lock = true;
       animation              = "goal";
-      animation_direction    = 1;
    }   
 

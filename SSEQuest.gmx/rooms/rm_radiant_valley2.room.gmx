@@ -86,7 +86,7 @@
     <instance objName="obj_collision_tile_02" x="256" y="832" name="inst_AE09BB82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="320" y="832" name="inst_83432C0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="320" y="672" name="inst_465059E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ssz2_parallax" x="48" y="16" name="inst_1E5ECF32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ssz2_parallax" x="16" y="16" name="inst_1E5ECF32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_metal_sign_post" x="160" y="832" name="inst_467A9337" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_waterfall_a" x="832" y="960" name="inst_242817D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_waterfall_a" x="896" y="768" name="inst_C53E7832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -42,7 +42,7 @@
             <string>type = 0; /// 0 - Ground, 1 - Ceiling, 2 - Wall Left, 3 - Wall Right
 sprNormal = spr_technomeow_h;
 sprDrift = spr_technomeow_h_drift;
-spd_factor = 2;
+spd_factor = 4;
 deac_factor = 0.015*spd_factor;
 image_speed = 0.25;
 </string>

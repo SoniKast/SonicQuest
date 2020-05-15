@@ -1,5 +1,4 @@
-// ==== FUNCTION ====================================================================
-// scr_parallax_add_node(YFactor, YSpeed, YScroll, YOffset, YSeparation, Left, Top, Width, Height)
+/// scr_parallax_add_node(RepeatedOver, Background, XFactor, XSpeed, XScroll, XOffset, XSeparation, YFactor, YSpeed, YScroll, YOffset, YSeparation, Left, Top, Width, Height)
 // ==================================================================================
 
     // Create or resize grid if needed

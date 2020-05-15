@@ -997,6 +997,7 @@
     || animation == "glide drop" || animation == "slide" || animation == "ledge climb" || animation == "climb") 
     {
        animation_angle = 0;
+       animation_angle_mod = 0;
     }
     
  // Set the Angle of Miles tail.
@@ -2877,10 +2878,10 @@ state = STATE_DEFAULT
 objHandle = player_collision_check(COL_MAIN_OBJECT, x, y, par_boss, -1, -1);
 if (objHandle != noone)
 {
-if(state = STATE_JUMP or state = STATE_ROLL or state = STATE_GLIDE or state = STATE_FLY or state = STATE_SPINDASH or state = STATE_CORKSCREW_ROLL){
+if(state = STATE_JUMP || state = STATE_ROLL || state = STATE_GLIDE || state = STATE_FLY || state = STATE_SPINDASH || state = STATE_CORKSCREW_ROLL){
   angle_to_boss = degtorad(round(wrap_angle(point_direction(x, y, par_boss.x, par_boss.y)-90)/22.5)*24);
-  x_speed = sin(wrap_angle(angle_to_boss))*5;
-  y_speed = cos(wrap_angle(angle_to_boss))*5;   
+  x_speed = sin(wrap_angle(angle_to_boss))*1.5;
+  y_speed = cos(wrap_angle(angle_to_boss))*1.5;   
   ground  = false; 
   }else{
   if(state != STATE_HURT &amp;&amp; state != STATE_DEATH &amp;&amp; player_type == IS_PLAYER){

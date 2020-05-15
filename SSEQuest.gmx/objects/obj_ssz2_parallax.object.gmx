@@ -102,7 +102,7 @@
     
     // Update position, relative to the current scroll
     for (i = 0; i &lt; 15; i+= 1)
-    x = floor(view_xview[view_current]*0.5-((1+i)/15)*0.5);
+    x = floor(view_xview[view_current]);
     y = floor(view_yview[view_current]*RatioY)+Height;
     
     // Calculate scale and limit it over the MaxScaleY

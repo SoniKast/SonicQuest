@@ -49,6 +49,35 @@
 image_index = 0;
 bumper_state = 0;
 score_given = 0;
+_alpha = 0;
+_size  = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0);
+
+/* Create Explosion */
+dummy_effect_create(spr_explosion,0.2,x-random(40)+20,self.y-6+random(20),-2, 0);
+
 </string>
           </argument>
         </arguments>
@@ -197,7 +226,37 @@ if(alarm[0] == -1)
           <argument>
             <kind>1</kind>
             <string>//Sync the animation.
+if(!instance_exists(obj_egg_bumper))
+{
 draw_sprite_ext(sprite_index,global.object_time div 120,x,y,1,1,0,c_white,1)
+}
+else if(instance_exists(obj_egg_bumper))
+{
+if(depth &gt; 0)
+{
+draw_sprite_ext(sprite_index, global.object_time div 120, x, y, 1+_size, 1+_size, 0, c_white,1);
+d3d_set_fog(true, c_black, 0, 0); // Set this to the colour you want to draw
+draw_sprite_ext(sprite_index, global.object_time div 120, x, y, 1+_size, 1+_size, 0, c_white, _alpha);
+d3d_set_fog(false, c_black, 0, 0); // Disable the effect
+if(_alpha &lt; .30)
+{
+   _alpha += (.30-_alpha)*0.10;
+}
+   _size += (-.25-_size)*0.10;
+}else
+{
+draw_sprite_ext(sprite_index, global.object_time div 120, x, y, 1+_size, 1+_size, 0, c_white, 1);
+d3d_set_fog(true, c_black, 0, 0); // Set this to the colour you want to draw
+draw_sprite_ext(sprite_index, global.object_time div 120, x, y, 1+_size, 1+_size, 0, c_white, _alpha);
+d3d_set_fog(false, c_black, 0, 0); // Disable the effect
+if(_alpha &gt; 0)
+{
+   _alpha += (0-_alpha)*0.10;
+}
+   _size += (0-_size)*0.10;
+}
+
+}
 </string>
           </argument>
         </arguments>

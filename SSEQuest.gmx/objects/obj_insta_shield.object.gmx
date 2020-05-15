@@ -3,7 +3,7 @@
   <spriteName>spr_insta_shield</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,8 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Frame speed, Sound and Character Jump lock.
+            <string>/// Variables.
    
+    image_speed      = 0;
+    remaining_frames = 10 // Make sure to keep the insta shield active for a split second.
+    
+/// Frame speed, Sound and Character Jump lock.
+/*   
     image_speed = 0.5; 
     aud_play_sound(shield_use_insta, global.sfx_volume, 1, 0, 0);
     parent = obj_player;
@@ -53,19 +58,133 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Stick to the Player.
+            <string>/// Set position, animation and decrease frames.
 
-    x = floor(parent.x);
-    y = floor(parent.y);
-    with(parent){
-         invincibility_timer = 60;
+ // Set the position to the player's position. 
+    if(instance_exists(obj_player))
+    {
+       x = floor(obj_player.x);
+       y = floor(obj_player.y);
     }
+    else // Since the player doesn't exist, there's no reason to keep this instance alive.
+    {
+       instance_destroy();
+    }
+ 
+ // Animate.
+    if(floor(image_index) &lt; 6)
+    {
+       image_index += .5;
+    }
+    else
+    {
+       image_index = 6
+    }
+    
+ // Decrease frames, destroy once depleted.
+    if(remaining_frames &gt; 0)
+    {
+       remaining_frames -= 1;
+    }
+    else
+    {
+       instance_destroy();
+    }
+    
+ // Disable the players jump roll lock.
+    if(instance_exists(obj_player))
+    {
+       with(obj_player)
+       {
+            if(jump_lock == true)
+            { 
+               jump_lock = false;
+            }
+       }
+    }
+    
+ // Also while active, make sure that the player can destroy objects at a extended range and is temporarly invulnerable.
+    if(instance_exists(obj_player))
+    {
+       // Player invincibility, only run when the player is not already in a state where they cannot be hurt.
+          with(obj_player)
+          {
+               if(invincibility == 0)
+               {
+                   invincibility_timer = 5;
+               }
+          }
+            
+       // Destroy objects. (Enemies, Monitors)
+       
+       // Badniks:
+          _badnik = instance_place(x, y, par_enemy);
+          if(_badnik != noone)
+          {
+             with(_badnik)
+             {
+                  instance_destroy();
+             }
+             
+          // Player Rebound:
+             with(obj_player)
+             {
+                if(y_speed &gt; 0)
+                {
+                   if(input_action)
+                   {
+                      y_speed       *= -1;
+                      ground         = false;
+                      jump_completed = false;
+                   }
+                   else
+                   {
+                      y_speed        = max(-4, y_speed*-1)
+                      ground         = false;
+                      jump_completed = false;
+                   } 
+                }    
+             }
+          }  
+               
+       // Monitor:          
+          _monitor = instance_place(x, y, obj_monitor);
+          if(_monitor != noone)
+          {
+             _monitor.parent = obj_player;
+             with(_monitor)
+             {
+                  instance_destroy();
+             }
+             
+          // Player Rebound:
+             with(obj_player)
+             {
+                if(y_speed &gt; 0)
+                {
+                   if(input_action)
+                   {
+                      y_speed       *= -1;
+                      ground         = false;
+                      jump_completed = false;
+                   }
+                   else
+                   {
+                      y_speed        = max(-4, y_speed*-1)
+                      ground         = false;
+                      jump_completed = false;
+                   } 
+                }    
+             }
+          }          
+    }
+  
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_monitor">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -82,70 +201,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*/// Destroy.
-    with(obj_monitor){
-         instance_destroy();
-         parent = obj_player;
-    }
-*/
-/// Destroy.
-    other.parent = parent
-    with(other){
-         instance_destroy();
+            <string>/// Draw insta-shield.
+ 
+    if(instance_exists(obj_player))
+    {
+       draw_sprite_ext(sprite_index, image_index, floor(x), floor(y), image_xscale, image_yscale, image_angle, image_blend, obj_player.animation_alpha);
     }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="par_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Destroy.
-
-    with(other){
-         instance_destroy();
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Destroy.
-   
-    instance_destroy();
 </string>
           </argument>
         </arguments>

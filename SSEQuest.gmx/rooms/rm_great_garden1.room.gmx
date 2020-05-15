@@ -101,8 +101,8 @@
     <instance objName="obj_badnik_block" x="880" y="1440" name="inst_5E68527A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_loop_switch_0" x="1200" y="1280" name="inst_DA57FD8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_layer_switch" x="1336" y="1280" name="inst_380CCA45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_down" x="1504" y="1088" name="inst_ECD516BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_up" x="1504" y="1232" name="inst_0C8D6FBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_down" x="1504" y="1056" name="inst_ECD516BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_up" x="1504" y="1184" name="inst_0C8D6FBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_platform_collapse" x="1984" y="1408" name="inst_0E3509D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_platform_collapse" x="2128" y="1472" name="inst_85B34DC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="2080" y="1664" name="inst_11C14429" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -939,7 +939,7 @@
     <instance objName="obj_collision_tile_19" x="6562" y="353" name="inst_6141774D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_chowhound" x="2160" y="1680" name="inst_1C87AA29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_platform" x="864" y="1248" name="inst_0A175B68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ggz_platform" x="1472" y="1200" name="inst_A69C16A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ggz_platform" x="1472" y="1184" name="inst_A69C16A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_layer_1_02" x="5760" y="992" name="inst_11323DBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_layer_1_02" x="5760" y="1024" name="inst_181DA5FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_loop_switch_1" x="5856" y="960" name="inst_152D5734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1032,7 +1032,7 @@
     <instance objName="obj_collision_terrain_layer_0_03" x="5824" y="896" name="inst_3BB05DD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_layer_0_03" x="5824" y="928" name="inst_BBB7FD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="448" y="1328" name="inst_253A5F8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_left" x="720" y="1328" name="inst_028C57B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_left" x="624" y="1328" name="inst_028C57B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="4448" y="1168" name="inst_1019F4BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="4480" y="1168" name="inst_2D15EEB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="4512" y="1168" name="inst_4AFD3B79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1054,10 +1054,10 @@
     <instance objName="obj_monitor_electricity" x="2336" y="880" name="inst_F49CF3B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_technomeow_ground" x="1280" y="1248" name="inst_F57158BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="1264" y="1232" name="inst_2A091AF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_left" x="1408" y="1232" name="inst_3B26E452" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_moving_dir_left" x="1344" y="1232" name="inst_3B26E452" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dove_bomber" x="1328" y="1760" name="inst_540B1AEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dove_bomber" x="1584" y="1776" name="inst_429E3E5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dove_bomber" x="2128" y="1360" name="inst_F15C8D28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dove_bomber" x="2112" y="1376" name="inst_F15C8D28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dove_bomber" x="2064" y="912" name="inst_0E5063DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dove_bomber" x="2272" y="1408" name="inst_66C4CCFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dove_bomber" x="3520" y="1216" name="inst_D522E8C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

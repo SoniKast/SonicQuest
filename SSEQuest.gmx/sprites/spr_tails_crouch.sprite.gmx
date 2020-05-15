@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>26</width>
+  <width>30</width>
   <height>29</height>
   <frames>
     <frame index="0">images\spr_tails_crouch_0.png</frame>

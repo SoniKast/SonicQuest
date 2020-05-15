@@ -953,6 +953,7 @@
             <sprite>sprites\spr_ffz_loop_right</sprite>
             <sprite>sprites\spr_ffz_loop_left</sprite>
             <sprite>sprites\spr_ffz_loop_top</sprite>
+            <sprite>sprites\spr_ffz_fire_screen</sprite>
           </sprites>
           <sprites name="Badniks">
             <sprite>sprites\spr_butterkiller_follow</sprite>
@@ -1019,6 +1020,7 @@
         <sprite>sprites\sprPresentationSonicOG</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
         <sprite>sprites\sprPresentationTitle</sprite>
+        <sprite>sprites\sprPresentationTitleScreen</sprite>
         <sprite>sprites\spr_retrosonicquest_title</sprite>
         <sprite>sprites\sprPresentationSubtitle</sprite>
         <sprite>sprites\spr_title_press_start</sprite>
@@ -1161,6 +1163,7 @@
         </backgrounds>
         <backgrounds name="Forest Frenzy">
           <background>background\ts_forest_frenzy</background>
+          <background>background\ts_forest_frenzy2</background>
           <background>background\ts_ffz_tree</background>
           <background>background\ts_jungle_havoc</background>
           <background>background\ts_ffz_plants</background>
@@ -1239,6 +1242,7 @@
         </backgrounds>
         <backgrounds name="Jungle Havoc Zone">
           <background>background\bg_jhz_front</background>
+          <background>background\bg_jhz2_front</background>
           <background>background\bg_jhz_back1</background>
           <background>background\bg_jhz_back2</background>
           <background>background\bg_jhz_back3</background>
@@ -1468,6 +1472,7 @@
         <script>scripts\d3d_draw_2d.gml</script>
       </scripts>
       <script>scripts\inview.gml</script>
+      <script>scripts\tile_swap.gml</script>
       <script>scripts\string_hex.gml</script>
       <script>scripts\sound_test_code.gml</script>
       <script>scripts\string_place_number.gml</script>
@@ -2024,8 +2029,10 @@
           </objects>
           <objects name="New Capsule Parts">
             <object>objects\obj_new_capsule_goal_switch</object>
+            <object>objects\obj_new_capsule_busted</object>
           </objects>
           <object>objects\obj_results</object>
+          <object>objects\obj_alt_results</object>
           <object>objects\obj_sign_post</object>
           <object>objects\obj_sign_post_camera</object>
           <object>objects\obj_capsule_goal</object>
@@ -2554,10 +2561,16 @@
           <object>objects\obj_bonus1_parallax</object>
           <object>objects\obj_goal_block</object>
         </objects>
+        <objects name="Boss">
+          <object>objects\obj_egg_bumper</object>
+          <object>objects\obj_egg_bumper_create</object>
+          <object>objects\obj_egg_bumper_mobile_camera</object>
+        </objects>
       </objects>
       <objects name="Forest Frenzy Zone">
         <objects name="Parallax">
           <object>objects\obj_ffz_parallax</object>
+          <object>objects\obj_ffz2_parallax</object>
         </objects>
         <objects name="Gimmicks">
           <object>objects\obj_ffz_loop_solid</object>
@@ -2575,6 +2588,7 @@
           <object>objects\obj_C1_MS_proj</object>
           <object>objects\obj_fade_in_white</object>
           <object>objects\par_cutscene_star</object>
+          <object>objects\obj_ffz_fire_screen</object>
         </objects>
       </objects>
       <objects name="Wild Waterworks">

@@ -73,6 +73,8 @@ if(obj_new_capsule_goal.used_spring == true)
   ID.capsule_flag = true;
   flicky_timer += 1;
 }
+
+
 </string>
           </argument>
         </arguments>
