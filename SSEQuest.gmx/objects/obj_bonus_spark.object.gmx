@@ -128,6 +128,14 @@ if(accframe &lt; 10){
             <kind>1</kind>
             <string>/// Draw Sparkles.
 
+if(global.player_rings &gt;= 25 &amp;&amp; global.player_rings &lt; 50)
+{
+draw_set_colour(c_white);
+}
+if(global.player_rings &gt;= 50)
+{
+draw_set_colour(c_blue);
+}
 var _roll = 80;  //how much ring is tilted toward camera
 var _pitch = sin(time*0.12)*15;  //rocking back and forth
 var _x0 = dcos(_pitch);

@@ -51,7 +51,9 @@ instance_create(x,y,obj_fade_next);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if(instance_exists(par_fades)){
+            <string>/*
+
+if(instance_exists(par_fades)){
 draw_set_alpha(1);
 };
 draw_set_font(global.title_font);

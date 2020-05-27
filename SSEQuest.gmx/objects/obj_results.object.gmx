@@ -96,6 +96,7 @@
     result_gfx_position[3]        =  global.screen_width+60;
     result_gfx_position[4]        =  global.screen_width+90;
     result_gfx_position_completed = false;
+    continue_flag                 = 0;
 
 </string>
           </argument>
@@ -658,6 +659,7 @@
        if(bonus_continue == 0)
        {
           bonus_continue = 1;
+          continue_flag  = 1;
           global.player_continues += 1;
           aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);        
        }
@@ -697,6 +699,12 @@
     
  // Bonuses:
     draw_sprite(spr_results_bonuses, 0, view_xview+63+result_gfx_position[2], view_yview+113);
+    
+ // Draw continue sprite:
+    if(continue_flag)
+    {
+    draw_sprite(spr_continues, obj_level_controller.player_index-1, view_xview[0]+262, view_yview[0]+168);
+    }
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)

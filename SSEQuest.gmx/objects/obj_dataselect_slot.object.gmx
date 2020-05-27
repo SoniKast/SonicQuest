@@ -174,6 +174,8 @@
 
     if(dataslot_zone = 0 &amp;&amp; obj_dataselect_robotnik.active == false)
     {
+     if(global.secret = 0)
+     {
        if(keyboard_check_pressed(global.key_up) &amp;&amp; obj_dataselect_cursor.datacursor_slot_index == dataslot_index &amp;&amp; obj_dataselect_cursor.datacursor_direction == 0)
        {
           if(dataslot_combo == 3)
@@ -220,6 +222,62 @@
           dataslot_character = 3;
           dataslot_cpu       = 0;   
        }
+     }
+     else
+     if(global.secret = 1)
+     {
+       if(keyboard_check_pressed(global.key_up) &amp;&amp; obj_dataselect_cursor.datacursor_slot_index == dataslot_index &amp;&amp; obj_dataselect_cursor.datacursor_direction == 0)
+       {
+          if(dataslot_combo == 4)
+          {
+             dataslot_combo  = 0;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+          }
+          else
+          {
+             dataslot_combo += 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+          }
+       }
+       if(keyboard_check_pressed(global.key_down) &amp;&amp; obj_dataselect_cursor.datacursor_slot_index == dataslot_index &amp;&amp; obj_dataselect_cursor.datacursor_direction == 0)
+       {
+          if(dataslot_combo == 0)
+          {
+             dataslot_combo  = 4;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+          }
+          else
+          {
+             dataslot_combo -= 1;
+             aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+          }
+       }    
+       if(dataslot_combo == 0)
+       {
+          dataslot_character = 1;
+          dataslot_cpu       = 2;   
+       }
+       if(dataslot_combo == 1)
+       {
+          dataslot_character = 1;
+          dataslot_cpu       = 0;   
+       }
+       if(dataslot_combo == 2)
+       {
+          dataslot_character = 2;
+          dataslot_cpu       = 0;   
+       }
+       if(dataslot_combo == 3)
+       {
+          dataslot_character = 3;
+          dataslot_cpu       = 0;   
+       }
+       if(dataslot_combo == 4)
+       {
+          dataslot_character = 4;
+          dataslot_cpu       = 0;   
+       }
+     }
     }
 </string>
           </argument>
@@ -269,7 +327,11 @@
                                if(dataslot_character = 3)
                                {
                                   global.first_zone = rm_radiant_valley1;
-                               }               
+                               }                     
+                               if(dataslot_character = 4)
+                               {
+                                  global.first_zone = rm_radiant_valley1;
+                               }       
                                
                             // Set global. variables.
                                global.zone_id          = 1;
@@ -418,7 +480,8 @@ save_reload_all();
     {
        if(dataslot_zone == 0)
        {
-          draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+96, 1, 1, 0, c_white, 1);          
+          draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+sprite_get_height(sprite_index)-97, -1, 1, 0, c_white, 1);
+          //draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+96, 1, 1, 0, c_white, 1);          
        }       
        else
        {
@@ -431,7 +494,8 @@ save_reload_all();
        {
           if(dataslot_zone == 0)
           {
-             draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-2, y+96, 1, 1, 0, c_white, 1);          
+             draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-2, y+sprite_get_height(sprite_index)-64, 1, 1, 0, c_white, 1); 
+             //draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-2, y+96, 1, 1, 0, c_white, 1);          
           }
           else
           {
@@ -442,7 +506,8 @@ save_reload_all();
        {
           if(dataslot_zone == 0)
           {
-             draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-12, y+96, 1, 1, 0, c_white, 1);           
+             draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-12, y+sprite_get_height(sprite_index)-64, 1, 1, 0, c_white, 1);    
+             //draw_sprite_ext(spr_dataselect_characters, dataslot_character, (x+sprite_get_width(sprite_index)/2)-12, y+96, 1, 1, 0, c_white, 1);           
           }  
           else
           {

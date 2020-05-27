@@ -445,8 +445,6 @@
     <instance objName="obj_collision_tile_02" x="2976" y="1376" name="inst_FEDF008B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="2816" y="1536" name="inst_93266D8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="2880" y="1536" name="inst_7721BB75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spring_up_red" x="3312" y="2352" name="inst_05BADD74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_spring_up_red" x="3344" y="2352" name="inst_F77EC465" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_monitor_bubble" x="3376" y="2352" name="inst_34440D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_water_bubble_generator" x="2880" y="2432" name="inst_B1856D65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="3216" y="1792" name="inst_30602C9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -495,6 +493,9 @@
     <instance objName="obj_collision_tile_03" x="2944" y="1568" name="inst_320121FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="3424" y="1504" name="inst_31953B45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="3424" y="1568" name="inst_D3FF7F78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_up" x="3312" y="2352" name="inst_F35025B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_up" x="3344" y="2352" name="inst_8F712E59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wwz_parallax" x="16" y="16" name="inst_540A2320" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_aquapolis" x="768" y="1664" w="128" h="128" xo="0" yo="384" id="10038085" name="inst_C325A380" depth="10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

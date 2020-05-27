@@ -25,8 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.5;
+            <string>image_speed = 0.25;
 alarm[0] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tile_swap(100, 100000, ts_forest_frenzy, ts_forest_frenzy2);
+tile_swap(10, 100000, ts_forest_frenzy, ts_forest_frenzy2);
+tile_swap(5, 100000, ts_forest_frenzy, ts_forest_frenzy2);
+tile_swap(1, 100000, ts_forest_frenzy, ts_forest_frenzy2);
+tile_swap(-1, 100000, ts_forest_frenzy, ts_forest_frenzy2);
 </string>
           </argument>
         </arguments>
@@ -50,11 +77,6 @@ alarm[0] = 1;
           <argument>
             <kind>1</kind>
             <string>/// Change the tiles
-tile_swap(100, 100000, ts_forest_frenzy, ts_forest_frenzy2);
-tile_swap(10, 100000, ts_forest_frenzy, ts_forest_frenzy2);
-tile_swap(5, 100000, ts_forest_frenzy, ts_forest_frenzy2);
-tile_swap(1, 100000, ts_forest_frenzy, ts_forest_frenzy2);
-tile_swap(-1, 100000, ts_forest_frenzy, ts_forest_frenzy2);
 
 /// Change parallax
 with(obj_ffz_parallax)

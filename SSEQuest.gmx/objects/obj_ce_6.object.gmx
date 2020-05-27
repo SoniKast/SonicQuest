@@ -55,13 +55,23 @@
             <kind>1</kind>
             <string>/// Add emerald.
 
-
-    instance_create(x, y, obj_ss_ring_sparkle);
-    global.player_emeralds += 1;   
-    aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
-    if(!instance_exists(obj_special_results))
+    if(global.player_rings &gt;= 100)
     {
-    instance_create(x, y, obj_special_results);
+        instance_create(x, y, obj_ss_ring_sparkle);
+        global.player_emeralds += 1;   
+        aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
+        if(!instance_exists(obj_special_results))
+        {
+        instance_create(x, y, obj_special_results);
+        }
+    }
+    else
+    {
+        global.used_emerald_6   = false;
+        if(!instance_exists(obj_special_results))
+        {
+        instance_create(x, y, obj_special_results);
+        }
     }
 </string>
           </argument>

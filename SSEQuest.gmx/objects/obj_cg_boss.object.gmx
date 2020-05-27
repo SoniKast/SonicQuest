@@ -30,14 +30,14 @@
 
 //Drawing - HP:
 hp = 8 //The Amount of HP this boss has.
-st_normal   = (spr_eggmobile_cg_normal) //The Normal Sprites if not hurt.
-st_hurt     = (spr_eggmobile_cg_hurt)   //The Sprites when being hurt.
-st_defeated = (spr_eggmobile_cg_dead)   //The Sprites when being defeated.
+st_normal   = (spr_eggmobile_cg_normal) // The Normal Sprites if not hurt.
+st_hurt     = (spr_eggmobile_cg_hurt)   // The Sprites when being hurt.
+st_defeated = (spr_eggmobile_cg_dead)   // The Sprites when being defeated.
 st_move     = (spr_eggmobile_cg_normal) // The sprites for when he moves
 st_flyaway  = (spr_eggmobile_cg_flee)   // Get out of here, motherfucker!
 st_hit      = (spr_eggmobile_cg_hit)    // he laughs when he hits Sonic
 st_intro    = (spr_eggmobile_cg_hit)    // When he shows up on screen
-image_speed = 0.3                       //The Frames Speed.
+image_speed = 0.3                       // The Frames Speed.
 
 //Projectiles and States:
 state     = (st_intro) //This is the current sprite Dr.Robotnik has.
@@ -289,30 +289,7 @@ damaged = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Is dead?
-//When the Boss Appears on the Screen:
-/*if(boss_appear == true){
-   if(boss_pos_change == false){
-      boss_pos_change = true;
-   };
-   
-   //Y Speed:
-   if(y &lt;= obj_cg_mobile_camera.y-_offset-3 ){
-      y += ver_speed;
-   }else{
-    y = obj_cg_mobile_camera.y-_offset-3;
-    ver_speed = 0;
-   };
-   
-   //X Speed:
-   if(ver_speed == 0 &amp;&amp; x &gt;= obj_cg_mobile_camera.x){
-      hor_speed -= hor_acc_dec;
-   }else if(ver_speed == 0 &amp;&amp; x &lt;= obj_cg_mobile_camera.x){
-      hor_speed = 0;
-   }
-}
-*/
-//Speed
+            <string>/// Speed
 x+= xspd;
 
 /* Change the Animation Direction: */

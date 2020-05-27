@@ -58,7 +58,7 @@
  
  // Zone / Data related:
     global.player_id        = 1;             // Player id.
-    global.player_rings     = 20;            // Current amount of rings.
+    global.player_rings     = 0;             // Current amount of rings.
     global.player_score     = 0;             // Current score.
     global.player_score_mtp = 0;             // Current score multiplier (when defeating enemies)
     global.player_continues = 0;             // Current amount of continues.
@@ -93,6 +93,7 @@
     global.data_select_icon = 1;             //To correctly display the level preview.
     global.cutscene         = false;
     global.demo             = false;
+    global.secret           = 0;
     
  // Modes
     global.time_attack      = false;  //Used in time attack mode so the big rings don't spawn

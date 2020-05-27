@@ -46,7 +46,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.5;
-alarm[0] = 57//2;
+alarm[0] = 64//2;
 
 </string>
           </argument>
@@ -177,7 +177,7 @@ alarm[1] = 60*2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_single = 24;
+            <string>image_single = 25;
 </string>
           </argument>
         </arguments>

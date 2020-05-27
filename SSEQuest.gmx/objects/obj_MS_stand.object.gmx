@@ -109,6 +109,7 @@ cam_handle = obj_screen_camera;
 }
 with(obj_player)
 {
+x_speed = 0;
 global.controller_lock = true;
 input_up_pressed = true;
 }

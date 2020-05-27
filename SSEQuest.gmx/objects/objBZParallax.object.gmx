@@ -52,7 +52,7 @@
         scrParallaxAddNode(1, backGhzWater,        0.5-((1+i)/15)*0.5, ((1+i)/15)*-1.8, 0, 0, 0,       OverallYOffset, 0, 0, 152+i*8, 0,   0, i*8, 256, 8);
 */
     
-    OverallYOffset      = 0;
+    OverallYOffset      = 0.964;
     CurrentScanline     = 0;
     NumberOfScanlines   = 0;
     ScanlineStep        = 0;

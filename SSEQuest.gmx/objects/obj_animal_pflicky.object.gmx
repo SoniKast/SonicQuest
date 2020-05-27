@@ -102,7 +102,7 @@ if(sol_handle != noone &amp;&amp; on_ground == false &amp;&amp; move_timer = 0)
 };
 else if(capsule_flag == true)
 {
- cap_handle = instance_place(x,y+1,obj_capsule_goal_bottom)
+ cap_handle = instance_place(x,y+1,obj_new_capsule_busted)
 if(cap_handle != noone &amp;&amp; on_ground == false &amp;&amp; move_timer = 0)
 {
  on_ground = true;

@@ -303,10 +303,10 @@
     <instance objName="obj_ring" x="5280" y="320" name="inst_9D1CA480" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="5312" y="320" name="inst_5DA2B9EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="5344" y="320" name="inst_25DE4E34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="5632" y="256" name="inst_83C8CBD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="5632" y="224" name="inst_573476FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="5632" y="192" name="inst_34874639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ring" x="5632" y="160" name="inst_508C1921" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="5600" y="288" name="inst_83C8CBD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="5600" y="256" name="inst_573476FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="5600" y="224" name="inst_34874639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="5600" y="192" name="inst_508C1921" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="7024" y="256" name="inst_E7ACDB58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="7056" y="256" name="inst_69B5C98B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="7088" y="256" name="inst_75C0B65E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -346,8 +346,6 @@
     <instance objName="obj_ring" x="3584" y="128" name="inst_5539EF41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="3616" y="128" name="inst_BAC0FDAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sign_post" x="7584" y="208" name="inst_5A9D3096" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objObjectSpikeball" x="3352" y="346" name="inst_108F0F13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objObjectSpikeball" x="5625" y="305" name="inst_96E0C0A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_da_rock" x="5383" y="307" name="inst_806DF888" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_da_rock" x="16" y="336" name="inst_63257EFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_da_rock" x="2828" y="371" name="inst_FA2293E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -367,7 +365,6 @@
     <instance objName="obj_moving_platform_test" x="2384" y="176" name="inst_51084D89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_right" x="2384" y="192" name="inst_6148E086" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_left" x="2704" y="192" name="inst_2A41B559" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objObjectSeesaw" x="3328" y="376" name="inst_ED19045D" locked="0" code="state = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="960" y="144" name="inst_9F428888" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="720" y="144" name="inst_767DC2AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="1696" y="368" name="inst_023506C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -378,7 +375,6 @@
     <instance objName="obj_moving_dir_left" x="4320" y="224" name="inst_BB1E7589" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_12" x="4672" y="336" name="inst_7574773B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_swing_platform_test" x="5120" y="336" name="inst_E580FC0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objObjectSeesaw" x="5600" y="336" name="inst_C873E000" locked="0" code="state = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_12" x="6016" y="336" name="inst_E839FABF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_12" x="6208" y="336" name="inst_351C6DC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_example_bridge_12" x="6784" y="272" name="inst_08B2C309" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -707,6 +703,8 @@
     <instance objName="obj_ring" x="3584" y="368" name="inst_746B7AC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="3616" y="368" name="inst_CF05C2B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="3648" y="368" name="inst_647896A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBridgeZoneSpringPlatform" x="5600" y="336" name="inst_1E3A04EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBridgeZoneSpringPlatform" x="3328" y="288" name="inst_ECAA1114" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_bridge4" x="544" y="128" w="8" h="32" xo="16" yo="0" id="10028084" name="inst_3D40FF4E" depth="1000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -967,6 +965,19 @@
     <tile bgName="ts_bridge2" x="5696" y="640" w="64" h="128" xo="0" yo="256" id="10028060" name="inst_453B32DA" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="896" y="560" w="64" h="112" xo="64" yo="272" id="10028074" name="inst_27EDA807" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="2944" y="608" w="64" h="64" xo="32" yo="240" id="10028076" name="inst_5B402057" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="544" w="64" h="64" xo="464" yo="68" id="10042934" name="inst_B9E2B77C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="608" w="64" h="64" xo="464" yo="68" id="10042935" name="inst_4CD01D32" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="480" w="64" h="64" xo="464" yo="68" id="10042936" name="inst_DE058AC9" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="416" w="64" h="64" xo="464" yo="68" id="10042937" name="inst_5B480223" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="352" w="64" h="64" xo="464" yo="68" id="10042938" name="inst_E88B8DC8" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="5568" y="288" w="64" h="64" xo="464" yo="2" id="10042939" name="inst_FAF1375C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="368" w="64" h="64" xo="464" yo="68" id="10042940" name="inst_E3D48EBF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="304" w="64" h="64" xo="464" yo="68" id="10042941" name="inst_22F8D766" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="240" w="64" h="64" xo="464" yo="2" id="10042942" name="inst_5AA83555" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="432" w="64" h="64" xo="464" yo="68" id="10042943" name="inst_C0E27DE2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="496" w="64" h="64" xo="464" yo="68" id="10042944" name="inst_410E368F" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="560" w="64" h="64" xo="464" yo="68" id="10042945" name="inst_7A2AE9C4" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="ts_bridges" x="3296" y="624" w="64" h="64" xo="464" yo="68" id="10042946" name="inst_377077AF" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="0" y="240" w="128" h="384" xo="0" yo="0" id="10000002" name="tile_8A404C0B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="128" y="240" w="128" h="384" xo="0" yo="0" id="10000003" name="tile_29124956" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="336" y="240" w="48" h="304" xo="80" yo="0" id="10000005" name="tile_EEE575D1" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -990,8 +1001,6 @@
     <tile bgName="ts_bridge2" x="3152" y="176" w="64" h="384" xo="64" yo="0" id="10000115" name="tile_E3CD05FF" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="2960" y="224" w="64" h="384" xo="64" yo="0" id="10000116" name="tile_1C219911" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="3088" y="176" w="64" h="384" xo="64" yo="0" id="10000117" name="tile_FFAEC3DA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="432" w="96" h="56" xo="0" yo="0" id="10000145" name="tile_52AD367A" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="400" w="96" h="56" xo="0" yo="0" id="10000146" name="tile_3CB3ACBB" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="3584" y="80" w="64" h="384" xo="0" yo="0" id="10000156" name="tile_B543B1D4" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="3712" y="80" w="64" h="384" xo="64" yo="0" id="10000157" name="tile_1E89141E" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="3712" y="464" w="64" h="64" xo="64" yo="320" id="10000159" name="tile_43B273E0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1007,10 +1016,6 @@
     <tile bgName="ts_bridge2" x="5248" y="208" w="64" h="320" xo="0" yo="0" id="10000201" name="tile_2E0A9B08" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5312" y="208" w="128" h="320" xo="0" yo="0" id="10000203" name="tile_9A27582C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="5440" y="208" w="64" h="320" xo="64" yo="0" id="10000205" name="tile_C2F1DD44" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="448" w="96" h="56" xo="0" yo="0" id="10000210" name="tile_B89C0CE6" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="400" w="96" h="56" xo="0" yo="0" id="10000211" name="tile_2757BEEC" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="352" w="96" h="56" xo="0" yo="0" id="10000212" name="tile_FFEFADA4" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="608" w="96" h="56" xo="0" yo="56" id="10000213" name="tile_08B423A3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="5696" y="208" w="32" h="320" xo="0" yo="0" id="10000215" name="tile_FEE20000" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5728" y="208" w="128" h="320" xo="0" yo="0" id="10000217" name="tile_C782E999" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5856" y="208" w="128" h="320" xo="0" yo="0" id="10000218" name="tile_849F4C50" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1039,10 +1044,6 @@
     <tile bgName="ts_bridge2" x="3872" y="256" w="64" h="384" xo="0" yo="0" id="10027985" name="inst_E0E52E63" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="3872" y="640" w="64" h="64" xo="0" yo="320" id="10027986" name="inst_7839C29B" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="3936" y="640" w="64" h="64" xo="32" yo="320" id="10027988" name="inst_0402D041" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="480" w="96" h="56" xo="0" yo="0" id="10028063" name="inst_14099348" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="528" w="96" h="56" xo="0" yo="0" id="10028064" name="inst_7F3A87F4" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="576" w="96" h="56" xo="0" yo="0" id="10028065" name="inst_23A4F3CA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="3280" y="608" w="96" h="56" xo="0" yo="56" id="10028066" name="inst_292C8D9E" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5760" y="528" w="128" h="128" xo="0" yo="256" id="10028067" name="inst_32368D52" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5824" y="528" w="128" h="128" xo="0" yo="256" id="10028068" name="inst_C7B7CFB1" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="5312" y="528" w="128" h="128" xo="0" yo="256" id="10028069" name="inst_40AE6F51" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1050,9 +1051,6 @@
     <tile bgName="ts_bridge1" x="128" y="624" w="128" h="128" xo="0" yo="256" id="10028071" name="inst_76807D5C" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="592" y="560" w="128" h="128" xo="0" yo="256" id="10028072" name="inst_3DB68BED" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge1" x="656" y="560" w="128" h="128" xo="0" yo="256" id="10028073" name="inst_F2CFC088" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="560" w="96" h="56" xo="0" yo="0" id="10028079" name="inst_A50849D3" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="496" w="96" h="56" xo="0" yo="0" id="10028080" name="inst_FD7849BA" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_seesaw" x="5552" y="544" w="96" h="56" xo="0" yo="0" id="10028081" name="inst_F3C36BD0" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="1952" y="592" w="128" h="128" xo="0" yo="256" id="10027962" name="inst_E1F76CF6" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="4000" y="256" w="64" h="384" xo="64" yo="0" id="10027990" name="inst_0DBF2931" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_bridge2" x="4000" y="640" w="64" h="64" xo="64" yo="320" id="10027991" name="inst_66F7BB17" depth="-10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

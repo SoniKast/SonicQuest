@@ -137,6 +137,11 @@
                    trial_menu_string = "KNUCKLES";
                    break;
               }
+              case 3:
+              {
+                   trial_menu_string = "KAST";
+                   break;
+              }
            }
        }
        
@@ -165,7 +170,7 @@
     // Character select
     if(trial_menu_active == 1)
     {
-        if(trial_menu_option = 0)
+        if(trial_menu_option = 0 &amp;&amp; global.secret = 0)
         {
            if(keyboard_check_pressed(global.key_right))
            {
@@ -190,6 +195,36 @@
               else
               {
                  player_select = 2;
+                 aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+              }
+           }       
+        }
+        else 
+        if(trial_menu_option = 0 &amp;&amp; global.secret = 1)
+        {
+           if(keyboard_check_pressed(global.key_right))
+           {
+              if(player_select &lt; 3)
+              {
+                 player_select += 1;
+                 aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+              }
+              else
+              {
+                 player_select = 0;
+                 aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+              }
+           }
+           if(keyboard_check_pressed(global.key_left))
+           {
+              if(player_select &gt; 0)
+              {
+                 player_select -= 1;
+                 aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+              }
+              else
+              {
+                 player_select = 3;
                  aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
               }
            }       

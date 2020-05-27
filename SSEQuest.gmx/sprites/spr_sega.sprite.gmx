@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>319</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>223</bbox_bottom>
+  <bbox_top>80</bbox_top>
+  <bbox_bottom>143</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -45,5 +45,6 @@
     <frame index="22">images\spr_sega_22.png</frame>
     <frame index="23">images\spr_sega_23.png</frame>
     <frame index="24">images\spr_sega_24.png</frame>
+    <frame index="25">images\spr_sega_25.png</frame>
   </frames>
 </sprite>

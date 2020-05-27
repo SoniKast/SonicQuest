@@ -205,7 +205,7 @@
     }     
   
  // Life:
-    if(icon == 4)
+    if(icon == 4 || icon == 9 || icon == 10 || icon == 12)
     {
        global.player_lives += 1;
        global.sfx_volume = obj_audio.zone_my_bgm_volume;
@@ -250,11 +250,27 @@
     {
         with(parent)
         {
-            global.player_emeralds += 7;
+            global.player_emeralds = 7;
             global.player_rings    += 50;
             state = STATE_TRANSFORM;
         }
     }
+  
+ // Normal Shield:
+    if(icon == 11)
+    {
+       if(parent.shield != 0)
+       { 
+          parent.shield = 0;
+          with(parent.shield_obj)
+          {
+               instance_destroy();
+          }
+          parent.shield_obj = noone;
+       }
+       parent.shield = SHIELD_NORMAL;
+      aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
+    }  
 
 </string>
           </argument>

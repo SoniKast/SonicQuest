@@ -23,3 +23,9 @@
     {
        animation_index_knuckles();
     }    
+    
+ // Kast:
+    if(player_index == CHAR_KAST)
+    {
+       animation_index_kast();
+    }

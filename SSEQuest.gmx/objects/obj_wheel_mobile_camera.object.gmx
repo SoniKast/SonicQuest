@@ -90,12 +90,16 @@ start = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_camera)
+            <string>/// Focus the camera on sonic and stop the boss theme from playing
+ with(obj_camera)
    {
     cam_handle = obj_player;
     limit_left  = 0;
     limit_right = room_width;
     }
+    
+// Stop the boss theme from playing
+    obj_audio.boss_flag = false;
 </string>
           </argument>
         </arguments>
@@ -146,7 +150,10 @@ if(start == true){
  &amp;&amp; bbox_bottom &gt; view_yview
  &amp;&amp; bbox_top &lt; view_yview + view_hview ){
     start = false;
-   
+                
+        // Play Song
+        obj_audio.boss_flag = true;
+    
         //Create Boss:
         boss_id = instance_create(x+128, y+47, obj_wheel_mobile_create);
         

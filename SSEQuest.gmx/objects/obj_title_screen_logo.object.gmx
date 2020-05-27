@@ -49,12 +49,14 @@
     title_menu_active    = 0;
     title_menu_string    = "START";
     title_menu_character = 1;
+    title_menu_cpu       = 0;
     sound_test_option    = 0;
     retro_sonic_quest    = 0;
     alarm[0]             = 15;
-    if(menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_title) or !audio_is_playing(jingle_easteregg))
+    alarm[1]             = 5;
+    if(menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_title) || menu_mode = "TITLE" &amp;&amp; !audio_is_playing(jingle_easteregg))
     {
-    alarm[2]             = 1000;
+    alarm[2]             = 2000;
     }
     title_menu_string0  = "RIVERS. VALLEY"
     title_menu_string1  = ""
@@ -341,8 +343,6 @@ if(menu_mode = "TITLE")
                       {
                            value = rm_data_select;
                       }
-                      /*aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
-                      title_menu_active = 1;*/
                       break;
                  }
                  case 1:
@@ -435,6 +435,7 @@ if(menu_mode = "LEVEL SELECT")
     audio_stop_sound(jingle_title);
     aud_play_sound(music_options, global.bgm_volume, 1, 1, 0);                
     }
+    
 // Level selecting
 if(title_menu_active == 1)
     {
@@ -515,7 +516,7 @@ if(title_menu_active == 1)
                aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
             }
         }
-        if(keyboard_check_pressed(global.key_special))
+        if(keyboard_check_pressed(global.key_action))
         {
             if(title_menu_character &gt; 1)
             {
@@ -529,6 +530,38 @@ if(title_menu_active == 1)
             }
         }
     }
+    
+// CPU choosing
+if(title_menu_active == 1)
+    {
+        if(keyboard_check_pressed(global.key_special))
+        {
+            if(title_menu_cpu &lt; 3)
+            {
+               title_menu_cpu += 1;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+            else
+            {
+               title_menu_cpu = 0;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+        }
+        if(keyboard_check_pressed(global.key_special))
+        {
+            if(title_menu_cpu &gt; 0)
+            {
+               title_menu_cpu -= 1;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+            else
+            {
+               title_menu_cpu = 3;
+               aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
+            }
+        }
+    }
+        
  // Choose.
     if(title_menu_active == 1)
     { 
@@ -543,7 +576,7 @@ if(title_menu_active == 1)
                            value = rm_radiant_valley1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -554,7 +587,7 @@ if(title_menu_active == 1)
                            value = rm_radiant_valley2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -565,7 +598,7 @@ if(title_menu_active == 1)
                            value = rm_great_garden1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -576,7 +609,7 @@ if(title_menu_active == 1)
                            value = rm_great_garden2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -587,7 +620,7 @@ if(title_menu_active == 1)
                            value = rm_pinball_panic1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -598,7 +631,7 @@ if(title_menu_active == 1)
                            value = rm_pinball_panic2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -609,7 +642,7 @@ if(title_menu_active == 1)
                            value = rm_forest_frenzy1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -620,7 +653,7 @@ if(title_menu_active == 1)
                            value = rm_forest_frenzy2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -631,7 +664,7 @@ if(title_menu_active == 1)
                            value = rm_aquapolis1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -642,7 +675,7 @@ if(title_menu_active == 1)
                            value = rm_aquapolis2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -653,7 +686,7 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -664,7 +697,7 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -675,7 +708,7 @@ if(title_menu_active == 1)
                            value = rm_egg_gauntlet3;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -686,7 +719,7 @@ if(title_menu_active == 1)
                            value = rm_bridge_zone1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -694,10 +727,10 @@ if(title_menu_active == 1)
                  {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = rm_bridge2;
+                           value = rm_bridge_zone2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -708,7 +741,7 @@ if(title_menu_active == 1)
                            value = rm_playground;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -719,7 +752,7 @@ if(title_menu_active == 1)
                            value = rm_playground_2;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -727,10 +760,10 @@ if(title_menu_active == 1)
                  {    
                       with(instance_create(0, 0, obj_fade_to_value))
                       {
-                           value = rm_bonus1;
+                           value = room_goto_bonus();
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
+                      global.cpu       = title_menu_cpu;
                       global.time_attack = false;
                       break;
                  }
@@ -741,7 +774,6 @@ if(title_menu_active == 1)
                            value = rm_special_stage1;
                       }
                       global.player_id = title_menu_character;
-                      global.cpu       = 0;
                       global.time_attack = false;
                       break;
                  }
@@ -814,7 +846,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_jungle_havoc1, global.bgm_volume, 1, 0, 0);
+                          aud_play_sound(music_pinball_panic2, global.bgm_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -824,7 +856,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_test, global.bgm_volume, 1, 0, 0);
+                          aud_play_sound(music_jungle_havoc1, global.bgm_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -834,7 +866,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_test, global.bgm_volume, 1.15, 0, 0);
+                          aud_play_sound(music_jungle_havoc2, global.bgm_volume, 1.15, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -844,7 +876,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_dataselect, global.bgm_volume, 1, 0, 0);
+                          aud_play_sound(music_colossal_conduit1, global.bgm_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -854,7 +886,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_levelselect, global.bgm_volume, 1, 0, 0);
+                          aud_play_sound(music_hidden_palace, global.bgm_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -864,7 +896,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(music_options, global.bgm_volume, 1, 0, 0);
+                          aud_play_sound(music_special_stage, global.bgm_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -874,7 +906,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_continue, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(music_dataselect, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -884,7 +916,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_drown, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(music_time_attack, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -894,7 +926,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_gameover, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(music_levelselect, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -904,7 +936,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_invincibility, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(music_options, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -914,7 +946,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_sneakers, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(music_test, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -924,7 +956,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_scoring, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_continue, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -934,7 +966,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_super, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_disclaimer, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -944,7 +976,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(jingle_sega, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_drown, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -954,7 +986,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_accelerator, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_gameover, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -964,7 +996,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_alarm_count, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_easteregg, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -974,7 +1006,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_break, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_invincibility, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -984,7 +1016,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_bump, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_sneakers, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -994,7 +1026,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_bumper, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_scoring, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1004,7 +1036,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_checkpoint, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_super, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1014,7 +1046,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_crumble, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(jingle_sega, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1024,7 +1056,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_accelerator, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1034,7 +1066,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_alarm_count, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1044,7 +1076,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_break, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1054,7 +1086,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_fire, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_bump, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1064,7 +1096,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_flame, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_bumper, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1074,7 +1106,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_flipper, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_checkpoint, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1084,7 +1116,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_projectile, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_crumble, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1094,7 +1126,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1104,7 +1136,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_score_points, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_emerald, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1114,7 +1146,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_score_result, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1124,7 +1156,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_signpost, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_fire, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1134,7 +1166,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_spring, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_flame, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1144,7 +1176,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_flipper, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1154,7 +1186,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_ss_goal, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_projectile, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1164,7 +1196,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1174,7 +1206,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ring_left, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1184,7 +1216,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ring_right, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1194,7 +1226,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_teleport_start, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_score_points, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1204,7 +1236,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(general_water_splash, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_score_result, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1214,7 +1246,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_air, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_signpost, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1224,7 +1256,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_die, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_spring, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1234,7 +1266,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_dropdash, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1244,7 +1276,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_drowned, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ss_goal, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1254,7 +1286,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_flying, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1264,7 +1296,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_flying_drop, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1274,7 +1306,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_hang, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1284,7 +1316,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_hit_spike, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_teleport_start, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1294,7 +1326,7 @@ if(title_menu_active == 1)
                           
                           {
                           audio_stop_all();
-                          aud_play_sound(player_hurt, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_slab, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1303,7 +1335,7 @@ if(title_menu_active == 1)
                           {
                           {
                           audio_stop_all();
-                          aud_play_sound(player_jump, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_shine, global.sfx_volume, 1, 0, 0);
                           }
                           title_menu_active = 1;
                           break;
@@ -1311,130 +1343,228 @@ if(title_menu_active == 1)
                           case 56:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_land, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_wallbreak, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 57:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(general_water_splash, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 58:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_ring_drop, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_air, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 59:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_roll, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_die, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 60:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_skidding, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_dropdash, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 61:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_slide, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_drowned, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 62:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_spindash_charge, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_flying, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1; 
                           break;
                           }
                           case 63:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_spindash_release, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_flying_drop, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 64:
                           {
                           audio_stop_all();
-                          aud_play_sound(player_transform, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_hang, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 65:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_extra_bubble, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_hit_spike, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 66:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_hurt, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 67:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_jump, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 68:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_get_flame, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_land, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 69:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 70:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_use_bubble, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_ring_drop, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 71:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_use_default, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_roll, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 72:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_use_electricity, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_skidding, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 73:
                           {
                           audio_stop_all();
-                          aud_play_sound(shield_use_flame, global.sfx_volume, 1, 0, 0);
+                          aud_play_sound(player_slide, global.sfx_volume, 1, 0, 0);
                           title_menu_active = 1;
                           break;
                           }
                           case 74:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_peelout_charge, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 75:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_peelout_release, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 76:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_spindash_charge, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 77:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_spindash_release, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 78:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(player_transform, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 79:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_extra_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 80:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 81:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 82:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_flame, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 83:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 84:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_bubble, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 85:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_default, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 86:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_electricity, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 87:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(shield_use_flame, global.sfx_volume, 1, 0, 0);
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 88:
                           {
                           audio_stop_all();
                           aud_play_sound(shield_use_insta, global.sfx_volume, 1, 0, 0);
@@ -1546,7 +1676,7 @@ else if(retro_sonic_quest = 1)
     draw_set_font(global.title_font);
     draw_set_halign(fa_left);
     draw_text(213, 38, scr_string_number_format(title_menu_character-1, 2));
-    draw_text(245, 38, scr_string_number_format(0, 2));
+    draw_text(245, 38, scr_string_number_format(title_menu_cpu, 2));
     if(title_menu_option = 0)
     {
     draw_set_color(c_yellow);

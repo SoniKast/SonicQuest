@@ -46,7 +46,7 @@
 
     var OverallYOffset; OverallYOffset = 0.965;
     
-    scr_parallax_add_node(1, bg_jhz_back3,  0.82, 0, 0, 0, 0, OverallYOffset, 0, 0, 0, 0,    0, 0, 128, 128);
+    scr_parallax_add_node(1, bg_jhz_back3,  0.86, 0, 0, 0, 0, OverallYOffset, 0, 0, 0, 0,    0, 0, 128, 128);
     scr_parallax_add_node(1, bg_jhz_back1,  0.84, 0, 0, 0, 0, OverallYOffset, 0, 0, 115, 0,    0, 0, 512, 32);
     scr_parallax_add_node(1, bg_jhz_back2,  0.82, 0, 0, 0, 0, OverallYOffset, 0, 0, 99, 0,    0, 0, 512, 16);
     scr_parallax_add_node(1, bg_jhz_front, 0.80, 0, 0, 0, 0,     OverallYOffset, 0, 0, -285, 0,    0, 0, 512, 656);

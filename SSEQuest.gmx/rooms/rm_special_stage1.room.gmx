@@ -166,7 +166,6 @@
     <instance objName="obj_bomb" x="2432" y="336" name="inst_4DAAB003" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hud_new" x="32" y="192" name="inst_B09692EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera_new" x="0" y="192" name="inst_B255D6BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_title_card" x="16" y="192" name="inst_FD224332" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ss_ring" x="1024" y="336" name="inst_35005FFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ss_ring" x="1056" y="336" name="inst_B2269A15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ss_ring" x="1184" y="368" name="inst_B2008D63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -2482,7 +2482,16 @@
                  shield_obj . handle = id;
                  aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);                     
               }
-           }           
+           }             
+           if(shield == SHIELD_NORMAL)
+           {
+              if(shield_obj = noone)
+              {
+                 shield_obj = instance_create(x, y, obj_player_normal_shield);
+                 shield_obj . handle = id;
+                 aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);                     
+              }
+           }          
     }
     
     if(debug_mode)
@@ -2527,7 +2536,16 @@
                 shield_obj . handle = id;
                 aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);                     
              }
-          }              
+          }             
+           if(shield == SHIELD_NORMAL)
+           {
+              if(shield_obj = noone)
+              {
+                 shield_obj = instance_create(x, y, obj_player_normal_shield);
+                 shield_obj . handle = id;
+                 aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);                     
+              }
+           }             
     }
 
 </string>

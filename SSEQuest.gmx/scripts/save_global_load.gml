@@ -16,7 +16,8 @@
        global.key_enter    = ini_read_real("Keyboard",  "KeyEnter",   vk_enter);           
        global.gmp_action   = ini_read_real("Gamepad",  "GMPAction",   0);  
        global.gmp_special  = ini_read_real("Gamepad",  "GMPSpecial",  0);
-       global.gmp_enter    = ini_read_real("Gamepad",  "GMPEnter",    0);                                 
+       global.gmp_enter    = ini_read_real("Gamepad",  "GMPEnter",    0);     
+       global.secret       = ini_read_real("Unlocked", "Secret",      1);                            
     }
     ini_close()
 

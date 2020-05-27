@@ -184,6 +184,7 @@ if(!instance_exists(obj_nice) &amp;&amp; global.ss_rings = 100)
        switch(global.player_id)
        {
        case 1:
+       case 4:
            {
            sprite_index = tex_sonic_curl;
            }
@@ -206,6 +207,7 @@ if(!instance_exists(obj_nice) &amp;&amp; global.ss_rings = 100)
        switch(global.player_id)
        {
        case 1:
+       case 4:
            {
            sprite_index = tex_sonic;
            }

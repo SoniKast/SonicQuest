@@ -224,7 +224,6 @@
  // Set level variables:
     if(global.BonusStage = false)
     {
-        global.player_rings = 0;
         global.do_time      = 0;
         global.game_time    = 0;
         global.object_time  = 0;

@@ -30,7 +30,29 @@
     event_inherited()
     
  // Set Icon:
-    icon = 4;
+    switch(global.player_id)
+    {
+        case 1:
+        {
+            icon = 4;
+        }
+        break;
+        case 2:
+        {
+            icon = 9;
+        }
+        break;
+        case 3:
+        {
+            icon = 10;
+        }
+        case 4:
+        {
+            icon = 12;
+        }
+        break;
+    }
+
 </string>
           </argument>
         </arguments>

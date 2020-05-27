@@ -48,8 +48,9 @@
             <string>/// STH 2 Capsule Code by Shiro 
 
 // Main Variables 
-used_spring = false; // Checks if you pressed the switch/spring on the capsules.
-door_y = 0;          // The Position of the door.Should increase after switch/spring is triggered.
+used_spring = false;    // Checks if you pressed the switch/spring on the capsules.
+door_y      = 0;        // The Position of the door.Should increase after switch/spring is triggered.
+capsule_broken = false; // Create explosions
 
 // Sprite Variables 
 s_capsule = 0;
@@ -69,7 +70,141 @@ instance_create(floor(x),floor(y),obj_new_capsule_goal_switch);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// And NOW we change the capsule
+alarm[2] = -1;
+
+// Create flicky generator
+if(!instance_exists(obj_capsule_flicky_generator))
+{
+ instance_create(x,y+30,obj_capsule_flicky_generator);
+};
+
+with(obj_new_capsule_goal_switch)
+{
+instance_destroy();
+}
+instance_change(obj_new_capsule_busted, true);
+
+// Do it
+if(instance_exists(par_animal) == false )
+{      
+    /* Create Round Clear Object */
+    if(instance_exists(obj_results) == false)
+    {
+        instance_create(x,y,obj_results)
+    };
+};
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// BOOM
+aud_play_sound(general_destroy, global.sfx_volume, 1, 0, 0); 
+
+// Create Explosion
+dummy_effect_create(spr_explosion,0.2,x-random(40)+20,self.y-6+random(20), -12, -1);
+
+//Repeat:
+alarm[2] = 10
+
+//Stop:
+if(alarm[3] = -1){
+   alarm[3] = 150;
+};
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Lock the camera if inview</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(inview)
+{   
+    instance_create(x, y, obj_capsule_cam);
+    with(obj_camera)
+    {
+         cam_handle  = obj_capsule_cam;
+         limit_left  = obj_capsule_cam.x-view_wview/2;
+         limit_right = obj_capsule_cam.x+view_wview/2;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -106,73 +241,17 @@ instance_create(floor(x),floor(y),obj_new_capsule_goal_switch);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* Create flicky generator */
-/* Check if the Switch is triggered */
-if(used_spring == true)
+            <string>// Create flicky generator 
+// Check if the Switch is triggered 
+
+if(capsule_broken == true)
 {
-    if(door_y &lt; 17)
-    {
-        door_y += 1;
-    }
+if(alarm[2] = -1)
+{
+alarm[2] = 3
 }
- 
-/* Create flicky generator */
-if(door_y == 6 &amp;&amp; !instance_exists(obj_capsule_flicky_generator))
-{
- instance_create(x,y+30,obj_capsule_flicky_generator);
- instance_change(obj_new_capsule_busted, false);
-};
+}
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>Done</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/* Create Round Clear: */
-if( door_y &gt;= 17 &amp;&amp; instance_exists(par_animal) == false )
-{      
-    /* Create Round Clear Object */
-    if(instance_exists(obj_results) == false)
-    {
-        instance_create(x,y,obj_results)
-    };
-};
 </string>
           </argument>
         </arguments>
@@ -215,11 +294,10 @@ if( door_y &gt;= 17 &amp;&amp; instance_exists(par_animal) == false )
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* Draw each part of the Capsule */
+            <string>// Draw each part of the Capsule 
 
-/* INTERIOR */ if(used_spring = false){draw_sprite(sprite_index,s_interior,floor(x),floor(y))}; 
-/* LOCK */ if(used_spring = true) {draw_sprite(sprite_index,s_destroyed,floor(x),floor(y))};
-/* CAPSULE */if(used_spring = false){draw_sprite(sprite_index,s_capsule,floor(x),floor(y))};
+/* INTERIOR */ draw_sprite(sprite_index,s_interior,floor(x),floor(y)); 
+/* CAPSULE */  draw_sprite(sprite_index,s_capsule,floor(x),floor(y));
 
 
 </string>

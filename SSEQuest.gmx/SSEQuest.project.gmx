@@ -249,6 +249,30 @@
           <sprite>sprites\spr_knuckles_pole_grab_h</sprite>
           <sprite>sprites\spr_knuckles_pole_grab</sprite>
         </sprites>
+        <sprites name="SoniKast">
+          <sprite>sprites\spr_kast_idle</sprite>
+          <sprite>sprites\spr_kast_lookup</sprite>
+          <sprite>sprites\spr_kast_crouch</sprite>
+          <sprite>sprites\spr_kast_walk</sprite>
+          <sprite>sprites\spr_kast_run</sprite>
+          <sprite>sprites\spr_kast_spring</sprite>
+          <sprite>sprites\spr_kast_skid</sprite>
+          <sprite>sprites\spr_kast_push</sprite>
+          <sprite>sprites\spr_kast_roll</sprite>
+          <sprite>sprites\spr_kast_drop_dash</sprite>
+          <sprite>sprites\spr_kast_spindash</sprite>
+          <sprite>sprites\spr_kast_breath</sprite>
+          <sprite>sprites\spr_kast_grab</sprite>
+          <sprite>sprites\spr_kast_corkscrew</sprite>
+          <sprite>sprites\spr_kast_edge_balance</sprite>
+          <sprite>sprites\spr_kast_hurt</sprite>
+          <sprite>sprites\spr_kast_transform</sprite>
+          <sprite>sprites\spr_kast_die</sprite>
+          <sprite>sprites\spr_kast_goal</sprite>
+          <sprite>sprites\spr_kast_goal_finish</sprite>
+          <sprite>sprites\spr_kast_peelout</sprite>
+          <sprite>sprites\spr_kast_tpose</sprite>
+        </sprites>
         <sprites name="Shields">
           <sprite>sprites\spr_shield_fire</sprite>
           <sprite>sprites\spr_shield_fire_dash</sprite>
@@ -281,6 +305,9 @@
           <sprite>sprites\spr_tails_to_normal_palette</sprite>
           <sprite>sprites\spr_knuckles_super_palette</sprite>
           <sprite>sprites\spr_knuckles_to_normal_palette</sprite>
+          <sprite>sprites\spr_kast_super_palette</sprite>
+          <sprite>sprites\spr_kast_hyper_palette</sprite>
+          <sprite>sprites\spr_kast_to_normal_palette</sprite>
           <sprite>sprites\spr_super_flicky_palette</sprite>
         </sprites>
         <sprite>sprites\spr_insta_shield</sprite>
@@ -352,6 +379,7 @@
               <sprite>sprites\spr_eggmobile_cg_hit</sprite>
               <sprite>sprites\spr_eggmobile_cg_dead</sprite>
               <sprite>sprites\spr_eggmobile_cg_flee</sprite>
+              <sprite>sprites\spr_eggmobile_cg_pipe</sprite>
             </sprites>
             <sprites name="Eggmobile">
               <sprite>sprites\spr_eggmobile_normal</sprite>
@@ -397,6 +425,7 @@
           <sprite>sprites\spr_test_bridge_8_logs</sprite>
           <sprite>sprites\spr_test_bridge_10_logs</sprite>
           <sprite>sprites\spr_test_bridge_12_logs</sprite>
+          <sprite>sprites\spr_test_bridge_16_logs</sprite>
         </sprites>
         <sprites name="Grabs">
           <sprite>sprites\spr_grab_example</sprite>
@@ -662,6 +691,10 @@
         <sprite>sprites\spr_bonus_slab5</sprite>
         <sprite>sprites\spr_slab_preview5</sprite>
         <sprite>sprites\spr_goal_block</sprite>
+        <sprite>sprites\spr_charged_spring_charged</sprite>
+        <sprite>sprites\spr_charged_spring_charging</sprite>
+        <sprite>sprites\spr_charged_spring_normal</sprite>
+        <sprite>sprites\spr_charged_spring_release</sprite>
       </sprites>
       <sprites name="Collision Masks">
         <sprites name="Unused">
@@ -984,6 +1017,7 @@
             <sprite>sprites\spr_bz_swing_platform</sprite>
             <sprite>sprites\sprObjectSpikeball</sprite>
             <sprite>sprites\sprObjectSeesaw</sprite>
+            <sprite>sprites\sprBridgeZonePlatfrom</sprite>
           </sprites>
           <sprites name="Decorations">
             <sprite>sprites\spr_waterfall_top</sprite>
@@ -993,6 +1027,8 @@
           <sprites name="Badniks">
             <sprite>sprites\spr_badnik_spikes</sprite>
             <sprite>sprites\spr_badnik_spikes_mask</sprite>
+            <sprite>sprites\spr_badnik_buzzbomber</sprite>
+            <sprite>sprites\spr_badnik_buzzbomber_bullet</sprite>
           </sprites>
         </sprites>
         <sprites name="HPZ">
@@ -1200,6 +1236,7 @@
           <background>background\ts_bridge4_new</background>
           <background>background\ts_bridge5_new</background>
           <background>background\ts_seesaw</background>
+          <background>background\ts_bridges</background>
         </backgrounds>
       </backgrounds>
       <backgrounds name="Parallax Backgrounds">
@@ -1246,6 +1283,10 @@
           <background>background\bg_jhz_back1</background>
           <background>background\bg_jhz_back2</background>
           <background>background\bg_jhz_back3</background>
+        </backgrounds>
+        <backgrounds name="Wild Waterworks Zone">
+          <background>background\bg_wwz1</background>
+          <background>background\bg_wwz1_grass</background>
         </backgrounds>
         <backgrounds name="Egg Gauntlet Zone">
           <background>background\bg_egg_gauntlet</background>
@@ -1387,11 +1428,13 @@
         <script>scripts\player_handle_glider.gml</script>
         <script>scripts\player_handle_pole_grab.gml</script>
         <script>scripts\player_handle_block.gml</script>
+        <script>scripts\player_handle_charged_springs.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
         <script>scripts\player_physics_tails.gml</script>
         <script>scripts\player_physics_knuckles.gml</script>
+        <script>scripts\player_physics_kast.gml</script>
       </scripts>
       <scripts name="Other">
         <script>scripts\player_ringtoss.gml</script>
@@ -1408,6 +1451,7 @@
         <script>scripts\animation_index_supersonic.gml</script>
         <script>scripts\animation_index_tails.gml</script>
         <script>scripts\animation_index_knuckles.gml</script>
+        <script>scripts\animation_index_kast.gml</script>
       </scripts>
     </scripts>
     <scripts name="Saving/Loading">
@@ -1832,6 +1876,7 @@
             <object>objects\obj_example_bridge_8</object>
             <object>objects\obj_example_bridge_10</object>
             <object>objects\obj_example_bridge_12</object>
+            <object>objects\obj_example_bridge_16</object>
             <objects name="Don't use.">
               <object>objects\obj_bridge_node</object>
             </objects>
@@ -1958,6 +2003,7 @@
             <object>objects\obj_monitor_eggman</object>
             <object>objects\obj_monitor_combiring</object>
             <object>objects\obj_monitor_super</object>
+            <object>objects\obj_monitor_shield</object>
           </objects>
           <objects name="Don't use.">
             <object>objects\obj_monitor_collision</object>
@@ -2035,6 +2081,7 @@
           <object>objects\obj_alt_results</object>
           <object>objects\obj_sign_post</object>
           <object>objects\obj_sign_post_camera</object>
+          <object>objects\obj_capsule_cam</object>
           <object>objects\obj_capsule_goal</object>
           <object>objects\obj_new_capsule_goal</object>
         </objects>
@@ -2353,6 +2400,7 @@
           <object>objects\obj_bonus_slab3</object>
           <object>objects\obj_bonus_slab4</object>
           <object>objects\obj_bonus_slab5</object>
+          <object>objects\obj_charged_spring</object>
           <object>objects\obj_casino_slot</object>
           <object>objects\obj_slot_box</object>
           <object>objects\obj_slotpanel01</object>
@@ -2534,33 +2582,6 @@
         <objects name="Parallax">
           <object>objects\obj_ppz_parallax</object>
         </objects>
-        <objects name="Extra">
-          <objects name="Bridge Zone">
-            <objects name="Parallax">
-              <object>objects\objBZParallax</object>
-            </objects>
-            <objects name="Waterfall">
-              <object>objects\obj_waterfall_bottom</object>
-              <object>objects\obj_waterfall_top</object>
-            </objects>
-            <objects name="Gimmicks">
-              <objects name="Seesaws">
-                <object>objects\objObjectSeesaw</object>
-                <object>objects\objObjectSpikeball</object>
-                <object>objects\objSeesawLimiterLeft</object>
-                <object>objects\objSeesawLimiterRight</object>
-              </objects>
-              <object>objects\obj_bridge_platform</object>
-            </objects>
-            <objects name="Badniks">
-              <object>objects\obj_badnik_spikes</object>
-              <object>objects\obj_badnik_spikes_mask</object>
-            </objects>
-            <object>objects\obj_da_rock</object>
-          </objects>
-          <object>objects\obj_bonus1_parallax</object>
-          <object>objects\obj_goal_block</object>
-        </objects>
         <objects name="Boss">
           <object>objects\obj_egg_bumper</object>
           <object>objects\obj_egg_bumper_create</object>
@@ -2597,6 +2618,9 @@
           <object>objects\obj_wwz_cork</object>
           <object>objects\obj_wwz_pole_v</object>
         </objects>
+        <objects name="Parallax">
+          <object>objects\obj_wwz_parallax</object>
+        </objects>
       </objects>
       <objects name="Egg Gauntlet">
         <objects name="Gimmicks">
@@ -2630,6 +2654,37 @@
         <object>objects\obj_unused_emerald</object>
         <object>objects\obj_g_unused_emerald</object>
         <object>objects\obj_hpz_platform</object>
+      </objects>
+      <objects name="Extra">
+        <objects name="Bridge Zone">
+          <objects name="Parallax">
+            <object>objects\objBZParallax</object>
+          </objects>
+          <objects name="Waterfall">
+            <object>objects\obj_waterfall_bottom</object>
+            <object>objects\obj_waterfall_top</object>
+          </objects>
+          <objects name="Gimmicks">
+            <objects name="Seesaws">
+              <object>objects\objObjectSeesaw</object>
+              <object>objects\objObjectSpikeball</object>
+              <object>objects\objSeesawLimiterLeft</object>
+              <object>objects\objSeesawLimiterRight</object>
+            </objects>
+            <object>objects\obj_bridge_platform</object>
+            <object>objects\objBridgeZoneSpringPlatform</object>
+            <object>objects\objBridgeZoneSpringPlatformWeight</object>
+          </objects>
+          <objects name="Badniks">
+            <object>objects\obj_badnik_spikes</object>
+            <object>objects\obj_badnik_spikes_mask</object>
+            <object>objects\obj_badnik_buzzbomber</object>
+            <object>objects\obj_badnik_buzzbomber_bullet</object>
+          </objects>
+          <object>objects\obj_da_rock</object>
+        </objects>
+        <object>objects\obj_bonus1_parallax</object>
+        <object>objects\obj_goal_block</object>
       </objects>
     </objects>
     <objects name="TweenGMS">
@@ -2710,10 +2765,11 @@
       <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
+      <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_demo_end</room>
     </rooms>
   </rooms>
-  <constants number="82">
+  <constants number="83">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v3.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2782,10 +2838,11 @@
     <constant name="SHIELD_FIRE">1</constant>
     <constant name="SHIELD_BUBBLE">2</constant>
     <constant name="SHIELD_ELECTRICITY">3</constant>
+    <constant name="SHIELD_NORMAL">4</constant>
     <constant name="CHAR_SONIC">1</constant>
     <constant name="CHAR_TAILS">2</constant>
     <constant name="CHAR_KNUCKLES">3</constant>
-    <constant name="CHAR_MODERN_SONIC">4</constant>
+    <constant name="CHAR_KAST">4</constant>
     <constant name="IS_PLAYER">1</constant>
     <constant name="IS_CPU">2</constant>
     <constant name="pal_cycle_default">1</constant>

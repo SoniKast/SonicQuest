@@ -8,7 +8,7 @@
     }
 
  // Full jump:
-    if((ground == true || state == STATE_CORKSCREW || state == STATE_CORKSCREW_ROLL) && !player_collision_check(COL_TOP, MASK_BIG, x, y-6, angle, -1) && input_action_pressed)
+    if((ground == true || state == STATE_CORKSCREW || state == STATE_CORKSCREW_ROLL) && !player_collision_check(COL_TOP, MASK_BIG, x, y-6, angle, -1) && !player_collision_check(COL_BOTTOM_OBJECT, MASK_MAIN, x, y, angle, obj_charged_spring) && input_action_pressed)
     {
        if(state != STATE_CROUCH && state != STATE_SPINDASH && state != STATE_LOOKUP && state != STATE_PEELOUT && tunnel_lock == 0 )
        {       

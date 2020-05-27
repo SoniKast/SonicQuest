@@ -97,33 +97,27 @@ mask_index = spr_new_capsule_goal_switch
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* Trigger the Switch */
-if(instance_exists(par_player))
-{
-
+            <string>// Trigger the Switch 
+if(instance_exists(par_player)){
 handle = instance_place(x+10,y-1,par_player);
 if(handle != noone &amp;&amp; image_index = s_spring[1])
- {
+  {
   image_index = s_spring[2];
   aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
-   with(parent) {used_spring = true};
-    instance_destroy();
-    /* Create a Dummy explosion and Lock object */
-    dummy_effect_create(spr_explosion,0.2,x-random(40)+20,self.y-10+random(20),1,-1); 
-    
- //Lock the camera:
-        with(obj_camera)
-        {
-             cam_handle  = obj_new_capsule_goal;
-             limit_left  = obj_new_capsule_goal.x-view_wview/2;
-             limit_right = obj_new_capsule_goal.x+view_wview/2;
-        }
- 
- /* Stop Time: */
- global.do_time = 0;
- 
+  with(parent)
+  {
+  used_spring = true
+  capsule_broken = true;
+  };
+  if(instance_exists(obj_new_capsule_busted))
+  {
+  instance_destroy();
+  }
+  // Stop Time: 
+  global.do_time = 0;
  };
 };
+
 
 </string>
           </argument>

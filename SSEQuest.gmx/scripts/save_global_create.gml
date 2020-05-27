@@ -17,6 +17,7 @@
        ini_write_real("Gamepad",  "GMPAction",   global.gmp_action);  
        ini_write_real("Gamepad",  "GMPSpecial",  global.gmp_special);
        ini_write_real("Gamepad",  "GMPEnter",    global.gmp_enter);                                 
+       ini_write_real("Unlocked", "Secret",      global.secret);  
     }
     ini_close()
 

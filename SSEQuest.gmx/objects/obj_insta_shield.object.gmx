@@ -3,7 +3,7 @@
   <spriteName>spr_insta_shield</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>obj_indestructible</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -30,12 +30,6 @@
     image_speed      = 0;
     remaining_frames = 10 // Make sure to keep the insta shield active for a split second.
     
-/// Frame speed, Sound and Character Jump lock.
-/*   
-    image_speed = 0.5; 
-    aud_play_sound(shield_use_insta, global.sfx_volume, 1, 0, 0);
-    parent = obj_player;
-    image_xscale = obj_player.animation_direction;
 </string>
           </argument>
         </arguments>
@@ -72,13 +66,13 @@
     }
  
  // Animate.
-    if(floor(image_index) &lt; 6)
+    if(floor(image_index) &lt; 7)
     {
-       image_index += .5;
+       image_index += 0.5;
     }
     else
     {
-       image_index = 6
+       image_index = 7
     }
     
  // Decrease frames, destroy once depleted.

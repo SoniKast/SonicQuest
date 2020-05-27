@@ -8,8 +8,8 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
-  <showcolour>-1</showcolour>
+  <colour>0</colour>
+  <showcolour>0</showcolour>
   <code>/// Zone init. 
 
     global.zone_name      = "CHAOTIC CASINO"
@@ -338,10 +338,10 @@
     <instance objName="obj_ppz_breakable_wall" x="608" y="1728" name="inst_1A063DB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_big_ring" x="512" y="1728" name="inst_25B1CD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_big_ring" x="3712" y="2368" name="inst_5C17BC27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="1760" y="1824" name="inst_DB2137EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_1" x="1760" y="2016" name="inst_983BBE29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_1" x="1760" y="1984" name="inst_72CB68E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_layer_switch_0" x="1760" y="1792" name="inst_B2CBF32A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2624" y="1696" name="inst_DB2137EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_1" x="2560" y="2144" name="inst_983BBE29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_1" x="2560" y="2112" name="inst_72CB68E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="2624" y="1664" name="inst_B2CBF32A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_30" x="1280" y="2304" name="inst_85019C86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ppz_flipping_card" x="3776" y="2048" name="inst_A7C8EDE1" locked="0" code="" scaleX="1.14285719394684" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ppz_flipping_card" x="3712" y="2048" name="inst_717D2721" locked="0" code="" scaleX="1.14285719394684" scaleY="1" colour="4294967295" rotation="0"/>
@@ -866,6 +866,28 @@
     <instance objName="obj_moving_dir_right" x="9488" y="2064" name="inst_3B9AA691" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moving_dir_left" x="9840" y="2064" name="inst_759210C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ppz_parallax" x="16" y="16" name="inst_6DAFC839" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spring_up" x="8176" y="1904" name="inst_F061AB39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="400" y="2096" name="inst_E9393B71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="240" y="2096" name="inst_CCEE87B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="272" y="2096" name="inst_C333E319" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="304" y="2096" name="inst_2C4A00FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="336" y="2096" name="inst_3EB32677" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="368" y="2096" name="inst_F26D89C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="736" y="2160" name="inst_BDB5FA2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="768" y="2160" name="inst_0CC4544A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ring" x="800" y="2160" name="inst_637A05E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_1" x="1760" y="2016" name="inst_20822EE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_1" x="1760" y="1984" name="inst_24C783C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="1760" y="1824" name="inst_6BFFB6DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_layer_switch_0" x="1760" y="1792" name="inst_41795F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slot_box" x="2880" y="2304" name="inst_4B7BBF22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slot_box" x="5888" y="2000" name="inst_5CEE7E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel01" x="2833" y="2229" name="inst_ACA5052E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel01" x="5841" y="1925" name="inst_491CC864" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel02" x="5873" y="1925" name="inst_B6A30B71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel02" x="2865" y="2229" name="inst_57BE2FB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel03" x="2897" y="2229" name="inst_ED19E9D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slotpanel03" x="5905" y="1925" name="inst_BEC5D462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_pinball_panic" x="0" y="1920" w="128" h="128" xo="0" yo="256" id="10037636" name="inst_2B196F10" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

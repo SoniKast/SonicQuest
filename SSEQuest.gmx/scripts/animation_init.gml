@@ -17,6 +17,10 @@
         {
            sprite = spr_knuckles_idle;
         }    
+        if(player_index == CHAR_KAST)
+        {
+           sprite = spr_kast_idle;
+        }
                     
         animation                 = "";
         animation_previous        = "";

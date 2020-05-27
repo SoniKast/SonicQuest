@@ -28,7 +28,7 @@
             <string>/// Explode.
                                 
  // Dummy Effect:
-    dummy_effect_create(spr_explosion, 0.2, x, y, 5, 0);
+    dummy_effect_create(spr_explosion, 0.2, x, y, 2, 0);
     
  // Play Sound:
     aud_play_sound(general_break, global.sfx_volume, 1, 0, 0);
