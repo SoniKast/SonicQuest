@@ -34,7 +34,7 @@
     landed                = false;
     y_speed               = 0;      
     y_gravity             = 0.21875;
-
+    palette_pos           = 0;
 </string>
           </argument>
         </arguments>
@@ -296,8 +296,15 @@
             <kind>1</kind>
             <string>/// Draw  Broken Monitor.
 
+ // Main palette:
+    palette_pos = icon;
+    pal_swap_set(spr_monitor_palette, palette_pos, false);
+    
  // Broken part:
     draw_sprite(sprite_index, -1, x, y)
+    
+ // Reset the palette:
+    pal_swap_reset();
     
  // Draw Icon:
     if(icon_disappear_length){

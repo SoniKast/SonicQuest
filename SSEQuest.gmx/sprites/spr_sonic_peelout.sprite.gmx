@@ -10,7 +10,7 @@
   <bbox_left>0</bbox_left>
   <bbox_right>39</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>35</bbox_bottom>
+  <bbox_bottom>36</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>40</width>
-  <height>36</height>
+  <height>37</height>
   <frames>
     <frame index="0">images\spr_sonic_peelout_0.png</frame>
     <frame index="1">images\spr_sonic_peelout_1.png</frame>

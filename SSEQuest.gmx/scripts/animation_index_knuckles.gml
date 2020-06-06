@@ -84,6 +84,20 @@
        animation_linked_to   =  "";
        animation_linked_frame = 0;     
     }
+         
+ // Chuckles:
+    if(animation = "chuckles")
+    {
+       sprite                 = spr_knuckles_chuckles;
+       animation_start        = 0;
+       animation_end          = 4;
+       animation_loop         = 3;
+       animation_speed        = 0.125;
+       animation_repeat       = 1; 
+       animation_repeat_times = 0;
+       animation_linked_to   =  "";
+       animation_linked_frame = 0;     
+    }
  
  // Run:
     if(animation = "run")

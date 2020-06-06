@@ -34,6 +34,7 @@
     parent      = -1;                                           // Parent. Used after destroying.
     collision   = instance_create(x, y, obj_monitor_collision); // Have seperate collision to prevent bugs with player.
     collision   . sprite_index = sprite_index;
+    palette_pos = 0;                                            // If we manipulate a sprites palette, this keeps track of the position.  
 
 </string>
           </argument>
@@ -209,10 +210,15 @@
             <string>/// Draw monitor.
 
  // Icon:
-    draw_sprite(spr_monitor_icon, icon, floor(x), floor(y-5));
+    draw_sprite(spr_monitor_icon, icon, floor(x), floor(y-2));
+    
+ // Main palette:
+    palette_pos = icon;
+    pal_swap_set(spr_monitor_palette, palette_pos, false);
+    
  // Main monitor:
     draw_sprite(sprite_index, -1, floor(x), floor(y));
-
+    pal_swap_reset();
 </string>
           </argument>
         </arguments>

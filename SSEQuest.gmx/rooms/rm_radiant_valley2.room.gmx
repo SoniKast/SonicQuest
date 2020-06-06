@@ -1384,7 +1384,6 @@
     <instance objName="obj_kabuturbo" x="5184" y="496" name="inst_3281175D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="7776" y="368" name="inst_BF15982E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="9552" y="1264" name="inst_C54BF704" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_kabuturbo" x="10048" y="752" name="inst_BE6041AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="9952" y="368" name="inst_8EB00C7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="9872" y="176" name="inst_8EE51E89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_kabuturbo" x="8832" y="368" name="inst_EA1FDC7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1399,8 +1398,6 @@
     <instance objName="obj_badnik_block" x="11136" y="352" name="inst_614753E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="9872" y="352" name="inst_9E7DB236" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="10096" y="352" name="inst_B6E7F488" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_badnik_block" x="10096" y="736" name="inst_26FFAB92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_badnik_block" x="9984" y="736" name="inst_2095E854" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="10064" y="160" name="inst_112D08AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="9808" y="160" name="inst_8F0EF90B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="8736" y="352" name="inst_88A5EE4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

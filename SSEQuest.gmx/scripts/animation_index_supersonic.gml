@@ -6,7 +6,7 @@
     {
        sprite                 = spr_ssonic_idle;
        animation_start        = 0;
-       animation_end          = 2;
+       animation_end          = 3;
        animation_loop         = 0;
        animation_speed        = 0.15;
        animation_repeat       = 1; 
@@ -20,10 +20,10 @@
     {
        sprite                 = spr_ssonic_crouch;
        animation_start        = 0;
-       animation_end          = 0;
+       animation_end          = 3;
        animation_loop         = 0;
-       animation_speed        = 0;
-       animation_repeat       = 0; 
+       animation_speed        = 0.15;
+       animation_repeat       = 1; 
        animation_repeat_times = 0;
        animation_linked_to    = "";
        animation_linked_frame = 0;      
@@ -32,7 +32,7 @@
  // Look up:
     if(animation = "look up")
     {
-       sprite                 = spr_ssonic_lookup;
+       sprite                 = spr_sonic_lookup;
        animation_start        = 0;
        animation_end          = 1;
        animation_loop         = 1;
@@ -74,7 +74,7 @@
  // Roll:
     if(animation = "roll")
     {
-       sprite                 = spr_ssonic_roll;
+       sprite                 = spr_sonic_roll;
        animation_start        = 0;
        animation_end          = 7;
        animation_loop         = 0;
@@ -88,7 +88,7 @@
  // Dropdash:
     if(animation = "dropdash")
     {
-       sprite                 = spr_ssonic_dropdash;
+       sprite                 = spr_sonic_dropdash;
        animation_start        = 0;
        animation_end          = 5;
        animation_loop         = 0;
@@ -102,7 +102,7 @@
  // Spindash:
     if(animation = "spindash")
     {
-       sprite                 = spr_ssonic_spindash;
+       sprite                 = spr_sonic_spindash;
        animation_start        = 0;
        animation_end          = 5;
        animation_loop         = 0;
@@ -116,7 +116,7 @@
  // Spring:
     if(animation = "spring")
     {
-       sprite                 = spr_ssonic_spring;
+       sprite                 = spr_sonic_spring;
        animation_start        = 0;
        animation_end          = 0;
        animation_loop         = 0;
@@ -130,7 +130,7 @@
  // Skid:
     if(animation = "skid")
     {
-       sprite                 = spr_ssonic_skid;
+       sprite                 = spr_sonic_skid;
        animation_start        = 0;
        animation_end          = 2;
        animation_loop         = 2;
@@ -298,7 +298,7 @@
  // Breath.
     if(animation = "breath")
     {
-       sprite                 = spr_ssonic_breath;
+       sprite                 = spr_sonic_breath;
        animation_start        = 0;
        animation_end          = 0;
        animation_loop         = 0;
@@ -326,7 +326,7 @@
  // Roll:
     if(animation = "tube")
     {
-       sprite                 = spr_ssonic_roll;
+       sprite                 = spr_sonic_roll;
        animation_start        = 0;
        animation_end          = 7;
        animation_loop         = 0;

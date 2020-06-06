@@ -23,6 +23,8 @@
       <sound>sound\music_jungle_havoc1</sound>
       <sound>sound\music_jungle_havoc2</sound>
       <sound>sound\music_colossal_conduit1</sound>
+      <sound>sound\music_final_fall1</sound>
+      <sound>sound\music_final_fall2</sound>
       <sound>sound\music_hidden_palace</sound>
       <sound>sound\music_special_stage</sound>
       <sound>sound\music_boss</sound>
@@ -160,19 +162,12 @@
           <sprite>sprites\spr_sonic_pole_grab</sprite>
           <sprites name="Super">
             <sprite>sprites\spr_ssonic_idle</sprite>
-            <sprite>sprites\spr_ssonic_lookup</sprite>
             <sprite>sprites\spr_ssonic_crouch</sprite>
             <sprite>sprites\spr_ssonic_walk</sprite>
             <sprite>sprites\spr_ssonic_run</sprite>
             <sprite>sprites\spr_ssonic_push</sprite>
-            <sprite>sprites\spr_ssonic_skid</sprite>
-            <sprite>sprites\spr_ssonic_spindash</sprite>
-            <sprite>sprites\spr_ssonic_roll</sprite>
-            <sprite>sprites\spr_ssonic_spring</sprite>
             <sprite>sprites\spr_ssonic_falling</sprite>
             <sprite>sprites\spr_ssonic_edge_balance</sprite>
-            <sprite>sprites\spr_ssonic_breath</sprite>
-            <sprite>sprites\spr_ssonic_dropdash</sprite>
           </sprites>
         </sprites>
         <sprites name="Tails">
@@ -219,6 +214,7 @@
         </sprites>
         <sprites name="Knuckles">
           <sprite>sprites\spr_knuckles_idle</sprite>
+          <sprite>sprites\spr_knuckles_chuckles</sprite>
           <sprite>sprites\spr_knuckles_idle_bored</sprite>
           <sprite>sprites\spr_knuckles_lookup</sprite>
           <sprite>sprites\spr_knuckles_crouch</sprite>
@@ -296,20 +292,6 @@
             <sprite>sprites\spr_player_mask_thin_block</sprite>
           </sprites>
         </sprites>
-        <sprites name="Palette">
-          <sprite>sprites\pal_sonic</sprite>
-          <sprite>sprites\spr_sonic_super_palette</sprite>
-          <sprite>sprites\spr_sonic_hyper_palette</sprite>
-          <sprite>sprites\spr_sonic_to_normal_palette</sprite>
-          <sprite>sprites\spr_tails_super_palette</sprite>
-          <sprite>sprites\spr_tails_to_normal_palette</sprite>
-          <sprite>sprites\spr_knuckles_super_palette</sprite>
-          <sprite>sprites\spr_knuckles_to_normal_palette</sprite>
-          <sprite>sprites\spr_kast_super_palette</sprite>
-          <sprite>sprites\spr_kast_hyper_palette</sprite>
-          <sprite>sprites\spr_kast_to_normal_palette</sprite>
-          <sprite>sprites\spr_super_flicky_palette</sprite>
-        </sprites>
         <sprite>sprites\spr_insta_shield</sprite>
       </sprites>
       <sprites name="NPCs">
@@ -326,6 +308,7 @@
           <sprite>sprites\spr_monitor_broken</sprite>
           <sprite>sprites\spr_monitor_icon</sprite>
           <sprite>sprites\spr_monitor_flip</sprite>
+          <sprite>sprites\spr_monitor_palette</sprite>
         </sprites>
         <sprites name="Springs">
           <sprites name="Yellow">
@@ -552,6 +535,9 @@
         </sprites>
         <sprites name="Score">
           <sprite>sprites\spr_score</sprite>
+          <sprite>sprites\spr_score_goal_100</sprite>
+          <sprite>sprites\spr_score_goal_1000</sprite>
+          <sprite>sprites\spr_score_goal_10000</sprite>
         </sprites>
         <sprites name="Flickies">
           <sprites name="Zones">
@@ -987,6 +973,15 @@
             <sprite>sprites\spr_ffz_loop_left</sprite>
             <sprite>sprites\spr_ffz_loop_top</sprite>
             <sprite>sprites\spr_ffz_fire_screen</sprite>
+            <sprite>sprites\spr_ffz_conveyor</sprite>
+            <sprite>sprites\sprPBridge</sprite>
+            <sprite>sprites\sprPCenter</sprite>
+            <sprite>sprites\sprPChain</sprite>
+            <sprite>sprites\spr_ffz_fall_bridge_holder_l</sprite>
+            <sprite>sprites\spr_ffz_fall_bridge_holder_r</sprite>
+            <sprite>sprites\spr_ffz_fall_bridge_l</sprite>
+            <sprite>sprites\spr_ffz_fall_bridge</sprite>
+            <sprite>sprites\spr_ffz_fall_bridge_r</sprite>
           </sprites>
           <sprites name="Badniks">
             <sprite>sprites\spr_butterkiller_follow</sprite>
@@ -1049,6 +1044,30 @@
           <sprite>sprites\spr_hpz_scenery</sprite>
         </sprites>
       </sprites>
+      <sprites name="Mobile">
+        <sprite>sprites\spr_gamepad_up</sprite>
+        <sprite>sprites\spr_gamepad_left</sprite>
+        <sprite>sprites\spr_gamepad_right</sprite>
+        <sprite>sprites\spr_gamepad_down</sprite>
+        <sprite>sprites\spr_gamepad_action</sprite>
+        <sprite>sprites\spr_gamepad_special</sprite>
+        <sprite>sprites\spr_gamepad_start</sprite>
+      </sprites>
+      <sprites name="Palette">
+        <sprite>sprites\pal_sonic</sprite>
+        <sprite>sprites\spr_sonic_super_palette</sprite>
+        <sprite>sprites\spr_sonic_hyper_palette</sprite>
+        <sprite>sprites\spr_sonic_to_normal_palette</sprite>
+        <sprite>sprites\spr_tails_super_palette</sprite>
+        <sprite>sprites\spr_tails_to_normal_palette</sprite>
+        <sprite>sprites\spr_knuckles_super_palette</sprite>
+        <sprite>sprites\spr_knuckles_to_normal_palette</sprite>
+        <sprite>sprites\spr_kast_super_palette</sprite>
+        <sprite>sprites\spr_kast_hyper_palette</sprite>
+        <sprite>sprites\spr_kast_to_normal_palette</sprite>
+        <sprite>sprites\spr_super_flicky_palette</sprite>
+        <sprite>sprites\spr_ffz_palette</sprite>
+      </sprites>
     </sprites>
     <sprites name="Menus / Continue">
       <sprites name="Title Screen">
@@ -1074,12 +1093,14 @@
         <sprite>sprites\spr_dataselect_continues</sprite>
       </sprites>
       <sprites name="Menu">
-        <sprite>sprites\spr_header</sprite>
-        <sprite>sprites\spr_menu</sprite>
-        <sprite>sprites\spr_menu_background</sprite>
-        <sprite>sprites\spr_menu_rotating_piece</sprite>
-        <sprite>sprites\spr_menu_picture</sprite>
-        <sprite>sprites\spr_menu_sonic_run</sprite>
+        <sprites name="Old Menu">
+          <sprite>sprites\spr_header</sprite>
+          <sprite>sprites\spr_menu</sprite>
+          <sprite>sprites\spr_menu_background</sprite>
+          <sprite>sprites\spr_menu_rotating_piece</sprite>
+          <sprite>sprites\spr_menu_picture</sprite>
+          <sprite>sprites\spr_menu_sonic_run</sprite>
+        </sprites>
         <sprites name="New Data Select">
           <sprite>sprites\spr_data_select</sprite>
           <sprite>sprites\spr_data_emerald_counter</sprite>
@@ -1087,6 +1108,10 @@
           <sprite>sprites\spr_data_select_lives</sprite>
           <sprite>sprites\spr_data_select_zone</sprite>
           <sprite>sprites\spr_data_select_player</sprite>
+        </sprites>
+        <sprites name="New Menu">
+          <sprite>sprites\spr_stripe_top</sprite>
+          <sprite>sprites\spr_stripe_bottom</sprite>
         </sprites>
       </sprites>
       <sprites name="Time Trial">
@@ -1159,6 +1184,10 @@
       </backgrounds>
       <backgrounds name="Menu">
         <background>background\bg_menu</background>
+        <background>background\bg_menu_2</background>
+        <background>background\bg_menu_3</background>
+        <background>background\bg_stripe_top</background>
+        <background>background\bg_stripe_bottom</background>
         <background>background\bg_back</background>
         <background>background\bg_sonic_and_tails</background>
         <background>background\bg_header</background>
@@ -1201,6 +1230,7 @@
           <background>background\ts_forest_frenzy</background>
           <background>background\ts_forest_frenzy2</background>
           <background>background\ts_ffz_tree</background>
+          <background>background\ts_ffz2_tree</background>
           <background>background\ts_jungle_havoc</background>
           <background>background\ts_ffz_plants</background>
           <background>background\ts_ffz_plants2</background>
@@ -1429,6 +1459,7 @@
         <script>scripts\player_handle_pole_grab.gml</script>
         <script>scripts\player_handle_block.gml</script>
         <script>scripts\player_handle_charged_springs.gml</script>
+        <script>scripts\player_handle_conveyors.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1808,6 +1839,7 @@
         <object>objects\par_solid</object>
         <object>objects\par_solid_no_angle</object>
         <object>objects\par_slipping_right</object>
+        <object>objects\par_conveyer</object>
         <object>objects\par_platform</object>
         <object>objects\par_platform_no_angle</object>
         <object>objects\par_layer0</object>
@@ -2035,6 +2067,9 @@
           </objects>
           <objects name="Score">
             <object>objects\obj_score</object>
+            <object>objects\obj_score_goal_100</object>
+            <object>objects\obj_score_goal_1000</object>
+            <object>objects\obj_score_goal_10000</object>
           </objects>
         </objects>
         <objects name="Flickies">
@@ -2318,6 +2353,7 @@
           <object>objects\obj_continue_post</object>
           <object>objects\obj_continue_effect</object>
         </objects>
+        <object>objects\obj_menu_parallax</object>
       </objects>
       <objects name="Special Stage">
         <objects name="Old">
@@ -2415,6 +2451,16 @@
           <object>objects\objBonusZoneParallax</object>
           <object>objects\obj_bonus3_bumper</object>
         </objects>
+      </objects>
+      <objects name="Mobile">
+        <object>objects\obj_touchpad</object>
+        <object>objects\obj_gamepad_up</object>
+        <object>objects\obj_gamepad_down</object>
+        <object>objects\obj_gamepad_left</object>
+        <object>objects\obj_gamepad_right</object>
+        <object>objects\obj_gamepad_action</object>
+        <object>objects\obj_gamepad_special</object>
+        <object>objects\obj_gamepad_enter</object>
       </objects>
       <object>objects\obj_screenshotter</object>
     </objects>
@@ -2594,9 +2640,15 @@
           <object>objects\obj_ffz2_parallax</object>
         </objects>
         <objects name="Gimmicks">
+          <object>objects\obj_ffz_fall_bridge_l</object>
+          <object>objects\obj_ffz_fall_bridge</object>
+          <object>objects\obj_ffz_fall_bridge_r</object>
           <object>objects\obj_ffz_loop_solid</object>
           <object>objects\obj_ffz_loop_left</object>
           <object>objects\obj_ffz_loop_right</object>
+          <object>objects\obj_ffz_conveyor</object>
+          <object>objects\obj_spinning_platform</object>
+          <object>objects\obj_spinning_platform_parent</object>
         </objects>
         <objects name="Badniks">
           <object>objects\obj_butterkiller_follow</object>
@@ -2694,7 +2746,6 @@
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
-      <room>rooms\rm_disclaimer</room>
       <room>rooms\rm_engine_logo</room>
       <room>rooms\rm_sega</room>
       <room>rooms\rm_stt</room>
@@ -2765,6 +2816,7 @@
       <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
+      <room>rooms\rm_disclaimer</room>
       <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_demo_end</room>
     </rooms>

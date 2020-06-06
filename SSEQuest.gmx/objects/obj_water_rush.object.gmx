@@ -50,7 +50,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(PalPosition &gt; 6){
+            <string>    if(PalPosition &gt; 6){
           PalPosition = 0;
        }
        PalPosition += 0.15;
@@ -77,7 +77,14 @@
           <argument>
             <kind>1</kind>
             <string>draw_self();
+if(inview())
+{
 pal_swap_set(spr_rush_palette, floor(PalPosition), false);
+}
+else
+{
+pal_swap_reset();
+}
 </string>
           </argument>
         </arguments>

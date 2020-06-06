@@ -56,17 +56,32 @@
             <string>/// Rewards.
     if(Collected != 0){
        if(image_index == 0){
+          // Give a certain amount of rings
           global.player_rings += choose(10, 10, 10, 10, 10, 20, 40, 10, 20, 40, 80, 10, 10, 20) 
           aud_play_sound(general_ring, global.sfx_volume, 1, 0, 0);
        }
        if(image_index == 1){
+          // Give an extra life
           global.player_lives++
           aud_play_sound(player_life, global.sfx_volume, 1, 0, 0);
        }
        if(image_index == 2){
-          // No normal shield yet
+          // Normal Shield 
+          if(par_player.shield != 0)
+           { 
+              par_player.shield = 0;
+              with(par_player.shield_obj)
+              {
+                   instance_destroy();
+              }
+              par_player.shield_obj = noone;
+           }
+           par_player.shield = SHIELD_NORMAL;
+           global.BonusShield = SHIELD_NORMAL;
+           aud_play_sound(shield_get_normal, global.sfx_volume, 1, 0, 0);
        }
        if(image_index == 3){
+          // Bubble Shield 
           if(par_player.shield != 0)
           { 
             par_player.shield = 0;
@@ -81,6 +96,7 @@
           aud_play_sound(shield_get_bubble, global.sfx_volume, 1, 0, 0);       
        }
        if(image_index == 5){
+          // Electric Shield 
           if(par_player.shield != 0)
           { 
             par_player.shield = 0;
@@ -95,6 +111,7 @@
           aud_play_sound(shield_get_electricity, global.sfx_volume, 1, 0, 0);      
        }
        if(image_index == 4){
+          // Flame Shield 
            if(par_player.shield != 0)
            { 
               par_player.shield = 0;

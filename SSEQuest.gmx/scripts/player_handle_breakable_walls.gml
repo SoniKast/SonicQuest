@@ -4,7 +4,7 @@
  // All Characters.
     var breakable_wall;
         breakable_wall = instance_nearest(x, y, par_collision_breakable_wall);
-        if(breakable_wall != noone && (player_index == CHAR_KNUCKLES || state == STATE_ROLL || shield_state == 1 || state == STATE_GLIDE || state == STATE_SLIDE) && (player_collision_check(COL_LEFT_OBJECT, MASK_BIG, x, y, angle, breakable_wall)))
+        if(breakable_wall != noone && (player_index == CHAR_KNUCKLES || state == STATE_ROLL || state == STATE_SPINDASH || shield_state == 1 || state == STATE_GLIDE || state == STATE_SLIDE) && (player_collision_check(COL_LEFT_OBJECT, MASK_BIG, x, y, angle, breakable_wall)))
         {
            with(breakable_wall)
            {
@@ -13,7 +13,7 @@
                 instance_destroy();                
            }
         }
-        if(breakable_wall != noone && (player_index == CHAR_KNUCKLES || state == STATE_ROLL || shield_state == 1 || state == STATE_GLIDE || state == STATE_SLIDE) && (player_collision_check(COL_RIGHT_OBJECT, MASK_BIG, x, y, angle, breakable_wall)))
+        if(breakable_wall != noone && (player_index == CHAR_KNUCKLES || state == STATE_ROLL || state == STATE_SPINDASH || shield_state == 1 || state == STATE_GLIDE || state == STATE_SLIDE) && (player_collision_check(COL_RIGHT_OBJECT, MASK_BIG, x, y, angle, breakable_wall)))
         {
            with(breakable_wall)
            {

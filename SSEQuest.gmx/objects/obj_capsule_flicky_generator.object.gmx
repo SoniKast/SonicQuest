@@ -48,7 +48,33 @@
             <string>/* Create all the Flickys! */
 flickys = 30;
 flicky_timer = 1;
-generate_type = choose(1,2)
+switch(global.zone_id){
+    case 1:
+    {
+    generate_type = 1
+    }
+    break;
+    case 2:
+    {
+    generate_type = 2
+    }
+    break;
+    case 3:
+    {
+    generate_type = 3
+    }
+    break;
+    case 4:
+    {
+    generate_type = 4
+    }
+    break;
+    case 5:
+    {
+    generate_type = 5
+    }
+    break;
+}
 
 repeat(flickys)
 {
@@ -63,7 +89,15 @@ repeat(flickys)
  else if(generate_type == 3)
  {
  ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_bear,obj_animal_vicky,obj_animal_nicky,obj_animal_clucky,obj_animal_plucky))
- };
+ }
+ else if(generate_type == 4)
+ {
+ ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_bear,obj_animal_vicky,obj_animal_nicky,obj_animal_clucky,obj_animal_plucky))
+ }
+ else if(generate_type == 5)
+ {
+ ID = instance_create(choose(x+0,x+3,x-3,x+10,x+7,x+8,x+13,x-10,x-23,x-17,x+3,x+23,x+18,x+20,x+14),y-13,choose(obj_animal_lucky,obj_animal_pecky,obj_animal_dicky,obj_animal_docky,obj_animal_rocky))
+ }
 };
 
 /* Movement */

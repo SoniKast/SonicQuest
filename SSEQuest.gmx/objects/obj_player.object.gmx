@@ -549,7 +549,12 @@
                            peelout_flag = 0;
                         }
                 }
-             }          
+             }  
+          /// Chuckling
+             if(x_speed == 0 &amp;&amp; player_index == CHAR_KNUCKLES &amp;&amp; keyboard_check_pressed(ord('K')) &amp;&amp; animation != "chuckles")
+             {
+                animation = "chuckles"
+             }        
        }    
              
        // Looking up:
@@ -1576,6 +1581,7 @@
               player_handle_switches();
               player_handle_block();
               player_handle_charged_springs();
+              player_handle_conveyors();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1622,6 +1628,7 @@
               player_handle_switches();
               player_handle_block();
               player_handle_charged_springs();
+              player_handle_conveyors();
               
            // Abort.
               if(x_speed == 0)
@@ -1691,6 +1698,7 @@
                            player_handle_switches();
                            player_handle_block();
                            player_handle_charged_springs();
+                           player_handle_conveyors();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1802,6 +1810,7 @@
                               player_handle_switches();
                               player_handle_block();
                               player_handle_charged_springs();
+                              player_handle_conveyors();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -2554,8 +2563,8 @@
     
  // Super Sonic Palette:
     if(player_index = CHAR_SONIC &amp;&amp; CharacterState = CharacterSuper){
-       if(PalettePosition &gt; 3){
-          PalettePosition = 0;
+       if(PalettePosition &gt; 4){
+          PalettePosition = 1;
        }
        PalettePosition += 0.05;
     }
@@ -3029,9 +3038,11 @@ if(state = STATE_JUMP || state = STATE_ROLL || state = STATE_GLIDE || state = ST
            }
            
         // When we modified the palette, make sure to reset it:
+        /*
              if(CharacterState != CharacterNormal){
                 pal_swap_reset()
              }
+             */
                          
         // Draw Spindash dust:
          if(state == STATE_SPINDASH || (state == STATE_PEELOUT &amp;&amp; peelout_timer == 32))

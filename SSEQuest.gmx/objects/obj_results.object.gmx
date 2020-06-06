@@ -621,7 +621,7 @@
             <kind>1</kind>
             <string>/// Skip counting.
 
-    if(keyboard_check(global.key_enter) &amp;&amp; can_skip == 1)
+    if(keyboard_check(global.key_action) &amp;&amp; can_skip == 1)
     {
        bonus_total        += bonus_time + bonus_rings;
        bonus_time          =  0;      
