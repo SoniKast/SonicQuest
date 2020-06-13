@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Draw the dataselect background.
 
-    draw_background(bg_dataselect, view_xview, view_yview);
+    draw_background(bg_menu, view_xview, view_yview);
     draw_background(bg_back, 0, 0);
 </string>
           </argument>

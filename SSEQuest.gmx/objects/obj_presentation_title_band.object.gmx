@@ -33,7 +33,7 @@ skip = false;
 alarm[2] = 35;
 
 ended = 0
-x = 160
+x = 208
 y = -1
 gravity = 0.2
 bounceheight = 8
@@ -106,9 +106,9 @@ instance_create(x, y, obj_fade_next_white);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if y &gt;= 150
+            <string>if y &gt;= 150+16
 {
-y = 150
+y = 150+16
 bounceheight -= 2
 if bounceheight &lt;= 0
 {
@@ -116,7 +116,7 @@ ended = 1
 bounceheight = 0
 gravity = 0
 vspeed = 0
-y = 150
+y = 150+16
 }
 if ended = 0
 {
@@ -129,7 +129,7 @@ if vspeed &gt; 5
 vspeed = 5
 if ended = 1
 {
-y = 150
+y = 150+16
 gravity = 0
 vspeed = 0
 }
@@ -159,7 +159,7 @@ vspeed = 0
             <string>/// Draw the black background and the emblem.
 
     // Draw black screen
-       draw_sprite_ext(spr_dot,-1,view_xview,view_yview,320,224,0,c_black,1)    
+       draw_sprite_ext(spr_dot,-1,view_xview,view_yview,424,240,0,c_black,1)    
     
     // Draw self
         draw_self();

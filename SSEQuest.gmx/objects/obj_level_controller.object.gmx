@@ -234,7 +234,7 @@
     ring_visibility = 1;
 
  // Save progress. 
-    if(global.time_attack != true)
+    if(global.time_attack = false)
     {
         if(global.save_selected != 0)
         {
@@ -352,14 +352,14 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
           if(obj_player.invincibility == 2 &amp;&amp; obj_player.CharacterState = CharacterNormal)
           {
           draw_set_color(c_blue);
-          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+180), floor(view_xview[view_current])+(obj_player.invincibility_timer/900*200), floor(view_yview[view_current]+195), false)
+          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+180), view_xview[view_current]+(obj_player.invincibility_timer/900*(200)), floor(view_yview[view_current]+195), false)
           draw_set_color(c_white);
           draw_sprite(spr_invincibility_counter, 0, view_xview[view_current]+8, view_yview[view_current]+180);
           }
           if(obj_player.speedshoe == 1) 
           {
           draw_set_color(c_red);
-          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+200), floor(view_xview[view_current])+(obj_player.speedshoe_timer/900*200), floor(view_yview[view_current]+215), false)
+          draw_rectangle(floor(view_xview[view_current]+24), floor(view_yview[view_current]+200), view_xview[view_current]+(obj_player.speedshoe_timer/900*(200)), floor(view_yview[view_current]+215), false)
           draw_set_color(c_white);
           draw_sprite(spr_sneakers_counter, 0, view_xview[view_current]+8, view_yview[view_current]+200);
           }

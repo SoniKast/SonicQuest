@@ -206,8 +206,7 @@
                     
        // Disable timer.
           global.do_time = 0;       
-
-        with(obj_player){
+          with(obj_player){
                // Make sure that you can no longer transform after this.
                   AllowTransformation = 0;       
                   if(CharacterState != CharacterNormal){

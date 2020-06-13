@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>32</bbox_left>
-  <bbox_right>291</bbox_right>
-  <bbox_top>8</bbox_top>
-  <bbox_bottom>193</bbox_bottom>
+  <bbox_left>84</bbox_left>
+  <bbox_right>343</bbox_right>
+  <bbox_top>16</bbox_top>
+  <bbox_bottom>201</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>320</width>
-  <height>224</height>
+  <width>424</width>
+  <height>240</height>
   <frames>
     <frame index="0">images\spr_retrosonicquest_title_0.png</frame>
   </frames>

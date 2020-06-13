@@ -337,60 +337,60 @@
             <string>/// Draw Logo and menu.
 
  // Draw menu.
-    draw_sprite_ext(spr_player_mask_dot, 0, x, y, 320, 224, 0, c_black, 0.5);
+    draw_sprite_ext(spr_player_mask_dot, 0, x, y, 424, 240, 0, c_black, 0.5);
     draw_set_color(c_white);
-    draw_sprite(spr_time_attack_picture, 4, 160, 40);
+    draw_sprite(spr_time_attack_picture, 4, 160+51, 40);
     draw_set_font(global.trial_font);
     draw_set_halign(fa_left);
-    draw_text(35, 56, "-"+"BEST TIME"+"-");
+    draw_text(35+51, 56, "-"+"BEST TIME"+"-");
     if(trial_act_string = "ACT 1" || trial_act_string != "ACT 2")
     {
-    draw_text(35, 77, string(floor(global.best_time_ffz1/60000))+":"+scr_string_number_format(floor(global.best_time_ffz1/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ffz1/10) mod 100,2));
+    draw_text(35+51, 77, string(floor(global.best_time_ffz1/60000))+":"+scr_string_number_format(floor(global.best_time_ffz1/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ffz1/10) mod 100,2));
     }
     if(trial_act_string = "ACT 2" || trial_act_string != "ACT 1")
     {
-    draw_text(35, 77, string(floor(global.best_time_ffz2/60000))+":"+scr_string_number_format(floor(global.best_time_ffz2/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ffz2/10) mod 100,2));
+    draw_text(35+51, 77, string(floor(global.best_time_ffz2/60000))+":"+scr_string_number_format(floor(global.best_time_ffz2/1000) mod 60,2)+":"+scr_string_number_format(floor(global.best_time_ffz2/10) mod 100,2));
     }
     draw_set_halign(fa_center);
     if(trial_menu_option = 0)
     {
     draw_set_color(c_yellow);
-    draw_text(51, 99, trial_menu_string); 
+    draw_text(51+51, 99, trial_menu_string); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(51, 99, trial_menu_string); 
+    draw_text(51+51, 99, trial_menu_string); 
     }
     if(trial_menu_option = 1)
     {
     draw_set_color(c_yellow);
-    draw_text(51, 121, trial_act_string);
+    draw_text(51+51, 121, trial_act_string);
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(51, 121, trial_act_string);
+    draw_text(51+51, 121, trial_act_string);
     }
     if(trial_menu_option = 2)
     {
     draw_set_color(c_yellow);
-    draw_text(54, 164, "START"); 
+    draw_text(54+51, 164, "START"); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(54, 164, "START"); 
+    draw_text(54+51, 164, "START"); 
     }
     if(trial_menu_option = 3)
     {
     draw_set_color(c_yellow);
-    draw_text(54, 184, "RETURN"); 
+    draw_text(54+51, 184, "RETURN"); 
     }
     else
     {
     draw_set_color(c_white);
-    draw_text(54, 184, "RETURN"); 
+    draw_text(54+51, 184, "RETURN"); 
     }
     
 </string>

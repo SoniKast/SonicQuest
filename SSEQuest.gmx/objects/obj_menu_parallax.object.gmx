@@ -47,8 +47,8 @@
 
     var OverallYOffset; OverallYOffset = 1;
     
-    scr_parallax_add_node(1, bg_stripe_top,    0.8, 2, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 238, 224);
-    scr_parallax_add_node(1, bg_stripe_bottom,   0.8, -2, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 238, 224);
+    scr_parallax_add_node(1, bg_stripe_top,    1, 2, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 238, 224);
+    scr_parallax_add_node(1, bg_stripe_bottom,   1, -2, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 238, 240);
 </string>
           </argument>
         </arguments>

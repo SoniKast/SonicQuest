@@ -559,67 +559,67 @@
 
  // 3D... stuff
     d3d_set_fog(false, c_white, 100, 5000);
-    d3d_set_projection_ortho(0,0,320,224,0);
+    d3d_set_projection_ortho(0,0,424,240,0);
     d3d_set_hidden(false);
     draw_set_color(c_white);
  
  // White Screen
-    draw_sprite_ext(spr_dot,-1, 0, 0,320,224,0,c_white,1)
+    draw_sprite_ext(spr_dot,-1, 0, 0,424,240,0,c_white,1)
 
  // "Character" Got:
-    draw_sprite(spr_ss_results_name, global.player_id-1, 32+result_gfx_position[0], 24);
+    draw_sprite(spr_ss_results_name, global.player_id-1, 32+49+result_gfx_position[0], 24);
 
  // Through:
     if(can_be = false)
     {
-    draw_sprite(spr_results_through, 1, 60+result_gfx_position[1], 48);
+    draw_sprite(spr_results_through, 1, 60+49+result_gfx_position[1], 48);
     }
     if(can_be = false &amp;&amp; global.player_emeralds = 7)
     {
-    draw_sprite(spr_results_through, 2, 60+result_gfx_position[1], 48);
+    draw_sprite(spr_results_through, 2, 60+49+result_gfx_position[1], 48);
     }
 
  // Display emeralds
     if(global.used_emerald_1 == true)
     {
-    draw_sprite(spr_chaos_emerald, 0, 112, 74);
+    draw_sprite(spr_chaos_emerald, 0, 112+49, 74);
     }
     if(global.used_emerald_2 == true)
     {
-    draw_sprite(spr_chaos_emerald, 1, 126, 74);
+    draw_sprite(spr_chaos_emerald, 1, 126+49, 74);
     }
     if(global.used_emerald_3 == true)
     {
-    draw_sprite(spr_chaos_emerald, 2, 140, 74);
+    draw_sprite(spr_chaos_emerald, 2, 140+49, 74);
     }
     if(global.used_emerald_4 == true)
     {
-    draw_sprite(spr_chaos_emerald, 3, 154, 74);
+    draw_sprite(spr_chaos_emerald, 3, 154+49, 74);
     }
     if(global.used_emerald_5 == true)
     {
-    draw_sprite(spr_chaos_emerald, 4, 168, 74);
+    draw_sprite(spr_chaos_emerald, 4, 168+49, 74);
     }
     if(global.used_emerald_6 == true)
     {
-    draw_sprite(spr_chaos_emerald, 5, 182, 74);
+    draw_sprite(spr_chaos_emerald, 5, 182+49, 74);
     }
     if(global.used_emerald_7 == true)
     {
-    draw_sprite(spr_chaos_emerald, 6, 196, 74);
+    draw_sprite(spr_chaos_emerald, 6, 196+49, 74);
     }
     
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 1, 63+result_gfx_position[2], 113);
+    draw_sprite(spr_results_bonuses, 1, 63+49+result_gfx_position[2], 113);
     
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(246+result_gfx_position[2], 116,''+ string(bonus_time),  0);
-    draw_number_zero(246+result_gfx_position[3], 134,''+ string(bonus_rings), 0);
-    draw_number_zero(246+result_gfx_position[4], 159,    string(bonus_total), 0);
+    draw_number_zero(246+result_gfx_position[2], 116+49,''+ string(bonus_time),  0);
+    draw_number_zero(246+result_gfx_position[3], 134+49,''+ string(bonus_rings), 0);
+    draw_number_zero(246+result_gfx_position[4], 159+49,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
     draw_set_alpha(1);

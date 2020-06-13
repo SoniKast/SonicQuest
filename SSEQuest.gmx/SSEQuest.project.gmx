@@ -110,12 +110,15 @@
         <sound>sound\jingle_super</sound>
         <sound>sound\jingle_title</sound>
         <sound>sound\jingle_sega</sound>
+        <sound>sound\jingle_stt</sound>
       </sounds>
     </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Engine Boot">
       <sprites name="STT">
+        <sprite>sprites\spr_stt_water</sprite>
+        <sprite>sprites\spr_stt_logo</sprite>
         <sprite>sprites\spr_sonic_ball</sprite>
         <sprite>sprites\spr_tails_flight</sprite>
         <sprite>sprites\spr_knuckles_gliding</sprite>
@@ -1567,6 +1570,7 @@
       <script>scripts\scr_approach.gml</script>
       <script>scripts\scr_string_number_format.gml</script>
       <script>scripts\room_goto_bonus.gml</script>
+      <script>scripts\chance.gml</script>
     </scripts>
     <scripts name="Audio">
       <script>scripts\aud_play_sound.gml</script>
@@ -1820,6 +1824,8 @@
     <objects name="Init">
       <object>objects\obj_init</object>
       <object>objects\obj_engine_screen</object>
+      <object>objects\obj_stt_logo_controller</object>
+      <object>objects\obj_stt_logo</object>
       <object>objects\obj_demo_end</object>
       <object>objects\obj_credits_screen</object>
       <object>objects\obj_disclaimer</object>
@@ -2746,6 +2752,7 @@
   <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rm_init</room>
+      <room>rooms\rm_disclaimer</room>
       <room>rooms\rm_engine_logo</room>
       <room>rooms\rm_sega</room>
       <room>rooms\rm_stt</room>
@@ -2816,7 +2823,6 @@
       <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
-      <room>rooms\rm_disclaimer</room>
       <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_demo_end</room>
     </rooms>

@@ -96,7 +96,11 @@
     result_gfx_position[3]        =  global.screen_width+60;
     result_gfx_position[4]        =  global.screen_width+90;
     result_gfx_position_completed = false;
-    continue_flag                 = 0;
+    continue_flag                 = 0; 
+
+ // For drawing misc stuff
+    continue_flash                = 0; //flashing white chaos emerald
+
 
 </string>
           </argument>
@@ -689,31 +693,39 @@
             <string>/// Draw Results.
 
  // "Character" Got:
-    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+42+result_gfx_position[0], view_yview+56);
+    draw_sprite(spr_results_name, obj_level_controller.player_index-1, view_xview+42+49+result_gfx_position[0], view_yview+56);
 
  // Through:
-    draw_sprite(spr_results_through, 0, view_xview+106+result_gfx_position[1], view_yview+74);
+    draw_sprite(spr_results_through, 0, view_xview+106+49+result_gfx_position[1], view_yview+74);
     
  // Act Letter:
-    draw_sprite(spr_act_clear_act, global.zone_act-1, view_xview+226+result_gfx_position[1], view_yview+61);
+    draw_sprite(spr_act_clear_act, global.zone_act-1, view_xview+226+49+result_gfx_position[1], view_yview+61);
     
  // Bonuses:
-    draw_sprite(spr_results_bonuses, 0, view_xview+63+result_gfx_position[2], view_yview+113);
-    
+    draw_sprite(spr_results_bonuses, 0, view_xview+63+49+result_gfx_position[2], view_yview+113);
+      
+ // Continue flashing
+    continue_flash += 1
+    if (continue_flash &gt; 1)
+    {
+    continue_flash = 0
+    }
+      
  // Draw continue sprite:
     if(continue_flag)
     {
-    draw_sprite(spr_continues, obj_level_controller.player_index-1, view_xview[0]+262, view_yview[0]+168);
+        if(continue_flash){draw_sprite(spr_continues, obj_level_controller.player_index-1, view_xview[0]+262+49, view_yview[0]+168);}
+        else{}
     }
-    
+
  // Draw Bonuses:
     draw_set_font(global.hud_font)
     draw_set_color(c_white)
     draw_set_halign(fa_right)
     
-    draw_number_zero(view_xview+246+result_gfx_position[2], view_yview+116,''+ string(bonus_time),  0);
-    draw_number_zero(view_xview+246+result_gfx_position[3], view_yview+134,''+ string(bonus_rings), 0);
-    draw_number_zero(view_xview+246+result_gfx_position[4], view_yview+159,    string(bonus_total), 0);
+    draw_number_zero(view_xview+246+49+result_gfx_position[2], view_yview+116,''+ string(bonus_time),  0);
+    draw_number_zero(view_xview+246+49+result_gfx_position[3], view_yview+134,''+ string(bonus_rings), 0);
+    draw_number_zero(view_xview+246+49+result_gfx_position[4], view_yview+159,    string(bonus_total), 0);
     
     draw_set_halign(-1)    
 </string>

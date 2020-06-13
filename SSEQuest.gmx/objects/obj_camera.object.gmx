@@ -29,8 +29,8 @@
     
  // Set view:
     view_object [0] = id;
-    view_hborder[0] = 320/2;
-    view_vborder[0] = 224/2;
+    view_hborder[0] = 426/2;
+    view_vborder[0] = 240/2;
     
  // Horizontal Borders:
     border_left  = x-8;

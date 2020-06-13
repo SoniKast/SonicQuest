@@ -34,6 +34,8 @@ Cycle = false;
 CanCycle = true;
 ActionTimer = 0;
 Panel = 0;
+
+
 </string>
           </argument>
         </arguments>

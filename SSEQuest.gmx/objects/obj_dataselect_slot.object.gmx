@@ -54,7 +54,7 @@
     dataslot_emerald_frame = 0;
  
  //---For drawing misc stuff
-    chaos_flash = 0;            //flashing white chaso emerald
+    chaos_flash = 0;            //flashing white chaos emerald
 
 </string>
           </argument>
@@ -480,7 +480,7 @@ save_reload_all();
     {
        if(dataslot_zone == 0)
        {
-          draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+sprite_get_height(sprite_index)-97, -1, 1, 0, c_white, 1);
+          draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+sprite_get_height(sprite_index)-64, -1, 1, 0, c_white, 1);
           //draw_sprite_ext(spr_dataselect_characters, dataslot_cpu, (x+sprite_get_width(sprite_index)/2)+8, y+96, 1, 1, 0, c_white, 1);          
        }       
        else

@@ -27,20 +27,15 @@
             <kind>1</kind>
             <string>/// Variables.
 
-    x_spd        = -1;
+    x_spd        = -2;
     y_spd        = 0;
-    x_tmr        = -5;
-    reset_x      = x;
-    reset_y      = y;
-    ground       = false;
-    image_speed  = 0.15;
-    image_xscale = -1;
+    facing       = -1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -57,88 +52,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Movement.
+            <string>/// MOVE DAMNIT
+
+ // Anims:
+    image_xscale = facing;
+    if(x_spd == 0)
+    {
+    image_index = 2;
+    }
+    else
+    if(x_spd &gt; 0 or x_spd &lt; 0)
+    {
+    image_speed = 0.25
+    if(image_index = 1)
+    {
+    image_index = 0;
+    }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_badnik_block">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Turning.
 
  // Horizontal:
-    repeat(abs(x_spd))
-    {
-          if(place_meeting(x + sign(x_spd), y, par_terrain) &amp;&amp; !place_meeting(x + sign(x_spd), y - 1, par_terrain))
-          {
-             y -= 1;
-          }
-          if(place_meeting(x + sign(x_spd), y + 2, par_terrain) &amp;&amp; !place_meeting(x + sign(x_spd), y + 1, par_terrain))
-          {
-             y += 1;    
-          }    
-          if(!place_meeting(x+sign(x_spd), y, par_terrain) &amp;&amp; !place_meeting(x+sign(x_spd), y, obj_badnik_block)){
-               x += x_spd;
-          }else{
-               if(x_tmr == -5)
-               {
-                  x_tmr  = 60;
-               }
-          }
-    }
-    
- // Timer to change direction.
-    if(x_tmr &gt; 0)
-    {
-       x_tmr -= 1;
-       if(x_tmr &lt;= 0)
-       {
-          image_xscale *= -1;
-          x_spd  = -x_spd;    
-          x_tmr  = -5;      
-       }
-    }
+    x_spd = x_spd*facing;
 
- // Vertical:
-    repeat(abs(y_spd))
-    {
-           if(!badnik_simple_collision_check(y_spd))
-           {
-              y += sign(y_spd);
-           }
-           else
-           {
-              y_spd = 0;
-           }
-    }
-    if(ground == false)
-    {
-       y_spd += 0.21875;
-       if(y_spd &gt; 12)
-       {
-          y_spd = 12;
-       }
-    }
-    
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Return collision.
-
-    ground = badnik_simple_collision_check(y_spd);
 </string>
           </argument>
         </arguments>
