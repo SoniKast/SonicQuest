@@ -1005,7 +1005,6 @@
     <instance objName="obj_loop_switch_0" x="7536" y="1376" name="inst_3E6CC2AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="5632" y="832" name="inst_25AE5FE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="5696" y="832" name="inst_B48100DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_capsule_goal" x="10784" y="976" name="inst_442C1294" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10752" y="1024" name="inst_BE31FF2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10816" y="1024" name="inst_91E0556A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="10880" y="1024" name="inst_DEAD591D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

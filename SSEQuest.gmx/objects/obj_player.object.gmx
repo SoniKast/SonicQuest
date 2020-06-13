@@ -2333,6 +2333,7 @@
     
  // Rolling:
     player_state_roll();
+    
  // Skidding:
     player_state_skid();
     
@@ -2345,9 +2346,6 @@
     
  // Tubes:
     player_state_tube();
-
- // Glider:
-    player_state_glider();
     
  // Peelout:
     if(global.player_id == CHAR_SONIC){
@@ -2883,7 +2881,8 @@ state = STATE_DEFAULT
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check_pressed(global.key_enter))
+            <string>/// Exiting the auto demo
+if(keyboard_check_pressed(global.key_enter))
 {
     if(global.Mode = 1)
     {

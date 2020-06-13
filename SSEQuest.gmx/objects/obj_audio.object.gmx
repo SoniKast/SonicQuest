@@ -84,20 +84,6 @@
        exit;
     }
     
-    if(instance_exists(obj_fake_results) &amp;&amp; zone_results == false)
-    {
-       zone_results = true;    
-       audio_stop_all();
-       global.bgm_volume = zone_my_bgm_volume;
-       global.sfx_volume = zone_my_sfx_volume;
-       aud_play_sound(jingle_scoring, global.bgm_volume, 1, 0, 0);       
-       exit;
-    }
-    if(zone_results == true)
-    {
-       exit;
-    }
-    
     if(instance_exists(obj_special_results) &amp;&amp; zone_results == false)
     {
        zone_results = true;    
@@ -504,6 +490,24 @@
            case rm_hidden_palace:
            {
                 zone_bgm = music_hidden_palace;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }
+           case rm_bonus1:
+           {
+                zone_bgm = music_bonus_stage1;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }
+           case rm_bonus3:
+           {
+                zone_bgm = music_bonus_stage3;
                 if(audio_is_playing(zone_bgm) == false)
                 {
                     aud_play_music(zone_bgm, global.bgm_volume, 1);

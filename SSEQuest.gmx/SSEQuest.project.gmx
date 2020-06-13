@@ -28,6 +28,8 @@
       <sound>sound\music_hidden_palace</sound>
       <sound>sound\music_special_stage</sound>
       <sound>sound\music_boss</sound>
+      <sound>sound\music_bonus_stage1</sound>
+      <sound>sound\music_bonus_stage3</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -119,9 +121,6 @@
       <sprites name="STT">
         <sprite>sprites\spr_stt_water</sprite>
         <sprite>sprites\spr_stt_logo</sprite>
-        <sprite>sprites\spr_sonic_ball</sprite>
-        <sprite>sprites\spr_tails_flight</sprite>
-        <sprite>sprites\spr_knuckles_gliding</sprite>
         <sprite>sprites\spr_blow</sprite>
       </sprites>
       <sprite>sprites\spr_sega</sprite>
@@ -270,7 +269,6 @@
           <sprite>sprites\spr_kast_goal</sprite>
           <sprite>sprites\spr_kast_goal_finish</sprite>
           <sprite>sprites\spr_kast_peelout</sprite>
-          <sprite>sprites\spr_kast_tpose</sprite>
         </sprites>
         <sprites name="Shields">
           <sprite>sprites\spr_shield_fire</sprite>
@@ -429,31 +427,19 @@
           <sprite>sprites\spr_corkscrew_horizontal</sprite>
         </sprites>
         <sprites name="Goal and Results">
-          <sprites name="Capsule">
-            <sprite>sprites\spr_capsule_goal</sprite>
-            <sprite>sprites\spr_capsule_goal_bottom_mask</sprite>
-            <sprite>sprites\spr_capsule_goal_mask</sprite>
-            <sprite>sprites\spr_capsule_goal_switch</sprite>
-            <sprite>sprites\spr_capsule_lock</sprite>
-          </sprites>
           <sprites name="New Capsule">
             <sprite>sprites\spr_new_capsule_goal</sprite>
             <sprite>sprites\spr_new_capsule_goal_mask</sprite>
             <sprite>sprites\spr_new_capsule_goal_switch</sprite>
           </sprites>
           <sprite>sprites\spr_sign_post</sprite>
-          <sprite>sprites\spr_results_passed</sprite>
           <sprite>sprites\spr_results_name</sprite>
           <sprite>sprites\spr_ss_results_name</sprite>
           <sprite>sprites\spr_results_through</sprite>
           <sprite>sprites\spr_results_bonuses</sprite>
-          <sprite>sprites\spr_results_time</sprite>
-          <sprite>sprites\spr_results_ring</sprite>
-          <sprite>sprites\spr_results_total</sprite>
           <sprite>sprites\spr_emerald_counter</sprite>
         </sprites>
         <sprites name="Casino">
-          <sprite>sprites\spr_casino_accelerator</sprite>
           <sprite>sprites\spr_casino_bumper</sprite>
           <sprite>sprites\spr_casino_bumper_hit</sprite>
           <sprite>sprites\spr_casino_bumper2</sprite>
@@ -602,7 +588,6 @@
             <sprite>sprites\tex_knuckles</sprite>
             <sprite>sprites\tex_knuckles_curl</sprite>
           </sprites>
-          <sprite>sprites\spr_sonic_specialstage</sprite>
         </sprites>
         <sprites name="NPCs">
           <sprite>sprites\tex_ring</sprite>
@@ -687,12 +672,7 @@
       </sprites>
       <sprites name="Collision Masks">
         <sprites name="Unused">
-          <sprite>sprites\spr_collision_tile_s_tunnel</sprite>
-          <sprite>sprites\spr_collision_tile_s_tunnel_mask</sprite>
-          <sprite>sprites\spr_collision_mask_tile_22</sprite>
-          <sprite>sprites\spr_collision_mask_tile_23</sprite>
           <sprite>sprites\spr_collision_mask_tile_20</sprite>
-          <sprite>sprites\spr_collision_mask_tile_21</sprite>
           <sprite>sprites\spr_dot</sprite>
         </sprites>
         <sprites name="Terrain">
@@ -747,6 +727,8 @@
           <sprite>sprites\sprite677</sprite>
           <sprite>sprites\sprite678</sprite>
           <sprite>sprites\sprite679</sprite>
+          <sprite>sprites\spr_collision_tile_s_tunnel</sprite>
+          <sprite>sprites\spr_collision_tile_s_tunnel_mask</sprite>
         </sprites>
         <sprites name="Terrain (Layer 0)">
           <sprite>sprites\spr_collision_mask_terrain_layer0_tile01</sprite>
@@ -836,20 +818,10 @@
         <sprite>sprites\spr_test_chain</sprite>
         <sprite>sprites\spr_test_chain_top</sprite>
       </sprites>
-      <sprites name="Cutscene">
-        <sprites name="SSZ">
-          <sprite>sprites\spr_metal_dash</sprite>
-          <sprite>sprites\spr_metal_slowdown</sprite>
-          <sprite>sprites\spr_metal_stand</sprite>
-          <sprite>sprites\spr_metal_win</sprite>
-          <sprite>sprites\spr_metal_dash_r</sprite>
-          <sprite>sprites\spr_fake_sign_post</sprite>
-          <sprite>sprites\spr_metal_sign_post</sprite>
-        </sprites>
-      </sprites>
       <sprites name="Tileset">
         <sprites name="SSZ">
           <sprites name="Water">
+            <sprite>sprites\spr_ssz_waterfall_platform</sprite>
             <sprite>sprites\spr_water_rush_mask</sprite>
             <sprite>sprites\spr_water_rush</sprite>
             <sprite>sprites\spr_rush_palette</sprite>
@@ -884,7 +856,6 @@
             <sprite>sprites\spr_ssz_break_wall</sprite>
             <sprite>sprites\spr_ssz_parts</sprite>
             <sprite>sprites\spr_bridge_hold</sprite>
-            <sprite>sprites\spr_ssz_waterfall_platform</sprite>
             <sprite>sprites\spr_bridge_hold_line</sprite>
             <sprite>sprites\spr_fall_bridge</sprite>
             <sprite>sprites\sprite430</sprite>
@@ -907,7 +878,6 @@
             <sprite>sprites\spr_ggz_breakable_wall_pieces</sprite>
             <sprite>sprites\spr_ggz_breakable_block</sprite>
             <sprite>sprites\spr_ggz_moving_platform</sprite>
-            <sprite>sprites\spr_ggz_glider</sprite>
             <sprite>sprites\spr_ggz_plat_start</sprite>
             <sprite>sprites\spr_ggz_switch</sprite>
             <sprite>sprites\spr_ggz_door</sprite>
@@ -963,11 +933,6 @@
               <sprite>sprites\spr_diamond_projectile</sprite>
               <sprite>sprites\spr_ace_projectile</sprite>
             </sprites>
-          </sprites>
-          <sprites name="Palettes">
-            <sprite>sprites\spr_ppz_pal1</sprite>
-            <sprite>sprites\spr_ppz_pal2</sprite>
-            <sprite>sprites\spr_ppz_pal3</sprite>
           </sprites>
         </sprites>
         <sprites name="FFZ">
@@ -1070,6 +1035,9 @@
         <sprite>sprites\spr_kast_to_normal_palette</sprite>
         <sprite>sprites\spr_super_flicky_palette</sprite>
         <sprite>sprites\spr_ffz_palette</sprite>
+        <sprite>sprites\spr_ppz_pal1</sprite>
+        <sprite>sprites\spr_ppz_pal2</sprite>
+        <sprite>sprites\spr_ppz_pal3</sprite>
       </sprites>
     </sprites>
     <sprites name="Menus / Continue">
@@ -1178,12 +1146,6 @@
       <backgrounds name="Disclaimer">
         <background>background\bg_disclaimer</background>
         <background>background\bg_disclaimer_gms</background>
-        <background>background\bg_demo_end</background>
-        <background>background\bg_demo_end_gms</background>
-      </backgrounds>
-      <backgrounds name="STT">
-        <background>background\bg_STT</background>
-        <background>background\bg_splash_stt</background>
       </backgrounds>
       <backgrounds name="Menu">
         <background>background\bg_menu</background>
@@ -1234,7 +1196,6 @@
           <background>background\ts_forest_frenzy2</background>
           <background>background\ts_ffz_tree</background>
           <background>background\ts_ffz2_tree</background>
-          <background>background\ts_jungle_havoc</background>
           <background>background\ts_ffz_plants</background>
           <background>background\ts_ffz_plants2</background>
           <background>background\ts_ffz_plants3</background>
@@ -1252,7 +1213,6 @@
         </backgrounds>
         <backgrounds name="Bonus Stage 1">
           <background>background\ts_bonus</background>
-          <background>background\ts_bonus_duplicate</background>
         </backgrounds>
         <backgrounds name="Bonus Stage 3">
           <background>background\backBonusZoneTiles01</background>
@@ -1280,8 +1240,6 @@
             <background>background\backGhzMountains1</background>
             <background>background\backGhzBushes</background>
             <background>background\backGhzWater</background>
-            <background>background\backGhzIsland</background>
-            <background>background\backDeathEgg</background>
           </backgrounds>
           <backgrounds name="Act 2">
             <background>background\backGhzCloudsAct2</background>
@@ -1419,7 +1377,6 @@
         <script>scripts\player_state_float.gml</script>
         <script>scripts\player_state_float_v.gml</script>
         <script>scripts\player_state_goal.gml</script>
-        <script>scripts\player_state_glider.gml</script>
         <script>scripts\player_state_transform.gml</script>
         <scripts name="Sonic only">
           <script>scripts\player_state_dropdash.gml</script>
@@ -1824,20 +1781,12 @@
     <objects name="Init">
       <object>objects\obj_init</object>
       <object>objects\obj_engine_screen</object>
-      <object>objects\obj_stt_logo_controller</object>
-      <object>objects\obj_stt_logo</object>
-      <object>objects\obj_demo_end</object>
       <object>objects\obj_credits_screen</object>
       <object>objects\obj_disclaimer</object>
       <objects name="Startup">
-        <objects name="STT">
-          <object>objects\obj_sonic_run</object>
-          <object>objects\obj_tails_flight</object>
-          <object>objects\obj_knuckles_glide</object>
-          <object>objects\obj_blow</object>
-          <object>objects\obj_background_create</object>
-        </objects>
         <object>objects\obj_sega_startup</object>
+        <object>objects\obj_stt_logo_controller</object>
+        <object>objects\obj_stt_logo</object>
       </objects>
       <objects name="Parents">
         <object>objects\par_obstacles</object>
@@ -2108,22 +2057,15 @@
           </objects>
         </objects>
         <objects name="Goal and Results">
-          <objects name="Capsule Parts">
-            <object>objects\obj_capsule_flicky_generator</object>
-            <object>objects\obj_capsule_goal_bottom</object>
-            <object>objects\obj_capsule_goal_lock</object>
-            <object>objects\obj_capsule_goal_switch</object>
-          </objects>
           <objects name="New Capsule Parts">
             <object>objects\obj_new_capsule_goal_switch</object>
             <object>objects\obj_new_capsule_busted</object>
+            <object>objects\obj_capsule_flicky_generator</object>
           </objects>
           <object>objects\obj_results</object>
-          <object>objects\obj_alt_results</object>
           <object>objects\obj_sign_post</object>
           <object>objects\obj_sign_post_camera</object>
           <object>objects\obj_capsule_cam</object>
-          <object>objects\obj_capsule_goal</object>
           <object>objects\obj_new_capsule_goal</object>
         </objects>
       </objects>
@@ -2316,7 +2258,6 @@
         <objects name="Title Screen">
           <object>objects\obj_presentation_title_band</object>
           <object>objects\obj_title_screen_logo</object>
-          <object>objects\obj_title_screen</object>
         </objects>
         <objects name="Options">
           <object>objects\obj_options</object>
@@ -2338,13 +2279,6 @@
         <objects name="Level Select">
           <object>objects\obj_level_select_controller</object>
         </objects>
-        <objects name="Menu">
-          <object>objects\obj_header</object>
-          <object>objects\obj_menu_background</object>
-          <object>objects\obj_menu</object>
-          <object>objects\obj_menu_rotating_piece</object>
-          <object>objects\obj_data_select</object>
-        </objects>
         <objects name="Time Attack">
           <object>objects\obj_time_attack</object>
           <object>objects\obj_time_attack_ssz</object>
@@ -2362,13 +2296,9 @@
         <object>objects\obj_menu_parallax</object>
       </objects>
       <objects name="Special Stage">
-        <objects name="Old">
-          <object>objects\par_ss_player</object>
-          <object>objects\obj_ring_new</object>
-          <object>objects\obj_ss_sonic</object>
-        </objects>
         <objects name="New">
           <objects name="Camera &amp; Hud">
+            <object>objects\obj_special_results</object>
             <object>objects\obj_hud_new</object>
             <object>objects\obj_camera_new</object>
           </objects>
@@ -2387,6 +2317,7 @@
             </objects>
             <object>objects\obj_ss_ring</object>
             <object>objects\obj_ss_ring_sparkle</object>
+            <object>objects\obj_bomb</object>
           </objects>
           <objects name="Floor">
             <object>objects\par_floor</object>
@@ -2422,11 +2353,9 @@
             </objects>
           </objects>
         </objects>
-        <object>objects\obj_special_results</object>
         <object>objects\obj_big_ring</object>
         <object>objects\obj_big_ring_unavailable</object>
         <object>objects\obj_tornado</object>
-        <object>objects\obj_bomb</object>
       </objects>
       <objects name="Bonus Stage">
         <objects name="Bonus Stage 1">
@@ -2486,17 +2415,6 @@
                 <object>objects\obj_boss_coconut</object>
               </objects>
             </objects>
-            <objects name="Mini-Boss">
-              <object>objects\obj_trigger_miniboss1</object>
-              <object>objects\obj_miniboss1_cam</object>
-              <object>objects\obj_npc_sth3_firebreather</object>
-              <object>objects\obj_miniboss1_create</object>
-              <objects name="Parts">
-                <object>objects\obj_npc_sth3_firebreather_flame</object>
-                <object>objects\obj_npc_sth3_firebreather_projectile</object>
-                <object>objects\obj_npc_sth3_firebreather_parts</object>
-              </objects>
-            </objects>
           </objects>
           <objects name="Badniks">
             <object>objects\obj_kabuturbo</object>
@@ -2550,10 +2468,7 @@
           <object>objects\obj_ssz_fan</object>
         </objects>
         <objects name="Cutscenes">
-          <object>objects\obj_metal_cutscene</object>
           <object>objects\obj_metal_sign_post</object>
-          <object>objects\obj_fake_sign_post</object>
-          <object>objects\obj_fake_results</object>
         </objects>
       </objects>
       <objects name="Petal Park Zone">
@@ -2569,10 +2484,6 @@
             <object>objects\obj_ggz_breakable_wall_piece2</object>
             <object>objects\obj_ggz_breakable_wall_piece3</object>
             <object>objects\obj_ggz_breakable_wall_piece4</object>
-          </objects>
-          <objects name="Glider">
-            <object>objects\obj_glider_parent</object>
-            <object>objects\obj_ggz_glider</object>
           </objects>
           <object>objects\obj_ggz_switch</object>
           <object>objects\obj_ggz_door</object>
@@ -2612,7 +2523,6 @@
       <objects name="Chaotic Casino Zone">
         <objects name="Gimmicks">
           <object>objects\obj_ppz_flipping_card</object>
-          <object>objects\obj_casino_accelerator</object>
           <object>objects\obj_ppz_question_block</object>
           <object>objects\obj_ppz_spike_block</object>
           <object>objects\obj_ppz_bonus_block</object>
@@ -2801,10 +2711,8 @@
         <room>rooms\rm_playground_2</room>
         <room>rooms\rm_template</room>
         <room>rooms\rm_level_select</room>
-        <room>rooms\rm_new_data_select</room>
         <room>rooms\rm_sunshine_valley1</room>
         <room>rooms\rm_sunshine_valley2</room>
-        <room>rooms\rm_menu</room>
       </rooms>
       <rooms name="Bonus Stage">
         <room>rooms\rm_bonus1</room>
@@ -2824,7 +2732,6 @@
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
       <room>rooms\rm_bridge_zone2</room>
-      <room>rooms\rm_demo_end</room>
     </rooms>
   </rooms>
   <constants number="83">

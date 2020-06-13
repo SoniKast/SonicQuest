@@ -1,5 +1,4 @@
-/// player_handle_charged_springs()
-// Code for the charged springs from the bonus stage. (Made by Pvic)
+///player_handle_charged_springs
 var charged;
 charged = player_collision_check(COL_BOTTOM_OBJECT, MASK_MAIN, x, y, angle, obj_charged_spring)
     // Interact with charged spring
@@ -18,11 +17,12 @@ charged = player_collision_check(COL_BOTTOM_OBJECT, MASK_MAIN, x, y, angle, obj_
                     {
                         // Snap to spring
                             x = charged.x + 16;
-                            //y = max(y, charged.bbox_top - 12);
-                            
+                                                        
                         // Set State
                             x_speed = 0;
-                            y_speed = 0;
+                            y_speed = max(y_speed, 0);
+                            input_down = true;
+                            tunnel_lock = true;
                             state = STATE_ROLL;
                             animation = "roll";
                             animation_speed = 0.2;
@@ -54,10 +54,26 @@ charged = player_collision_check(COL_BOTTOM_OBJECT, MASK_MAIN, x, y, angle, obj_
             if (charged.sprite_index == spr_charged_spring_charged) or (charged.sprite_index == spr_charged_spring_charging && image_index > 20)
             {
                 ground = false;
+                jump_completed = true;
+                jump_lock = false;
                 state = STATE_SPRING;
-                y_speed = -18;
+                y_speed = -14;
+                x_speed = 0;
                 aud_play_sound(general_spring, global.sfx_volume, 1, 0, 0);
                 charged.sprite_index = spr_charged_spring_release;
+                tunnel_lock = false;
+            }
+            else
+            {
+                ground = false;
+                jump_completed = true;
+                jump_lock = false;
+                state = STATE_SPRING;
+                x_speed = 0;
+                y_speed = -((14/20)*charged.image_index)
+                aud_play_sound(general_spring, global.sfx_volume, 1, 0, 0);
+                charged.sprite_index = spr_charged_spring_release;
+                tunnel_lock = false;
             }
         }
         
