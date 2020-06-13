@@ -705,7 +705,7 @@
     draw_sprite(spr_results_bonuses, 0, view_xview+63+49+result_gfx_position[2], view_yview+113);
       
  // Continue flashing
-    continue_flash += 1
+    continue_flash += 0.25
     if (continue_flash &gt; 1)
     {
     continue_flash = 0

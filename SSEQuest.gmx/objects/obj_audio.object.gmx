@@ -36,7 +36,9 @@
     zone_results         = false;
     fadeout_flag         = 0;
     boss_flag            = false;
+    final_boss_flag      = false;
     boss_bgm             = music_boss;
+    final_boss_bgm       = music_final_boss;
 </string>
           </argument>
         </arguments>
@@ -85,20 +87,6 @@
     }
     
     if(instance_exists(obj_special_results) &amp;&amp; zone_results == false)
-    {
-       zone_results = true;    
-       audio_stop_all();
-       global.bgm_volume = zone_my_bgm_volume;
-       global.sfx_volume = zone_my_sfx_volume;
-       aud_play_sound(jingle_scoring, global.bgm_volume, 1, 0, 0);       
-       exit;
-    }
-    if(zone_results == true)
-    {
-       exit;
-    }
-    
-    if(instance_exists(obj_alt_results) &amp;&amp; zone_results == false)
     {
        zone_results = true;    
        audio_stop_all();
@@ -186,7 +174,7 @@
                     aud_play_music(zone_bgm, global.bgm_volume, 1);  
                }
       } 
-      
+       
  // Set the volume of the currently playing zone music and invincibility jingle.
     if(audio_is_playing(jingle_invincibility) == false)
     {    
@@ -347,9 +335,10 @@
     audio_stop_all();
     
  // Revert the fadeout flag if it's enabled.
-    fadeout_flag = false;
-    zone_results = false;
-    boss_flag   = false;
+    fadeout_flag   = false;
+    zone_results   = false;
+    boss_flag      = false;
+    final_boss_bgm = false;
     
  // Set the volumes.
     global.bgm_volume = zone_my_bgm_volume;
@@ -498,7 +487,7 @@
            }
            case rm_bonus1:
            {
-                zone_bgm = music_bonus_stage1;
+                zone_bgm = music_bonus_stage3;
                 if(audio_is_playing(zone_bgm) == false)
                 {
                     aud_play_music(zone_bgm, global.bgm_volume, 1);
@@ -507,7 +496,7 @@
            }
            case rm_bonus3:
            {
-                zone_bgm = music_bonus_stage3;
+                zone_bgm = music_bonus_stage1;
                 if(audio_is_playing(zone_bgm) == false)
                 {
                     aud_play_music(zone_bgm, global.bgm_volume, 1);

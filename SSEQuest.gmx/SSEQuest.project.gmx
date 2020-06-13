@@ -30,6 +30,7 @@
       <sound>sound\music_boss</sound>
       <sound>sound\music_bonus_stage1</sound>
       <sound>sound\music_bonus_stage3</sound>
+      <sound>sound\music_final_boss</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -1414,8 +1415,6 @@
         <script>scripts\player_handle_float.gml</script>
         <script>scripts\player_handle_float_v.gml</script>
         <script>scripts\player_handle_tornado.gml</script>
-        <script>scripts\player_handle_bosses.gml</script>
-        <script>scripts\player_handle_glider.gml</script>
         <script>scripts\player_handle_pole_grab.gml</script>
         <script>scripts\player_handle_block.gml</script>
         <script>scripts\player_handle_charged_springs.gml</script>
@@ -2063,6 +2062,7 @@
             <object>objects\obj_capsule_flicky_generator</object>
           </objects>
           <object>objects\obj_results</object>
+          <object>objects\obj_fake_results</object>
           <object>objects\obj_sign_post</object>
           <object>objects\obj_sign_post_camera</object>
           <object>objects\obj_capsule_cam</object>

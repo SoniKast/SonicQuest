@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>Active = true;
 ActionTimer = 800;
+/*
 result[0] = obj_slotpanel01.y1;
 result[1] = obj_slotpanel02.y1;
-result[2] = obj_slotpanel02.y1;
+result[2] = obj_slotpanel03.y1;
 
 </string>
           </argument>
@@ -70,7 +71,7 @@ if (ActionTimer == 800)
 {
 Active = true;
 }
-
+/*
     // Basic slot logic.
     if(Active == true)
     {
