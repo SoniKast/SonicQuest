@@ -626,7 +626,6 @@
     d3d_set_fog(true, c_white, 100, 5000);   
     d3d_set_hidden(true);
 
-
 </string>
           </argument>
         </arguments>

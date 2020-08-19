@@ -46,6 +46,7 @@
         {
             icon = 10;
         }
+        break;
         case 4:
         {
             icon = 12;

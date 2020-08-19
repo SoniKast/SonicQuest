@@ -1112,8 +1112,6 @@
     <instance objName="obj_moving_dir_up" x="4544" y="656" name="inst_CFB72ECF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="9344" y="1120" name="inst_74B159EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="4496" y="768" name="inst_C168445D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_screen_camera" x="12992" y="1520" name="inst_63853EAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_MS_stand" x="13056" y="1488" name="inst_429E81B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="13024" y="1488" name="inst_1E7DBA7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="13088" y="1488" name="inst_E97EAE7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="13152" y="1488" name="inst_030303D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1121,6 +1119,7 @@
     <instance objName="obj_collision_terrain_platform_02" x="13280" y="1488" name="inst_8515F347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="13152" y="1600" name="inst_56478A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="13216" y="1600" name="inst_1B319A79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sign_post" x="12992" y="1600" name="inst_45F0A489" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ffz_tree" x="3136" y="0" w="128" h="128" xo="0" yo="0" id="10030663" name="inst_3606A765" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

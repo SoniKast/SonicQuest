@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>148</width>
-  <height>78</height>
+  <width>512</width>
+  <height>256</height>
   <data>images\bg_ss7.png</data>
 </background>

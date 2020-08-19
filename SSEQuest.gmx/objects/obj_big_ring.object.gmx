@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Variables
-    image_speed = 0.15;          // Image speed, for animation :)
-    activated = 0;
+    image_speed  = 0.15;          // Image speed, for animation :)
+    activated    = 0;
+    sound_played = 0;
+    sound_played_2 = 0;
     scr_loadcollect();
 </string>
           </argument>
@@ -51,9 +53,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!audio_is_playing(general_ss_enter))
+            <string>if(!audio_is_playing(general_ss_enter) &amp;&amp; sound_played_2 = 0)
 {
     aud_play_sound(general_ss_enter, global.sfx_volume, 1, 0, 0)
+    sound_played_2 = 1;
 }    
 if(!instance_exists(obj_fade_hpz))
 {
@@ -143,7 +146,11 @@ if(other.player_type == IS_PLAYER &amp;&amp; activated == 0){
 
 if(activated &gt; 0)
 {
+if(sound_played = 0)
+{
 aud_play_sound(general_ss_ring, global.sfx_volume, 1, 0, 1);
+sound_played = 1;
+}
 sprite_index = spr_big_ring_disappear;
 image_speed  = 1;
 }

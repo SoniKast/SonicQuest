@@ -131,7 +131,7 @@ activated = false;
             <string>if(activated = true)
 {
 d3d_set_fog(false, c_white, 100, 5000);
-d3d_set_projection_ortho(0,0,320,224,0);
+d3d_set_projection_ortho(0,0,424,240,0);
 d3d_set_hidden(false);
 draw_set_color(c_white);
 draw_set_font(global.ss_font);

@@ -1580,6 +1580,8 @@
               player_handle_block();
               player_handle_charged_springs();
               player_handle_conveyors();
+              player_handle_valve();
+              player_handle_water_spray();
               
            // Terrain/Slope movement:                         
               if(ground)
@@ -1624,8 +1626,9 @@
               player_handle_pole_grab();
               player_handle_switches();
               player_handle_block();
-              player_handle_charged_springs();
               player_handle_conveyors();
+              player_handle_valve();
+              player_handle_water_spray();
               
            // Abort.
               if(x_speed == 0)
@@ -1692,8 +1695,9 @@
                            player_handle_pole_grab();
                            player_handle_switches();
                            player_handle_block();
-                           player_handle_charged_springs();
                            player_handle_conveyors();
+                           player_handle_valve();
+                           player_handle_water_spray();
                                                               
                         // Check for landing:
                            if(y_speed &gt;= 0 &amp;&amp; player_collision_check(COL_BOTTOM, MASK_BIG, x, y, 0, -1))
@@ -1803,8 +1807,9 @@
                               player_handle_pole_grab();
                               player_handle_switches();
                               player_handle_block();
-                              player_handle_charged_springs();
                               player_handle_conveyors();
+                              player_handle_valve();
+                              player_handle_water_spray();
                               
                            // Abort:
                               if(y_speed == 0)
@@ -2340,6 +2345,9 @@
     
  // Tubes:
     player_state_tube();
+    
+ // Water splashing
+    player_state_water_spray();
     
  // Peelout:
     if(global.player_id == CHAR_SONIC){

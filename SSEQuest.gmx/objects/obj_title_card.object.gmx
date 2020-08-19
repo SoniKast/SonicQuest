@@ -242,8 +242,6 @@
             <kind>1</kind>
             <string>/// Draw elements.
 
-    if(global.special == 0)
-    {
     // The black screen
         draw_set_color(c_black);
         if(transition = false)
@@ -278,31 +276,6 @@
         
      // Stop drawing the font
         draw_set_font(-1);
-    }
-    else    
- // Setup the 3D stuff    
-    if(global.special == 1)
-    {    
-    d3d_set_fog(false, c_white, 100, 5000);
-    d3d_set_projection_ortho(0,0,320,224,0);
-    d3d_set_hidden(false);
-    draw_set_color(c_black);
-    draw_set_alpha(tc_backdrop_alpha);
-    draw_rectangle(0, 224, 320, 224, false);
-    draw_set_alpha(1);
-    draw_set_color(c_white);
-    
- // Text.
-    draw_set_font(zone_font);
-    draw_set_color(c_white);
-    draw_text(zone_x, zone_y, zone_text);
-    draw_text(zone_add_x, zone_add_y, zone_add_text);
-    draw_sprite(spr_title_card_act, global.zone_act-1, zone_act_x, zone_act_y);
-    draw_set_font(-1);    
-    draw_set_alpha(1);
-    d3d_set_fog(true, c_white, 100, 5000);   
-    d3d_set_hidden(true);
-    }
 </string>
           </argument>
         </arguments>

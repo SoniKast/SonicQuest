@@ -5,6 +5,10 @@
        if(state != STATE_TRANSFORM && state = STATE_JUMP && CharacterState == CharacterNormal && shield = 0 && invincibility == 0 && AllowTransformation == 1 && state != STATE_FLY && state != STATE_FLYDROP){
           if((global.player_emeralds == 7 || global.player_emeralds == 14) && global.player_rings >= 50 && input_action_pressed){
              state = STATE_TRANSFORM;
+             with(obj_insta_shield)
+             {
+             instance_destroy()
+             }
              invincibility          =  2;
              invincibility_timer    = -3;
              aud_play_sound(player_transform, global.sfx_volume, 1, 0, 0);

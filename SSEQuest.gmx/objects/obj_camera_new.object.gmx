@@ -42,6 +42,7 @@
     ylast = 0
     fog_color = 0;
     _x = 0;    
+    _y = 0;
     
 // Init. 3D:
    d3d_start()   
@@ -109,49 +110,61 @@
 
  // Draw the background:
     _x += 1; // &lt; Scrolls bg. Edit if you don't want it.
+    _y -= 1;
     d3d_set_depth(-10000);
     d3d_set_fog(false, make_color_hsv(fog_color, 255, 255), 100, 5000);
-    d3d_set_projection_ortho(view_xview,view_yview,320,224,0);
+    d3d_set_projection_ortho(view_xview,view_yview,424,240,0);
     d3d_set_zwriteenable(false);   
-    if(room == rm_special_stage1)
-    { 
-    draw_background_tiled(bg_ss1, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage2)
+    switch(room)
     {
-    draw_background_tiled(bg_ss2, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage3)
-    {
-    draw_background_tiled(bg_ss3, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage4)
-    {
-    draw_background_tiled(bg_ss4, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage5)
-    {
-    draw_background_tiled(bg_ss5, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage6)
-    {
-    draw_background_tiled(bg_ss6, _x, _x);  
-    }
-    else
-    if(room == rm_special_stage7)
-    {
-    draw_background_tiled(bg_ss7, _x, _x);  
+        case rm_special_stage1:
+        { 
+        draw_background_tiled(bg_ss1, _x, _x);  
+        draw_background_tiled(bg_ss1_tex, _y, _y);  
+        break;
+        }
+        case rm_special_stage2:
+        {
+        draw_background_tiled(bg_ss2, _x, _x);    
+        draw_background_tiled(bg_ss2_tex, _y, _y);  
+        break;
+        }
+        case rm_special_stage3:
+        {
+        draw_background_tiled(bg_ss3, _x, _x);    
+        draw_background_tiled(bg_ss3_tex, _y, _y);  
+        break;
+        }
+        case rm_special_stage4:
+        {
+        draw_background_tiled(bg_ss4, _x, _x);    
+        draw_background_tiled(bg_ss4_tex, _y, _y);  
+        break;
+        }
+        case rm_special_stage5:
+        {
+        draw_background_tiled(bg_ss5, _x, _x);    
+        draw_background_tiled(bg_ss5_tex, _y, _y);  
+        break;
+        }
+        case rm_special_stage6:
+        {
+        draw_background_tiled(bg_ss6, _x, _x);   
+        draw_background_tiled(bg_ss6_tex, _y, _y);   
+        break;
+        }
+        case rm_special_stage7:
+        {
+        draw_background_tiled(bg_ss7, _x, _x);    
+        draw_background_tiled(bg_ss7_tex, _y, _y);  
+        break;
+        }
     }
     
     d3d_set_zwriteenable(true);    
     
   // Draw 3D elements:
-    d3d_set_projection_perspective(0,0,320,224,0);
+    d3d_set_projection_perspective(0,0,424,240,0);
     d3d_set_perspective(1)  ;
     d3d_set_depth(10000);
     draw_set_color(c_white);
@@ -161,6 +174,7 @@
     draw_set_color(c_white);
     d3d_set_lighting(0);
 
+    
 </string>
           </argument>
         </arguments>

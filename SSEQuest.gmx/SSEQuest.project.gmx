@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles"/>
+  <datafiles number="23" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
   </NewExtensions>
@@ -23,14 +23,18 @@
       <sound>sound\music_jungle_havoc1</sound>
       <sound>sound\music_jungle_havoc2</sound>
       <sound>sound\music_colossal_conduit1</sound>
+      <sound>sound\music_colossal_conduit2</sound>
+      <sound>sound\music_twisted_towers</sound>
       <sound>sound\music_final_fall1</sound>
       <sound>sound\music_final_fall2</sound>
       <sound>sound\music_hidden_palace</sound>
       <sound>sound\music_special_stage</sound>
       <sound>sound\music_boss</sound>
       <sound>sound\music_bonus_stage1</sound>
+      <sound>sound\music_bonus_stage2</sound>
       <sound>sound\music_bonus_stage3</sound>
       <sound>sound\music_final_boss</sound>
+      <sound>sound\music_final_boss2</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -63,8 +67,11 @@
         <sound>sound\general_teleport</sound>
         <sound>sound\general_teleport_start</sound>
         <sound>sound\general_water_splash</sound>
+        <sound>sound\general_water_shoot</sound>
         <sound>sound\general_slab</sound>
         <sound>sound\general_shine</sound>
+        <sound>sound\general_score</sound>
+        <sound>sound\jingle_stt</sound>
       </sounds>
       <sounds name="Player">
         <sound>sound\player_air</sound>
@@ -113,7 +120,6 @@
         <sound>sound\jingle_super</sound>
         <sound>sound\jingle_title</sound>
         <sound>sound\jingle_sega</sound>
-        <sound>sound\jingle_stt</sound>
       </sounds>
     </sounds>
   </sounds>
@@ -380,6 +386,13 @@
               <sprite>sprites\spr_wheelmobile_intro</sprite>
               <sprite>sprites\spr_wheelmobile_dead</sprite>
               <sprite>sprites\spr_wheelmobile_flee</sprite>
+            </sprites>
+            <sprites name="Spikethrower">
+              <sprite>sprites\spr_spikemobile_normal</sprite>
+              <sprite>sprites\spr_spikemobile_hurt</sprite>
+              <sprite>sprites\spr_spikemobile_hit</sprite>
+              <sprite>sprites\spr_spikemobile_dead</sprite>
+              <sprite>sprites\spr_spikemobile_flee</sprite>
             </sprites>
           </sprites>
           <sprites name="Spikes">
@@ -834,10 +847,13 @@
             <sprite>sprites\spr_kabuturbo</sprite>
             <sprite>sprites\spr_flutter</sprite>
             <sprite>sprites\spr_snapper</sprite>
-            <sprites name="Mini-boss">
-              <sprite>sprites\spr_npc_sth3_firebreather</sprite>
-              <sprite>sprites\spr_npc_sth3_firebreather_parts</sprite>
-              <sprite>sprites\spr_npc_sth3_firebreather_flames</sprite>
+            <sprites name="Kabuturbo">
+              <sprite>sprites\spr_kabuturbo_charged_drift</sprite>
+              <sprite>sprites\spr_kabuturbo_charged_walk</sprite>
+              <sprite>sprites\spr_kabuturbo_charging</sprite>
+              <sprite>sprites\spr_kabuturbo_drift</sprite>
+              <sprite>sprites\spr_kabuturbo_walk</sprite>
+              <sprite>sprites\spr_skid_dust_weak</sprite>
             </sprites>
           </sprites>
           <sprites name="Loop">
@@ -877,6 +893,7 @@
             <sprite>sprites\spr_ggz_bouncing_flower2</sprite>
             <sprite>sprites\spr_ggz_breakable_wall</sprite>
             <sprite>sprites\spr_ggz_breakable_wall_pieces</sprite>
+            <sprite>sprites\spr_ggz_breakable_wall_pieces_bigger</sprite>
             <sprite>sprites\spr_ggz_breakable_block</sprite>
             <sprite>sprites\spr_ggz_moving_platform</sprite>
             <sprite>sprites\spr_ggz_plat_start</sprite>
@@ -935,6 +952,9 @@
               <sprite>sprites\spr_ace_projectile</sprite>
             </sprites>
           </sprites>
+          <sprites name="Decorations">
+            <sprite>sprites\spr_ccz_post</sprite>
+          </sprites>
         </sprites>
         <sprites name="FFZ">
           <sprites name="Gimmicks">
@@ -943,6 +963,7 @@
             <sprite>sprites\spr_ffz_loop_top</sprite>
             <sprite>sprites\spr_ffz_fire_screen</sprite>
             <sprite>sprites\spr_ffz_conveyor</sprite>
+            <sprite>sprites\spr_ffz_vine_gimmick_placeholder</sprite>
             <sprite>sprites\sprPBridge</sprite>
             <sprite>sprites\sprPCenter</sprite>
             <sprite>sprites\sprPChain</sprite>
@@ -970,6 +991,12 @@
             <sprite>sprites\spr_wwz_cork</sprite>
             <sprite>sprites\spr_wwz_platform</sprite>
             <sprite>sprites\spr_wwz_pole_v</sprite>
+            <sprite>sprites\spr_wwz_pipe_fall</sprite>
+            <sprite>sprites\spr_wwz_break_wall</sprite>
+            <sprite>sprites\spr_wwz_bridge_log</sprite>
+            <sprite>sprites\spr_wwz_valve</sprite>
+            <sprite>sprites\spr_wwz_water_spray</sprite>
+            <sprite>sprites\spr_wwz_valve_water_mask</sprite>
           </sprites>
         </sprites>
         <sprites name="BZ">
@@ -1162,6 +1189,9 @@
         <background>background\bg_dataselect</background>
         <background>background\bg_levelselect</background>
       </backgrounds>
+      <backgrounds name="Sound Test">
+        <background>background\bg_soundtest</background>
+      </backgrounds>
     </backgrounds>
     <backgrounds name="Zone Specific">
       <backgrounds name="Tilesets">
@@ -1185,6 +1215,7 @@
         </backgrounds>
         <backgrounds name="Pinball Panic">
           <background>background\ts_pinball_panic</background>
+          <background>background\ts_ppz_back</background>
           <background>background\ts_ppz_slot</background>
           <background>background\ts_ppz_slot2</background>
           <background>background\ts_ppz_up</background>
@@ -1197,6 +1228,8 @@
           <background>background\ts_forest_frenzy2</background>
           <background>background\ts_ffz_tree</background>
           <background>background\ts_ffz2_tree</background>
+          <background>background\ts_ffz2_boss_tree</background>
+          <background>background\ts_ffz2_back_tree</background>
           <background>background\ts_ffz_plants</background>
           <background>background\ts_ffz_plants2</background>
           <background>background\ts_ffz_plants3</background>
@@ -1208,6 +1241,7 @@
         </backgrounds>
         <backgrounds name="Egg Gauntlet">
           <background>background\ts_egg_gauntlet</background>
+          <background>background\ts_egg_gauntlet_new</background>
         </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\ts_hpz</background>
@@ -1267,11 +1301,14 @@
           </backgrounds>
         </backgrounds>
         <backgrounds name="Pinball Panic Zone">
-          <background>background\bg_ppz</background>
+          <background>background\bg_ppz_sky</background>
+          <background>background\bg_ppz_building1</background>
+          <background>background\bg_ppz_building2</background>
         </backgrounds>
         <backgrounds name="Jungle Havoc Zone">
           <background>background\bg_jhz_front</background>
           <background>background\bg_jhz2_front</background>
+          <background>background\bg_jhz2_back</background>
           <background>background\bg_jhz_back1</background>
           <background>background\bg_jhz_back2</background>
           <background>background\bg_jhz_back3</background>
@@ -1315,31 +1352,31 @@
       </backgrounds>
       <backgrounds name="Special Stage">
         <backgrounds name="SS1">
+          <background>background\bg_ss1_tex</background>
           <background>background\bg_ss1</background>
-          <background>background\bg_ss1_floor</background>
         </backgrounds>
         <backgrounds name="SS2">
+          <background>background\bg_ss2_tex</background>
           <background>background\bg_ss2</background>
-          <background>background\bg_ss2_floor</background>
         </backgrounds>
         <backgrounds name="SS3">
+          <background>background\bg_ss3_tex</background>
           <background>background\bg_ss3</background>
-          <background>background\bg_ssz3_floor</background>
         </backgrounds>
         <backgrounds name="SS4">
+          <background>background\bg_ss4_tex</background>
           <background>background\bg_ss4</background>
-          <background>background\bg_ssz4_floor</background>
         </backgrounds>
         <backgrounds name="SS5">
+          <background>background\bg_ss5_tex</background>
           <background>background\bg_ss5</background>
-          <background>background\bg_ssz5_floor</background>
         </backgrounds>
         <backgrounds name="SS6">
+          <background>background\bg_ss6_tex</background>
           <background>background\bg_ss6</background>
-          <background>background\bg_ssz6_floor</background>
         </backgrounds>
         <backgrounds name="SS7">
-          <background>background\bg_ssz7_floor</background>
+          <background>background\bg_ss7_tex</background>
           <background>background\bg_ss7</background>
         </backgrounds>
       </backgrounds>
@@ -1377,6 +1414,7 @@
         <script>scripts\player_state_tube.gml</script>
         <script>scripts\player_state_float.gml</script>
         <script>scripts\player_state_float_v.gml</script>
+        <script>scripts\player_state_water_spray.gml</script>
         <script>scripts\player_state_goal.gml</script>
         <script>scripts\player_state_transform.gml</script>
         <scripts name="Sonic only">
@@ -1419,6 +1457,8 @@
         <script>scripts\player_handle_block.gml</script>
         <script>scripts\player_handle_charged_springs.gml</script>
         <script>scripts\player_handle_conveyors.gml</script>
+        <script>scripts\player_handle_valve.gml</script>
+        <script>scripts\player_handle_water_spray.gml</script>
       </scripts>
       <scripts name="Physics">
         <script>scripts\player_physics_sonic.gml</script>
@@ -1527,6 +1567,22 @@
       <script>scripts\scr_string_number_format.gml</script>
       <script>scripts\room_goto_bonus.gml</script>
       <script>scripts\chance.gml</script>
+      <script>scripts\dummy_effect_create_motion.gml</script>
+      <script>scripts\dummy_effect_create_speed.gml</script>
+      <script>scripts\physics_collision_check.gml</script>
+      <script>scripts\physics_create.gml</script>
+      <script>scripts\physics_draw.gml</script>
+      <script>scripts\physics_interact.gml</script>
+      <script>scripts\physics_jump.gml</script>
+      <script>scripts\physics_move_left.gml</script>
+      <script>scripts\physics_move_right.gml</script>
+      <script>scripts\physics_step.gml</script>
+      <script>scripts\physics_x_decel.gml</script>
+      <script>scripts\physics_y_decel.gml</script>
+      <script>scripts\scr_afterimage.gml</script>
+      <script>scripts\scr_collision_check.gml</script>
+      <script>scripts\scr_solid_check.gml</script>
+      <script>scripts\wall_check.gml</script>
     </scripts>
     <scripts name="Audio">
       <script>scripts\aud_play_sound.gml</script>
@@ -2006,6 +2062,7 @@
           <object>objects\obj_effect_screenflash</object>
           <object>objects\obj_bonus_spark_generator</object>
           <object>objects\obj_bonus_spark</object>
+          <object>objects\obj_after_image</object>
           <object>objects\obj_dummy_effect</object>
           <object>objects\obj_empty</object>
           <objects name="Player">
@@ -2387,6 +2444,10 @@
           <object>objects\obj_bonus3_bumper</object>
         </objects>
       </objects>
+      <objects name="Sound Test">
+        <object>objects\obj_sonic_sound_test</object>
+        <object>objects\obj_sound_test</object>
+      </objects>
       <objects name="Mobile">
         <object>objects\obj_touchpad</object>
         <object>objects\obj_gamepad_up</object>
@@ -2523,6 +2584,7 @@
       <objects name="Chaotic Casino Zone">
         <objects name="Gimmicks">
           <object>objects\obj_ppz_flipping_card</object>
+          <object>objects\obj_ccz_post</object>
           <object>objects\obj_ppz_question_block</object>
           <object>objects\obj_ppz_spike_block</object>
           <object>objects\obj_ppz_bonus_block</object>
@@ -2559,17 +2621,14 @@
           <object>objects\obj_ffz_fall_bridge_l</object>
           <object>objects\obj_ffz_fall_bridge</object>
           <object>objects\obj_ffz_fall_bridge_r</object>
+          <object>objects\placeholder</object>
           <object>objects\obj_ffz_loop_solid</object>
           <object>objects\obj_ffz_loop_left</object>
           <object>objects\obj_ffz_loop_right</object>
+          <object>objects\obj_ffz_swing_platform</object>
           <object>objects\obj_ffz_conveyor</object>
           <object>objects\obj_spinning_platform</object>
           <object>objects\obj_spinning_platform_parent</object>
-        </objects>
-        <objects name="Badniks">
-          <object>objects\obj_butterkiller_follow</object>
-          <object>objects\obj_jugglesaw</object>
-          <object>objects\obj_turbosnail</object>
         </objects>
         <objects name="Mini Boss">
           <object>objects\obj_screen_camera</object>
@@ -2579,12 +2638,33 @@
           <object>objects\par_cutscene_star</object>
           <object>objects\obj_ffz_fire_screen</object>
         </objects>
+        <objects name="Enemies">
+          <objects name="Boss">
+            <objects name="Slash Mobile">
+              <object>objects\obj_slash_mobile</object>
+              <object>objects\obj_slash_mobile_camera</object>
+              <object>objects\obj_boss4_create</object>
+            </objects>
+          </objects>
+          <objects name="Badniks">
+            <object>objects\obj_butterkiller_follow</object>
+            <object>objects\obj_jugglesaw</object>
+            <object>objects\obj_turbosnail</object>
+          </objects>
+        </objects>
       </objects>
       <objects name="Wild Waterworks">
         <objects name="Gimmicks">
-          <object>objects\obj_wwz_platform</object>
+          <object>objects\obj_wwz_bridge_8</object>
+          <object>objects\obj_wwz_bridge_12</object>
+          <object>objects\obj_wwz_break_wall</object>
+          <object>objects\obj_wwz_break_wall_knuckles</object>
           <object>objects\obj_wwz_cork</object>
+          <object>objects\obj_wwz_platform</object>
           <object>objects\obj_wwz_pole_v</object>
+          <object>objects\obj_wwz_pipe_fall</object>
+          <object>objects\obj_wwz_valve</object>
+          <object>objects\obj_wwz_water_spray</object>
         </objects>
         <objects name="Parallax">
           <object>objects\obj_wwz_parallax</object>
@@ -2732,9 +2812,10 @@
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
       <room>rooms\rm_bridge_zone2</room>
+      <room>rooms\rm_sound_test</room>
     </rooms>
   </rooms>
-  <constants number="83">
+  <constants number="85">
     <constant name="GAME_NAME">"Sonic Quest DX"</constant>
     <constant name="GAME_VERSION">"v3.0"</constant>
     <constant name="SFX">obj_audio</constant>
@@ -2794,6 +2875,7 @@
     <constant name="STATE_GLIDER">31</constant>
     <constant name="STATE_POLE_GRAB">32</constant>
     <constant name="STATE_POLE_GRAB_H">33</constant>
+    <constant name="STATE_WATER_SPRAY">34</constant>
     <constant name="RING_NORMAL">1</constant>
     <constant name="RING_BLUE">2</constant>
     <constant name="GRAB_STATIC">0</constant>
@@ -2818,6 +2900,7 @@
     <constant name="CharacterNormal">1</constant>
     <constant name="CharacterSuper">2</constant>
     <constant name="CharacterHyper">3</constant>
+    <constant name="live_enabled">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

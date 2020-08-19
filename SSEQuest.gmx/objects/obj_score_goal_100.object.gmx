@@ -70,6 +70,7 @@ if used = 0
 {
 global.player_score += 100;
 used = 1;
+aud_play_sound(general_score, global.sfx_volume, 1, 0, 0);
 }
 
 if used = 1

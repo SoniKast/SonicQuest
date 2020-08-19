@@ -46,7 +46,7 @@
     
     var OverallYOffset; OverallYOffset = 0.978;
     
-    scr_parallax_add_node(1, bg_egg_gauntlet,       0.86, 0, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 768, 128);
+    scr_parallax_add_node(1, bg_egg_gauntlet,       0.86, 0.3, 0, 0, 0,    OverallYOffset, 0, 0, 0, 0,     0, 0, 768, 128);
     scr_parallax_add_node(1, bg_egg_gauntlet,       0.84, 0, 0, 0, 0,    OverallYOffset, 0, 0, 128, 0,    0, 128, 768, 128);
     scr_parallax_add_node(1, bg_egg_gauntlet,       0.82, 0, 0, 0, 0,    OverallYOffset, 0, 0, 256, 0,   0, 256, 768, 128);
     scr_parallax_add_node(1, bg_egg_gauntlet,       0.80, 0, 0, 0, 0,    OverallYOffset, 0, 0, 384, 0,   0, 384, 768, 128);

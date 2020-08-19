@@ -60,6 +60,8 @@
     global.previous_room = noone;
     global.coming_from_special = 1;
     global.special             = 0;
+    d3d_set_zwriteenable(false);    
+    d3d_set_fog(false, c_white, 100, 5000);
     d3d_end();
 </string>
           </argument>

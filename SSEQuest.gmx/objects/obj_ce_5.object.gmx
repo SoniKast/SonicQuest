@@ -55,7 +55,7 @@
             <kind>1</kind>
             <string>/// Add emerald.
 
-    if(global.player_rings &gt;= 100)
+    if(global.ss_rings &gt;= 100)
     {
         instance_create(x, y, obj_ss_ring_sparkle);
         global.player_emeralds += 1;   

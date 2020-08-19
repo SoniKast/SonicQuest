@@ -2,6 +2,7 @@
  // Script to handle terrain that moves.
  
     platform_id = player_collision_check(COL_BOTTOM_OBJECT, MASK_BIG, x, y, angle, par_moving_platform);
+    platform2_id = player_collision_check(COL_BOTTOM_OBJECT, MASK_BIG, x, y, angle, par_moving_solid);
     swing_id    = player_collision_check(COL_BOTTOM_OBJECT, MASK_BIG, x, y, angle, par_swing);
     
     collapse_id = instance_nearest(x, y, par_collision_collapse);

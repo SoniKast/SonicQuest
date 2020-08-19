@@ -57,8 +57,8 @@
     Height      = 152;
     MaxScaleY   = 1.2;
     
-/*    for (i = 0; i &lt; 15; i+= 1)
-    scr_parallax_add_node(1, backGhzWaterAct2, 0.5-((1+i)/15)*0.5, ((1+i)/15)*-1.8, 0, 0, 0, OverallYOffset, 0, 0, 143+i*12, 0, 0, i*8, 256, 120);
+//    for (i = 0; i &lt; 15; i+= 1)
+//    scr_parallax_add_node(1, backGhzWaterAct2, 0.5-((1+i)/15)*0.5, ((1+i)/15)*-1.8, 0, 0, 0, OverallYOffset, 0, 0, 143+i*12, 0, 0, i*8, 256, 120);
 
 
 </string>
@@ -102,7 +102,7 @@
     
     // Update position, relative to the current scroll
     for (i = 0; i &lt; 15; i+= 1)
-    x = floor(view_xview[view_current]);
+    x = floor(view_xview[view_current]*0.5-((1+i)/15)*0.5+0+0);
     y = floor(view_yview[view_current]*RatioY)+Height;
     
     // Calculate scale and limit it over the MaxScaleY
@@ -119,6 +119,11 @@
                                 y+(_i*6)*_Scale, 
                                 1, _Scale, 0, c_white, c_white, c_white, c_white, 1);
     }
+
+/*draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                x-((current_time*0.01)*_i mod 384), 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);
     
     /* 
     // Water    

@@ -139,7 +139,7 @@ if( instance_exists(par_player) )
    if( state == STATE_TUBE )
     {
      tube_mov_y = -0.2;
-     global.used_emerald_1   = true;
+     global.used_emerald_1 = true;
      with(instance_create(x,y,obj_fade_to_value))
      {
      value = rm_special_stage1

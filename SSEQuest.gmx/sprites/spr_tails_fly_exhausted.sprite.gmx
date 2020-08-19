@@ -8,8 +8,8 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>30</bbox_right>
-  <bbox_top>1</bbox_top>
+  <bbox_right>33</bbox_right>
+  <bbox_top>0</bbox_top>
   <bbox_bottom>26</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -17,7 +17,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>31</width>
+  <width>34</width>
   <height>27</height>
   <frames>
     <frame index="0">images\spr_tails_fly_exhausted_0.png</frame>

@@ -342,11 +342,12 @@ y-= yspd;
           <argument>
             <kind>1</kind>
             <string>///Change Direction
-
+if(state != st_flyaway)
+{
 yspd = 0; 
 xspd = 3; 
 img_dir = -1;
-
+};
 </string>
           </argument>
         </arguments>
@@ -370,11 +371,12 @@ img_dir = -1;
           <argument>
             <kind>1</kind>
             <string>///Change Direction
-
+if(state != st_flyaway)
+{
 yspd = 0; 
 xspd = -3; 
 img_dir = 1;
-
+}
 
 </string>
           </argument>
