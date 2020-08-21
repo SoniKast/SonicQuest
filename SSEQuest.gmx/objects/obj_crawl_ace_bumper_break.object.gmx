@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_crawl_ace_break.x
-y = obj_crawl_ace_break.y
+            <string>x = instance_nearest(x, y, obj_crawl_ace_break.x)
+y = instance_nearest(x, y, obj_crawl_ace_break.y)
 image_xscale = obj_crawl_ace.image_xscale
 bumper_state = 0;
 score_given = 0;
+
 </string>
           </argument>
         </arguments>
@@ -54,7 +55,7 @@ score_given = 0;
             <kind>1</kind>
             <string> // Dummy Effect:
     dummy_effect_create(spr_explosion, 0.2, x, y, 0, 0);
-    with(obj_crawl_ace_break)
+    with(instance_nearest(x, y, obj_crawl_ace_break))
     {
         bumper_break = true;
     }

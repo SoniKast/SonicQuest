@@ -40,8 +40,8 @@
     instance_activate_object(obj_water_walk);   
     instance_activate_object(objObjectSeesaw);  
     instance_activate_object(objObjectSpikeball);
-    instance_activate_object(obj_crawl_ace);
-    instance_activate_object(obj_crawl_ace_break);
+/*  instance_activate_object(obj_crawl_ace);
+    instance_activate_object(obj_crawl_ace_break);*/
     instance_activate_object(obj_crawl_ace_bumper);
     instance_activate_object(obj_crawl_ace_bumper_break);
     instance_activate_object(obj_ggz_door);

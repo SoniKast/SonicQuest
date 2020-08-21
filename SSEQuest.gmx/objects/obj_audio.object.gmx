@@ -500,6 +500,15 @@
                 }
                 break;
            }    
+           case rm_aquapolis2:
+           {
+                zone_bgm = music_colossal_conduit2;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }   
            case rm_hidden_palace:
            {
                 zone_bgm = music_hidden_palace;

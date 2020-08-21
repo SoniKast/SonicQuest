@@ -4,7 +4,7 @@
  // Sonic's insta shield.
     if(player_index == CHAR_SONIC && shield_usable == true && shield == 0 && shield_obj == noone && CharacterState == CharacterNormal)
     {
-       if(input_action_pressed)
+       if(input_action_pressed && global.player_emeralds < 7)
        {
           if(instance_exists(obj_insta_shield) == false)
           {

@@ -67,7 +67,6 @@
     {
        if(keyboard_check_pressed(global.key_up) &amp;&amp; obj_dataselect_cursor.datacursor_slot_index == 0 &amp;&amp; obj_dataselect_cursor.datacursor_direction == 0)
        {
-        {
           if(dataslot_combo == 3)
           {
              dataslot_combo  = 0;
@@ -112,13 +111,11 @@
           dataslot_character = 3;
           dataslot_cpu       = 0;   
        }
-      }
     }
     else
     if(global.secret = 1)
     {
     if(keyboard_check_pressed(global.key_up) &amp;&amp; obj_dataselect_cursor.datacursor_slot_index == 0 &amp;&amp; obj_dataselect_cursor.datacursor_direction == 0)
-     {
         {
           if(dataslot_combo == 4)
           {
@@ -169,7 +166,6 @@
           dataslot_character = 4;
           dataslot_cpu       = 0;   
        }
-      }
     }
 </string>
           </argument>

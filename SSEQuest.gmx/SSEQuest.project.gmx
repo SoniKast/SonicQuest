@@ -35,6 +35,7 @@
       <sound>sound\music_bonus_stage3</sound>
       <sound>sound\music_final_boss</sound>
       <sound>sound\music_final_boss2</sound>
+      <sound>sound\music_ending_cutscene</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -1066,6 +1067,9 @@
         <sprite>sprites\spr_ppz_pal1</sprite>
         <sprite>sprites\spr_ppz_pal2</sprite>
         <sprite>sprites\spr_ppz_pal3</sprite>
+      </sprites>
+      <sprites name="Sound Test">
+        <sprite>sprites\spr_sonic_soundtest</sprite>
       </sprites>
     </sprites>
     <sprites name="Menus / Continue">
@@ -2816,8 +2820,8 @@
     </rooms>
   </rooms>
   <constants number="85">
-    <constant name="GAME_NAME">"Sonic Quest DX"</constant>
-    <constant name="GAME_VERSION">"v3.0"</constant>
+    <constant name="GAME_NAME">"Sonic Quest"</constant>
+    <constant name="GAME_VERSION">"v1.0"</constant>
     <constant name="SFX">obj_audio</constant>
     <constant name="COL_MAIN">1</constant>
     <constant name="COL_MAIN_OBJECT">2</constant>

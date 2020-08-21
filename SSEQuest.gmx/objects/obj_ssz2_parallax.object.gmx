@@ -118,6 +118,31 @@
                                 x-((current_time*0.01)*_i mod 384), 
                                 y+(_i*6)*_Scale, 
                                 1, _Scale, 0, c_white, c_white, c_white, c_white, 1);
+                                
+        draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                (x-((current_time*0.01)*_i mod 384)) + 1536, 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);                     
+                                
+        draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                (x-((current_time*0.01)*_i mod 384)) + 3072, 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);                      
+                                
+        draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                (x-((current_time*0.01)*_i mod 384)) + 4608, 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);                     
+                                
+        draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                (x-((current_time*0.01)*_i mod 384)) + 6144, 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);                  
+                                
+        draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
+                                (x-((current_time*0.01)*_i mod 384)) + 7680, 
+                                y+(_i*6)*_Scale, 
+                                1, _Scale, 0, c_white, c_white, c_white, c_white, 1);      
     }
 
 /*draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,

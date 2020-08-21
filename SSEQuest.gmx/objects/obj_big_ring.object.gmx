@@ -90,11 +90,12 @@ if(!instance_exists(obj_fade_hpz))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.time_attack = true || global.demo = true)
+            <string>instance_change(obj_big_ring_unavailable, true);
+/*if(global.time_attack = true || global.demo = true)
 {
 instance_change(obj_big_ring_unavailable, true);
 //instance_destroy();
-}
+}*/
 
 if (activated == 1) {
     obj_player.visible = false;

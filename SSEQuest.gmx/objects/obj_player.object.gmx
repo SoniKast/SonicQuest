@@ -35,7 +35,7 @@
     }
  
  //Initiate recording sequence.    
-    scrRecordInit(global.Mode,working_directory+"\data\demo\demo.rec");
+    scrRecordInit(global.Mode,program_directory+"\data\demo\demo.rec");
     
  // Character flag.
     player_index    = global.player_id; // Who do we play as?

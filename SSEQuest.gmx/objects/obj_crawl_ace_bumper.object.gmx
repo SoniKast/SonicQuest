@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_crawl_ace.x
-y = obj_crawl_ace.y
+            <string>x = instance_nearest(x, y, obj_crawl_ace.x)
+y = instance_nearest(x, y, obj_crawl_ace.y)
 image_xscale = obj_crawl_ace.image_xscale
 bumper_state = 0;
 score_given = 0;

@@ -1099,6 +1099,8 @@
     <instance objName="obj_collision_terrain_platform_02" x="1056" y="1632" name="inst_5587F79F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="1408" y="1792" name="inst_189F6C11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_terrain_platform_02" x="1472" y="1792" name="inst_E66FBC5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turbosnail" x="1522" y="1558" name="inst_1C2D2E58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turbosnail" x="1742" y="1474" name="inst_0D9B9AED" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="ts_ecz" x="5280" y="1280" w="32" h="32" xo="34" yo="298" id="10045753" name="inst_2526366E" depth="100" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

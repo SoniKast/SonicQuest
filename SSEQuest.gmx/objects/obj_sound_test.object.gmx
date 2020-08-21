@@ -31,7 +31,7 @@
     music_test_option    = 0;
     title_menu_option    = 0;
     title_menu_active    = 1;
-    play_string          = "";
+    play_string          = "SOUND TEST";
     pause_option         = 0;
 </string>
           </argument>
@@ -127,7 +127,7 @@ if(title_menu_active == 1)
     {
        if(keyboard_check_pressed(global.key_right))
        {
-          if(music_test_option &lt; 29)
+          if(music_test_option &lt; 31)
           {
              music_test_option += 1;
              aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
@@ -147,7 +147,7 @@ if(title_menu_active == 1)
           }
           else
           {
-             music_test_option = 29;
+             music_test_option = 31;
              aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);   
           }
        }       
@@ -804,12 +804,28 @@ if(title_menu_active == 1)
                           case 28:
                           {
                           audio_stop_all();
+                          aud_play_sound(music_ending_cutscene, global.sfx_volume, 1, 0, 0);
+                          play_string = "CREDITS";
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 29:
+                          {
+                          audio_stop_all();
+                          aud_play_sound(music_credits, global.sfx_volume, 1, 0, 0);
+                          play_string = "CREDITS";
+                          title_menu_active = 1;
+                          break;
+                          }
+                          case 30:
+                          {
+                          audio_stop_all();
                           aud_play_sound(jingle_stt, global.sfx_volume, 1, 0, 0);
                           play_string = "SONIC TRIBUTE TEAM";
                           title_menu_active = 1;
                           break;
                           }
-                          case 29:
+                          case 31:
                           {
                           audio_stop_all();
                           aud_play_sound(jingle_sega, global.sfx_volume, 1, 0, 0);
