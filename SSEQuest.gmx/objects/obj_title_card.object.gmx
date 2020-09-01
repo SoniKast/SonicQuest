@@ -55,6 +55,10 @@
     title_backdrop_delay  = 50; // How many frames it takes to fade the black.
     tc_backdrop_alpha     = 1;  // Alpha of the black backdrop.
     transition            = 0;  // Zone transition
+    
+ // Tween Started Flags
+    tween1_started = false;
+    tween2_started = false;
 </string>
           </argument>
         </arguments>
@@ -179,13 +183,16 @@
             <kind>1</kind>
             <string>/// Move Title card.
 
-    // Move the parts 
+    // Move the parts
+        if tween1_started = false
+        { 
           TweenFire(id, EaseInOutQuad, 0, false, 0, 6, "banner_y", banner_y, 0);
           TweenFire(id, EaseInOutQuad, 0, false, 0, 6, "stripe_x", stripe_x, 0);
           TweenFire(id, EaseInOutQuad, 0, false, 0, 8, "zone_x", zone_x, 85);
           TweenFire(id, EaseInOutQuad, 0, false, 0, 8, "zone_add_x", zone_add_x, 174);
           TweenFire(id, EaseInOutQuad, 0, false, 0, 8, "zone_act_x", zone_act_x, 229);
-    
+          tween1_started = true;
+        }
     // Fade the black
           if(alarm[2] = -1)
           {
@@ -195,12 +202,16 @@
     // Move everything away once it has faded      
           if(tc_backdrop_alpha == 0)
           {
-                TweenFire(id, EaseOutQuad, 0, false, 0, 16, "banner_y", banner_y, -sprite_get_height(spr_title_card_banner));
-                TweenFire(id, EaseOutQuad, 0, false, 0, 16, "stripe_x", stripe_x, -sprite_get_width(spr_title_card_stripe));
-                TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_x", zone_x, view_xview+view_wview*2);
-                TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_add_x", zone_add_x, view_xview+view_wview*2);
-                TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_act_x", zone_act_x, view_xview+view_wview*2);
-                
+                if tween2_started = false
+                {
+                    TweenFire(id, EaseOutQuad, 0, false, 0, 16, "banner_y", banner_y, -sprite_get_height(spr_title_card_banner));
+                    TweenFire(id, EaseOutQuad, 0, false, 0, 16, "stripe_x", stripe_x, -sprite_get_width(spr_title_card_stripe));
+                    TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_x", zone_x, view_xview+view_wview*2);
+                    TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_add_x", zone_add_x, view_xview+view_wview*2);
+                    TweenFire(id, EaseOutQuad, 0, false, 0, 16, "zone_act_x", zone_act_x, view_xview+view_wview*2);
+                    
+                    tween2_started = true;
+                }
     // Sonic Quest Stuff
           if(instance_exists(par_player))
               {

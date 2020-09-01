@@ -216,7 +216,7 @@
     if(icon == 5)
     { 
        parent.invincibility       = 2;
-       parent.invincibility_timer = 900;  
+       parent.invincibility_timer = 1200;  
        if(global.bgm_volume &lt;= 0.0 &amp;&amp; audio_is_playing(player_life))
        {
           global.bgm_volume = 1;
@@ -227,7 +227,7 @@
  // Sneakers:
     if(icon == 6)
     {
-       parent.speedshoe_timer = 900    
+       parent.speedshoe_timer = 1200    
        parent.speedshoe       = 1;
        if(global.bgm_volume &lt;= 0.0 &amp;&amp; audio_is_playing(player_life))
        {

@@ -43,7 +43,7 @@
 sprNormal = spr_technomeow_h;
 sprDrift = spr_technomeow_h_drift;
 spd_factor = 4;
-deac_factor = 0.015*spd_factor;
+deac_factor = 0.2;
 image_speed = 0.25;
 </string>
           </argument>

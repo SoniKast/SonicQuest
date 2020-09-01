@@ -184,7 +184,7 @@
     {
        other.drown_timer = 1800;
        other.state       = STATE_BREATH;
-       aud_play_sound(player_air, global.sfx_volume, 0, 1, 0);     
+       aud_play_sound(player_air, global.sfx_volume, 0, 0, 1);     
        instance_destroy();
     }
 

@@ -145,7 +145,7 @@
     }
     else
     {
-       if(audio_is_playing(zone_bgm) == false &amp;&amp; !audio_is_playing(boss_bgm))// zone_bgm != -1)
+       if(audio_is_playing(zone_bgm) == false &amp;&amp; !audio_is_playing(boss_bgm) &amp;&amp; !audio_is_playing(final_boss_bgm))// zone_bgm != -1)
        {
           aud_play_music(zone_bgm, global.bgm_volume, 1);
        }
@@ -181,7 +181,7 @@
       {
           if(audio_is_playing(zone_bgm) &amp;&amp; !audio_is_playing(final_boss_bgm) &amp;&amp; zone_bgm != -1)
                {
-                  //show_message("TURN THE SOUND UP")
+                   //show_message("TURN THE SOUND UP")
                     temp_zone_bgm = zone_bgm;
                     audio_stop_sound(zone_bgm)
                     zone_bgm = final_boss_bgm;
@@ -508,7 +508,18 @@
                     aud_play_music(zone_bgm, global.bgm_volume, 1);
                 }
                 break;
-           }   
+           }        
+           case rm_egg_gauntlet1:
+           case rm_egg_gauntlet2:
+           case rm_egg_gauntlet3:
+           {
+                zone_bgm = music_final_fall1;
+                if(audio_is_playing(zone_bgm) == false)
+                {
+                    aud_play_music(zone_bgm, global.bgm_volume, 1);
+                }
+                break;
+           }      
            case rm_hidden_palace:
            {
                 zone_bgm = music_hidden_palace;

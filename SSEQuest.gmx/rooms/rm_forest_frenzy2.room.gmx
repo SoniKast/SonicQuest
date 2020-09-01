@@ -302,7 +302,7 @@
     <instance objName="obj_ffz_loop_right" x="4288" y="1504" name="inst_00F4CAE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_big_ring" x="4480" y="1152" name="inst_17326D33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ffz_swing_platform" x="6176" y="1392" name="inst_DF3931F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ffz_swing_platform" x="5424" y="1424" name="inst_A06C5825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ffz_swing_platform" x="5522" y="1443" name="inst_A06C5825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_up" x="5344" y="1264" name="inst_E6A5F139" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spring_diagonal_up_right" x="4847" y="1010" name="inst_D5C88434" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spike_top" x="4736" y="992" name="inst_A891219B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

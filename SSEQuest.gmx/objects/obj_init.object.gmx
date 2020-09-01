@@ -57,46 +57,47 @@
     global.gmp_enter        = 0;
  
  // Zone / Data related:
-    global.player_id        = 1;             // Player id.
-    global.player_rings     = 0;             // Current amount of rings.
-    global.player_score     = 0;             // Current score.
-    global.player_score_mtp = 0;             // Current score multiplier (when defeating enemies)
-    global.player_continues = 0;             // Current amount of continues.
-    global.player_lives     = 3;             // Current amount of lives.
-    global.player_emeralds  = 0;             // Current amount of chaos emeralds.
-    global.cpu              = 2;             // CPU id.
-    global.do_time          = 0;             // Increases in game timers if enabled.
-    global.game_time        = 0;             // Main game time.
-    global.object_time      = 0;             // Seperate timer for objects- 
-    global.game_paused      = 0;             // Is the game paused (Unused)
-    global.time_over        = 1;             // Got a time over? (Unused)
-    global.player_rings_100 = 1;             // Used to properly gain 100 rings.
-    global.zone_id          = 0;             // ID of the current zone, used for data selects.
-    global.death_height     = -1;            // Position that kills the player.
-    global.checkpoint_x     = -1;            // Position used after respawning.
-    global.checkpoint_y     = -1;            // Position used after respawning.
-    global.temp_restart_x   = -1;
-    global.temp_restart_y   = -1;
-    global.specialring_x    = -1;
-    global.specialring_y    = -1;
-    global.checkpoint_t     = 0;             // Time used after respawning.
-    global.water_position   = -1;            // Position of the water surface.
-    global.game_completed   = 0;             // Have we completed the game?
-    global.first_zone       = rm_radiant_valley1; // The first zone in the game. See obj_dataselect_slot/_small and obj_fade_newgame()
-    global.previous_room    = -1;            // Returns the previous room.
-    global.BonusStage       = false;         // Are you in a bonus stage?
-    global.BonusRings       = 0;             // Rings you get in a special stage
-    global.BonusShield      = 0;             // Shield we got in a Bonus Stage. Current shield of the player. 0 - None, 1 - Normal, 2 - Fire, 3 - Electric / Magnetic, 4 - Water/ Bubble
-    global.zone             = 0;             //This will be used for letting the Big Ring object know which zone it is.
-    global.save_file        = 1;
-    global.save_icon        = 0;
-    global.data_select_icon = 1;             //To correctly display the level preview.
-    global.cutscene         = false;
-    global.demo             = false;
-    global.secret           = 0;
+    global.player_id            = 1;             // Player id.
+    global.player_rings         = 0;             // Current amount of rings.
+    global.player_score         = 0;             // Current score.
+    global.player_score_mtp     = 0;             // Current score multiplier (when defeating enemies)
+    global.player_continues     = 0;             // Current amount of continues.
+    global.player_lives         = 3;             // Current amount of lives.
+    global.player_emeralds      = 0;             // Current amount of chaos emeralds.
+    global.cpu                  = 2;             // CPU id.
+    global.do_time              = 0;             // Increases in game timers if enabled.
+    global.game_time            = 0;             // Main game time.
+    global.object_time          = 0;             // Seperate timer for objects- 
+    global.game_paused          = 0;             // Is the game paused (Unused)
+    global.time_over            = 1;             // Got a time over? (Unused)
+    global.player_rings_100     = 1;             // Used to properly gain 100 rings.
+    global.zone_id              = 0;             // ID of the current zone, used for data selects.
+    global.death_height         = -1;            // Position that kills the player.
+    global.checkpoint_x         = -1;            // Position used after respawning.
+    global.checkpoint_y         = -1;            // Position used after respawning.
+    global.temp_restart_x       = -1;
+    global.temp_restart_y       = -1;
+    global.specialring_x        = -1;
+    global.specialring_y        = -1;
+    global.checkpoint_t         = 0;             // Time used after respawning.
+    global.water_position       = -1;            // Position of the water surface.
+    global.game_completed       = 0;             // Have we completed the game?
+    global.game_completed_full  = 0;             // Have we completed the game with all emeralds?
+    global.first_zone           = rm_radiant_valley1; // The first zone in the game. See obj_dataselect_slot/_small and obj_fade_newgame()
+    global.previous_room        = -1;            // Returns the previous room.
+    global.BonusStage           = false;         // Are you in a bonus stage?
+    global.BonusRings           = 0;             // Rings you get in a special stage
+    global.BonusShield          = 0;             // Shield we got in a Bonus Stage. Current shield of the player. 0 - None, 1 - Normal, 2 - Fire, 3 - Electric / Magnetic, 4 - Water/ Bubble
+    global.zone                 = 0;             //This will be used for letting the Big Ring object know which zone it is.
+    global.save_file            = 1;
+    global.save_icon            = 0;
+    global.data_select_icon     = 1;             //To correctly display the level preview.
+    global.cutscene             = false;
+    global.demo                 = false;
+    global.secret               = 0;
     
  // Modes
-    global.time_attack      = false;  //Used in time attack mode so the big rings don't spawn
+    global.time_attack          = false;  //Used in time attack mode so the big rings don't spawn
     global.best_time_ssz1       = 0;
     global.best_time_ssz2       = 0;
     global.best_time_ggz1       = 0;
@@ -146,20 +147,21 @@
 
         if(_slot == true)
         {
-           global.save_slot_zone          [i] = global.zone_id;
-           global.save_slot_character     [i] = global.player_id;
-           global.save_slot_cpu           [i] = global.cpu;
-           global.save_slot_lives         [i] = global.player_lives;           
-           global.save_slot_continues     [i] = global.player_continues;               
-           global.save_slot_emeralds      [i] = global.player_emeralds;
-           global.save_slot_completed     [i] = global.game_completed;
-           global.save_slot_used_emerald1 [i] = global.used_emerald_1;
-           global.save_slot_used_emerald2 [i] = global.used_emerald_2;
-           global.save_slot_used_emerald3 [i] = global.used_emerald_3;
-           global.save_slot_used_emerald4 [i] = global.used_emerald_4;
-           global.save_slot_used_emerald5 [i] = global.used_emerald_5;
-           global.save_slot_used_emerald6 [i] = global.used_emerald_6;
-           global.save_slot_used_emerald7 [i] = global.used_emerald_7;
+           global.save_slot_zone           [i] = global.zone_id;
+           global.save_slot_character      [i] = global.player_id;
+           global.save_slot_cpu            [i] = global.cpu;
+           global.save_slot_lives          [i] = global.player_lives;           
+           global.save_slot_continues      [i] = global.player_continues;               
+           global.save_slot_emeralds       [i] = global.player_emeralds;
+           global.save_slot_completed      [i] = global.game_completed;
+           global.save_slot_completed_full [i] = global.game_completed_full;
+           global.save_slot_used_emerald1  [i] = global.used_emerald_1;
+           global.save_slot_used_emerald2  [i] = global.used_emerald_2;
+           global.save_slot_used_emerald3  [i] = global.used_emerald_3;
+           global.save_slot_used_emerald4  [i] = global.used_emerald_4;
+           global.save_slot_used_emerald5  [i] = global.used_emerald_5;
+           global.save_slot_used_emerald6  [i] = global.used_emerald_6;
+           global.save_slot_used_emerald7  [i] = global.used_emerald_7;
         }        
         else
         {
@@ -170,6 +172,7 @@
            global.save_slot_continues     [i] = 0;               
            global.save_slot_emeralds      [i] = 0;
            global.save_slot_completed     [i] = 0;
+           global.save_slot_completed_full [i] = 0;
            global.save_slot_used_emerald1 [i] = 0;
            global.save_slot_used_emerald2 [i] = 0;
            global.save_slot_used_emerald3 [i] = 0;

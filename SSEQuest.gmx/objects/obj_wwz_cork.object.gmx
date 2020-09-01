@@ -28,9 +28,6 @@
             <string>/// Cork code from the Super Ring Engine (by ChasmanMX)
 
 //===Create Vars====//
-var InitialPosition;
-var CurrentPosition;
-
 //===Setup Same Vars===//
 InitialPosition = y;
 CurrentPosition = InitialPosition;

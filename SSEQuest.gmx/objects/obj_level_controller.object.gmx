@@ -58,7 +58,7 @@
     if(global.do_time == true &amp;&amp; instance_exists(par_fades) == false &amp;&amp; !instance_exists(obj_game_over)){
     
        // Check if we pressed Pause:
-          if(keyboard_check_pressed(global.key_enter)){
+          if(keyboard_check_pressed(global.key_enter) &amp;&amp; !instance_exists(obj_title_card)){
            
              // Pause the Game:   
                 if(game_paused == false &amp;&amp; game_snapshot == noone &amp;&amp; instance_exists(obj_pause) == false){
@@ -289,7 +289,12 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
     }
     else if(global.BonusStage == true)
     {
-    draw_sprite(spr_hud, 1, view_xview[view_current]+0, view_yview[view_current]+0);
+         // Bonus Stage Jank
+         draw_sprite(spr_hud_new, 0, view_xview+16, view_yview+9);
+         draw_set_font(global.hud_font);
+         draw_set_color(c_white)
+         draw_set_halign(fa_right);
+         draw_text(view_xview+111, view_yview+13, global.player_rings);
     }
     
     //Draw the Score and all that Stuff:
@@ -320,13 +325,6 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
                 draw_text(view_xview+87, view_yview+45, global.player_rings);
                 }
             }
-            else if(global.BonusStage == true)
-            {
-                draw_set_halign(fa_left);
-                draw_set_color(c_white);
-                draw_text(view_xview[view_current]+27, view_yview[view_current]+7, global.player_rings);
-                
-            }
         }
         draw_set_halign(-1);
        };
@@ -334,19 +332,12 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
      
      /* Draw Lifes */ 
      /* TEXT */ 
-     {
-      if(global.BonusStage == false)
-      {  
+     
           draw_set_color(c_white);
           draw_set_font(global.lives_font);
           draw_sprite(spr_hud_lives, player_index-1, view_xview+16, view_yview+view_hview-24)
           draw_text(view_xview+64, view_yview+view_hview-15, global.player_lives);
-      }
-      else if(global.BonusStage == true)
-      {
-          draw_set_color(c_white);
-          draw_text(view_xview[view_current]+365, view_yview[view_current]+7, global.player_lives);
-      }
+
         if(instance_exists(obj_player))
         {
           if(obj_player.invincibility == 2 &amp;&amp; obj_player.CharacterState = CharacterNormal)
@@ -365,7 +356,7 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
           }
         }
       }; 
-    }
+    
     
 /*
  // Exit if paused.

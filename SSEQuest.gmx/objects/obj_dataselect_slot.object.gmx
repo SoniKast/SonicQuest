@@ -28,13 +28,14 @@
             <string>/// Variables.
 
  // Slot data.
-    dataslot_zone       = 0;
-    dataslot_character  = 1;
-    dataslot_cpu        = 2;
-    dataslot_lives      = 3;
-    dataslot_continues  = 0;
-    dataslot_emeralds   = 0; 
-    dataslot_completed  = 0;
+    dataslot_zone           = 0;
+    dataslot_character      = 1;
+    dataslot_cpu            = 2;
+    dataslot_lives          = 3;
+    dataslot_continues      = 0;
+    dataslot_emeralds       = 0; 
+    dataslot_completed      = 0;
+    dataslot_completed_full = 0;
     dataslot_used_emerald_1 = 0;
     dataslot_used_emerald_2 = 0;
     dataslot_used_emerald_3 = 0;
@@ -80,13 +81,14 @@
             <kind>1</kind>
             <string>/// Refresh data.
     
-    dataslot_zone       = global.save_slot_zone[dataslot_index];
-    dataslot_character  = global.save_slot_character[dataslot_index];
-    dataslot_cpu        = global.save_slot_cpu[dataslot_index];
-    dataslot_lives      = global.save_slot_lives[dataslot_index];
-    dataslot_continues  = global.save_slot_continues[dataslot_index];
-    dataslot_emeralds   = global.save_slot_emeralds[dataslot_index]; 
-    dataslot_completed  = global.save_slot_completed[dataslot_index];
+    dataslot_zone           = global.save_slot_zone[dataslot_index];
+    dataslot_character      = global.save_slot_character[dataslot_index];
+    dataslot_cpu            = global.save_slot_cpu[dataslot_index];
+    dataslot_lives          = global.save_slot_lives[dataslot_index];
+    dataslot_continues      = global.save_slot_continues[dataslot_index];
+    dataslot_emeralds       = global.save_slot_emeralds[dataslot_index]; 
+    dataslot_completed      = global.save_slot_completed[dataslot_index];
+    dataslot_completed_full = global.save_slot_completed_full[dataslot_index];
     dataslot_used_emerald_1 = global.save_slot_used_emerald1[dataslot_index];
     dataslot_used_emerald_2 = global.save_slot_used_emerald2[dataslot_index];
     dataslot_used_emerald_3 = global.save_slot_used_emerald3[dataslot_index];
@@ -100,7 +102,13 @@
     {
        dataslot_zone = -1;
     }
-    
+
+ // Set zone id to -1 aka level select if the game is completed with all emeralds.
+    if(dataslot_completed_full == 1)
+    {
+       dataslot_zone = -1;
+    }
+        
 </string>
           </argument>
         </arguments>
@@ -126,13 +134,14 @@
             <string>/// Reset slot.
 
  // Slot data.
-    dataslot_zone       = 0;
-    dataslot_character  = 1;
-    dataslot_cpu        = 2;
-    dataslot_lives      = 3;
-    dataslot_continues  = 0;
-    dataslot_emeralds   = 0; 
-    dataslot_completed  = 0;
+    dataslot_zone           = 0;
+    dataslot_character      = 1;
+    dataslot_cpu            = 2;
+    dataslot_lives          = 3;
+    dataslot_continues      = 0;
+    dataslot_emeralds       = 0; 
+    dataslot_completed      = 0;
+    dataslot_completed_full = 0;
     dataslot_used_emerald_1 = 0;
     dataslot_used_emerald_2 = 0;
     dataslot_used_emerald_3 = 0;
@@ -334,20 +343,21 @@
                                }       
                                
                             // Set global. variables.
-                               global.zone_id          = 1;
-                               global.player_id        = dataslot_character;
-                               global.cpu              = dataslot_cpu;
-                               global.player_lives     = 3;
-                               global.player_continues = 0;
-                               global.player_emeralds  = 0;
-                               global.game_completed   = 0;
-                               global.used_emerald_1   = 0;
-                               global.used_emerald_2   = 0;
-                               global.used_emerald_3   = 0;
-                               global.used_emerald_4   = 0;
-                               global.used_emerald_5   = 0;
-                               global.used_emerald_6   = 0;
-                               global.used_emerald_7   = 0;
+                               global.zone_id             = 1;
+                               global.player_id           = dataslot_character;
+                               global.cpu                 = dataslot_cpu;
+                               global.player_lives        = 3;
+                               global.player_continues    = 0;
+                               global.player_emeralds     = 0;
+                               global.game_completed      = 0;
+                               global.game_completed_full = 0;
+                               global.used_emerald_1      = 0;
+                               global.used_emerald_2      = 0;
+                               global.used_emerald_3      = 0;
+                               global.used_emerald_4      = 0;
+                               global.used_emerald_5      = 0;
+                               global.used_emerald_6      = 0;
+                               global.used_emerald_7      = 0;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_newgame);
@@ -361,20 +371,21 @@
                          if(instance_exists(obj_fade_loadgame) == false)
                          {
                             // Set global. variables.
-                               global.zone_id          = dataslot_zone;
-                               global.player_id        = dataslot_character;
-                               global.cpu              = dataslot_cpu;
-                               global.player_lives     = dataslot_lives;
-                               global.player_continues = dataslot_continues;
-                               global.player_emeralds  = dataslot_emeralds;
-                               global.game_completed   = 0;
-                               global.used_emerald_1   = dataslot_used_emerald_1;
-                               global.used_emerald_2   = dataslot_used_emerald_2;
-                               global.used_emerald_3   = dataslot_used_emerald_3;
-                               global.used_emerald_4   = dataslot_used_emerald_4;
-                               global.used_emerald_5   = dataslot_used_emerald_5;
-                               global.used_emerald_6   = dataslot_used_emerald_6;
-                               global.used_emerald_7   = dataslot_used_emerald_7;
+                               global.zone_id             = dataslot_zone;
+                               global.player_id           = dataslot_character;
+                               global.cpu                 = dataslot_cpu;
+                               global.player_lives        = dataslot_lives;
+                               global.player_continues    = dataslot_continues;
+                               global.player_emeralds     = dataslot_emeralds;
+                               global.game_completed      = 0;
+                               global.game_completed_full = 0;
+                               global.used_emerald_1      = dataslot_used_emerald_1;
+                               global.used_emerald_2      = dataslot_used_emerald_2;
+                               global.used_emerald_3      = dataslot_used_emerald_3;
+                               global.used_emerald_4      = dataslot_used_emerald_4;
+                               global.used_emerald_5      = dataslot_used_emerald_5;
+                               global.used_emerald_6      = dataslot_used_emerald_6;
+                               global.used_emerald_7      = dataslot_used_emerald_7;
                                
                             // Create the fade out.                                       
                                instance_create(0, 0, obj_fade_loadgame);
@@ -383,7 +394,7 @@
                       }   
                        
                    // Level select.
-                      if(dataslot_zone == -1)
+                      if(dataslot_zone == -1 &amp;&amp; dataslot_emeralds == 7)
                       {
                          if(instance_exists(obj_fade_levelselect) == false)
                          {
@@ -394,7 +405,8 @@
                                global.player_lives     = dataslot_lives;
                                global.player_continues = dataslot_continues;
                                global.player_emeralds  = dataslot_emeralds;
-                               global.game_completed   = 1;
+                               global.game_completed   = 0;
+                               global.game_completed_full = 1;
                                global.used_emerald_1   = dataslot_used_emerald_1;
                                global.used_emerald_2   = dataslot_used_emerald_2;
                                global.used_emerald_3   = dataslot_used_emerald_3;
@@ -407,7 +419,35 @@
                                instance_create(0, 0, obj_fade_levelselect);
                                obj_dataselect_cursor.datacursor_lock = true;
                          }
-                      }                                         
+                      }       
+                       
+                   // Level select.
+                      if(dataslot_zone == -1 &amp;&amp; dataslot_emeralds != 7)
+                      {
+                         if(instance_exists(obj_fade_levelselect) == false)
+                         {
+                            // Set global. variables.
+                               global.zone_id          = dataslot_zone;
+                               global.player_id        = dataslot_character;
+                               global.cpu              = dataslot_cpu;
+                               global.player_lives     = dataslot_lives;
+                               global.player_continues = dataslot_continues;
+                               global.player_emeralds  = dataslot_emeralds;
+                               global.game_completed   = 1;
+                               global.game_completed_full = 0;
+                               global.used_emerald_1   = dataslot_used_emerald_1;
+                               global.used_emerald_2   = dataslot_used_emerald_2;
+                               global.used_emerald_3   = dataslot_used_emerald_3;
+                               global.used_emerald_4   = dataslot_used_emerald_4;
+                               global.used_emerald_5   = dataslot_used_emerald_5;
+                               global.used_emerald_6   = dataslot_used_emerald_6;
+                               global.used_emerald_7   = dataslot_used_emerald_7;
+                               
+                            // Create the fade out.                                       
+                               instance_create(0, 0, obj_fade_levelselect);
+                               obj_dataselect_cursor.datacursor_lock = true;
+                         }
+                      }                                      
                 }
           }
     }
@@ -436,7 +476,6 @@
           <argument>
             <kind>1</kind>
             <string>/// Reload the save because the original engine didn't do it
-
 save_reload_all();
 </string>
           </argument>
@@ -470,7 +509,25 @@ save_reload_all();
     {
        draw_sprite(spr_dataselect_icon, dataslot_zone, x+5, y+5);
     }
-    else
+    else if(dataslot_completed = 1 &amp;&amp; dataslot_character = 1)
+    {
+       draw_sprite(spr_dataselect_icon, sprite_get_number(spr_dataselect_icon)-5, x+5, y+5);    
+    }
+    else if(dataslot_completed = 1 &amp;&amp; dataslot_character = 2)
+    {
+       draw_sprite(spr_dataselect_icon, sprite_get_number(spr_dataselect_icon)-4, x+5, y+5);    
+    }
+    else if(dataslot_completed = 1 &amp;&amp; dataslot_character = 3)
+    {
+       draw_sprite(spr_dataselect_icon, sprite_get_number(spr_dataselect_icon)-3, x+5, y+5);    
+    }
+    else if(dataslot_completed = 1 &amp;&amp; dataslot_character = 4)
+    {
+       draw_sprite(spr_dataselect_icon, sprite_get_number(spr_dataselect_icon)-2, x+5, y+5);    
+    }
+    
+ // Draw Slot icon.
+    if(dataslot_completed_full = 1)
     {
        draw_sprite(spr_dataselect_icon, sprite_get_number(spr_dataselect_icon)-1, x+5, y+5);    
     }

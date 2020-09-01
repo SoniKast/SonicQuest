@@ -131,7 +131,7 @@
     <instance objName="obj_bonus3_bumper" x="848" y="608" name="inst_179FB9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bonus3_bumper" x="848" y="640" name="inst_37AEC33F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bonus3_bumper" x="848" y="672" name="inst_A214D848" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="128" y="416" name="inst_6F54FD90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="128" y="416" name="inst_6F54FD90" locked="0" code="y_speed = -2;&#xA;state = STATE_JUMP;&#xA;animation = &quot;roll&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="48" y="672" name="inst_2D50278F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="64" y="672" name="inst_20DB94EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="80" y="640" name="inst_EA28451C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

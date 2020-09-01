@@ -47,14 +47,18 @@
 
     OverallYOffset = 0.965;
     
-    scr_parallax_add_node(1, backGhzCloudsAct2,       0.83, 0.3, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 128, 62);
-    scr_parallax_add_node(1, backGhzClouds2Act2,      0.8, 0.2, 0, 0, 0,     OverallYOffset, 0, 0, 62, 0,    0, 0, 128, 58);
+    scr_parallax_add_node(1, backGhzCloudsAct2,       0.83, -0.3, 0, 0, 0,     OverallYOffset, 0, 0, 0, 0,    0, 0, 128, 62);
+    scr_parallax_add_node(1, backGhzClouds2Act2,      0.8, -0.2, 0, 0, 0,     OverallYOffset, 0, 0, 62, 0,    0, 0, 128, 58);
     scr_parallax_add_node(1, backGhzMountains1Act2,   0.7,  0, 0, 0, 0,       OverallYOffset, 0, 0, 71, 0,    0, 0, 420, 51);
     scr_parallax_add_node(1, backGhzBushesAct2,       0.65,  0, 0, 0, 0,       OverallYOffset, 0, 0, 71, 0,    0, 0, 256, 83);
-      
+    scr_parallax_add_node(1, bg_underwater_backdrop,  0.64,  0, 0, 0, 0,       OverallYOffset, 0, 0, 153, 0,    0, 0, 128, 130);
+    scr_parallax_add_node(1, bg_corals1,       0.63,  0, 0, 0, 0,       OverallYOffset, 0, 0, 156, 0,    0, 0, 128, 65);
+    scr_parallax_add_node(1, bg_corals2,       0.62,  0, 0, 0, 0,       OverallYOffset, 0, 0, 197, 0,    0, 0, 128, 72);
+    scr_parallax_add_node(1, bg_corals3,       0.61,  0, 0, 0, 0,       OverallYOffset, 0, 0, 237, 0,    0, 0, 128, 64);
+
     // Water    
     RatioY      = OverallYOffset;
-    Height      = 152;
+    Height      = 153;
     MaxScaleY   = 1.2;
     
 //    for (i = 0; i &lt; 15; i+= 1)
@@ -144,7 +148,7 @@
                                 y+(_i*6)*_Scale, 
                                 1, _Scale, 0, c_white, c_white, c_white, c_white, 1);      
     }
-
+    
 /*draw_background_general(backGhzWaterAct2, 0, _i*6, background_get_width(backGhzWaterAct2), 6,
                                 x-((current_time*0.01)*_i mod 384), 
                                 y+(_i*6)*_Scale, 

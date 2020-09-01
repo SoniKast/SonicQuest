@@ -196,6 +196,26 @@
             }
          }                    
     }
+    else
+    {
+        if instance_exists(obj_player)
+        {
+            with obj_player
+            {
+                // Keep Player Within Boundaries
+                    if x &lt; view_xview[0]
+                    {
+                        x = view_xview[0]
+                    }   
+                    
+                    if x &gt; view_xview[0] + 424
+                    {
+                        x = view_xview[0] + 424
+                    }                      
+            }
+            
+        }
+    }
     
  // Target camera handling:    
     if(cam_handle != noone &amp;&amp; cam_handle != obj_player)
