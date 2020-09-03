@@ -1068,15 +1068,12 @@
     <instance objName="obj_collision_tile_03" x="9504" y="384" name="inst_CBC739D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="9504" y="448" name="inst_086E0596" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_star_post" x="9680" y="864" name="inst_40AE01D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slash_mobile_camera" x="10256" y="784" name="inst_F1111BCF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="5664" y="1824" name="inst_7E821F92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="5856" y="1824" name="inst_CF06D658" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="5376" y="544" name="inst_1859C476" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_badnik_block" x="5488" y="544" name="inst_DEC1FBF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ffz_swing_platform" x="8928" y="672" name="inst_1A210822" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ffz_swing_platform" x="9120" y="736" name="inst_43B9DA08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_right" x="10048" y="736" name="inst_7477A639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_left" x="10464" y="736" name="inst_262D1D91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="336" y="1968" name="inst_B532F4F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="208" y="1968" name="inst_CE95FBB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ring" x="240" y="1968" name="inst_9CFA1666" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1721,9 +1718,6 @@
     <tile bgName="ts_forest_frenzy2" x="9280" y="2464" w="64" h="128" xo="0" yo="64" id="10046764" name="inst_883FBC9D" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_forest_frenzy2" x="9280" y="2592" w="64" h="64" xo="0" yo="64" id="10046766" name="inst_8F68EF44" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_forest_frenzy2" x="9024" y="2592" w="64" h="64" xo="192" yo="64" id="10046767" name="inst_0D039CDE" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_ffz2_back_tree" x="10192" y="736" w="128" h="128" xo="0" yo="0" id="10047058" name="inst_724A131C" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_ffz2_boss_tree" x="10192" y="736" w="128" h="128" xo="0" yo="0" id="10047055" name="inst_80BC96E9" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="ts_ffz2_tree" x="10192" y="608" w="128" h="128" xo="0" yo="0" id="10047056" name="inst_463F0A4E" depth="3" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_forest_frenzy2" x="0" y="1984" w="128" h="128" xo="64" yo="0" id="10042568" name="inst_E12ACF20" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_forest_frenzy2" x="128" y="1984" w="128" h="128" xo="64" yo="0" id="10042569" name="inst_A9261400" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="ts_forest_frenzy2" x="256" y="1984" w="128" h="128" xo="64" yo="0" id="10042570" name="inst_9B73C0B2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

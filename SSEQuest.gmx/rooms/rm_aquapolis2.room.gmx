@@ -947,7 +947,6 @@
     <instance objName="obj_wwz_cork" x="8928" y="544" name="inst_DA777FD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wwz_cork" x="9024" y="544" name="inst_CBB90D35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wwz_cork" x="9120" y="544" name="inst_29E39BC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cork_mobile_camera" x="8832" y="464" name="inst_1BD1812A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wwz_water_switch" x="8256" y="488" name="inst_C05FE64C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6720" y="1024" name="inst_00FF2DCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6784" y="1024" name="inst_09094E80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -955,8 +954,6 @@
     <instance objName="obj_collision_tile_02" x="6848" y="960" name="inst_8F8D09FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6880" y="928" name="inst_FA0EB683" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_02" x="6944" y="928" name="inst_B01327C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_right" x="8624" y="416" name="inst_FF2FBD34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_moving_dir_left" x="9040" y="416" name="inst_F3C1889A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wwz_cork" x="8544" y="544" name="inst_D6E7D0D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

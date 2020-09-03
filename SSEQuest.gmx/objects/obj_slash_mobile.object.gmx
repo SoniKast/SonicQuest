@@ -295,6 +295,17 @@ xspd = 0;
 image_xscale = 1;
 }
 
+if(state = st_intro)
+{
+if(instance_exists(obj_sth1_eggmobile_ball) == false) {instance_create(x,y,obj_sth1_eggmobile_ball)}; 
+      if(instance_exists(obj_sth1_eggmobile_partb)){
+      if(obj_sth1_eggmobile_partb.chains != 7){
+        if(alarm[2] == -1){
+        alarm[2] = 20;
+        };
+        }
+      }
+}
 </string>
           </argument>
         </arguments>

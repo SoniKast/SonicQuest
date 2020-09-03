@@ -433,6 +433,11 @@
               <sprite>sprites\spr_spikemobile_dead</sprite>
               <sprite>sprites\spr_spikemobile_flee</sprite>
             </sprites>
+            <sprites name="Slash Mobile">
+              <sprite>sprites\spr_sth1_eggmobile_part_b</sprite>
+              <sprite>sprites\spr_sth1_eggmobile_chain</sprite>
+              <sprite>sprites\spr_sth1_eggmobile_ball</sprite>
+            </sprites>
           </sprites>
           <sprites name="Spikes">
             <sprite>sprites\spr_spike_top</sprite>
@@ -2705,6 +2710,9 @@
         <objects name="Enemies">
           <objects name="Boss">
             <objects name="Slash Mobile">
+              <object>objects\obj_sth1_eggmobile_partb</object>
+              <object>objects\obj_sth1_eggmobile_chain_part</object>
+              <object>objects\obj_sth1_eggmobile_ball</object>
               <object>objects\obj_slash_mobile</object>
               <object>objects\obj_slash_mobile_camera</object>
               <object>objects\obj_boss4_create</object>
@@ -2736,9 +2744,9 @@
         </objects>
         <objects name="Boss">
           <objects name="Cork Mobile">
-            <object>objects\obj_cork_mobile</object>
             <object>objects\obj_cork_mobile_camera</object>
             <object>objects\obj_boss5_create</object>
+            <object>objects\obj_cork_mobile</object>
           </objects>
         </objects>
       </objects>
@@ -2861,12 +2869,11 @@
         <room>rooms\rm_aquapolis2</room>
       </rooms>
       <rooms name="Egg Gauntlet">
-        <room>rooms\rm_egg_gauntlet1</room>
         <room>rooms\rm_egg_gauntlet2</room>
-        <room>rooms\rm_egg_gauntlet3</room>
       </rooms>
       <rooms name="Cutscenes">
         <room>rooms\rm_ending_cutscene</room>
+        <room>rooms\rm_credits</room>
         <room>rooms\rm_ending_cutscene_complete</room>
       </rooms>
     </rooms>
@@ -2881,6 +2888,7 @@
         <room>rooms\rm_level_select</room>
         <room>rooms\rm_sunshine_valley1</room>
         <room>rooms\rm_sunshine_valley2</room>
+        <room>rooms\rm_egg_gauntlet1unused</room>
       </rooms>
       <rooms name="Bonus Stage">
         <room>rooms\rm_bonus1</room>
@@ -2896,8 +2904,8 @@
         <room>rooms\rm_special_stage7</room>
       </rooms>
       <room>rooms\rm_options</room>
-      <room>rooms\rm_credits</room>
       <room>rooms\rm_hidden_palace</room>
+      <room>rooms\rm_egg_gauntlet1</room>
       <room>rooms\rm_bridge_zone1</room>
       <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_sound_test</room>

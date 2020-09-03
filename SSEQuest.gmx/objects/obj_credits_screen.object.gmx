@@ -49,7 +49,7 @@
 alarm[0] = 120;                             // This alarm is required to hide and show the text. 
 credit_font = global.fnt_credits;           // The Font we draw on Screen. 
 credit_numb = 0;                            // We will need this to End the credits later. 
-credit_max_numb = 12;                       // Should be the value of the text that only uses "" 
+credit_max_numb = 13;                       // Should be the value of the text that only uses "" 
 credit_alpha = 3;                           // The Alpha for the text. 
 credit_hide = false;                        // Is the Text hiding? 
 credit_show = false;                        // Should the text be drawn?
@@ -68,7 +68,8 @@ credit_text[8] = "MUSIC##THEBLURCAFE##SPEEDBLITZ##SONIKAST##S3 COMPLETE#SOUNDS##
 credit_text[9] = "SPECIAL THANKS TO##HEZMANIA";
 credit_text[10] = "THANKS TO EVERYONE##WHO DECIDED TO HELP ME##TEST THIS GAME";
 credit_text[11] = "AND THANK YOU##FOR PLAYING";
-credit_text[12] = "";
+credit_text[12] = "STAY TUNED FOR VERSION 2!";
+credit_text[13] = "";
 
 
 </string>
