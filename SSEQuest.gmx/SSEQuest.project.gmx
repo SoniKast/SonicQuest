@@ -2365,6 +2365,7 @@
         <object>objects\obj_fade_in_white2</object>
         <object>objects\obj_fade_next</object>
         <object>objects\obj_fade_next_white</object>
+        <object>objects\obj_fade_teleport</object>
         <object>objects\obj_fade_final_cutscene</object>
         <object>objects\obj_fade_bonus</object>
         <object>objects\obj_fade_from_bonus</object>
@@ -2869,6 +2870,7 @@
         <room>rooms\rm_aquapolis2</room>
       </rooms>
       <rooms name="Egg Gauntlet">
+        <room>rooms\rm_egg_gauntlet1</room>
         <room>rooms\rm_egg_gauntlet2</room>
       </rooms>
       <rooms name="Cutscenes">
@@ -2905,7 +2907,6 @@
       </rooms>
       <room>rooms\rm_options</room>
       <room>rooms\rm_hidden_palace</room>
-      <room>rooms\rm_egg_gauntlet1</room>
       <room>rooms\rm_bridge_zone1</room>
       <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_sound_test</room>

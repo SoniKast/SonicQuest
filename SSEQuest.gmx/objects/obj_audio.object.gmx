@@ -511,7 +511,6 @@
            }        
            case rm_egg_gauntlet1:
            case rm_egg_gauntlet2:
-           case rm_egg_gauntlet3:
            {
                 zone_bgm = music_final_fall1;
                 if(audio_is_playing(zone_bgm) == false)

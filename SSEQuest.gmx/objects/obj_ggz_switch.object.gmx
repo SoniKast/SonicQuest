@@ -73,7 +73,72 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
 // Add actions here.
  switch( switch_action )
  {
-  case  0: { with instance_nearest(x, y, obj_ggz_door){vspeed = -3} };
+  case 0: 
+  { 
+  with instance_nearest(x, y, obj_ggz_door)
+  {vspeed = -3} 
+  break;
+  };
+  case 1: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
+  case 2: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
+  case 3: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
+  case 4: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
+  case 5: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
+  case 6: 
+  { 
+  with(obj_player){
+  x=224 
+  y=1504
+  }
+  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  instance_create(x, y, obj_fade_teleport);
+  break;
+  };
   default: { exit; break; };  
  };
  

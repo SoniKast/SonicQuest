@@ -743,7 +743,7 @@
     <instance objName="obj_ggz_breakable_wall" x="6544" y="1520" name="inst_414198E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_breakable_wall" x="6592" y="1520" name="inst_4CD6A55B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_breakable_wall" x="6640" y="1520" name="inst_7551315D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ggz_switch" x="6592" y="1392" name="inst_8CC6130A" locked="0" code="switch_action = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ggz_switch" x="6592" y="1392" name="inst_8CC6130A" locked="0" code="switch_action = 0" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_platform" x="6384" y="1424" name="inst_11C3FBAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_tile_03" x="6880" y="1696" name="inst_4DF5B465" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ggz_door" x="6880" y="1792" name="inst_7EE0B021" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
