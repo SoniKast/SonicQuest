@@ -34,7 +34,6 @@ image_index = 0;
 switch_sprite  = sprite_index; // The Switch Sprite.           
 switch_pressed = false;        // Did we activated the Switch? 
 switch_timer   = 0;            // Required for doing something.
-
 </string>
           </argument>
         </arguments>
@@ -78,14 +77,13 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   with instance_nearest(x, y, obj_ggz_door)
   {vspeed = -3} 
   break;
-  };
+  };/*
   case 1: 
   { 
   with(obj_player){
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
   instance_create(x, y, obj_fade_teleport);
   break;
   };
@@ -95,7 +93,7 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  
   instance_create(x, y, obj_fade_teleport);
   break;
   };
@@ -105,7 +103,7 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  
   instance_create(x, y, obj_fade_teleport);
   break;
   };
@@ -115,7 +113,7 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  
   instance_create(x, y, obj_fade_teleport);
   break;
   };
@@ -125,7 +123,7 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  
   instance_create(x, y, obj_fade_teleport);
   break;
   };
@@ -135,10 +133,10 @@ aud_play_sound(general_switch, global.sfx_volume, 1, 0, 0);
   x=224 
   y=1504
   }
-  aud_play_sound(general_teleport, global.sfx_volume, 1, 0, 0);
+  
   instance_create(x, y, obj_fade_teleport);
   break;
-  };
+  };*/
   default: { exit; break; };  
  };
  

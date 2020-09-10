@@ -509,8 +509,7 @@
                 }
                 break;
            }        
-           case rm_egg_gauntlet1:
-           case rm_egg_gauntlet2:
+           case rm_egg_gauntlet:
            {
                 zone_bgm = music_final_fall1;
                 if(audio_is_playing(zone_bgm) == false)
@@ -577,6 +576,12 @@
                 {
                    aud_play_music(zone_bgm, global.bgm_volume, 1.15);
                 }
+                break;
+           }
+           case rm_credits:
+           {
+                zone_bgm = -1;
+                aud_play_sound(music_ending_cutscene, global.bgm_volume, 1, 0, 0);
                 break;
            }
            default:

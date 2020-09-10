@@ -215,13 +215,13 @@
         if (global.animTick &gt; 0 &amp;&amp; !global.sndPlay)
         {
             global.sndPlay = true;
-            audio_play_sound(sageSnd_SEGAVintage, 0, 0); // Play the SEGA Vintage jingle
+            aud_play_sound(sageSnd_SEGAVintage, global.sfx_volume, 1, 0, 0); // Play the SEGA Vintage jingle
         }
 
     // If it's time to make like a tree and get outta here...
         if (global.animTick &gt;= 4.0)
         {
-            if room_exists(room_next(room)) room_goto_next();
+            if room_exists(room_next(room)) instance_create(x, y, obj_fade_next);
         }
 </string>
           </argument>

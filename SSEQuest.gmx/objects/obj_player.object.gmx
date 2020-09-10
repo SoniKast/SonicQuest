@@ -1486,7 +1486,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Die from Heights.
-
+if(room != rm_egg_gauntlet)
+{
     if(global.death_height == -1)
     {
        if(y &gt;= room_height &amp;&amp; state != STATE_DEATH)
@@ -1501,6 +1502,7 @@
           state = STATE_DEATH;
        }
     }
+}
 </string>
           </argument>
         </arguments>
@@ -2273,13 +2275,23 @@
     player_state_goal();
     
  // Ass:
-    player_state_slipping();
+    player_state_slipping();   
     
- // Shield abilities:
-    player_state_shield();    
- 
+ // Transform: 
+    if(player_index != CHAR_TAILS){
+           player_state_transform();
+        }else if(player_index == CHAR_TAILS){
+                 if(global.player_emeralds == 14){
+                    player_state_transform(); 
+                 }
+        }
+ /*
  // Transform:
     player_state_transform();
+ */
+    
+ // Shield abilities:
+    player_state_shield();
     
  // Sonic only - Insta Shield and Hyper Dash:
     if(player_index == CHAR_SONIC)

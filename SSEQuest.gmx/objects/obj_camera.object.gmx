@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Camera variables.
+            <string>/// Cam variables.
     
  // Set view:
     view_object [0] = id;
-    view_hborder[0] = 426/2;
+    view_hborder[0] = 424/2;
     view_vborder[0] = 240/2;
     
  // Horizontal Borders:
@@ -60,6 +60,15 @@
     cam_left_lock = false;
     cam_lag     = 0;
     cam_limit   = 0;
+
+ // Special functions.
+    cam_shakescreen   = false;              // If enabled, the screen will shake as long as _ShakeDuration is above 0.
+    cam_shakeduration = 0;                  // How many frames the Shaking lasts.
+    cam_shakeforce    = 0;                  // The force of the Shake, 2 to 3 is a good number, everything above 3 is a strong shake.
+    cam_shakesound    = noone;              // If not set to noone, the game will loop this sound until the shake is over.
+    cam_debugdisplay  = false;              // Displays Debug Graphics.         
+
+
 
 </string>
           </argument>
@@ -255,6 +264,43 @@
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Camera Shake.
+
+    if(cam_shakescreen = true){
+       if(cam_shakeduration != 0){
+          if(audio_is_playing(cam_shakesound) == false){
+             aud_play_sound(cam_shakesound, global.sfx_volume, 1, 1, 0);
+          }
+          cam_shakeduration--         
+       }else{
+          if(audio_is_playing(cam_shakesound) == true){
+             audio_stop_sound(cam_shakesound);
+          }      
+          cam_shakescreen = false;   
+          cam_shakeforce  = 0; 
+       }
+    }
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

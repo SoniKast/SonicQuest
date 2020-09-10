@@ -66,7 +66,8 @@ previous_y = y;
 x_speed    = 0; //The Horizontal Speed.
 y_speed    = 0; //The Vertical Speed.       
 x_dcspeed  = 0; //Increases/Decreases the horizontal speed when changing direction, aka Oscillating.
-y_dcspeed  = 0; //Increases/Decreases the vertical speed  when changing direction, aka Oscillating.
+y_dcspeed  = 0; //Increases/Decreases the vertical speed when changing direction, aka Oscillating.
+instance_create(x,y,obj_sth1_eggmobile_partb)
 </string>
           </argument>
         </arguments>
@@ -91,6 +92,32 @@ y_dcspeed  = 0; //Increases/Decreases the vertical speed  when changing directio
             <kind>1</kind>
             <string>with(obj_slash_mobile_camera){
      instance_destroy();
+};
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Create new chains!
+with(obj_sth1_eggmobile_partb){
+     chains += 1;
 };
 </string>
           </argument>
@@ -300,8 +327,8 @@ if(state = st_intro)
 if(instance_exists(obj_sth1_eggmobile_ball) == false) {instance_create(x,y,obj_sth1_eggmobile_ball)}; 
       if(instance_exists(obj_sth1_eggmobile_partb)){
       if(obj_sth1_eggmobile_partb.chains != 7){
-        if(alarm[2] == -1){
-        alarm[2] = 20;
+        if(alarm[6] == -1){
+        alarm[6] = 20;
         };
         }
       }

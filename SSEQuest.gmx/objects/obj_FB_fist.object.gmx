@@ -62,6 +62,15 @@ image_speed = 0;
             <kind>1</kind>
             <string>dummy_effect_create(spr_explosion, 0.2, x, y, 2, 0);
 aud_play_sound(general_wallbreak, global.sfx_volume, 1, 0, 0);
+with(mysolid)
+{
+instance_destroy()
+}
+with(myhurt)
+{
+instance_destroy()
+}
+
 </string>
           </argument>
         </arguments>

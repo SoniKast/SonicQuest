@@ -46,30 +46,31 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize some variables: 
-alarm[0] = 120;                             // This alarm is required to hide and show the text. 
+alarm[0] = 60;                             // This alarm is required to hide and show the text. 
 credit_font = global.fnt_credits;           // The Font we draw on Screen. 
 credit_numb = 0;                            // We will need this to End the credits later. 
-credit_max_numb = 13;                       // Should be the value of the text that only uses "" 
+credit_max_numb = 14;                       // Should be the value of the text that only uses "" 
 credit_alpha = 3;                           // The Alpha for the text. 
 credit_hide = false;                        // Is the Text hiding? 
 credit_show = false;                        // Should the text be drawn?
-credit_fade_music = 11;                     // Once Text 12 will be drawn,the music starts to fade out.
+credit_fade_music = 13;                     // Once Text 12 will be drawn,the music starts to fade out.
 
 /* Add Everything you want to draw on the Screen here: */
 credit_text[0] = "SONIC QUEST##CREDITS";
 credit_text[1] = "PROGRAMMED BY##SONIKAST##ALEKS##PVIC##JOHN-KUN##";
 credit_text[2] = "TITLE GRAPHICS##SONIKAST##DERZOCKER##DOLPHMAN";
-credit_text[3] = "GRAPHICS##SEGA##SONIKAST##DARKVAMPIREDEE##WIZTOAD##MRLEVROCKS##DANIELMANIA123##DOLPHMAN##OVERBOUND";
-credit_text[4] = "TESTERS##SONIC TRIBUTE TEAM##KAST INC SERVER##ELECTRO BLOCK##SIDVANIA";
-credit_text[5] = "GIMMICKS##SONIKAST##PVIC##JOHN-KUN##ALEKS##";
-credit_text[6] = "PHYSICS##LILACCHIPS##ALEKS NORBERG";
+credit_text[3] = "GRAPHICS##SEGA##SONIKAST##WIZTOAD##MRLEVROCKS##ARTYEIKO##DOLPHMAN##THEBLURCAFE";
+credit_text[4] = "TESTERS##PVIC##SPEEDVGM##LILACCHIPS##MRLEVROCKS##BRICETAS##ILLIAS";
+credit_text[5] = "GIMMICKS##SONIKAST##PVIC##JOHN-KUN##ALEKS##OVERBOUND";
+credit_text[6] = "PHYSICS##ALEKS NORBERG";
 credit_text[7] = "LEVEL DESIGN##SONIKAST##WIZTOAD";
-credit_text[8] = "MUSIC##THEBLURCAFE##SPEEDBLITZ##SONIKAST##S3 COMPLETE#SOUNDS##SONIC TEAM##SOUND EFFECTS RIPPED BY##MR LANGE";
-credit_text[9] = "SPECIAL THANKS TO##HEZMANIA";
-credit_text[10] = "THANKS TO EVERYONE##WHO DECIDED TO HELP ME##TEST THIS GAME";
-credit_text[11] = "AND THANK YOU##FOR PLAYING";
-credit_text[12] = "STAY TUNED FOR VERSION 2!";
-credit_text[13] = "";
+credit_text[8] = "MUSIC##THEBLURCAFE##SPEEDVGM##SONIKAST###SOUNDS##SONIC TEAM##SOUND EFFECTS RIPPED BY##MR LANGE##RANDOM TALKING BUSH";
+credit_text[9] = "SPECIAL THANKS TO##HEZMANIA##DARKVAMPIREDEE##DANIELMANIA##GABRIEL CASANOVA##OVERBOUND";
+credit_text[10] = "SPECIAL THANKS TO##KRIS##ROSABELLE##DERZOCKER##KEATONTHFOX";
+credit_text[11] = "THANKS TO EVERYONE##WHO HELPED ME##WITH THIS GAME##I TRULY APPRECIATE IT";
+credit_text[12] = "AND MOST OF ALL##THANK YOU FOR PLAYING";
+credit_text[13] = "STAY TUNED FOR VERSION TWO";
+credit_text[14] = "";
 
 
 </string>
@@ -182,27 +183,14 @@ else if( credit_hide == false &amp;&amp; credit_alpha &gt;= 2.9 &amp;&amp; credi
 
 // Restart the Game: 
 
-if ( credit_numb &gt;= credit_max_numb &amp;&amp; global.previous_room = noone) 
+if ( credit_numb &gt;= credit_max_numb) 
 {
 draw_set_alpha(1);
 draw_set_halign(-1)
 draw_set_valign(-1)
 game_restart();
 }
-else
-if ( credit_numb &gt;= credit_max_numb &amp;&amp; global.previous_room = rm_credits)
-{
-draw_set_alpha(1);
-draw_set_halign(-1)
-draw_set_valign(-1)
-if(!instance_exists(obj_fade_to_value))
-    {
-       with(instance_create(0, 0, obj_fade_to_value))
-       {
-            value = rm_credits
-       }
-    }
-}
+
 </string>
           </argument>
         </arguments>
@@ -255,7 +243,7 @@ draw_set_font(credit_font);
  draw_set_color(c_white);
  draw_set_halign(fa_center)
  draw_set_valign(fa_center)
- draw_text(round(view_xview)+160,round(view_xview)+room_height-130,string(credit_text[credit_numb]))
+ draw_text(round(view_xview)+212,round(view_xview)+room_height-120,string(credit_text[credit_numb]))
 };
 
 </string>

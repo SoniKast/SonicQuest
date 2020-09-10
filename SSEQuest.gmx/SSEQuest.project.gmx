@@ -54,6 +54,7 @@
       <sound>sound\music_final_boss</sound>
       <sound>sound\music_final_boss2</sound>
       <sound>sound\music_ending_cutscene</sound>
+      <sound>sound\music_credits</sound>
     </sounds>
     <sounds name="SFX">
       <sounds name="General">
@@ -1021,6 +1022,8 @@
             <sprite>sprites\spr_butterkiller_follow</sprite>
             <sprite>sprites\spr_jugglesaw</sprite>
             <sprite>sprites\spr_turbosnail</sprite>
+            <sprite>sprites\spr_croakhop</sprite>
+            <sprite>sprites\spr_froggie_solid</sprite>
           </sprites>
           <sprites name="Mini-Boss">
             <sprite>sprites\spr_screen_camera</sprite>
@@ -1034,6 +1037,7 @@
           <sprites name="Gimmicks">
             <sprite>sprites\spr_wwz_cork</sprite>
             <sprite>sprites\spr_wwz_platform</sprite>
+            <sprite>sprites\spr_cm_spike</sprite>
             <sprite>sprites\spr_wwz_pole_v</sprite>
             <sprite>sprites\spr_wwz_pipe_fall</sprite>
             <sprite>sprites\spr_wwz_break_wall</sprite>
@@ -1083,6 +1087,9 @@
           <sprite>sprites\spr_sanctuary_orb_end</sprite>
           <sprite>sprites\spr_hpz_scenery</sprite>
         </sprites>
+        <sprites name="EGZ">
+          <sprite>sprites\spr_egg_gauntlet_platform</sprite>
+        </sprites>
       </sprites>
       <sprites name="Mobile">
         <sprite>sprites\spr_gamepad_up</sprite>
@@ -1127,6 +1134,7 @@
     <sprites name="Menus / Continue">
       <sprites name="Title Screen">
         <sprite>sprites\sprPresentationSonic</sprite>
+        <sprite>sprites\spr_presentation</sprite>
         <sprite>sprites\sprPresentationSonicOG</sprite>
         <sprite>sprites\sprPresentationTitleBand</sprite>
         <sprite>sprites\sprPresentationTitle</sprite>
@@ -1136,6 +1144,7 @@
         <sprite>sprites\spr_title_press_start</sprite>
         <sprite>sprites\spr_level_select</sprite>
         <sprite>sprites\spr_level_select_bg</sprite>
+        <sprite>sprites\spr_menu_options</sprite>
       </sprites>
       <sprites name="Level Select">
         <sprite>sprites\spr_levelselect_stage_previews</sprite>
@@ -1297,7 +1306,6 @@
         </backgrounds>
         <backgrounds name="Egg Gauntlet">
           <background>background\ts_egg_gauntlet</background>
-          <background>background\ts_egg_gauntlet_new</background>
         </backgrounds>
         <backgrounds name="Hidden Palace Zone">
           <background>background\ts_hpz</background>
@@ -1647,6 +1655,8 @@
       <script>scripts\wall_check.gml</script>
       <script>scripts\easeOutBackBloominOnionZone.gml</script>
       <script>scripts\easeOutExpoBloominOnionZone.gml</script>
+      <script>scripts\scr_gravity.gml</script>
+      <script>scripts\scr_solid.gml</script>
     </scripts>
     <scripts name="Audio">
       <script>scripts\aud_play_sound.gml</script>
@@ -2528,6 +2538,7 @@
         <object>objects\obj_gamepad_special</object>
         <object>objects\obj_gamepad_enter</object>
       </objects>
+      <object>objects\obj_redirector</object>
       <object>objects\obj_screenshotter</object>
     </objects>
     <objects name="Zone">
@@ -2723,6 +2734,8 @@
             <object>objects\obj_butterkiller_follow</object>
             <object>objects\obj_jugglesaw</object>
             <object>objects\obj_turbosnail</object>
+            <object>objects\obj_jumbot</object>
+            <object>objects\obj_jumbot_solid</object>
           </objects>
         </objects>
       </objects>
@@ -2745,6 +2758,7 @@
         </objects>
         <objects name="Boss">
           <objects name="Cork Mobile">
+            <object>objects\obj_cm_spike</object>
             <object>objects\obj_cork_mobile_camera</object>
             <object>objects\obj_boss5_create</object>
             <object>objects\obj_cork_mobile</object>
@@ -2753,6 +2767,7 @@
       </objects>
       <objects name="Egg Gauntlet">
         <objects name="Gimmicks">
+          <object>objects\obj_egz_platform</object>
           <object>objects\obj_ttz_parallax</object>
         </objects>
         <objects name="Boss">
@@ -2870,12 +2885,11 @@
         <room>rooms\rm_aquapolis2</room>
       </rooms>
       <rooms name="Egg Gauntlet">
-        <room>rooms\rm_egg_gauntlet1</room>
-        <room>rooms\rm_egg_gauntlet2</room>
+        <room>rooms\rm_egg_gauntlet</room>
       </rooms>
       <rooms name="Cutscenes">
-        <room>rooms\rm_ending_cutscene</room>
         <room>rooms\rm_credits</room>
+        <room>rooms\rm_ending_cutscene</room>
         <room>rooms\rm_ending_cutscene_complete</room>
       </rooms>
     </rooms>
@@ -2908,6 +2922,7 @@
       <room>rooms\rm_options</room>
       <room>rooms\rm_hidden_palace</room>
       <room>rooms\rm_bridge_zone1</room>
+      <room>rooms\rm_egg_gauntlet1</room>
       <room>rooms\rm_bridge_zone2</room>
       <room>rooms\rm_sound_test</room>
       <room>rooms\rm_disclaimer</room>
@@ -2915,7 +2930,7 @@
   </rooms>
   <constants number="85">
     <constant name="GAME_NAME">"Sonic Quest"</constant>
-    <constant name="GAME_VERSION">"v1.0"</constant>
+    <constant name="GAME_VERSION">"v1.2"</constant>
     <constant name="SFX">obj_audio</constant>
     <constant name="COL_MAIN">1</constant>
     <constant name="COL_MAIN_OBJECT">2</constant>

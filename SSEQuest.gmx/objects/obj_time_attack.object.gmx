@@ -131,7 +131,11 @@ if(keyboard_check_pressed(global.key_enter))
              }
              case 6:
              {    
-                  instance_create(0, 0, obj_time_attack_egz)
+                  aud_play_sound(general_error, global.sfx_volume, 1, 0, 0);
+                  canselect = 1;
+                  canmove = 1;
+                  turnoff = false;
+                  /*instance_create(0, 0, obj_time_attack_egz)
                   global.time_attack = false;
                   canselect = 0;
                   canmove = 0;
@@ -141,7 +145,7 @@ if(keyboard_check_pressed(global.key_enter))
                       global.best_time_ttz2   = ini_read_real("TWISTED TOWERS 2",     "TTZ2",  0);
                       global.best_time_ttz3   = ini_read_real("TWISTED TOWERS 3",     "TTZ3",  0);                                 
                   }
-                  ini_close()
+                  ini_close()*/
                   break;
              }
       }

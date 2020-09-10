@@ -56,7 +56,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Go to the ending cutscene.
-
+/*
    if(global.player_emeralds &lt; 7)
    {
    room_goto(rm_ending_cutscene);    
@@ -66,6 +66,8 @@
    {
    room_goto(rm_ending_cutscene_complete);
    }
+*/
+    room_goto(rm_credits);
 </string>
           </argument>
         </arguments>

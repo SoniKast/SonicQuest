@@ -290,7 +290,7 @@ if(global.cutscene = false || !instance_exists(obj_special_results) || room != r
     else if(global.BonusStage == true)
     {
          // Bonus Stage Jank
-         draw_sprite(spr_hud_new, 0, view_xview+16, view_yview+9);
+         draw_sprite(spr_hud_new, 2, view_xview+16, view_yview+9);
          draw_set_font(global.hud_font);
          draw_set_color(c_white)
          draw_set_halign(fa_right);

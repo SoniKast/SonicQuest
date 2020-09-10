@@ -2,6 +2,13 @@
  // Creates a save file for this engine. Load using save_load(slot)
  // Since we can only store inis in the same folder as the game executable, we'll use text file instead.
  
+ // Exit in certain rooms.
+    if(room = rm_ending_cutscene || room = rm_credits || room = rm_ending_cutscene_complete || room = rm_continue
+    || room = rm_template || room = rm_level_select || room = rm_sunshine_valley1 || room = rm_sunshine_valley2 ||
+    room = rm_special_stage1 || room = rm_special_stage2 || room = rm_special_stage3 || room = rm_special_stage4 ||
+    room = rm_special_stage5 || room = rm_special_stage6 || room = rm_special_stage7 || room = rm_bonus1 || room = rm_bonus3 ||
+    room = rm_options || room = rm_hidden_palace || room = rm_bridge_zone1 || room = rm_bridge_zone2 || room = rm_sound_test) exit
+    
  // Add a zero in front argument0 if it's less than 10.
     if(argument0 < 10)
     {

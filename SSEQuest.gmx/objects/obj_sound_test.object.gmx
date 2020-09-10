@@ -805,7 +805,7 @@ if(title_menu_active == 1)
                           {
                           audio_stop_all();
                           aud_play_sound(music_ending_cutscene, global.sfx_volume, 1, 0, 0);
-                          play_string = "CREDITS";
+                          play_string = "ENDING CUTSCENE";
                           title_menu_active = 1;
                           break;
                           }

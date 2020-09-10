@@ -138,7 +138,7 @@ y_dcspeed  = 0; //Increases/Decreases the vertical speed  when changing directio
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_boss_coconut);
+            <string>instance_create(x,y,obj_cm_spike);
 alarm[4] = 80;
 </string>
           </argument>
