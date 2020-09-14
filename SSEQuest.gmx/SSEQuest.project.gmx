@@ -405,6 +405,7 @@
         <sprites name="Harmful">
           <sprites name="Bosses">
             <sprites name="Coconut Gun">
+              <sprite>sprites\spr_eggmobile_cg_intro</sprite>
               <sprite>sprites\spr_eggmobile_cg_normal</sprite>
               <sprite>sprites\spr_eggmobile_cg_hurt</sprite>
               <sprite>sprites\spr_eggmobile_cg_hit</sprite>
@@ -438,6 +439,13 @@
               <sprite>sprites\spr_sth1_eggmobile_part_b</sprite>
               <sprite>sprites\spr_sth1_eggmobile_chain</sprite>
               <sprite>sprites\spr_sth1_eggmobile_ball</sprite>
+            </sprites>
+            <sprites name="Bumpermobile">
+              <sprite>sprites\spr_bumpermobile_normal</sprite>
+              <sprite>sprites\spr_bumpermobile_hurt</sprite>
+              <sprite>sprites\spr_bumpermobile_hit</sprite>
+              <sprite>sprites\spr_bumpermobile_dead</sprite>
+              <sprite>sprites\spr_bumpermobile_flee</sprite>
             </sprites>
           </sprites>
           <sprites name="Spikes">
@@ -2930,7 +2938,7 @@
   </rooms>
   <constants number="85">
     <constant name="GAME_NAME">"Sonic Quest"</constant>
-    <constant name="GAME_VERSION">"v1.2"</constant>
+    <constant name="GAME_VERSION">"v1.3"</constant>
     <constant name="SFX">obj_audio</constant>
     <constant name="COL_MAIN">1</constant>
     <constant name="COL_MAIN_OBJECT">2</constant>
